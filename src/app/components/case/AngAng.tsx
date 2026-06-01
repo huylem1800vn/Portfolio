@@ -30,6 +30,7 @@ import CamXuc from "../../../imports/CảmXuc/CảmXuc";
 import LocalProfile from "../../../imports/LocalProfile/LocalProfile";
 import VerifiedProfile from "../../../imports/VertifiedProfile/VertifiedProfile";
 import LogoMark from "../../../imports/Frame1-1/Frame1-13-12627";
+import logoIconPaths from "../../../imports/Frame1-1/svg-s6l1fubn7v";
 import wireframeHome from "../../../imports/image-5.png";
 import wireframeNav from "../../../imports/image-2.png";
 import wireframeDetail from "../../../imports/image-3.png";
@@ -335,7 +336,7 @@ const COPY = {
     brand: {
       tag: "( 11 · Brand Identity )",
       title: "Ăng Ăng feels fresh, friendly, and easy to say yes to",
-      logoCaption: "Primary logo · Lockup with leaf motif",
+      logoCaption: "Primary Ăng Ăng logo with the Baloo Bhaijaan wordmark",
       keywordsLabel: "Brand keywords",
       keywords: ["Fresh", "Friendly", "Youthful", "Simple", "Local", "Trustworthy", "Easy to decide"],
       toneLabel: "Visual tone",
@@ -356,7 +357,7 @@ const COPY = {
       tag: "( 13 · Typography )",
       title: "SF Pro feels clean, modern, and native to mobile",
       body:
-        "SF Pro helps the interface feel clean, modern, and easy to read. It also feels familiar on mobile, which supports faster and clearer food decisions.",
+        "SF Pro supports the Ăng Ăng interface with a clean, familiar, and easy to read experience on mobile. It helps information feel clear and keeps food decisions light, quick, and approachable.",
       stack: "SF Pro Display, SF Pro Text, Inter, Arial, sans-serif",
       scale: [
         { n: "H1", v: "64 / 72 · Bold" },
@@ -708,7 +709,7 @@ const COPY = {
     brand: {
       tag: "( 11 · Bộ nhận diện )",
       title: "Ăng Ăng mang cảm giác tươi mới, thân thiện và dễ khiến người ta muốn chọn",
-      logoCaption: "Logo chính · Lockup với biểu tượng lá",
+      logoCaption: "Logo chính của Ăng Ăng với wordmark dùng font Baloo Bhaijaan",
       keywordsLabel: "Brand keywords",
       keywords: ["Tươi mới", "Thân thiện", "Trẻ trung", "Đơn giản", "Gần gũi", "Đáng tin", "Dễ quyết định"],
       toneLabel: "Visual tone",
@@ -729,7 +730,7 @@ const COPY = {
       tag: "( 13 · Typography )",
       title: "SF Pro gọn gàng, hiện đại và rất hợp với cảm giác mobile",
       body:
-        "SF Pro giúp giao diện trở nên sạch, hiện đại và dễ đọc. Sự quen thuộc của nó trên mobile cũng khiến việc chọn quán trở nên rõ ràng hơn và bớt nặng nề hơn.",
+        "SF Pro giúp giao diện của Ăng Ăng trở nên sạch, quen thuộc và dễ đọc trên mobile. Nó giữ cho thông tin đủ rõ ràng để việc chọn món và chọn quán diễn ra nhanh, nhẹ và tự nhiên hơn.",
       stack: "SF Pro Display, SF Pro Text, Inter, Arial, sans-serif",
       scale: [
         { n: "H1", v: "64 / 72 · Bold" },
@@ -984,20 +985,16 @@ function Logo({ size = 1 }: { size?: number }) {
   return (
     <div className="inline-flex items-center gap-3" style={{ transform: `scale(${size})`, transformOrigin: "left center" }}>
       <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ backgroundColor: GREEN }}>
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
-          <path
-            d="M5 14c0-5 4-9 9-9 1.5 0 3 .4 4 1-1 5-5 9-10 9-1 0-2-.2-3-.5.5-.4 0-.5 0-.5Z"
-            fill="#fff"
-          />
-          <path d="M5 19c2-3 5-5 9-6" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" />
+        <svg viewBox="0 0 33.6973 41.2816" width="24" height="29" fill="none" preserveAspectRatio="xMidYMid meet">
+          <path d={logoIconPaths.p441a940} fill="#fff" />
         </svg>
       </div>
       <div
         style={{
-          fontFamily: "Fraunces, serif",
-          fontWeight: 500,
+          fontFamily: "'Baloo Bhaijaan', sans-serif",
+          fontWeight: 400,
           fontSize: "2rem",
-          letterSpacing: "-0.02em",
+          lineHeight: 1,
           color: INK,
         }}
       >
@@ -1543,14 +1540,25 @@ export function AngAng() {
         <div className="grid lg:grid-cols-12 gap-8 mt-10">
           <div className="lg:col-span-5">
             <div
-              className="rounded-3xl overflow-hidden flex items-center justify-center"
-              style={{ border: `1px solid ${BORDER}`, minHeight: 320, padding: 0 }}
+              className="rounded-3xl flex items-center justify-center"
+              style={{
+                border: `1px solid ${BORDER}`,
+                minHeight: 320,
+                padding: "40px",
+                backgroundColor: "#fff",
+              }}
             >
-              <div style={{ width: "100%", height: 320 }}>
+              <div
+                className="flex items-center justify-center"
+                style={{
+                  width: 94,
+                  height: 107.28,
+                }}
+              >
                 <LogoMark />
               </div>
             </div>
-            <p className="mt-3 text-xs tracking-[0.18em] uppercase" style={{ color: MUTED }}>
+            <p className="mt-3 text-sm leading-relaxed" style={{ color: MUTED }}>
               {t.brand.logoCaption}
             </p>
 
@@ -1689,7 +1697,12 @@ export function AngAng() {
                 <div
                   key={g}
                   className="rounded-2xl py-6"
-                  style={{ backgroundColor: BG, border: `1px solid ${BORDER}`, fontSize: "2rem", fontWeight: 600 }}
+                  style={{
+                    backgroundColor: BG,
+                    border: `1px solid ${BORDER}`,
+                    fontSize: "2rem",
+                    fontWeight: 600,
+                  }}
                 >
                   {g}
                 </div>
