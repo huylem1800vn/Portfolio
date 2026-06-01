@@ -1,0 +1,684 @@
+import { motion } from "motion/react";
+import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp } from "lucide-react";
+import { useI18n } from "../../i18n";
+import { CaseNav } from "./CaseNav";
+
+const VIOLET = "#a59cff";
+const BLUE = "#6b8cff";
+const INK = "#0b0d18";
+const FG = "#f4f1ea";
+const GLASS = "rgba(255,255,255,0.06)";
+const BORDER = "rgba(255,255,255,0.12)";
+
+const COPY = {
+  en: {
+    sections: [
+      { id: "overview", label: "Overview" },
+      { id: "problem", label: "Problem" },
+      { id: "research", label: "Research" },
+      { id: "journey", label: "Journey" },
+      { id: "flow", label: "Flow" },
+      { id: "principles", label: "Principles" },
+      { id: "features", label: "Features" },
+      { id: "ui", label: "UI" },
+      { id: "reflection", label: "Reflection" },
+    ],
+    badge: "Case Study · 2026 · AI Companion · Mobile",
+    title: "Murror — Overthinking Support Experience",
+    concept: "UNFOLD",
+    headline: "Helping users gently untangle thoughts and turn emotional noise into clear next steps.",
+    description:
+      "A UX research and product design case study exploring how an AI companion can support users through low-effort emotional check-ins, visual grounding, reflective prompts, and daily self-growth rituals.",
+    cta1: "View UX Flow",
+    cta2: "See Final Screens",
+
+    overview: {
+      tag: "( 01 — Project Overview )",
+      cards: [
+        { k: "Problem", v: "Users who overthink often feel mentally overloaded, struggle to express emotions, and do not know where to start." },
+        { k: "Goal", v: "Design a low-pressure experience that helps users identify emotions, calm down, reflect, and choose a small next action." },
+        { k: "Target Users", v: "Young users who experience mild emotional confusion, stress, relationship worries, study pressure, or uncertainty about themselves." },
+        { k: "My Role", v: "UX Research, Product Thinking, User Flow, Wireframing, UI Design, Interaction Design." },
+      ],
+    },
+
+    problem: {
+      tag: "( 02 — Core UX Problem )",
+      quote: "Most mental wellness apps ask users to explain their feelings before helping them calm down.",
+      body: "When users are overwhelmed, typing long text can become another burden. The product needs to reduce input effort and guide users step by step.",
+    },
+
+    research: {
+      tag: "( 03 — Research Insights )",
+      insights: [
+        { n: "01", k: "Users do not want to explain too much when overwhelmed.", v: "Design response: quick replies, mood buttons, color input, icon selection, and voice option." },
+        { n: "02", k: "Users need guidance before advice.", v: "Design response: check-in → grounding → reflection → AI mirror → small action." },
+        { n: "03", k: "The interface must feel safe and non-judgmental.", v: "Design response: calm colors, short copy, soft motion, gentle tone of voice." },
+        { n: "04", k: "Retention should come from daily ritual, not pressure.", v: "Design response: daily check-in, self-growth journey, mood pattern, gentle streak system." },
+      ],
+    },
+
+    journey: {
+      tag: "( 04 — User Journey )",
+      stages: [
+        { k: "Trigger", feel: "Overwhelmed, confused, mentally noisy.", need: "A safe place to start.", opp: "Open with one gentle question, not a blank input box." },
+        { k: "Check-in", feel: "Hesitant to explain.", need: "Express without typing.", opp: "Mood buttons, color picker, icon palette." },
+        { k: "Grounding", feel: "Racing thoughts.", need: "Slow down before reflecting.", opp: "Soft visual rhythm, breath prompt, calm copy." },
+        { k: "Reflection", feel: "Wants to be heard, not diagnosed.", need: "A mirror, not a verdict.", opp: "Reflective prompts in the user's own words." },
+        { k: "AI Mirror", feel: "Searching for meaning.", need: "Gentle interpretation.", opp: "Soft AI reply naming the emotional pattern without labeling the user." },
+        { k: "Small Action", feel: "Tired of choice.", need: "One next step, not ten.", opp: "Suggest one small, doable action with an opt-out." },
+        { k: "Growth Ritual", feel: "Hopeful but skeptical.", need: "Continuity without pressure.", opp: "Quiet daily ritual, no streak shame." },
+      ],
+    },
+
+    flow: {
+      tag: "( 05 — UX Flow )",
+      steps: [
+        "User feels overwhelmed",
+        "Opens Murror",
+        "Chooses mood through quick input",
+        "Receives grounding interaction",
+        "Selects source of overthinking",
+        "AI reflects the emotional pattern",
+        "User chooses one small next action",
+        "Insight is saved into personal growth journey",
+      ],
+    },
+
+    principles: {
+      tag: "( 06 — Design Principles )",
+      items: [
+        { k: "Low-effort input", v: "Every interaction should be possible with a single tap." },
+        { k: "Calm before advice", v: "Regulate the nervous system before suggesting action." },
+        { k: "Reflection, not diagnosis", v: "Mirror what the user feels — never label them." },
+        { k: "Gentle personalization", v: "Adapt slowly, ask permission, never assume." },
+        { k: "Ritual-based retention", v: "Make daily presence feel calming, not obligatory." },
+      ],
+    },
+
+    features: {
+      tag: "( 07 — Key Features )",
+      items: [
+        { icon: "spark", k: "Zero-Typing Check-in", v: "Express emotions through buttons, colors, icons, or voice — never a blank text box." },
+        { icon: "compass", k: "Visual Grounding", v: "Soft visual rhythm and short calming prompts help users slow down." },
+        { icon: "message", k: "AI Mirror Reflection", v: "AI reflects what the user may be feeling in a gentle, non-judgmental tone." },
+        { icon: "step", k: "Small Next Step", v: "The app suggests one small action instead of overwhelming users with choices." },
+        { icon: "growth", k: "Self-Growth Journey", v: "Track mood patterns, insights, and emotional growth over time — privately." },
+      ],
+    },
+
+    ui: {
+      tag: "( 08 — UI Direction )",
+      body: "Dark mode by default, soft blue-violet gradient, glassmorphism cards, rounded components, large breathing space, minimal text, emotion-based visual input, and gentle animation.",
+      screensLabel: "( 09 — Final Screens )",
+      screens: [
+        "Onboarding",
+        "Daily Check-in",
+        "Mood Selection",
+        "Grounding Screen",
+        "AI Reflection",
+        "Small Action Suggestion",
+        "Self-Growth Journey",
+        "Insight History",
+      ],
+    },
+
+    reflection: {
+      tag: "( 10 — Reflection )",
+      body: "This project taught me that emotional UX is not about giving users more features, but about reducing pressure at the right moment. A helpful experience should guide users from confusion to clarity with calm interaction, simple choices, and thoughtful product logic.",
+    },
+
+    feelLabel: "Feeling",
+    needLabel: "Need",
+    oppLabel: "Opportunity",
+    next: "Next case study",
+    nextProject: "Ăng Ăng — Food Discovery",
+  },
+
+  vi: {
+    sections: [
+      { id: "overview", label: "Tổng quan" },
+      { id: "problem", label: "Vấn đề" },
+      { id: "research", label: "Nghiên cứu" },
+      { id: "journey", label: "Hành trình" },
+      { id: "flow", label: "Luồng" },
+      { id: "principles", label: "Nguyên tắc" },
+      { id: "features", label: "Tính năng" },
+      { id: "ui", label: "UI" },
+      { id: "reflection", label: "Suy ngẫm" },
+    ],
+    badge: "Case Study · 2026 · AI Companion · Mobile",
+    title: "Murror — Trải nghiệm hỗ trợ khi Overthinking",
+    concept: "UNFOLD",
+    headline: "Giúp người dùng nhẹ nhàng gỡ rối suy nghĩ và biến nhiễu cảm xúc thành bước đi rõ ràng tiếp theo.",
+    description:
+      "Một case study UX research và product design khám phá cách AI companion có thể hỗ trợ người dùng thông qua check-in cảm xúc ít thao tác, visual grounding, câu hỏi phản chiếu và thói quen phát triển bản thân mỗi ngày.",
+    cta1: "Xem UX Flow",
+    cta2: "Xem màn hình UI",
+
+    overview: {
+      tag: "( 01 — Tổng quan dự án )",
+      cards: [
+        { k: "Vấn đề", v: "Người dùng overthinking thường thấy quá tải, khó diễn đạt cảm xúc và không biết bắt đầu từ đâu." },
+        { k: "Mục tiêu", v: "Thiết kế trải nghiệm ít áp lực giúp người dùng nhận diện cảm xúc, bình tĩnh, phản chiếu và chọn một hành động nhỏ tiếp theo." },
+        { k: "Người dùng", v: "Người trẻ trải qua bối rối cảm xúc nhẹ, áp lực học tập, lo âu mối quan hệ hoặc nghi ngờ bản thân." },
+        { k: "Vai trò", v: "UX Research, Product Thinking, User Flow, Wireframing, UI Design, Interaction Design." },
+      ],
+    },
+
+    problem: {
+      tag: "( 02 — Vấn đề UX cốt lõi )",
+      quote: "Nhiều ứng dụng wellness yêu cầu người dùng giải thích cảm xúc trước khi giúp họ bình tĩnh lại.",
+      body: "Khi người dùng đang rối, việc phải gõ quá nhiều có thể trở thành một gánh nặng khác. Trải nghiệm cần giảm áp lực nhập liệu và dẫn dắt người dùng từng bước.",
+    },
+
+    research: {
+      tag: "( 03 — Insight nghiên cứu )",
+      insights: [
+        { n: "01", k: "Người dùng không muốn giải thích quá nhiều khi đang rối.", v: "Phản hồi thiết kế: quick reply, nút tâm trạng, chọn màu, chọn icon và tùy chọn giọng nói." },
+        { n: "02", k: "Người dùng cần dẫn dắt trước khi nhận lời khuyên.", v: "Phản hồi thiết kế: check-in → grounding → reflection → AI mirror → hành động nhỏ." },
+        { n: "03", k: "Giao diện phải an toàn và không phán xét.", v: "Phản hồi thiết kế: màu dịu, copy ngắn, motion mềm, giọng văn nhẹ nhàng." },
+        { n: "04", k: "Giữ chân nên đến từ thói quen, không phải áp lực.", v: "Phản hồi thiết kế: check-in hàng ngày, hành trình phát triển, mood pattern, hệ thống streak nhẹ nhàng." },
+      ],
+    },
+
+    journey: {
+      tag: "( 04 — Hành trình người dùng )",
+      stages: [
+        { k: "Trigger", feel: "Quá tải, bối rối, đầu óc ồn ào.", need: "Một nơi an toàn để bắt đầu.", opp: "Mở đầu bằng một câu hỏi dịu nhẹ, không phải ô input trống." },
+        { k: "Check-in", feel: "Ngại giải thích.", need: "Diễn đạt mà không cần gõ.", opp: "Nút tâm trạng, chọn màu, bảng icon." },
+        { k: "Grounding", feel: "Suy nghĩ chạy đua.", need: "Chậm lại trước khi phản chiếu.", opp: "Nhịp thị giác dịu, prompt hít thở, copy bình tĩnh." },
+        { k: "Reflection", feel: "Muốn được lắng nghe, không bị chẩn đoán.", need: "Một tấm gương, không phải lời phán xét.", opp: "Câu hỏi phản chiếu bằng chính lời người dùng." },
+        { k: "AI Mirror", feel: "Tìm kiếm ý nghĩa.", need: "Diễn giải nhẹ nhàng.", opp: "AI gọi tên kiểu cảm xúc, không dán nhãn người dùng." },
+        { k: "Small Action", feel: "Mệt vì phải chọn.", need: "Một bước tiếp theo, không phải mười.", opp: "Đề xuất một hành động nhỏ, có tùy chọn bỏ qua." },
+        { k: "Growth Ritual", feel: "Hy vọng nhưng hoài nghi.", need: "Sự liên tục không áp lực.", opp: "Nghi thức nhỏ hàng ngày, không streak xấu hổ." },
+      ],
+    },
+
+    flow: {
+      tag: "( 05 — UX Flow )",
+      steps: [
+        "Người dùng cảm thấy quá tải",
+        "Mở Murror",
+        "Chọn tâm trạng qua quick input",
+        "Nhận tương tác grounding",
+        "Chọn nguồn gốc của overthinking",
+        "AI phản chiếu kiểu cảm xúc",
+        "Người dùng chọn một hành động nhỏ tiếp theo",
+        "Insight được lưu vào hành trình phát triển cá nhân",
+      ],
+    },
+
+    principles: {
+      tag: "( 06 — Nguyên tắc thiết kế )",
+      items: [
+        { k: "Nhập liệu ít áp lực", v: "Mọi tương tác nên thực hiện được chỉ với một chạm." },
+        { k: "Bình tĩnh trước khi nhận lời khuyên", v: "Điều hòa cảm xúc trước khi đề xuất hành động." },
+        { k: "Phản chiếu, không chẩn đoán", v: "Phản chiếu cảm xúc — không dán nhãn người dùng." },
+        { k: "Cá nhân hóa nhẹ nhàng", v: "Thích nghi chậm rãi, xin phép, không giả định." },
+        { k: "Giữ chân bằng thói quen tích cực", v: "Làm cho việc xuất hiện hàng ngày trở nên dịu nhẹ, không bắt buộc." },
+      ],
+    },
+
+    features: {
+      tag: "( 07 — Tính năng chính )",
+      items: [
+        { icon: "spark", k: "Check-in không cần gõ", v: "Diễn đạt cảm xúc qua nút, màu sắc, icon hoặc giọng nói — không bao giờ là một ô trống." },
+        { icon: "compass", k: "Visual Grounding", v: "Nhịp thị giác dịu và prompt ngắn giúp người dùng chậm lại." },
+        { icon: "message", k: "AI Mirror Reflection", v: "AI phản chiếu cảm xúc người dùng có thể đang cảm thấy bằng giọng văn nhẹ nhàng." },
+        { icon: "step", k: "Bước tiếp theo nhỏ", v: "Ứng dụng gợi ý một hành động nhỏ thay vì hàng loạt lựa chọn." },
+        { icon: "growth", k: "Hành trình phát triển bản thân", v: "Theo dõi mood pattern, insight và sự trưởng thành cảm xúc — riêng tư." },
+      ],
+    },
+
+    ui: {
+      tag: "( 08 — Hướng UI )",
+      body: "Dark mode mặc định, gradient xanh-tím dịu, thẻ glassmorphism, component bo tròn, khoảng thở lớn, ít chữ, nhập liệu trực quan theo cảm xúc và animation nhẹ nhàng.",
+      screensLabel: "( 09 — Màn hình cuối )",
+      screens: [
+        "Onboarding",
+        "Daily Check-in",
+        "Chọn tâm trạng",
+        "Grounding Screen",
+        "AI Reflection",
+        "Đề xuất hành động nhỏ",
+        "Hành trình phát triển",
+        "Lịch sử insight",
+      ],
+    },
+
+    reflection: {
+      tag: "( 10 — Suy ngẫm )",
+      body: "Dự án này giúp tôi nhận ra rằng emotional UX không phải là thêm thật nhiều tính năng, mà là giảm áp lực đúng thời điểm. Một trải nghiệm hữu ích cần dẫn người dùng từ rối sang rõ bằng tương tác nhẹ nhàng, lựa chọn đơn giản và logic sản phẩm có chủ đích.",
+    },
+
+    feelLabel: "Cảm xúc",
+    needLabel: "Nhu cầu",
+    oppLabel: "Cơ hội",
+    next: "Case study tiếp theo",
+    nextProject: "Ăng Ăng — Food Discovery",
+  },
+};
+
+function FIcon({ name }: { name: string }) {
+  const p = { size: 20, color: VIOLET };
+  if (name === "spark") return <Sparkles {...p} />;
+  if (name === "compass") return <Compass {...p} />;
+  if (name === "message") return <MessageCircle {...p} />;
+  if (name === "step") return <Footprints {...p} />;
+  return <TrendingUp {...p} />;
+}
+
+export function Murror() {
+  const { lang } = useI18n();
+  const c = COPY[lang];
+
+  return (
+    <div className="min-h-screen relative" style={{ backgroundColor: INK, color: FG }}>
+      {/* Ambient gradient */}
+      <div
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          background:
+            `radial-gradient(900px 600px at 15% 10%, ${VIOLET}22, transparent 60%), radial-gradient(800px 500px at 85% 60%, ${BLUE}1f, transparent 65%), radial-gradient(700px 500px at 50% 110%, ${VIOLET}18, transparent 60%)`,
+        }}
+      />
+      <div className="relative">
+        <CaseNav
+          sections={c.sections}
+          accent={VIOLET}
+          bg="rgba(11,13,24,0.6)"
+          text={FG}
+          border={BORDER}
+        />
+
+        {/* HERO */}
+        <section className="pt-32 md:pt-44 pb-20 md:pb-28">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase"
+              style={{ color: VIOLET }}
+            >
+              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: VIOLET }} />
+              {c.badge}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="mt-8 text-xs tracking-[0.2em] uppercase opacity-70"
+            >
+              {c.title}
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="mt-3 tracking-[-0.05em] leading-[0.85]"
+              style={{ fontFamily: "Fraunces, serif", fontWeight: 300, fontSize: "clamp(4.5rem, 18vw, 16rem)" }}
+            >
+              UN<span className="italic" style={{ color: VIOLET }}>F</span>OLD
+            </motion.h1>
+
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="md:col-span-7 tracking-[-0.02em] leading-[1.1]"
+                style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
+              >
+                {c.headline}
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="md:col-span-4 md:col-start-9 leading-relaxed opacity-75"
+                style={{ fontSize: "1rem" }}
+              >
+                {c.description}
+              </motion.p>
+            </div>
+
+            <div className="mt-12 flex flex-wrap items-center gap-4">
+              <a
+                href="#flow"
+                className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 transition-all"
+                style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK }}
+              >
+                <span className="text-sm">{c.cta1}</span>
+                <span className="w-8 h-8 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform" style={{ backgroundColor: INK, color: FG }}>
+                  <ArrowUpRight size={16} />
+                </span>
+              </a>
+              <a
+                href="#ui"
+                className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors hover:bg-white/5"
+                style={{ border: `1px solid ${BORDER}` }}
+              >
+                {c.cta2}
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* OVERVIEW */}
+        <Section id="overview" tag={c.overview.tag}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {c.overview.cards.map((p, i) => (
+              <GlassCard key={i} delay={i * 0.05}>
+                <div className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: VIOLET }}>{p.k}</div>
+                <p className="leading-relaxed" style={{ fontSize: "1.0625rem" }}>{p.v}</p>
+              </GlassCard>
+            ))}
+          </div>
+        </Section>
+
+        {/* PROBLEM */}
+        <Section id="problem" tag={c.problem.tag}>
+          <motion.blockquote
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="tracking-[-0.02em] leading-[1.1] max-w-[24ch]"
+            style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(2rem, 5.5vw, 4.5rem)" }}
+          >
+            <span style={{ color: VIOLET }}>“</span>
+            {c.problem.quote}
+            <span style={{ color: VIOLET }}>”</span>
+          </motion.blockquote>
+          <p className="mt-10 max-w-[60ch] leading-relaxed opacity-80" style={{ fontSize: "1.125rem" }}>
+            {c.problem.body}
+          </p>
+        </Section>
+
+        {/* RESEARCH */}
+        <Section id="research" tag={c.research.tag}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {c.research.insights.map((it, i) => (
+              <GlassCard key={i} delay={i * 0.06}>
+                <div className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: VIOLET }}>Insight {it.n}</div>
+                <h3 className="tracking-[-0.01em] mb-4" style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(1.5rem, 2.4vw, 2rem)" }}>
+                  {it.k}
+                </h3>
+                <p className="leading-relaxed opacity-75" style={{ fontSize: "0.95rem" }}>{it.v}</p>
+              </GlassCard>
+            ))}
+          </div>
+        </Section>
+
+        {/* JOURNEY */}
+        <Section id="journey" tag={c.journey.tag}>
+          <div className="overflow-x-auto -mx-6 px-6 pb-4">
+            <div className="flex gap-4 min-w-max">
+              {c.journey.stages.map((s, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                  className="w-[280px] p-6 rounded-2xl backdrop-blur-md flex flex-col gap-4"
+                  style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs" style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK }}>
+                      {i + 1}
+                    </div>
+                    <span className="text-xs tracking-[0.2em] uppercase opacity-60">{i < c.journey.stages.length - 1 ? "→" : "■"}</span>
+                  </div>
+                  <h4 style={{ fontFamily: "Fraunces, serif", fontSize: "1.5rem" }}>{s.k}</h4>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <div className="text-[10px] tracking-[0.2em] uppercase opacity-50 mb-1">{c.feelLabel}</div>
+                      <div className="opacity-90">{s.feel}</div>
+                    </div>
+                    <div>
+                      <div className="text-[10px] tracking-[0.2em] uppercase opacity-50 mb-1">{c.needLabel}</div>
+                      <div className="opacity-90">{s.need}</div>
+                    </div>
+                    <div>
+                      <div className="text-[10px] tracking-[0.2em] uppercase mb-1" style={{ color: VIOLET }}>{c.oppLabel}</div>
+                      <div className="opacity-90">{s.opp}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </Section>
+
+        {/* FLOW */}
+        <Section id="flow" tag={c.flow.tag}>
+          <ol className="space-y-3">
+            {c.flow.steps.map((step, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: -16 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                className="flex items-center gap-6 p-5 rounded-2xl backdrop-blur-md group hover:translate-x-2 transition-transform"
+                style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+              >
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm shrink-0" style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK, fontFamily: "Fraunces, serif" }}>
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <div className="flex-1" style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(1.125rem, 2vw, 1.5rem)" }}>
+                  {step}
+                </div>
+                <ArrowUpRight size={20} className="opacity-30 group-hover:opacity-100 group-hover:rotate-45 transition-all" />
+              </motion.li>
+            ))}
+          </ol>
+        </Section>
+
+        {/* PRINCIPLES */}
+        <Section id="principles" tag={c.principles.tag}>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
+            {c.principles.items.map((p, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                className="p-6 rounded-2xl backdrop-blur-md flex flex-col gap-4"
+                style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+              >
+                <div className="text-xs opacity-50" style={{ fontFamily: "Fraunces, serif", fontSize: "2rem", color: VIOLET }}>0{i + 1}</div>
+                <h4 style={{ fontFamily: "Fraunces, serif", fontSize: "1.25rem" }}>{p.k}</h4>
+                <p className="text-sm opacity-75 leading-relaxed">{p.v}</p>
+              </motion.div>
+            ))}
+          </div>
+        </Section>
+
+        {/* FEATURES */}
+        <Section id="features" tag={c.features.tag}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {c.features.items.map((f, i) => (
+              <GlassCard key={i} delay={i * 0.06}>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-5" style={{ background: `linear-gradient(135deg, ${VIOLET}33, ${BLUE}33)`, border: `1px solid ${BORDER}` }}>
+                  <FIcon name={f.icon} />
+                </div>
+                <h3 className="tracking-[-0.01em] mb-3" style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "1.5rem" }}>
+                  {f.k}
+                </h3>
+                <p className="leading-relaxed opacity-75" style={{ fontSize: "0.95rem" }}>{f.v}</p>
+              </GlassCard>
+            ))}
+          </div>
+        </Section>
+
+        {/* UI */}
+        <Section id="ui" tag={c.ui.tag}>
+          <p className="max-w-[60ch] leading-relaxed opacity-85" style={{ fontSize: "1.125rem" }}>{c.ui.body}</p>
+
+          <div className="mt-10 flex flex-wrap gap-3">
+            {["Dark", "Gradient", "Glass", "Rounded", "Minimal text", "Gentle motion"].map((t) => (
+              <span key={t} className="px-4 py-2 rounded-full text-sm backdrop-blur-md" style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}>
+                {t}
+              </span>
+            ))}
+          </div>
+
+          <div className="mt-16 text-xs tracking-[0.2em] uppercase mb-8" style={{ color: VIOLET }}>
+            {c.ui.screensLabel}
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {c.ui.screens.map((label, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className="rounded-2xl overflow-hidden backdrop-blur-md flex flex-col"
+                style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+              >
+                <PhoneScreen index={i} />
+                <div className="p-4 text-sm opacity-80">{label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </Section>
+
+        {/* REFLECTION */}
+        <Section id="reflection" tag={c.reflection.tag}>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="max-w-[24ch] tracking-[-0.02em] leading-[1.1]"
+            style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(1.75rem, 4.2vw, 3.5rem)" }}
+          >
+            {c.reflection.body}
+          </motion.p>
+
+          <a
+            href="#case/angang"
+            className="mt-20 group inline-flex items-center justify-between w-full p-6 md:p-10 rounded-3xl backdrop-blur-md"
+            style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+          >
+            <div>
+              <div className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: VIOLET }}>{c.next}</div>
+              <div style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>{c.nextProject}</div>
+            </div>
+            <span className="w-14 h-14 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform" style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK }}>
+              <ArrowUpRight size={20} />
+            </span>
+          </a>
+        </Section>
+
+        {/* FOOTER */}
+        <footer className="py-16 border-t" style={{ borderColor: BORDER }}>
+          <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+            <div className="text-xs tracking-[0.2em] uppercase opacity-50">
+              © 2026 Huỳnh Minh Huy — Murror Case Study
+            </div>
+            <div className="flex flex-wrap gap-6 text-sm">
+              {["Behance", "LinkedIn", "Email", "Resume"].map((l) => (
+                <a key={l} href="#" className="hover:opacity-100 opacity-70 transition-opacity inline-flex items-center gap-1">
+                  {l} <ArrowUpRight size={14} />
+                </a>
+              ))}
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  );
+}
+
+function Section({ id, tag, children }: { id: string; tag: string; children: React.ReactNode }) {
+  return (
+    <section id={id} className="py-20 md:py-32">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+        <div className="text-xs tracking-[0.2em] uppercase mb-10" style={{ color: VIOLET }}>
+          {tag}
+        </div>
+        {children}
+      </div>
+    </section>
+  );
+}
+
+function GlassCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay }}
+      className="p-6 md:p-8 rounded-2xl backdrop-blur-md hover:-translate-y-1 transition-transform"
+      style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function PhoneScreen({ index }: { index: number }) {
+  return (
+    <div className="aspect-[3/4] relative overflow-hidden" style={{ background: `linear-gradient(160deg, ${INK}, ${BLUE}22, ${VIOLET}33)` }}>
+      <div className="absolute inset-4 rounded-2xl backdrop-blur-md p-4 flex flex-col" style={{ backgroundColor: "rgba(11,13,24,0.4)", border: `1px solid ${BORDER}` }}>
+        <div className="text-[9px] tracking-[0.2em] uppercase opacity-60">Murror</div>
+        {index === 0 && (
+          <div className="mt-3 text-[14px] leading-tight" style={{ fontFamily: "Fraunces, serif" }}>
+            How are you, <span style={{ color: VIOLET }}>quietly</span>?
+          </div>
+        )}
+        {index === 1 && (
+          <div className="mt-3 text-[14px]" style={{ fontFamily: "Fraunces, serif" }}>One tap to begin today.</div>
+        )}
+        {index === 2 && (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {["Calm", "Heavy", "Tense", "Soft", "Foggy"].map((m, i) => (
+              <span key={m} className="text-[8px] px-2 py-1 rounded-full" style={{ backgroundColor: i === 2 ? VIOLET : "rgba(255,255,255,0.08)", color: i === 2 ? INK : FG }}>{m}</span>
+            ))}
+          </div>
+        )}
+        {index === 3 && (
+          <div className="mt-auto mb-auto flex flex-col items-center justify-center gap-2">
+            <div className="w-14 h-14 rounded-full animate-pulse" style={{ background: `radial-gradient(circle, ${VIOLET}, transparent)` }} />
+            <div className="text-[9px] opacity-70">Breathe in… 4s</div>
+          </div>
+        )}
+        {index === 4 && (
+          <div className="mt-3 text-[11px] leading-snug opacity-90" style={{ fontFamily: "Fraunces, serif" }}>
+            “It sounds like you're holding a lot today. That's okay.”
+          </div>
+        )}
+        {index === 5 && (
+          <div className="mt-auto">
+            <div className="text-[9px] opacity-60 mb-1">One small step</div>
+            <div className="p-2 rounded-lg text-[10px]" style={{ backgroundColor: VIOLET, color: INK }}>Drink a glass of water</div>
+          </div>
+        )}
+        {index === 6 && (
+          <div className="mt-3 flex gap-1 items-end h-16">
+            {[24, 32, 18, 40, 28, 36, 22].map((h, i) => (
+              <div key={i} className="flex-1 rounded-sm" style={{ height: h, background: `linear-gradient(to top, ${BLUE}, ${VIOLET})`, opacity: 0.7 }} />
+            ))}
+          </div>
+        )}
+        {index === 7 && (
+          <div className="mt-3 space-y-1.5">
+            {["Mon · Foggy", "Tue · Calm", "Wed · Tense"].map((s) => (
+              <div key={s} className="p-1.5 rounded text-[9px]" style={{ backgroundColor: "rgba(255,255,255,0.06)" }}>{s}</div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
