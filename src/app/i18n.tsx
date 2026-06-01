@@ -72,21 +72,21 @@ type Dict = {
 const en: Dict = {
   nav: { work: "Work", process: "Process", about: "About", resume: "Resume" },
   hero: {
-    badge: "Portfolio · 2026 — Available for internships",
+    badge: "Portfolio · 2026 · Open to internships",
     name: "HUYNH MINH HUY",
     role: "UI/UX Designer",
     concept: "BRIDGE",
     headline:
-      "Designing the bridge between user needs, product logic, and technical execution.",
+      "Designing the point where user needs, product logic, and technical execution meet naturally.",
     intro:
-      "I'm a UI/UX designer with a foundation in software development. I focus on creating clear user flows, practical interfaces, and scalable design systems that are both beautiful and easy to build.",
+      "I am a UI/UX designer with a background in software development. I care about shaping user flows that feel clear, interfaces that feel grounded, and design systems that can grow beautifully while still being realistic to build.",
     cta1: "View Projects",
     cta2: "Download CV",
     scroll: "Scroll to explore",
     label1: "( 01 ) Designer",
     label2: "( 02 ) Currently",
     currently:
-      "UI/UX Designer bridging design & code. Building case studies around food discovery, e-commerce, and AI self-growth.",
+      "A UI/UX designer moving between design and code, currently building case studies around food discovery, e commerce, and AI for self growth.",
   },
   marquee: [
     "User needs",
@@ -94,14 +94,14 @@ const en: Dict = {
     "Technical execution",
     "Design systems",
     "Clear interfaces",
-    "Bridging design & code",
+    "Bridging design and code",
   ],
   work: {
-    tag: "( Selected Work — 2025 / 2026 )",
+    tag: "( Selected Work · 2025 / 2026 )",
     title1: "Case studies,",
     italic: "not",
     title2: " screenshots.",
-    sub: "Three projects. Each one solving a real, tangible user decision.",
+    sub: "Three projects, each shaped around a real decision people actually need to make.",
     problemLabel: "Problem",
     solutionLabel: "Solution",
     readMore: "Read full case study",
@@ -111,29 +111,29 @@ const en: Dict = {
       {
         type: "Mobile · iOS / Android",
         subtitle:
-          "Helping young users choose where to eat with real-time context and mood-based recommendations.",
+          "Helping young users decide where to eat with timely context and recommendations that match how they feel.",
         problem:
-          "Young users in Ho Chi Minh City often struggle to choose where to eat because of choice overload, unreliable reviews, and missing real-time context such as crowd level, opening status, or available seats.",
+          "Young users in Ho Chi Minh City often struggle to choose where to eat because there are too many options, reviews do not always feel trustworthy, and practical details like crowd level, opening status, or available seats are often missing.",
         solution:
-          "A mood-based food discovery experience that combines trusted information, real-time restaurant status, and personalized recommendations.",
+          "A food discovery experience built around mood, trusted information, live restaurant status, and recommendations that feel more personal.",
       },
       {
         type: "Web · Responsive",
         subtitle:
-          "Improving shopping clarity and conversion flow for a fashion e-commerce experience.",
+          "Making a fashion shopping experience feel clearer, easier to browse, and smoother to buy from.",
         problem:
-          "The current shopping experience has UX barriers such as complex navigation, difficulty finding products, fragmented user journeys, and high bounce risk.",
+          "The current shopping experience creates friction through complex navigation, weak product discovery, fragmented journeys, and a high risk of users dropping off too early.",
         solution:
-          "A redesigned e-commerce experience with clearer navigation, better product discovery, improved information architecture, and smoother purchase flow.",
+          "A redesigned e commerce experience with clearer navigation, stronger product discovery, a more coherent information structure, and a smoother purchase journey.",
       },
       {
         type: "Mobile · AI Companion",
         subtitle:
-          "A low-effort emotional check-in experience for reflection, grounding, and daily self-growth.",
+          "A gentle emotional check in experience for reflection, grounding, and steady daily self growth.",
         problem:
-          "Users may struggle to express emotions when overwhelmed, especially when they are forced to type or explain too much.",
+          "When people feel overwhelmed, even describing their emotions can feel heavy, especially if they are asked to type or explain too much.",
         solution:
-          "An AI companion experience with quick emotional check-ins, visual grounding, gentle interactions, and personalized self-growth rituals.",
+          "An AI companion experience with quick emotional check ins, visual grounding, gentle interactions, and personal rituals for self growth.",
       },
     ],
   },
@@ -142,28 +142,28 @@ const en: Dict = {
     title1: "How a project",
     italic: "moves",
     title2: " forward.",
-    desc: "Five steps I return to in every project. Not a linear template — more like a checklist I loop through until the experience genuinely helps the user decide.",
+    desc: "These are the five steps I return to in every project. They are not a rigid sequence. They are the rhythm I revisit until the experience truly helps someone make a decision.",
     stepLabel: "Step",
     steps: [
       {
         title: "Understand",
-        desc: "Define the user problem and product context. Frame the real question before reaching for solutions.",
+        desc: "Clarify the user problem and the product context. Find the real question before rushing toward an answer.",
       },
       {
         title: "Research",
-        desc: "Collect insights from users, competitors, and behavior patterns. Look for the gap between what people say and what they do.",
+        desc: "Listen to users, study competitors, and trace behavior patterns. Pay attention to the gap between what people say and what their actions reveal.",
       },
       {
         title: "Structure",
-        desc: "Create user flows, information architecture, and wireframes. Make the skeleton work before dressing it up.",
+        desc: "Shape the user flow, information architecture, and wireframes first. The structure has to breathe before the visuals can shine.",
       },
       {
         title: "Design",
-        desc: "Build UI screens, components, and design system foundations. Make the interface clear, consistent, and accessible.",
+        desc: "Craft screens, components, and the beginnings of a design system so the interface feels clear, consistent, and welcoming to use.",
       },
       {
         title: "Validate",
-        desc: "Review usability, collect feedback, and improve the experience. Treat the first version as a hypothesis.",
+        desc: "Review usability, gather feedback, and refine the experience. The first version is only the beginning of the conversation.",
       },
     ],
   },
@@ -172,7 +172,7 @@ const en: Dict = {
     title1: "A designer who can also ",
     italic: "ship",
     title2: " the build.",
-    body: "I'm Minh Huy, a UI/UX designer from Vietnam with a foundation in software development. I'm interested in designing clear, practical, and scalable digital products. My work focuses on user flows, interface systems, and solving real user problems through structured design thinking — informed by what's actually buildable.",
+    body: "I am Minh Huy, a UI/UX designer from Vietnam with a foundation in software development. I am drawn to digital products that feel clear, practical, and ready to grow. My work stays close to user flows, interface systems, and real problems, always shaped by design thinking that respects what can truly be built.",
     facts: [
       { k: "Based in", v: "Vietnam" },
       { k: "Background", v: "Software Development" },
@@ -182,38 +182,38 @@ const en: Dict = {
     skillsLabel: "( Skills & Tools )",
     learningLabel: "Currently learning",
     learning:
-      "Design systems at scale, accessibility patterns, and how research findings translate into measurable interface decisions.",
+      "I am currently learning how design systems scale, how accessibility patterns hold up in real products, and how research can lead to interface decisions that are visible and measurable.",
   },
   contact: {
-    tag: "( Contact — Let's build something useful )",
+    tag: "( Contact · Let's build something useful )",
     title1: "Have a ",
     italic: "project",
     title2: " in mind?",
-    body: "I'm currently open to internships, junior UI/UX roles, and collaborative case studies. The best way to reach me is by email — I usually reply within a day.",
+    body: "I am currently open to internships, junior UI/UX roles, and collaborative case studies. Email is the best way to reach me, and I usually reply within a day.",
     resume: "Download CV",
     backTop: "Back to top ↑",
-    footer: "© 2026 Huỳnh Minh Huy — Designed & built with care",
+    footer: "© 2026 Huỳnh Minh Huy · Designed and built with care",
   },
 };
 
 const vi: Dict = {
   nav: { work: "Dự án", process: "Quy trình", about: "Giới thiệu", resume: "CV" },
   hero: {
-    badge: "Portfolio · 2026 — Đang tìm cơ hội thực tập",
+    badge: "Portfolio · 2026 · Đang tìm cơ hội thực tập",
     name: "HUỲNH MINH HUY",
     role: "UI/UX Designer",
     concept: "BRIDGE",
     headline:
-      "Thiết kế cầu nối giữa nhu cầu người dùng, logic sản phẩm và khả năng triển khai kỹ thuật.",
+      "Thiết kế điểm chạm nơi nhu cầu người dùng, logic sản phẩm và khả năng triển khai kỹ thuật gặp nhau một cách tự nhiên.",
     intro:
-      "Tôi là UI/UX Designer có nền tảng về phát triển phần mềm. Tôi tập trung tạo ra luồng người dùng rõ ràng, giao diện thực tế và hệ thống thiết kế có khả năng mở rộng, vừa đẹp vừa dễ triển khai.",
+      "Tôi là một UI/UX Designer có nền tảng về phát triển phần mềm. Tôi muốn tạo ra những luồng trải nghiệm rõ ràng, những giao diện gần gũi và những hệ thống thiết kế có thể lớn lên theo sản phẩm mà vẫn thực tế để triển khai.",
     cta1: "Xem dự án",
     cta2: "Tải CV",
     scroll: "Cuộn để khám phá",
     label1: "( 01 ) Nhà thiết kế",
     label2: "( 02 ) Hiện tại",
     currently:
-      "UI/UX Designer kết nối thiết kế & lập trình. Đang xây dựng case study về khám phá ẩm thực, thương mại điện tử và đồng hành AI.",
+      "Hiện tại tôi đang đi qua cả hai phía của thiết kế và code, đồng thời xây dựng các case study xoay quanh khám phá ẩm thực, thương mại điện tử và AI cho hành trình phát triển bản thân.",
   },
   marquee: [
     "Nhu cầu người dùng",
@@ -221,14 +221,14 @@ const vi: Dict = {
     "Triển khai kỹ thuật",
     "Hệ thống thiết kế",
     "Giao diện rõ ràng",
-    "Cầu nối thiết kế & code",
+    "Cầu nối giữa thiết kế và code",
   ],
   work: {
-    tag: "( Dự án tiêu biểu — 2025 / 2026 )",
+    tag: "( Dự án tiêu biểu · 2025 / 2026 )",
     title1: "Case study,",
     italic: "không phải",
     title2: " ảnh chụp.",
-    sub: "Ba dự án. Mỗi dự án giải quyết một quyết định thực tế của người dùng.",
+    sub: "Ba dự án, mỗi dự án đi vào một quyết định rất thật mà người dùng phải đối diện.",
     problemLabel: "Vấn đề",
     solutionLabel: "Giải pháp",
     readMore: "Xem case study đầy đủ",
@@ -238,29 +238,29 @@ const vi: Dict = {
       {
         type: "Mobile · iOS / Android",
         subtitle:
-          "Giúp người dùng trẻ chọn nơi ăn uống nhờ ngữ cảnh thời gian thực và gợi ý theo tâm trạng.",
+          "Giúp người dùng trẻ chọn chỗ ăn phù hợp nhanh hơn nhờ ngữ cảnh thời gian thực và những gợi ý đúng tâm trạng.",
         problem:
-          "Người trẻ ở TP.HCM thường khó chọn nơi ăn vì quá nhiều lựa chọn, đánh giá thiếu tin cậy, và thiếu thông tin theo thời gian thực như độ đông, giờ mở cửa hay chỗ ngồi còn trống.",
+          "Người trẻ ở TP.HCM thường khó chọn chỗ ăn vì có quá nhiều lựa chọn, review không phải lúc nào cũng đáng tin, và những thông tin thực tế như quán đang đông hay vắng, còn mở cửa hay còn chỗ ngồi lại thường thiếu.",
         solution:
-          "Trải nghiệm khám phá ẩm thực dựa trên tâm trạng, kết hợp thông tin đáng tin cậy, trạng thái nhà hàng theo thời gian thực và gợi ý cá nhân hoá.",
+          "Một trải nghiệm khám phá ẩm thực dựa trên tâm trạng, kết hợp thông tin đáng tin, trạng thái quán theo thời gian thực và những gợi ý mang cảm giác cá nhân hơn.",
       },
       {
         type: "Web · Responsive",
         subtitle:
-          "Cải thiện sự rõ ràng khi mua sắm và luồng chuyển đổi cho một website thời trang.",
+          "Làm cho trải nghiệm mua sắm thời trang trở nên rõ ràng hơn, dễ theo hơn và mượt hơn khi đi tới quyết định mua.",
         problem:
-          "Trải nghiệm mua sắm hiện tại có nhiều rào cản UX: điều hướng phức tạp, khó tìm sản phẩm, hành trình người dùng rời rạc và tỉ lệ thoát cao.",
+          "Trải nghiệm mua sắm hiện tại còn nhiều điểm vướng, từ điều hướng rối, khó tìm sản phẩm, hành trình đứt đoạn cho tới nguy cơ người dùng rời đi quá sớm.",
         solution:
-          "Thiết kế lại trải nghiệm thương mại điện tử với điều hướng rõ ràng, khám phá sản phẩm tốt hơn, kiến trúc thông tin mạch lạc và luồng mua hàng mượt mà hơn.",
+          "Thiết kế lại trải nghiệm thương mại điện tử với điều hướng rõ hơn, khả năng khám phá sản phẩm tốt hơn, kiến trúc thông tin mạch lạc hơn và luồng mua hàng trơn tru hơn.",
       },
       {
         type: "Mobile · AI Companion",
         subtitle:
-          "Trải nghiệm check-in cảm xúc nhẹ nhàng để phản chiếu, ổn định và phát triển bản thân mỗi ngày.",
+          "Một trải nghiệm check in cảm xúc nhẹ nhàng để người dùng có thể lắng lại, soi chiếu chính mình và nuôi dưỡng bản thân mỗi ngày.",
         problem:
-          "Người dùng khó diễn đạt cảm xúc khi đang quá tải, đặc biệt khi bị buộc phải gõ chữ hoặc giải thích quá nhiều.",
+          "Khi đang quá tải, nhiều người rất khó gọi tên cảm xúc của mình, nhất là khi họ bị yêu cầu phải gõ nhiều hoặc giải thích quá sâu ngay từ đầu.",
         solution:
-          "Trải nghiệm AI đồng hành với check-in cảm xúc nhanh, hình ảnh ổn định tinh thần, tương tác nhẹ nhàng và nghi thức phát triển bản thân cá nhân hoá.",
+          "Một trải nghiệm AI đồng hành với check in cảm xúc nhanh, hình ảnh giúp ổn định lại tinh thần, những tương tác dịu dàng và các nhịp phát triển bản thân mang cảm giác riêng tư hơn.",
       },
     ],
   },
@@ -269,28 +269,28 @@ const vi: Dict = {
     title1: "Cách một dự án",
     italic: "tiến",
     title2: " về phía trước.",
-    desc: "Năm bước tôi quay lại trong mọi dự án. Không phải khuôn mẫu tuyến tính — mà là một checklist tôi lặp lại cho đến khi trải nghiệm thực sự giúp người dùng quyết định.",
+    desc: "Đây là năm bước tôi luôn quay lại trong mỗi dự án. Nó không phải một khuôn mẫu cứng. Nó giống nhịp làm việc mà tôi lặp lại cho tới khi trải nghiệm thật sự giúp người dùng đưa ra quyết định.",
     stepLabel: "Bước",
     steps: [
       {
         title: "Thấu hiểu",
-        desc: "Xác định vấn đề người dùng và ngữ cảnh sản phẩm. Đặt đúng câu hỏi trước khi tìm giải pháp.",
+        desc: "Xác định đúng vấn đề của người dùng và bối cảnh của sản phẩm. Khi câu hỏi được đặt đúng, lời giải mới có cơ hội đi đúng hướng.",
       },
       {
         title: "Nghiên cứu",
-        desc: "Thu thập insight từ người dùng, đối thủ và các mẫu hành vi. Tìm khoảng cách giữa điều người dùng nói và điều họ thực sự làm.",
+        desc: "Lắng nghe người dùng, nhìn vào đối thủ và quan sát các mẫu hành vi. Điều quan trọng là tìm ra khoảng cách giữa lời họ nói và điều họ thật sự làm.",
       },
       {
         title: "Cấu trúc",
-        desc: "Xây dựng user flow, kiến trúc thông tin và wireframe. Làm bộ khung vận hành được trước khi trang trí.",
+        desc: "Xây dựng user flow, kiến trúc thông tin và wireframe trước. Phần khung phải đứng vững thì phần nhìn mới có ý nghĩa.",
       },
       {
         title: "Thiết kế",
-        desc: "Dựng màn hình UI, component và nền tảng design system. Giao diện rõ ràng, nhất quán và dễ tiếp cận.",
+        desc: "Hoàn thiện màn hình, component và nền tảng design system để giao diện vừa rõ ràng, vừa nhất quán, vừa dễ tiếp cận với người dùng.",
       },
       {
         title: "Kiểm chứng",
-        desc: "Đánh giá khả năng sử dụng, thu thập phản hồi và cải tiến trải nghiệm. Xem phiên bản đầu tiên là một giả thuyết.",
+        desc: "Đánh giá khả năng sử dụng, lắng nghe phản hồi và tiếp tục chỉnh sửa. Phiên bản đầu tiên với tôi luôn chỉ là điểm khởi đầu.",
       },
     ],
   },
@@ -299,7 +299,7 @@ const vi: Dict = {
     title1: "Một nhà thiết kế có thể ",
     italic: "triển khai",
     title2: " được sản phẩm.",
-    body: "Tôi là Minh Huy, một UI/UX Designer từ Việt Nam với nền tảng phát triển phần mềm. Tôi quan tâm đến việc thiết kế các sản phẩm số rõ ràng, thực tế và có khả năng mở rộng. Công việc của tôi tập trung vào user flow, hệ thống giao diện và giải quyết vấn đề thật của người dùng thông qua tư duy thiết kế có cấu trúc — dựa trên những gì thực sự có thể triển khai.",
+    body: "Tôi là Minh Huy, một UI/UX Designer đến từ Việt Nam với nền tảng phát triển phần mềm. Tôi yêu những sản phẩm số rõ ràng, thực tế và có khả năng lớn lên cùng nhu cầu của người dùng. Công việc của tôi xoay quanh user flow, hệ thống giao diện và những vấn đề thật, luôn được dẫn dắt bởi tư duy thiết kế nhưng vẫn bám sát điều gì có thể triển khai ngoài đời.",
     facts: [
       { k: "Sinh sống tại", v: "Việt Nam" },
       { k: "Nền tảng", v: "Phát triển phần mềm" },
@@ -309,17 +309,17 @@ const vi: Dict = {
     skillsLabel: "( Kỹ năng & Công cụ )",
     learningLabel: "Đang học",
     learning:
-      "Design system ở quy mô lớn, các mẫu hình accessibility, và cách biến kết quả nghiên cứu thành quyết định giao diện đo lường được.",
+      "Tôi đang học cách design system vận hành ở quy mô lớn, cách các mẫu accessibility thật sự sống trong sản phẩm, và cách biến kết quả nghiên cứu thành những quyết định giao diện có thể nhìn thấy và đo lường được.",
   },
   contact: {
-    tag: "( Liên hệ — Cùng xây điều gì đó hữu ích )",
+    tag: "( Liên hệ · Cùng xây điều gì đó hữu ích )",
     title1: "Có một ",
     italic: "dự án",
     title2: " trong đầu?",
-    body: "Tôi đang sẵn sàng cho cơ hội thực tập, vị trí UI/UX junior và các case study hợp tác. Cách tốt nhất để liên hệ là qua email — tôi thường phản hồi trong vòng một ngày.",
+    body: "Hiện tại tôi đang sẵn sàng cho cơ hội thực tập, vị trí UI/UX junior và những case study hợp tác. Nếu muốn kết nối, email vẫn là cách nhanh và dễ nhất, và tôi thường phản hồi trong vòng một ngày.",
     resume: "Tải CV",
     backTop: "Lên đầu trang ↑",
-    footer: "© 2026 Huỳnh Minh Huy — Thiết kế & xây dựng tận tâm",
+    footer: "© 2026 Huỳnh Minh Huy · Được thiết kế và xây dựng với nhiều chăm chút",
   },
 };
 

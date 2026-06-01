@@ -32,7 +32,7 @@ export function CaseNav({
           className="inline-flex items-center gap-2 text-sm hover:opacity-70 transition-opacity"
         >
           <ArrowLeft size={16} />
-          <span className="hidden sm:inline">{lang === "en" ? "Back to portfolio" : "Về portfolio"}</span>
+          <span className="hidden sm:inline">{lang === "en" ? "Back to portfolio" : "Quay lại portfolio"}</span>
         </a>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm">

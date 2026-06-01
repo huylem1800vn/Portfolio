@@ -139,12 +139,12 @@ const COPY = {
       { id: "ui", label: "UI" },
     ],
     badge: "UX Research + Design System · 2025 · Mobile App Concept",
-    title: "Ăng Ăng — Food Decision Research",
+    title: "Ăng Ăng · Food decision research",
     concept: "DECIDE",
     headline:
       "Helping young users decide where to eat faster, with less confusion and more context.",
     description:
-      "A UX research and design system case study about how young users in Ho Chi Minh City choose restaurants — and how a food discovery app can reduce choice overload, review noise, and missing real-time context.",
+      "A UX research and design system case study about how young users in Ho Chi Minh City choose restaurants, and how a food discovery app can ease choice overload, reduce review noise, and fill in the real time context they often miss.",
     cta1: "View Research",
     cta2: "View Design System",
     meta: [
@@ -157,23 +157,23 @@ const COPY = {
       },
     ],
     overview: {
-      tag: "( 01 — Project Overview )",
+      tag: "( 01 · Project Overview )",
       title: "What is Ăng Ăng?",
       body:
-        "Ăng Ăng is a food discovery app concept designed to help young users find and choose suitable restaurants based on mood, occasion, location, budget, and real-time context.",
+        "Ăng Ăng is a food discovery app concept designed to help young users find and choose places to eat that fit their mood, the occasion, their location, their budget, and the real time situation around them.",
       core:
         "Users do not need more restaurant options. They need better reasons to choose one.",
     },
     problem: {
-      tag: "( 02 — Core Problem )",
+      tag: "( 02 · Core Problem )",
       quote:
         "Users are not struggling to find restaurants. They are struggling to choose the right restaurant for the right moment.",
       body:
-        "Most food platforms show many restaurant options, but users still feel uncertain because they lack trusted, contextual, and real-time information.",
+        "Most food platforms show plenty of restaurant options, yet users still feel unsure because they do not have information that feels trustworthy, contextual, and current enough to act on.",
     },
     process: {
-      tag: "( 03 — Research Process )",
-      title: "From desk research to design opportunities",
+      tag: "( 03 · Research Process )",
+      title: "From desk research to meaningful design directions",
       steps: [
         { t: "Desk Research", d: "Understand current food discovery behavior." },
         { t: "Competitor Analysis", d: "Review food, delivery, map and review apps." },
@@ -186,8 +186,8 @@ const COPY = {
       ],
     },
     competitors: {
-      tag: "( 04 — Competitor Analysis )",
-      title: "What existing platforms cover — and what they miss",
+      tag: "( 04 · Competitor Analysis )",
+      title: "What existing platforms do well, and what still feels missing",
       cols: [
         "Discovery",
         "Review",
@@ -209,10 +209,10 @@ const COPY = {
         { name: "Ăng Ăng (concept)", v: [1, 1, 1, 1, 0, 1, 1, 1, 1] },
       ],
       conclusion:
-        "Existing platforms help users find more restaurants, but they do not fully support contextual decision-making based on mood, occasion, real-time status, and social situation.",
+        "Existing platforms help users discover more places, but they still fall short when a decision depends on mood, occasion, live status, and the social context around the meal.",
     },
     users: {
-      tag: "( 05 — Target Users )",
+      tag: "( 05 · Target Users )",
       title: "Who Ăng Ăng is designed for",
       primaryLabel: "Primary users",
       primary: "Young users in Ho Chi Minh City, around 19–33 years old.",
@@ -229,18 +229,18 @@ const COPY = {
       ],
       behaviorLabel: "User behavior",
       behavior:
-        "Users often combine Google Maps, social media, review apps, delivery apps, and friend recommendations before deciding where to eat.",
+        "Before deciding where to eat, users often move back and forth between Google Maps, social media, review apps, delivery apps, and their friends' recommendations.",
     },
     insights: {
-      tag: "( 06 — Key Insights )",
-      title: "Four insights that reshaped the product",
+      tag: "( 06 · Key Insights )",
+      title: "Four insights that quietly reshaped the product",
       items: [
         {
           n: "01",
           t: "Choice Overload",
           d:
             "Users have too many restaurant options, but many look similar and do not clearly match their current situation.",
-          impl: "Support filtering by mood, occasion, budget, distance, group size, and time.",
+          impl: "The product should support filtering by mood, occasion, budget, distance, group size, and time.",
         },
         {
           n: "02",
@@ -248,14 +248,14 @@ const COPY = {
           d:
             "Users read reviews but are unsure whether they are real, updated, or relevant to their need.",
           impl:
-            "Contextual reviews tagged: date night, group meal, quick lunch, budget-friendly, quiet, good for photos.",
+            "Reviews should carry context tags such as date night, group meal, quick lunch, budget friendly, quiet, or good for photos.",
         },
         {
           n: "03",
           t: "Missing Real-Time Context",
           d:
             "Users need real-time signals: opening status, crowd level, waiting time, available seats, best time to visit.",
-          impl: "Add real-time status and practical decision cues.",
+          impl: "The experience should surface real time status and practical cues that help people decide with less doubt.",
         },
         {
           n: "04",
@@ -263,12 +263,12 @@ const COPY = {
           d:
             "Users often choose food by mood and social context, not only cuisine category.",
           impl:
-            "A mood-based discovery flow: chill, date, quick meal, comfort, group hangout, explore new.",
+            "A mood based discovery flow could guide users through states like chill, date, quick meal, comfort food, group hangout, or exploring something new.",
         },
       ],
     },
     persona: {
-      tag: "( 07 — Persona )",
+      tag: "( 07 · Persona )",
       name: "Linh, 24",
       role: "Young office worker · Ho Chi Minh City",
       context:
@@ -298,8 +298,8 @@ const COPY = {
       ],
     },
     journey: {
-      tag: "( 08 — User Journey )",
-      title: "From trigger to post-visit reflection",
+      tag: "( 08 · User Journey )",
+      title: "From the first craving to the feeling after the meal",
       stages: [
         { s: "Trigger", a: "User wants to eat out or plan a meal.", th: "“Where should we eat today?”", p: "No clear starting point.", o: "Mood / occasion-based entry point." },
         { s: "Search", a: "Checks social media, maps, review apps, asks friends.", th: "“There are too many places.”", p: "Choice overload.", o: "Smart filters based on context." },
@@ -310,8 +310,8 @@ const COPY = {
       ],
     },
     hmw: {
-      tag: "( 09 — How Might We )",
-      title: "Reframing insights into design questions",
+      tag: "( 09 · How Might We )",
+      title: "Turning insights into design questions worth answering",
       items: [
         "How might we reduce choice overload when users search for restaurants?",
         "How might we help users trust restaurant information more easily?",
@@ -321,8 +321,8 @@ const COPY = {
       ],
     },
     mapping: {
-      tag: "( 10 — Research → Design )",
-      title: "From findings to features",
+      tag: "( 10 · Research to Design )",
+      title: "How the findings begin to take shape as features",
       cols: ["Research Finding", "Design Opportunity", "Possible Feature"],
       rows: [
         ["Too many choices", "Contextual filtering", "Mood, occasion, budget, distance, group size filters"],
@@ -333,30 +333,30 @@ const COPY = {
       ],
     },
     brand: {
-      tag: "( 11 — Brand Identity )",
-      title: "Ăng Ăng — fresh, friendly, easy to decide",
+      tag: "( 11 · Brand Identity )",
+      title: "Ăng Ăng feels fresh, friendly, and easy to say yes to",
       logoCaption: "Primary logo · Lockup with leaf motif",
       keywordsLabel: "Brand keywords",
       keywords: ["Fresh", "Friendly", "Youthful", "Simple", "Local", "Trustworthy", "Easy to decide"],
       toneLabel: "Visual tone",
       tone:
-        "Warm, energetic and approachable. The green brand color expresses freshness and local trust; orange and yellow accents bring appetite and youthful energy.",
+        "The visual tone feels warm, energetic, and approachable. Green carries freshness and a sense of local trust, while orange and yellow add appetite and youthful energy.",
       moodLabel: "Moodboard",
     },
     color: {
-      tag: "( 12 — Color System )",
-      title: "A full token-based palette built on the Ăng Ăng green",
+      tag: "( 12 · Color System )",
+      title: "A full token based palette built around the Ăng Ăng green",
       desc:
-        "Primary 500 (#9dd325) anchors the logo, main CTAs, active states and highlights. Neutral covers text and surfaces, while Success / Warning / Error / Info / Secondary support feedback and category cues — each shipped as a 50–950 scale so every component has a token to reach for.",
+        "Primary 500 (#9dd325) anchors the logo, main CTAs, active states, and highlights. Neutral supports text and surfaces, while Success, Warning, Error, Info, and Secondary help with feedback and category cues. Each palette comes with a full 50 to 950 scale so every component can rely on a proper token.",
       brandLabel: "Brand color",
       shadeLabel: "Shade",
       hexLabel: "HEX",
     },
     typo: {
-      tag: "( 13 — Typography )",
-      title: "SF Pro — clean, modern, mobile-native",
+      tag: "( 13 · Typography )",
+      title: "SF Pro feels clean, modern, and native to mobile",
       body:
-        "SF Pro creates a clean, modern, readable interface that feels familiar on mobile devices and supports clear food decision-making.",
+        "SF Pro helps the interface feel clean, modern, and easy to read. It also feels familiar on mobile, which supports faster and clearer food decisions.",
       stack: "SF Pro Display, SF Pro Text, Inter, Arial, sans-serif",
       scale: [
         { n: "H1", v: "64 / 72 · Bold" },
@@ -369,10 +369,10 @@ const COPY = {
       ],
     },
     grid: {
-      tag: "( 14 — Grid System )",
-      title: "A two-grid layout system on an 8-point baseline",
+      tag: "( 14 · Grid System )",
+      title: "A two grid layout system grounded in an 8 point baseline",
       desc:
-        "The Ăng Ăng app frame uses two stretch column grids — a 4-column mobile grid for compact screens and a 6-column grid for wider product layouts. Both share the same 12 px margin and 12 px gutter, and every vertical rhythm snaps to an 8 px baseline row.",
+        "The Ăng Ăng app frame uses two stretch column grids, a 4 column grid for compact mobile screens and a 6 column grid for wider layouts. Both share a 12 px margin and 12 px gutter, while the whole vertical rhythm stays aligned to an 8 px baseline.",
       groups: [
         {
           n: "Mobile · 4 columns",
@@ -412,10 +412,10 @@ const COPY = {
       spacing: [4, 8, 12, 16, 24, 32, 48, 64, 96],
     },
     components: {
-      tag: "( 15 — Component System )",
-      title: "Four core component families, every state covered",
+      tag: "( 15 · Component System )",
+      title: "Four core component families, with every key state considered",
       desc:
-        "The Ăng Ăng UI kit is organised around four foundational families — Button, Button Group, Input and Badge & Chip. Each family ships with every variant × size × state pre-defined, so screens can be assembled from tokens without one-off styling.",
+        "The Ăng Ăng UI kit is organized around four foundational families, Button, Button Group, Input, and Badge & Chip. Each family comes with its variants, sizes, and states already defined, so screens can be assembled from tokens instead of one off styling.",
       families: [
         {
           name: "Button",
@@ -446,28 +446,28 @@ const COPY = {
       totalLabel: "Total composable states",
     },
     icons: {
-      tag: "( 16 — Icon & Illustration )",
-      title: "Simple rounded icons aligned with the green system",
+      tag: "( 16 · Icon & Illustration )",
+      title: "Simple rounded icons that stay in step with the green system",
       body:
-        "Icons stay simple and rounded — supporting glanceable decisions on mobile. They reinforce the brand without competing with content.",
+        "The icons stay simple and rounded so users can read them at a glance on mobile. They support the brand quietly without stealing attention from the content itself.",
     },
     wireframe: {
-      tag: "( 17 — Wireframes )",
-      title: "First strokes — sketching the food decision flow",
+      tag: "( 17 · Wireframes )",
+      title: "First strokes, sketching the flow of choosing where to eat",
       body:
-        "Before any pixel-perfect UI, I sketched the core screens on paper to test layout hierarchy, navigation patterns, and how each insight could translate into a usable flow.",
+        "Before moving into polished UI, I sketched the core screens on paper to test hierarchy, navigation patterns, and the way each insight might become a flow people could actually use.",
       items: [
-        { src: wireframeHome, t: "Home — Mood entry", d: "Greeting, search, mood chips, nearby section, banner block." },
+        { src: wireframeHome, t: "Home · Mood entry", d: "Greeting, search, mood chips, nearby section, banner block." },
         { src: wireframeNav, t: "Layout & bottom nav", d: "App frame, hero area, content block, 5-tab bottom navigation." },
         { src: wireframeDetail, t: "Restaurant detail", d: "Cover, headline, highlights, contextual reviews, social proof note." },
-        { src: wireframeProfile, t: "Profile variants", d: "Local profile vs verified profile — badge placement and trust signals." },
+        { src: wireframeProfile, t: "Profile variants", d: "Local profile vs verified profile, with badge placement and trust signals." },
         { src: wireframeExplore, t: "Explore & compare", d: "Card-based comparison with mood, price and distance hints." },
-        { src: wireframeReviewer, t: "Verified Reviewer", d: "Banner logo, perks list, CTA — the trust onboarding screen." },
+        { src: wireframeReviewer, t: "Verified Reviewer", d: "Banner logo, perks list, and CTA for the trust onboarding screen." },
       ],
     },
     ui: {
-      tag: "( 18 — Final UI Preview )",
-      title: "From research insights to product screens",
+      tag: "( 18 · Final UI Preview )",
+      title: "Where research insights begin to feel like product screens",
       screens: [
         { t: "Home", d: "Mood-based entry + personalized feed" },
         { t: "Explore", d: "Smart filters · occasion · budget" },
@@ -480,11 +480,11 @@ const COPY = {
       ],
     },
     reflection: {
-      tag: "( 19 — Reflection )",
+      tag: "( 19 · Reflection )",
       body:
-        "This project helped me understand that food discovery is not only about showing more options. A better experience should reduce uncertainty, provide the right context, and help users make confident food decisions based on their mood, moment, and social situation.",
+        "This project helped me see that food discovery is not just about showing more options. A better experience should ease uncertainty, bring the right context into view, and help people choose with more confidence based on their mood, their moment, and the people they are with.",
       cta1: "Back to Portfolio",
-      cta2: "Next Project — Murror",
+      cta2: "Next Project · Murror",
     },
     labels: {
       coreMessage: "Core message",
@@ -516,12 +516,12 @@ const COPY = {
       { id: "ui", label: "Giao diện" },
     ],
     badge: "UX Research + Design System · 2025 · Concept Mobile App",
-    title: "Ăng Ăng — Nghiên cứu UX về hành vi chọn quán ăn",
+    title: "Ăng Ăng · Nghiên cứu UX về hành vi chọn quán ăn",
     concept: "DECIDE",
     headline:
       "Giúp người dùng trẻ chọn nơi ăn uống nhanh hơn, ít rối hơn và có nhiều ngữ cảnh đáng tin hơn.",
     description:
-      "Một case study UX nghiên cứu cách người dùng trẻ ở TP.HCM chọn quán ăn — và cách một ứng dụng khám phá có thể giảm choáng ngợp lựa chọn, nhiễu review và thiếu thông tin thời gian thực.",
+      "Một case study UX nghiên cứu cách người dùng trẻ ở TP.HCM chọn quán ăn, và cách một ứng dụng khám phá có thể làm dịu cảm giác choáng ngợp vì quá nhiều lựa chọn, bớt nhiễu từ review và lấp vào khoảng trống của thông tin thời gian thực.",
     cta1: "Xem nghiên cứu",
     cta2: "Xem hệ thống thiết kế",
     meta: [
@@ -531,22 +531,22 @@ const COPY = {
       { k: "Vai trò", v: "Research · Framing · Journey · Insight · UI · Design System" },
     ],
     overview: {
-      tag: "( 01 — Tổng quan dự án )",
+      tag: "( 01 · Tổng quan dự án )",
       title: "Ăng Ăng là gì?",
       body:
-        "Ăng Ăng là concept ứng dụng khám phá địa điểm ăn uống, giúp người dùng trẻ tìm và chọn quán phù hợp dựa trên tâm trạng, dịp đi ăn, vị trí, ngân sách và ngữ cảnh thời gian thực.",
+        "Ăng Ăng là một concept ứng dụng khám phá địa điểm ăn uống, giúp người dùng trẻ tìm và chọn quán phù hợp với tâm trạng, dịp đi ăn, vị trí, ngân sách và cả bối cảnh đang diễn ra ngay lúc đó.",
       core:
         "Người dùng không cần thêm nhiều quán ăn hơn. Họ cần lý do rõ ràng hơn để chọn một quán.",
     },
     problem: {
-      tag: "( 02 — Vấn đề cốt lõi )",
+      tag: "( 02 · Vấn đề cốt lõi )",
       quote: "Người dùng không khó tìm quán ăn. Họ khó chọn đúng quán cho đúng tình huống.",
       body:
-        "Hầu hết các nền tảng ăn uống hiển thị rất nhiều lựa chọn, nhưng người dùng vẫn phân vân vì thiếu thông tin đáng tin, có ngữ cảnh và cập nhật theo thời gian thực.",
+        "Phần lớn các nền tảng ăn uống đều đưa ra rất nhiều lựa chọn, nhưng người dùng vẫn thấy phân vân vì thiếu những thông tin đủ đáng tin, đủ đúng ngữ cảnh và đủ mới để họ thật sự yên tâm quyết định.",
     },
     process: {
-      tag: "( 03 — Quá trình nghiên cứu )",
-      title: "Từ desk research đến design opportunities",
+      tag: "( 03 · Quá trình nghiên cứu )",
+      title: "Từ desk research đến những hướng thiết kế thật sự có ý nghĩa",
       steps: [
         { t: "Desk Research", d: "Hiểu hành vi khám phá ăn uống hiện tại." },
         { t: "Phân tích đối thủ", d: "Khảo sát app food, delivery, map, review." },
@@ -559,8 +559,8 @@ const COPY = {
       ],
     },
     competitors: {
-      tag: "( 04 — Phân tích đối thủ )",
-      title: "Các nền tảng hiện tại đáp ứng gì — và còn thiếu gì",
+      tag: "( 04 · Phân tích đối thủ )",
+      title: "Các nền tảng hiện tại làm được gì, và đâu là khoảng trống còn bỏ lại",
       cols: [
         "Khám phá",
         "Đánh giá",
@@ -582,10 +582,10 @@ const COPY = {
         { name: "Ăng Ăng (concept)", v: [1, 1, 1, 1, 0, 1, 1, 1, 1] },
       ],
       conclusion:
-        "Các nền tảng hiện tại giúp người dùng tìm được nhiều quán hơn, nhưng chưa hỗ trợ tốt việc ra quyết định theo tâm trạng, dịp đi ăn, trạng thái thời gian thực và tình huống xã hội.",
+        "Các nền tảng hiện tại giúp người dùng biết đến nhiều quán hơn, nhưng vẫn chưa đồng hành tốt với việc ra quyết định khi tâm trạng, dịp đi ăn, trạng thái thời gian thực và bối cảnh xã hội đều cùng lúc tác động lên lựa chọn ấy.",
     },
     users: {
-      tag: "( 05 — Người dùng mục tiêu )",
+      tag: "( 05 · Người dùng mục tiêu )",
       title: "Ăng Ăng được thiết kế cho ai",
       primaryLabel: "Người dùng chính",
       primary: "Người trẻ tại TP.HCM, khoảng 19–33 tuổi.",
@@ -602,18 +602,18 @@ const COPY = {
       ],
       behaviorLabel: "Hành vi người dùng",
       behavior:
-        "Người dùng thường kết hợp Google Maps, mạng xã hội, app review, app delivery và lời gợi ý của bạn bè trước khi chọn quán.",
+        "Trước khi chọn quán, người dùng thường phải đi qua nhiều nơi cùng lúc, từ Google Maps, mạng xã hội, app review, app giao đồ ăn cho tới lời gợi ý từ bạn bè.",
     },
     insights: {
-      tag: "( 06 — Insight chính )",
-      title: "Bốn insight định hình sản phẩm",
+      tag: "( 06 · Insight chính )",
+      title: "Bốn insight đã âm thầm định hình lại sản phẩm",
       items: [
         {
           n: "01",
           t: "Choáng ngợp lựa chọn",
           d:
             "Người dùng có quá nhiều lựa chọn quán, nhưng nhiều quán trông giống nhau và không rõ phù hợp với tình huống nào.",
-          impl: "Hỗ trợ lọc theo tâm trạng, dịp, ngân sách, khoảng cách, số người và thời gian.",
+          impl: "Trải nghiệm nên hỗ trợ lọc theo tâm trạng, dịp đi ăn, ngân sách, khoảng cách, số người và thời điểm.",
         },
         {
           n: "02",
@@ -621,14 +621,14 @@ const COPY = {
           d:
             "Người dùng đọc review nhưng không chắc review có thật, có mới, có phù hợp nhu cầu.",
           impl:
-            "Review theo ngữ cảnh với tag: hẹn hò, đi nhóm, ăn nhanh, ngân sách thấp, yên tĩnh, đẹp để chụp.",
+            "Review nên được gắn theo ngữ cảnh như hẹn hò, đi nhóm, ăn nhanh, ngân sách thấp, yên tĩnh hay đẹp để chụp ảnh.",
         },
         {
           n: "03",
           t: "Thiếu ngữ cảnh thời gian thực",
           d:
             "Người dùng cần tín hiệu thời gian thực: đang mở, đông/vắng, thời gian chờ, ghế trống, giờ nên đến.",
-          impl: "Thêm trạng thái thời gian thực và tín hiệu ra quyết định thực tế.",
+          impl: "Sản phẩm nên đưa vào trạng thái thời gian thực và những tín hiệu đủ thực tế để người dùng dễ chốt hơn.",
         },
         {
           n: "04",
@@ -636,12 +636,12 @@ const COPY = {
           d:
             "Người dùng thường chọn món theo tâm trạng và tình huống xã hội, không chỉ theo loại món.",
           impl:
-            "Flow khám phá theo mood: chill, hẹn hò, ăn nhanh, comfort food, đi nhóm, khám phá mới.",
+            "Có thể mở ra một flow khám phá theo mood như chill, hẹn hò, ăn nhanh, đồ ăn chữa lành, đi nhóm hay thử điều mới.",
         },
       ],
     },
     persona: {
-      tag: "( 07 — Persona )",
+      tag: "( 07 · Persona )",
       name: "Linh, 24",
       role: "Nhân viên văn phòng trẻ · TP.HCM",
       context:
@@ -671,8 +671,8 @@ const COPY = {
       ],
     },
     journey: {
-      tag: "( 08 — User Journey )",
-      title: "Từ trigger đến phản hồi sau trải nghiệm",
+      tag: "( 08 · User Journey )",
+      title: "Từ cơn thèm ăn đầu tiên đến cảm giác sau khi đã chọn quán",
       stages: [
         { s: "Trigger", a: "Muốn đi ăn hoặc lên kế hoạch bữa ăn.", th: "“Hôm nay ăn gì đây?”", p: "Không có điểm bắt đầu rõ ràng.", o: "Entry point theo mood / dịp." },
         { s: "Tìm kiếm", a: "Xem MXH, map, app review, hỏi bạn bè.", th: "“Nhiều quán quá.”", p: "Choáng ngợp lựa chọn.", o: "Bộ lọc thông minh theo ngữ cảnh." },
@@ -683,8 +683,8 @@ const COPY = {
       ],
     },
     hmw: {
-      tag: "( 09 — How Might We )",
-      title: "Tái khung insight thành câu hỏi thiết kế",
+      tag: "( 09 · How Might We )",
+      title: "Đặt lại insight thành những câu hỏi thiết kế đáng để theo đuổi",
       items: [
         "Làm sao giảm choáng ngợp lựa chọn khi tìm quán?",
         "Làm sao giúp người dùng tin tưởng thông tin quán dễ dàng hơn?",
@@ -694,8 +694,8 @@ const COPY = {
       ],
     },
     mapping: {
-      tag: "( 10 — Research → Design )",
-      title: "Từ findings đến features",
+      tag: "( 10 · Research to Design )",
+      title: "Cách những phát hiện nghiên cứu dần thành hình trong tính năng",
       cols: ["Research Finding", "Cơ hội thiết kế", "Tính năng khả thi"],
       rows: [
         ["Quá nhiều lựa chọn", "Lọc theo ngữ cảnh", "Lọc mood, dịp, ngân sách, khoảng cách, số người"],
@@ -706,30 +706,30 @@ const COPY = {
       ],
     },
     brand: {
-      tag: "( 11 — Bộ nhận diện )",
-      title: "Ăng Ăng — tươi mới, thân thiện, dễ ra quyết định",
+      tag: "( 11 · Bộ nhận diện )",
+      title: "Ăng Ăng mang cảm giác tươi mới, thân thiện và dễ khiến người ta muốn chọn",
       logoCaption: "Logo chính · Lockup với biểu tượng lá",
       keywordsLabel: "Brand keywords",
       keywords: ["Tươi mới", "Thân thiện", "Trẻ trung", "Đơn giản", "Gần gũi", "Đáng tin", "Dễ quyết định"],
       toneLabel: "Visual tone",
       tone:
-        "Ấm, năng động, dễ tiếp cận. Xanh chính thể hiện tươi mới và tin cậy địa phương; cam và vàng tạo cảm giác thèm ăn và năng lượng trẻ.",
+        "Tổng thể hình ảnh mang cảm giác ấm, năng động và dễ gần. Màu xanh chủ đạo gợi sự tươi mới và cảm giác tin cậy quen thuộc, còn cam và vàng đem đến sự ngon miệng và nguồn năng lượng trẻ trung.",
       moodLabel: "Moodboard",
     },
     color: {
-      tag: "( 12 — Color System )",
-      title: "Hệ palette token đầy đủ, xây quanh sắc xanh Ăng Ăng",
+      tag: "( 12 · Color System )",
+      title: "Một hệ palette token đầy đủ, được xây quanh sắc xanh của Ăng Ăng",
       desc:
-        "Primary 500 (#9dd325) là sắc xanh chủ đạo cho logo, CTA chính, trạng thái active và highlight. Neutral phục vụ chữ và bề mặt; Success / Warning / Error / Info / Secondary hỗ trợ phản hồi và phân loại — mỗi nhóm đều có thang 50–950 để mọi component đều có token để dùng.",
+        "Primary 500 (#9dd325) là sắc xanh chủ đạo cho logo, CTA chính, trạng thái active và highlight. Neutral nâng đỡ phần chữ và bề mặt, còn Success, Warning, Error, Info và Secondary hỗ trợ cho phản hồi và phân loại. Mỗi nhóm đều có thang từ 50 đến 950 để mọi component đều có một token đúng nghĩa để bám vào.",
       brandLabel: "Màu thương hiệu",
       shadeLabel: "Sắc độ",
       hexLabel: "HEX",
     },
     typo: {
-      tag: "( 13 — Typography )",
-      title: "SF Pro — gọn, hiện đại, mobile-native",
+      tag: "( 13 · Typography )",
+      title: "SF Pro gọn gàng, hiện đại và rất hợp với cảm giác mobile",
       body:
-        "SF Pro tạo giao diện sạch, hiện đại, dễ đọc, quen thuộc trên mobile và hỗ trợ ra quyết định ăn uống rõ ràng.",
+        "SF Pro giúp giao diện trở nên sạch, hiện đại và dễ đọc. Sự quen thuộc của nó trên mobile cũng khiến việc chọn quán trở nên rõ ràng hơn và bớt nặng nề hơn.",
       stack: "SF Pro Display, SF Pro Text, Inter, Arial, sans-serif",
       scale: [
         { n: "H1", v: "64 / 72 · Bold" },
@@ -742,10 +742,10 @@ const COPY = {
       ],
     },
     grid: {
-      tag: "( 14 — Grid System )",
-      title: "Hệ lưới kép trên baseline 8 điểm",
+      tag: "( 14 · Grid System )",
+      title: "Hệ lưới kép được giữ nhịp trên baseline 8 điểm",
       desc:
-        "App frame Ăng Ăng dùng hai lưới stretch — lưới 4 cột cho mobile và lưới 6 cột cho layout rộng hơn. Cả hai đều chung margin 12 và gutter 12, đồng thời toàn bộ nhịp dọc đều khớp với baseline 8 px.",
+        "Khung app của Ăng Ăng dùng hai lưới stretch, một lưới 4 cột cho màn hình mobile và một lưới 6 cột cho những layout rộng hơn. Cả hai cùng dùng margin 12 và gutter 12, trong khi toàn bộ nhịp dọc đều bám theo baseline 8 px.",
       groups: [
         {
           n: "Mobile · 4 cột",
@@ -785,10 +785,10 @@ const COPY = {
       spacing: [4, 8, 12, 16, 24, 32, 48, 64, 96],
     },
     components: {
-      tag: "( 15 — Component System )",
-      title: "Bốn nhóm component cốt lõi, phủ đủ mọi trạng thái",
+      tag: "( 15 · Component System )",
+      title: "Bốn nhóm component cốt lõi, với những trạng thái cần thiết đã được tính sẵn",
       desc:
-        "UI kit Ăng Ăng được tổ chức quanh bốn nhóm nền tảng — Button, Button Group, Input và Badge & Chip. Mỗi nhóm có sẵn đủ variant × size × state, giúp ráp màn hình hoàn toàn bằng token mà không cần style thủ công.",
+        "UI kit của Ăng Ăng được tổ chức quanh bốn nhóm nền tảng là Button, Button Group, Input và Badge & Chip. Mỗi nhóm đều có sẵn variant, size và state cần thiết, để màn hình có thể được ráp lên từ token thay vì xử lý thủ công từng chi tiết nhỏ.",
       families: [
         {
           name: "Button",
@@ -819,28 +819,28 @@ const COPY = {
       totalLabel: "Tổng số state có thể ráp",
     },
     icons: {
-      tag: "( 16 — Icon & Minh hoạ )",
-      title: "Icon bo tròn đơn giản, đồng bộ với hệ thống xanh",
+      tag: "( 16 · Icon & Minh hoạ )",
+      title: "Những icon bo tròn đơn giản, đi cùng nhịp với hệ thống xanh",
       body:
-        "Icon giữ đơn giản và bo tròn — hỗ trợ quyết định nhanh trên mobile. Củng cố thương hiệu mà không cạnh tranh nội dung.",
+        "Các icon được giữ ở mức đơn giản và bo tròn để người dùng có thể đọc nhanh trên mobile. Chúng nâng đỡ cảm giác thương hiệu mà không lấn át phần nội dung chính.",
     },
     wireframe: {
-      tag: "( 17 — Wireframe )",
-      title: "Những nét vẽ đầu tiên — phác thảo flow chọn quán",
+      tag: "( 17 · Wireframe )",
+      title: "Những nét vẽ đầu tiên cho flow chọn quán ăn",
       body:
-        "Trước khi vẽ UI hoàn chỉnh, tôi phác thảo các màn hình cốt lõi trên giấy để thử nghiệm hệ thống bố cục, điều hướng và cách mỗi insight chuyển thành flow sử dụng được.",
+        "Trước khi đi tới phần UI hoàn chỉnh, tôi phác thảo các màn hình cốt lõi trên giấy để thử hệ thống bố cục, điều hướng và xem mỗi insight có thể đi vào một flow thật sự dùng được như thế nào.",
       items: [
-        { src: wireframeHome, t: "Trang chủ — Mood entry", d: "Lời chào, thanh tìm kiếm, mood chips, quán gần đây, banner." },
+        { src: wireframeHome, t: "Trang chủ · Mood entry", d: "Lời chào, thanh tìm kiếm, mood chips, quán gần đây và banner." },
         { src: wireframeNav, t: "Layout & bottom nav", d: "Khung app, vùng hero, khối nội dung, bottom nav 5 tab." },
         { src: wireframeDetail, t: "Chi tiết quán", d: "Ảnh bìa, headline, highlight, review theo ngữ cảnh, social proof." },
-        { src: wireframeProfile, t: "Biến thể profile", d: "Local profile vs verified profile — vị trí huy hiệu và tín hiệu uy tín." },
+        { src: wireframeProfile, t: "Biến thể profile", d: "Local profile và verified profile, cùng vị trí huy hiệu và các tín hiệu tạo cảm giác tin cậy." },
         { src: wireframeExplore, t: "Explore & so sánh", d: "So sánh dạng thẻ với mood, giá và khoảng cách." },
-        { src: wireframeReviewer, t: "Verified Reviewer", d: "Banner logo, danh sách quyền lợi, CTA — màn onboarding uy tín." },
+        { src: wireframeReviewer, t: "Verified Reviewer", d: "Banner logo, danh sách quyền lợi và CTA cho màn onboarding tạo niềm tin." },
       ],
     },
     ui: {
-      tag: "( 18 — Final UI Preview )",
-      title: "Từ insight nghiên cứu đến màn hình sản phẩm",
+      tag: "( 18 · Final UI Preview )",
+      title: "Nơi những insight nghiên cứu bắt đầu chạm thành màn hình sản phẩm",
       screens: [
         { t: "Home", d: "Mood entry + feed cá nhân hoá" },
         { t: "Explore", d: "Lọc thông minh · dịp · ngân sách" },
@@ -853,11 +853,11 @@ const COPY = {
       ],
     },
     reflection: {
-      tag: "( 19 — Reflection )",
+      tag: "( 19 · Reflection )",
       body:
-        "Dự án này giúp tôi hiểu rằng khám phá địa điểm ăn uống không chỉ là hiển thị nhiều lựa chọn hơn. Một trải nghiệm tốt hơn cần giảm sự phân vân, cung cấp đúng ngữ cảnh và giúp người dùng chọn quán tự tin hơn dựa trên tâm trạng, thời điểm và tình huống xã hội của họ.",
+        "Dự án này giúp tôi nhận ra rằng khám phá địa điểm ăn uống không chỉ nằm ở việc đưa ra thêm nhiều lựa chọn. Một trải nghiệm tốt hơn cần làm dịu sự phân vân, đưa đúng ngữ cảnh ra trước mắt và giúp người dùng chọn quán với nhiều tự tin hơn, dựa trên tâm trạng, thời điểm và bối cảnh xã hội của riêng họ.",
       cta1: "Về Portfolio",
-      cta2: "Dự án tiếp theo — Murror",
+      cta2: "Dự án tiếp theo · Murror",
     },
     labels: {
       coreMessage: "Thông điệp cốt lõi",
@@ -1406,7 +1406,7 @@ export function AngAng() {
         <div className="grid lg:grid-cols-12 gap-8 items-start mt-2">
           <div className="lg:col-span-4">
             <div className="rounded-3xl overflow-hidden" style={{ aspectRatio: "4 / 5", backgroundColor: GREEN_LIGHT }}>
-              <ImageWithFallback src={PERSONA_IMG} alt="Persona portrait — Linh, 24" className="w-full h-full object-cover" />
+              <ImageWithFallback src={PERSONA_IMG} alt="Persona portrait · Linh, 24" className="w-full h-full object-cover" />
             </div>
             <div className="mt-5 rounded-2xl p-5" style={{ backgroundColor: INK, color: "#fff" }}>
               <div style={{ fontFamily: "Fraunces, serif", fontSize: "1.6rem" }}>{t.persona.name}</div>
@@ -1739,7 +1739,7 @@ export function AngAng() {
                     fontWeight: row.n.startsWith("H") ? 700 : row.n === "Small Label" ? 500 : 400,
                   }}
                 >
-                  Ăng Ăng — {row.n}
+                  Ăng Ăng · {row.n}
                 </div>
               </div>
             ))}
@@ -2175,7 +2175,7 @@ export function AngAng() {
               >
                 <img
                   src={w.src}
-                  alt={`Wireframe — ${w.t}`}
+                  alt={`Wireframe · ${w.t}`}
                   className="w-full h-full object-cover"
                   style={{ filter: "contrast(1.05)" }}
                 />

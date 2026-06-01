@@ -24,42 +24,42 @@ const COPY = {
       { id: "reflection", label: "Reflection" },
     ],
     badge: "Case Study · 2026 · AI Companion · Mobile",
-    title: "Murror — Overthinking Support Experience",
+    title: "Murror · An experience for moments of overthinking",
     concept: "UNFOLD",
     headline: "Helping users gently untangle thoughts and turn emotional noise into clear next steps.",
     description:
-      "A UX research and product design case study exploring how an AI companion can support users through low-effort emotional check-ins, visual grounding, reflective prompts, and daily self-growth rituals.",
+      "A UX research and product design case study exploring how an AI companion might support users through low effort emotional check ins, visual grounding, reflective prompts, and gentle daily rituals for self growth.",
     cta1: "View UX Flow",
     cta2: "See Final Screens",
 
     overview: {
-      tag: "( 01 — Project Overview )",
+      tag: "( 01 · Project Overview )",
       cards: [
-        { k: "Problem", v: "Users who overthink often feel mentally overloaded, struggle to express emotions, and do not know where to start." },
-        { k: "Goal", v: "Design a low-pressure experience that helps users identify emotions, calm down, reflect, and choose a small next action." },
-        { k: "Target Users", v: "Young users who experience mild emotional confusion, stress, relationship worries, study pressure, or uncertainty about themselves." },
+        { k: "Problem", v: "People who overthink often feel mentally crowded, find it hard to name what they feel, and do not know where to begin." },
+        { k: "Goal", v: "Design a low pressure experience that helps users notice their emotions, settle down, reflect, and choose one small next step." },
+        { k: "Target Users", v: "Young users living with mild emotional confusion, stress, relationship worries, study pressure, or uncertainty about themselves." },
         { k: "My Role", v: "UX Research, Product Thinking, User Flow, Wireframing, UI Design, Interaction Design." },
       ],
     },
 
     problem: {
-      tag: "( 02 — Core UX Problem )",
+      tag: "( 02 · Core UX Problem )",
       quote: "Most mental wellness apps ask users to explain their feelings before helping them calm down.",
-      body: "When users are overwhelmed, typing long text can become another burden. The product needs to reduce input effort and guide users step by step.",
+      body: "When someone is overwhelmed, typing out long thoughts can feel like one more weight to carry. The experience needs to lower that effort and guide them gently, one step at a time.",
     },
 
     research: {
-      tag: "( 03 — Research Insights )",
+      tag: "( 03 · Research Insights )",
       insights: [
-        { n: "01", k: "Users do not want to explain too much when overwhelmed.", v: "Design response: quick replies, mood buttons, color input, icon selection, and voice option." },
-        { n: "02", k: "Users need guidance before advice.", v: "Design response: check-in → grounding → reflection → AI mirror → small action." },
-        { n: "03", k: "The interface must feel safe and non-judgmental.", v: "Design response: calm colors, short copy, soft motion, gentle tone of voice." },
-        { n: "04", k: "Retention should come from daily ritual, not pressure.", v: "Design response: daily check-in, self-growth journey, mood pattern, gentle streak system." },
+        { n: "01", k: "Users do not want to explain too much when they feel overwhelmed.", v: "Design response: quick replies, mood buttons, color based input, icon selection, and a voice option." },
+        { n: "02", k: "Users need guidance before they are ready for advice.", v: "Design response: check in, grounding, reflection, AI mirror, then one small action." },
+        { n: "03", k: "The interface has to feel safe and free from judgment.", v: "Design response: calm colors, short copy, soft motion, and a gentle tone of voice." },
+        { n: "04", k: "Retention should grow from ritual, not pressure.", v: "Design response: daily check ins, a self growth journey, mood patterns, and a gentle streak system." },
       ],
     },
 
     journey: {
-      tag: "( 04 — User Journey )",
+      tag: "( 04 · User Journey )",
       stages: [
         { k: "Trigger", feel: "Overwhelmed, confused, mentally noisy.", need: "A safe place to start.", opp: "Open with one gentle question, not a blank input box." },
         { k: "Check-in", feel: "Hesitant to explain.", need: "Express without typing.", opp: "Mood buttons, color picker, icon palette." },
@@ -72,7 +72,7 @@ const COPY = {
     },
 
     flow: {
-      tag: "( 05 — UX Flow )",
+      tag: "( 05 · UX Flow )",
       steps: [
         "User feels overwhelmed",
         "Opens Murror",
@@ -86,31 +86,31 @@ const COPY = {
     },
 
     principles: {
-      tag: "( 06 — Design Principles )",
+      tag: "( 06 · Design Principles )",
       items: [
         { k: "Low-effort input", v: "Every interaction should be possible with a single tap." },
         { k: "Calm before advice", v: "Regulate the nervous system before suggesting action." },
-        { k: "Reflection, not diagnosis", v: "Mirror what the user feels — never label them." },
+        { k: "Reflection, not diagnosis", v: "Reflect what the user feels, and never reduce them to a label." },
         { k: "Gentle personalization", v: "Adapt slowly, ask permission, never assume." },
         { k: "Ritual-based retention", v: "Make daily presence feel calming, not obligatory." },
       ],
     },
 
     features: {
-      tag: "( 07 — Key Features )",
+      tag: "( 07 · Key Features )",
       items: [
-        { icon: "spark", k: "Zero-Typing Check-in", v: "Express emotions through buttons, colors, icons, or voice — never a blank text box." },
+        { icon: "spark", k: "Zero-Typing Check-in", v: "Express emotions through buttons, colors, icons, or voice, never through an empty text box that feels intimidating." },
         { icon: "compass", k: "Visual Grounding", v: "Soft visual rhythm and short calming prompts help users slow down." },
         { icon: "message", k: "AI Mirror Reflection", v: "AI reflects what the user may be feeling in a gentle, non-judgmental tone." },
         { icon: "step", k: "Small Next Step", v: "The app suggests one small action instead of overwhelming users with choices." },
-        { icon: "growth", k: "Self-Growth Journey", v: "Track mood patterns, insights, and emotional growth over time — privately." },
+        { icon: "growth", k: "Self-Growth Journey", v: "Track mood patterns, insights, and emotional growth over time in a way that still feels private and personal." },
       ],
     },
 
     ui: {
-      tag: "( 08 — UI Direction )",
-      body: "Dark mode by default, soft blue-violet gradient, glassmorphism cards, rounded components, large breathing space, minimal text, emotion-based visual input, and gentle animation.",
-      screensLabel: "( 09 — Final Screens )",
+      tag: "( 08 · UI Direction )",
+      body: "Dark mode by default, a soft blue violet gradient, glassmorphism cards, rounded components, generous breathing space, minimal copy, emotion based visual input, and subtle motion that never feels intrusive.",
+      screensLabel: "( 09 · Final Screens )",
       screens: [
         "Onboarding",
         "Daily Check-in",
@@ -124,15 +124,15 @@ const COPY = {
     },
 
     reflection: {
-      tag: "( 10 — Reflection )",
-      body: "This project taught me that emotional UX is not about giving users more features, but about reducing pressure at the right moment. A helpful experience should guide users from confusion to clarity with calm interaction, simple choices, and thoughtful product logic.",
+      tag: "( 10 · Reflection )",
+      body: "This project reminded me that emotional UX is not about giving people more features. It is about easing pressure at the moment they need softness the most. A helpful experience should lead people from confusion toward clarity through calm interactions, simple choices, and thoughtful product logic.",
     },
 
     feelLabel: "Feeling",
     needLabel: "Need",
     oppLabel: "Opportunity",
     next: "Next case study",
-    nextProject: "Ăng Ăng — Food Discovery",
+    nextProject: "Ăng Ăng · Food Discovery",
   },
 
   vi: {
@@ -148,42 +148,42 @@ const COPY = {
       { id: "reflection", label: "Suy ngẫm" },
     ],
     badge: "Case Study · 2026 · AI Companion · Mobile",
-    title: "Murror — Trải nghiệm hỗ trợ khi Overthinking",
+    title: "Murror · Trải nghiệm đồng hành khi overthinking",
     concept: "UNFOLD",
     headline: "Giúp người dùng nhẹ nhàng gỡ rối suy nghĩ và biến nhiễu cảm xúc thành bước đi rõ ràng tiếp theo.",
     description:
-      "Một case study UX research và product design khám phá cách AI companion có thể hỗ trợ người dùng thông qua check-in cảm xúc ít thao tác, visual grounding, câu hỏi phản chiếu và thói quen phát triển bản thân mỗi ngày.",
+      "Một case study về UX research và product design, khám phá cách một AI companion có thể ở bên người dùng qua những lần check in cảm xúc ít thao tác, những điểm tựa thị giác, các câu hỏi phản chiếu và những nhịp nhỏ cho hành trình phát triển bản thân mỗi ngày.",
     cta1: "Xem UX Flow",
     cta2: "Xem màn hình UI",
 
     overview: {
-      tag: "( 01 — Tổng quan dự án )",
+      tag: "( 01 · Tổng quan dự án )",
       cards: [
-        { k: "Vấn đề", v: "Người dùng overthinking thường thấy quá tải, khó diễn đạt cảm xúc và không biết bắt đầu từ đâu." },
-        { k: "Mục tiêu", v: "Thiết kế trải nghiệm ít áp lực giúp người dùng nhận diện cảm xúc, bình tĩnh, phản chiếu và chọn một hành động nhỏ tiếp theo." },
-        { k: "Người dùng", v: "Người trẻ trải qua bối rối cảm xúc nhẹ, áp lực học tập, lo âu mối quan hệ hoặc nghi ngờ bản thân." },
+        { k: "Vấn đề", v: "Người hay overthinking thường thấy đầu óc quá tải, khó gọi tên cảm xúc của mình và không biết nên bắt đầu từ đâu." },
+        { k: "Mục tiêu", v: "Thiết kế một trải nghiệm ít áp lực để người dùng có thể nhận diện cảm xúc, dịu lại, soi chiếu chính mình và chọn một hành động nhỏ tiếp theo." },
+        { k: "Người dùng", v: "Người trẻ đang đi qua những bối rối cảm xúc nhẹ, áp lực học tập, lo âu trong mối quan hệ hoặc cảm giác hoang mang về chính mình." },
         { k: "Vai trò", v: "UX Research, Product Thinking, User Flow, Wireframing, UI Design, Interaction Design." },
       ],
     },
 
     problem: {
-      tag: "( 02 — Vấn đề UX cốt lõi )",
+      tag: "( 02 · Vấn đề UX cốt lõi )",
       quote: "Nhiều ứng dụng wellness yêu cầu người dùng giải thích cảm xúc trước khi giúp họ bình tĩnh lại.",
-      body: "Khi người dùng đang rối, việc phải gõ quá nhiều có thể trở thành một gánh nặng khác. Trải nghiệm cần giảm áp lực nhập liệu và dẫn dắt người dùng từng bước.",
+      body: "Khi một người đang rối, việc phải gõ quá nhiều đôi khi trở thành thêm một gánh nặng. Trải nghiệm cần hạ bớt áp lực nhập liệu và nhẹ nhàng dẫn họ đi từng bước.",
     },
 
     research: {
-      tag: "( 03 — Insight nghiên cứu )",
+      tag: "( 03 · Insight nghiên cứu )",
       insights: [
-        { n: "01", k: "Người dùng không muốn giải thích quá nhiều khi đang rối.", v: "Phản hồi thiết kế: quick reply, nút tâm trạng, chọn màu, chọn icon và tùy chọn giọng nói." },
-        { n: "02", k: "Người dùng cần dẫn dắt trước khi nhận lời khuyên.", v: "Phản hồi thiết kế: check-in → grounding → reflection → AI mirror → hành động nhỏ." },
-        { n: "03", k: "Giao diện phải an toàn và không phán xét.", v: "Phản hồi thiết kế: màu dịu, copy ngắn, motion mềm, giọng văn nhẹ nhàng." },
-        { n: "04", k: "Giữ chân nên đến từ thói quen, không phải áp lực.", v: "Phản hồi thiết kế: check-in hàng ngày, hành trình phát triển, mood pattern, hệ thống streak nhẹ nhàng." },
+        { n: "01", k: "Khi đang rối, người dùng không muốn phải giải thích quá nhiều.", v: "Phản hồi thiết kế là quick reply, nút tâm trạng, chọn màu, chọn icon và cả tùy chọn giọng nói." },
+        { n: "02", k: "Người dùng cần được dẫn dắt trước khi sẵn sàng nhận lời khuyên.", v: "Phản hồi thiết kế đi theo nhịp check in, grounding, reflection, AI mirror rồi mới tới hành động nhỏ." },
+        { n: "03", k: "Giao diện phải mang lại cảm giác an toàn và không phán xét.", v: "Phản hồi thiết kế là màu sắc dịu, câu chữ ngắn, motion mềm và một giọng điệu nhẹ nhàng." },
+        { n: "04", k: "Việc quay lại nên đến từ thói quen, không phải sức ép.", v: "Phản hồi thiết kế là check in hằng ngày, hành trình phát triển, mood pattern và một hệ thống streak rất nhẹ." },
       ],
     },
 
     journey: {
-      tag: "( 04 — Hành trình người dùng )",
+      tag: "( 04 · Hành trình người dùng )",
       stages: [
         { k: "Trigger", feel: "Quá tải, bối rối, đầu óc ồn ào.", need: "Một nơi an toàn để bắt đầu.", opp: "Mở đầu bằng một câu hỏi dịu nhẹ, không phải ô input trống." },
         { k: "Check-in", feel: "Ngại giải thích.", need: "Diễn đạt mà không cần gõ.", opp: "Nút tâm trạng, chọn màu, bảng icon." },
@@ -196,7 +196,7 @@ const COPY = {
     },
 
     flow: {
-      tag: "( 05 — UX Flow )",
+      tag: "( 05 · UX Flow )",
       steps: [
         "Người dùng cảm thấy quá tải",
         "Mở Murror",
@@ -210,31 +210,31 @@ const COPY = {
     },
 
     principles: {
-      tag: "( 06 — Nguyên tắc thiết kế )",
+      tag: "( 06 · Nguyên tắc thiết kế )",
       items: [
         { k: "Nhập liệu ít áp lực", v: "Mọi tương tác nên thực hiện được chỉ với một chạm." },
         { k: "Bình tĩnh trước khi nhận lời khuyên", v: "Điều hòa cảm xúc trước khi đề xuất hành động." },
-        { k: "Phản chiếu, không chẩn đoán", v: "Phản chiếu cảm xúc — không dán nhãn người dùng." },
+        { k: "Phản chiếu, không chẩn đoán", v: "Phản chiếu điều người dùng đang cảm thấy, chứ không đóng khung họ bằng một nhãn gọi tên." },
         { k: "Cá nhân hóa nhẹ nhàng", v: "Thích nghi chậm rãi, xin phép, không giả định." },
         { k: "Giữ chân bằng thói quen tích cực", v: "Làm cho việc xuất hiện hàng ngày trở nên dịu nhẹ, không bắt buộc." },
       ],
     },
 
     features: {
-      tag: "( 07 — Tính năng chính )",
+      tag: "( 07 · Tính năng chính )",
       items: [
-        { icon: "spark", k: "Check-in không cần gõ", v: "Diễn đạt cảm xúc qua nút, màu sắc, icon hoặc giọng nói — không bao giờ là một ô trống." },
+        { icon: "spark", k: "Check-in không cần gõ", v: "Người dùng có thể diễn đạt cảm xúc qua nút bấm, màu sắc, icon hoặc giọng nói, thay vì phải đối diện với một ô trống đầy áp lực." },
         { icon: "compass", k: "Visual Grounding", v: "Nhịp thị giác dịu và prompt ngắn giúp người dùng chậm lại." },
         { icon: "message", k: "AI Mirror Reflection", v: "AI phản chiếu cảm xúc người dùng có thể đang cảm thấy bằng giọng văn nhẹ nhàng." },
         { icon: "step", k: "Bước tiếp theo nhỏ", v: "Ứng dụng gợi ý một hành động nhỏ thay vì hàng loạt lựa chọn." },
-        { icon: "growth", k: "Hành trình phát triển bản thân", v: "Theo dõi mood pattern, insight và sự trưởng thành cảm xúc — riêng tư." },
+        { icon: "growth", k: "Hành trình phát triển bản thân", v: "Theo dõi mood pattern, insight và sự trưởng thành cảm xúc theo cách riêng tư và đủ an toàn để người dùng muốn quay lại." },
       ],
     },
 
     ui: {
-      tag: "( 08 — Hướng UI )",
-      body: "Dark mode mặc định, gradient xanh-tím dịu, thẻ glassmorphism, component bo tròn, khoảng thở lớn, ít chữ, nhập liệu trực quan theo cảm xúc và animation nhẹ nhàng.",
-      screensLabel: "( 09 — Màn hình cuối )",
+      tag: "( 08 · Hướng UI )",
+      body: "Giao diện dùng dark mode mặc định, gradient xanh tím dịu, các thẻ glassmorphism, component bo tròn, khoảng thở rộng, ít chữ, cách nhập liệu giàu cảm xúc và animation đủ nhẹ để không làm người dùng thấy mệt.",
+      screensLabel: "( 09 · Màn hình cuối )",
       screens: [
         "Onboarding",
         "Daily Check-in",
@@ -248,15 +248,15 @@ const COPY = {
     },
 
     reflection: {
-      tag: "( 10 — Suy ngẫm )",
-      body: "Dự án này giúp tôi nhận ra rằng emotional UX không phải là thêm thật nhiều tính năng, mà là giảm áp lực đúng thời điểm. Một trải nghiệm hữu ích cần dẫn người dùng từ rối sang rõ bằng tương tác nhẹ nhàng, lựa chọn đơn giản và logic sản phẩm có chủ đích.",
+      tag: "( 10 · Suy ngẫm )",
+      body: "Dự án này nhắc tôi rằng emotional UX không nằm ở việc thêm thật nhiều tính năng. Điều quan trọng hơn là biết giảm bớt áp lực đúng lúc. Một trải nghiệm hữu ích cần đưa người dùng đi từ cảm giác rối bời đến sự rõ ràng bằng những tương tác dịu, những lựa chọn vừa đủ và một logic sản phẩm có chủ đích.",
     },
 
     feelLabel: "Cảm xúc",
     needLabel: "Nhu cầu",
     oppLabel: "Cơ hội",
     next: "Case study tiếp theo",
-    nextProject: "Ăng Ăng — Food Discovery",
+    nextProject: "Ăng Ăng · Food Discovery",
   },
 };
 
@@ -583,7 +583,7 @@ export function Murror() {
         <footer className="py-16 border-t" style={{ borderColor: BORDER }}>
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
             <div className="text-xs tracking-[0.2em] uppercase opacity-50">
-              © 2026 Huỳnh Minh Huy — Murror Case Study
+              © 2026 Huỳnh Minh Huy · Murror Case Study
             </div>
             <div className="flex flex-wrap gap-6 text-sm">
               {["Behance", "LinkedIn", "Email", "Resume"].map((l) => (
