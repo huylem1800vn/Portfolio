@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import {
   ArrowUpRight,
@@ -341,7 +342,7 @@ const COPY = {
       keywords: ["Fresh", "Friendly", "Youthful", "Simple", "Local", "Trustworthy", "Easy to decide"],
       toneLabel: "Visual tone",
       tone:
-        "The visual tone feels warm, energetic, and approachable. Green carries freshness and a sense of local trust, while orange and yellow add appetite and youthful energy.",
+        "The #9DD325 green was chosen as the primary color because it feels fresh, energetic, and friendly. Its bright tone creates a positive impression at first glance and fits the spirit of Ăng Ăng as a food experience that feels close, cheerful, and easy for young users to approach. In the context of UX research, people often expect a food platform not only to help them find something to eat quickly, but also to feel pleasant, trustworthy, and inviting enough to spark curiosity. That is why this green does more than define the brand. It also supports the emotional side of the experience by making the product feel lighter, calmer, and less commercially heavy. The color suggests freshness, naturalness, and positive energy, while still standing out enough for important interface moments such as primary buttons, selected states, highlighted labels, or any area that needs attention. When paired with a white background and rounded typography, it gives Ăng Ăng a look that feels youthful, clean, and easy to remember.",
       moodLabel: "Moodboard",
     },
     color: {
@@ -414,33 +415,33 @@ const COPY = {
     },
     components: {
       tag: "( 15 · Component System )",
-      title: "Four core component families, with every key state considered",
+      title: "A UI kit built from reusable primitives, not one-off screen pieces",
       desc:
-        "The Ăng Ăng UI kit is organized around four foundational families, Button, Button Group, Input, and Badge & Chip. Each family comes with its variants, sizes, and states already defined, so screens can be assembled from tokens instead of one off styling.",
+        "The Ăng Ăng component kit centers on reusable interaction primitives such as Button, Button Group, Input, Badge, and selection controls. Their sizes, styles, and states are defined up front so the interface can stay consistent as new flows are added.",
       families: [
         {
           name: "Button",
-          variants: ["Filled", "Outlined", "Ghost"],
-          sizes: ["XS", "SM", "MD", "LG"],
-          states: ["Default", "Hover", "Pressed", "Focus", "Disabled"],
+          variants: ["Filled", "Outline", "Clear"],
+          sizes: ["Tiny", "Small", "Medium", "Large", "Giant"],
+          states: ["Default", "Hover", "Focus", "Press", "Disabled"],
         },
         {
           name: "Button Group",
-          variants: ["Segmented", "Connected", "Toolbar"],
+          variants: ["Single select", "Multi select", "Icon + text"],
           sizes: ["SM", "MD", "LG"],
           states: ["Default", "Selected", "Hover", "Disabled"],
         },
         {
           name: "Input",
-          variants: ["Text", "Search", "Password", "Textarea"],
+          variants: ["Text field", "Search", "Dropdown", "Textarea"],
           sizes: ["SM", "MD", "LG"],
-          states: ["Default", "Focus", "Filled", "Error", "Disabled"],
+          states: ["Default", "Active", "Filled", "Error", "Disabled"],
         },
         {
-          name: "Badge & Chip",
-          variants: ["Filled", "Tonal", "Outlined", "Dot"],
+          name: "Selection & Feedback",
+          variants: ["Checkbox", "Radio", "Switch", "Progress", "Tooltip"],
           sizes: ["SM", "MD"],
-          states: ["Success", "Warning", "Error", "Info", "Neutral"],
+          states: ["Off", "On", "Focus", "Disabled", "Status"],
         },
       ],
       labels: { variants: "Variants", sizes: "Sizes", states: "States" },
@@ -448,9 +449,9 @@ const COPY = {
     },
     icons: {
       tag: "( 16 · Icon & Illustration )",
-      title: "Simple rounded icons that stay in step with the green system",
+      title: "A lightweight icon language with small supporting brand moments",
       body:
-        "The icons stay simple and rounded so users can read them at a glance on mobile. They support the brand quietly without stealing attention from the content itself.",
+        "The visual support system stays compact and functional. Icons use a simple rounded style for fast scanning on mobile, while small illustration-like accents from the color system help highlight mood, trust, and food context without overpowering the interface.",
     },
     wireframe: {
       tag: "( 17 · Wireframes )",
@@ -714,7 +715,7 @@ const COPY = {
       keywords: ["Tươi mới", "Thân thiện", "Trẻ trung", "Đơn giản", "Gần gũi", "Đáng tin", "Dễ quyết định"],
       toneLabel: "Visual tone",
       tone:
-        "Tổng thể hình ảnh mang cảm giác ấm, năng động và dễ gần. Màu xanh chủ đạo gợi sự tươi mới và cảm giác tin cậy quen thuộc, còn cam và vàng đem đến sự ngon miệng và nguồn năng lượng trẻ trung.",
+        "Màu xanh #9DD325 được chọn làm màu chủ đạo vì mang lại cảm giác tươi mới, năng động và thân thiện. Đây là một sắc xanh có độ sáng cao, tạo cảm nhận tích cực ngay từ ánh nhìn đầu tiên và rất phù hợp với tinh thần của Ăng Ăng, một trải nghiệm ăn uống gần gũi, vui vẻ và dễ tiếp cận với người dùng trẻ. Trong bối cảnh UX research, người dùng thường mong một nền tảng liên quan đến ăn uống không chỉ giúp họ tìm món nhanh hơn mà còn tạo ra cảm giác dễ chịu, đáng tin và đủ gợi hứng để muốn khám phá thêm. Vì vậy, sắc xanh này không chỉ làm nhiệm vụ nhận diện thương hiệu mà còn góp phần nâng đỡ cảm xúc trong suốt quá trình sử dụng, khiến trải nghiệm trở nên nhẹ nhàng hơn, thoải mái hơn và bớt nặng tính thương mại. Màu #9DD325 gợi liên tưởng đến sự tươi ngon, tự nhiên và nguồn năng lượng tích cực, đồng thời vẫn đủ nổi bật để dùng cho các điểm nhấn quan trọng trong giao diện như nút chính, trạng thái được chọn, nhãn nổi bật hoặc những khu vực cần thu hút sự chú ý. Khi đi cùng nền trắng và typography bo tròn, tổng thể hình ảnh của Ăng Ăng trở nên trẻ trung, sạch sẽ và dễ ghi nhớ hơn.",
       moodLabel: "Moodboard",
     },
     color: {
@@ -787,33 +788,33 @@ const COPY = {
     },
     components: {
       tag: "( 15 · Component System )",
-      title: "Bốn nhóm component cốt lõi, với những trạng thái cần thiết đã được tính sẵn",
+      title: "Một UI kit được dựng từ các primitive có thể tái sử dụng, thay vì những mảnh màn hình rời rạc",
       desc:
-        "UI kit của Ăng Ăng được tổ chức quanh bốn nhóm nền tảng là Button, Button Group, Input và Badge & Chip. Mỗi nhóm đều có sẵn variant, size và state cần thiết, để màn hình có thể được ráp lên từ token thay vì xử lý thủ công từng chi tiết nhỏ.",
+        "Component kit của Ăng Ăng xoay quanh các primitive tương tác có thể tái sử dụng như Button, Button Group, Input, Badge và nhóm selection controls. Size, style và state của chúng được định nghĩa sẵn để giao diện giữ được sự nhất quán khi mở rộng thêm flow mới.",
       families: [
         {
           name: "Button",
-          variants: ["Filled", "Outlined", "Ghost"],
-          sizes: ["XS", "SM", "MD", "LG"],
-          states: ["Default", "Hover", "Pressed", "Focus", "Disabled"],
+          variants: ["Filled", "Outline", "Clear"],
+          sizes: ["Tiny", "Small", "Medium", "Large", "Giant"],
+          states: ["Default", "Hover", "Focus", "Press", "Disabled"],
         },
         {
           name: "Button Group",
-          variants: ["Segmented", "Connected", "Toolbar"],
+          variants: ["Single select", "Multi select", "Icon + text"],
           sizes: ["SM", "MD", "LG"],
           states: ["Default", "Selected", "Hover", "Disabled"],
         },
         {
           name: "Input",
-          variants: ["Text", "Search", "Password", "Textarea"],
+          variants: ["Text field", "Search", "Dropdown", "Textarea"],
           sizes: ["SM", "MD", "LG"],
-          states: ["Default", "Focus", "Filled", "Error", "Disabled"],
+          states: ["Default", "Active", "Filled", "Error", "Disabled"],
         },
         {
-          name: "Badge & Chip",
-          variants: ["Filled", "Tonal", "Outlined", "Dot"],
+          name: "Selection & Feedback",
+          variants: ["Checkbox", "Radio", "Switch", "Progress", "Tooltip"],
           sizes: ["SM", "MD"],
-          states: ["Success", "Warning", "Error", "Info", "Neutral"],
+          states: ["Off", "On", "Focus", "Disabled", "Status"],
         },
       ],
       labels: { variants: "Variant", sizes: "Size", states: "State" },
@@ -821,9 +822,9 @@ const COPY = {
     },
     icons: {
       tag: "( 16 · Icon & Minh hoạ )",
-      title: "Những icon bo tròn đơn giản, đi cùng nhịp với hệ thống xanh",
+      title: "Một ngôn ngữ icon gọn nhẹ, đi cùng những điểm nhấn thương hiệu nhỏ",
       body:
-        "Các icon được giữ ở mức đơn giản và bo tròn để người dùng có thể đọc nhanh trên mobile. Chúng nâng đỡ cảm giác thương hiệu mà không lấn át phần nội dung chính.",
+        "Hệ visual support được giữ gọn và thực dụng. Icon dùng nét đơn giản, bo tròn để người dùng quét nhanh trên mobile, trong khi các điểm nhấn minh hoạ nhỏ từ hệ màu giúp làm rõ mood, cảm giác tin cậy và bối cảnh ăn uống mà không lấn át nội dung chính.",
     },
     wireframe: {
       tag: "( 17 · Wireframe )",
@@ -1081,6 +1082,7 @@ export function AngAng() {
   const { lang } = useI18n();
   const t = COPY[lang];
   const L = t.labels;
+  const [activeWireframe, setActiveWireframe] = useState<null | { src: string; title: string }>(null);
 
   return (
     <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen">
@@ -1539,22 +1541,8 @@ export function AngAng() {
         <H2>{t.brand.title}</H2>
         <div className="grid lg:grid-cols-12 gap-8 mt-10">
           <div className="lg:col-span-5">
-            <div
-              className="rounded-3xl flex items-center justify-center"
-              style={{
-                border: `1px solid ${BORDER}`,
-                minHeight: 320,
-                padding: "40px",
-                backgroundColor: "#fff",
-              }}
-            >
-              <div
-                className="flex items-center justify-center"
-                style={{
-                  width: 94,
-                  height: 107.28,
-                }}
-              >
+            <div className="w-full">
+              <div className="flex items-center justify-center" style={{ width: "100%" }}>
                 <LogoMark />
               </div>
             </div>
@@ -1963,83 +1951,226 @@ export function AngAng() {
           <div className="lg:col-span-7 space-y-4">
             <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
               <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
-                Buttons
+                {lang === "en" ? "Button matrix" : "Ma trận button"}
               </div>
-              <div className="flex flex-wrap gap-3 items-center">
-                <button className="px-5 py-2.5 rounded-full text-sm" style={{ backgroundColor: GREEN, color: "#fff" }}>
-                  Primary
-                </button>
-                <button
-                  className="px-5 py-2.5 rounded-full text-sm"
-                  style={{ backgroundColor: "#fff", color: GREEN_DARK, border: `1.5px solid ${GREEN_DARK}` }}
-                >
-                  Secondary
-                </button>
-                <button className="px-5 py-2.5 rounded-full text-sm" style={{ backgroundColor: GREEN_LIGHT, color: GREEN_DARK }}>
-                  Selected
-                </button>
-                <button className="px-5 py-2.5 rounded-full text-sm" style={{ backgroundColor: BORDER, color: MUTED }} disabled>
-                  Disabled
-                </button>
-              </div>
-            </div>
-
-            <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
-              <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
-                Search + Filter Chips
-              </div>
-              <div
-                className="flex items-center gap-2 px-4 py-3 rounded-full"
-                style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}
-              >
-                <Search size={16} style={{ color: MUTED }} />
-                <span className="text-sm" style={{ color: MUTED }}>
-                  {L.searchPlaceholder}
-                </span>
-              </div>
-              <div className="flex flex-wrap gap-2 mt-4">
-                {["Open now", "Quiet", "Date", "Group", "<150K", "Nearby"].map((c, i) => (
-                  <span
-                    key={c}
-                    className="text-xs px-3 py-1.5 rounded-full"
-                    style={{
-                      backgroundColor: i === 0 ? GREEN : "#fff",
-                      color: i === 0 ? "#fff" : INK,
-                      border: `1px solid ${i === 0 ? GREEN : BORDER}`,
-                    }}
-                  >
-                    {c}
-                  </span>
+              <div className="grid md:grid-cols-3 gap-4">
+                {[
+                  {
+                    label: "Filled",
+                    items: [
+                      { name: "Default", bg: GREEN, fg: "#fff", border: GREEN },
+                      { name: "Hover", bg: GREEN_DARK, fg: "#fff", border: GREEN_DARK },
+                      { name: "Focus", bg: GREEN, fg: "#fff", border: GREEN, shadow: `0 0 0 3px ${GREEN_LIGHT}` },
+                      { name: "Press", bg: "#547516", fg: "#fff", border: "#547516" },
+                      { name: "Disabled", bg: BORDER, fg: MUTED, border: BORDER },
+                    ],
+                  },
+                  {
+                    label: "Outline",
+                    items: [
+                      { name: "Default", bg: "#fff", fg: GREEN_DARK, border: GREEN_DARK },
+                      { name: "Hover", bg: BG, fg: GREEN_DARK, border: GREEN_DARK },
+                      { name: "Focus", bg: "#fff", fg: GREEN_DARK, border: GREEN_DARK, shadow: `0 0 0 3px ${GREEN_LIGHT}` },
+                      { name: "Press", bg: GREEN_LIGHT, fg: GREEN_DARK, border: GREEN_DARK },
+                      { name: "Disabled", bg: "#fff", fg: MUTED, border: BORDER },
+                    ],
+                  },
+                  {
+                    label: "Clear",
+                    items: [
+                      { name: "Default", bg: "transparent", fg: GREEN_DARK, border: "transparent" },
+                      { name: "Hover", bg: BG, fg: GREEN_DARK, border: "transparent" },
+                      { name: "Focus", bg: "transparent", fg: GREEN_DARK, border: "transparent", shadow: `0 0 0 3px ${GREEN_LIGHT}` },
+                      { name: "Press", bg: GREEN_LIGHT, fg: GREEN_DARK, border: "transparent" },
+                      { name: "Disabled", bg: "transparent", fg: MUTED, border: "transparent" },
+                    ],
+                  },
+                ].map((group) => (
+                  <div key={group.label} className="rounded-2xl p-4" style={{ backgroundColor: "#fcfcf8", border: `1px solid ${BORDER}` }}>
+                    <div className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: MUTED }}>
+                      {group.label}
+                    </div>
+                    <div className="space-y-3">
+                      {group.items.map((item) => (
+                        <div key={item.name} className="flex items-center justify-between gap-3">
+                          <span className="text-[11px] tracking-[0.18em] uppercase min-w-[68px]" style={{ color: MUTED }}>
+                            {item.name}
+                          </span>
+                          <button
+                            className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm"
+                            style={{
+                              backgroundColor: item.bg,
+                              color: item.fg,
+                              border: `1.5px solid ${item.border}`,
+                              boxShadow: item.shadow ?? "none",
+                            }}
+                          >
+                            <Sparkles size={14} />
+                            {lang === "en" ? "Discover" : "Khám phá"}
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
+              <div className="mt-5 rounded-2xl p-4" style={{ backgroundColor: "#fcfcf8", border: `1px solid ${BORDER}` }}>
+                <div className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: MUTED }}>
+                  {lang === "en" ? "Icon only sizes" : "Cỡ icon only"}
+                </div>
+                <div className="flex flex-wrap items-end gap-3">
+                  {[
+                    { label: "Tiny", size: 24, icon: 11 },
+                    { label: "Small", size: 32, icon: 14 },
+                    { label: "Medium", size: 40, icon: 16 },
+                    { label: "Large", size: 48, icon: 18 },
+                    { label: "Giant", size: 56, icon: 20 },
+                  ].map((item) => (
+                    <div key={item.label} className="flex flex-col items-center gap-2">
+                      <button
+                        className="inline-flex items-center justify-center rounded-full"
+                        style={{ width: item.size, height: item.size, backgroundColor: GREEN, color: "#fff" }}
+                      >
+                        <ArrowUpRight size={item.icon} />
+                      </button>
+                      <span className="text-[11px]" style={{ color: MUTED }}>
+                        {item.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
               <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
-                Restaurant Card
+                {lang === "en" ? "Input fields" : "Trường nhập liệu"}
               </div>
-              <div className="rounded-2xl overflow-hidden" style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}>
-                <div className="h-32 relative" style={{ backgroundColor: GREEN_LIGHT }}>
-                  <span
-                    className="absolute top-3 left-3 text-xs px-2.5 py-1 rounded-full"
-                    style={{ backgroundColor: "#fff", color: GREEN_DARK }}
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <div
+                    className="flex items-center gap-2 px-4 py-3 rounded-2xl"
+                    style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}
                   >
-                    ● {L.openNow}
-                  </span>
-                  <span
-                    className="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full"
-                    style={{ backgroundColor: ORANGE, color: "#fff" }}
-                  >
-                    Date night
-                  </span>
-                </div>
-                <div className="p-4">
-                  <div style={{ fontFamily: "Fraunces, serif", fontSize: "1.2rem" }}>Cơm Tấm 88</div>
-                  <div className="mt-1 text-xs flex items-center gap-2" style={{ color: MUTED }}>
-                    <Star size={12} style={{ color: ORANGE }} /> 4.7 · 1.2km · 90K – 150K
+                    <Search size={16} style={{ color: MUTED }} />
+                    <span className="text-sm" style={{ color: MUTED }}>
+                      {L.searchPlaceholder}
+                    </span>
                   </div>
-                  <div className="mt-3 flex items-center gap-1.5 text-xs" style={{ color: GREEN_DARK }}>
-                    <Users size={12} /> {L.busy}
+                  <div
+                    className="flex items-center justify-between gap-2 px-4 py-3 rounded-2xl"
+                    style={{ backgroundColor: "#fff", border: `2px solid ${GREEN}` }}
+                  >
+                    <span className="text-sm" style={{ color: INK }}>
+                      {lang === "en" ? "District 1" : "Quận 1"}
+                    </span>
+                    <ArrowUpRight size={15} style={{ color: GREEN_DARK, transform: "rotate(135deg)" }} />
+                  </div>
+                  <div
+                    className="flex items-center gap-2 px-4 py-3 rounded-2xl"
+                    style={{ backgroundColor: "#fff", border: `1px solid ${RED}` }}
+                  >
+                    <span className="text-sm" style={{ color: RED }}>
+                      {lang === "en" ? "Please choose a time" : "Vui lòng chọn thời gian"}
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className="rounded-2xl p-4"
+                  style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}
+                >
+                  <div className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: MUTED }}>
+                    Textarea
+                  </div>
+                  <div
+                    className="rounded-2xl p-4 min-h-[132px]"
+                    style={{ backgroundColor: BG, border: `1px solid ${BORDER}`, color: MUTED, lineHeight: 1.6 }}
+                  >
+                    {lang === "en"
+                      ? "Notes for the group, mood, budget, or any special reason behind the choice."
+                      : "Ghi chú cho nhóm, mood, ngân sách, hoặc lý do đặc biệt đằng sau lựa chọn này."}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+              <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
+                {lang === "en" ? "Selection controls" : "Selection controls"}
+              </div>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="rounded-2xl p-4" style={{ backgroundColor: "#fcfcf8", border: `1px solid ${BORDER}` }}>
+                  <div className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: MUTED }}>
+                    Checkbox
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { label: lang === "en" ? "Open now" : "Đang mở", checked: true, disabled: false },
+                      { label: lang === "en" ? "Quiet space" : "Yên tĩnh", checked: false, disabled: false },
+                      { label: lang === "en" ? "Group friendly" : "Hợp đi nhóm", checked: true, disabled: true },
+                    ].map((item) => (
+                      <label key={item.label} className="flex items-center gap-3">
+                        <span
+                          className="inline-flex h-5 w-5 items-center justify-center rounded-md"
+                          style={{
+                            backgroundColor: item.checked ? GREEN : "#fff",
+                            border: `1.5px solid ${item.checked ? GREEN : BORDER}`,
+                            color: "#fff",
+                            opacity: item.disabled ? 0.5 : 1,
+                          }}
+                        >
+                          {item.checked ? <Check size={13} /> : null}
+                        </span>
+                        <span style={{ color: item.disabled ? MUTED : INK, fontSize: "0.9rem" }}>{item.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div className="rounded-2xl p-4" style={{ backgroundColor: "#fcfcf8", border: `1px solid ${BORDER}` }}>
+                  <div className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: MUTED }}>
+                    Radio
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { label: lang === "en" ? "Date night" : "Hẹn hò", checked: false },
+                      { label: lang === "en" ? "Casual lunch" : "Ăn trưa nhanh", checked: true },
+                      { label: lang === "en" ? "Weekend plan" : "Cuối tuần", checked: false },
+                    ].map((item) => (
+                      <label key={item.label} className="flex items-center gap-3">
+                        <span
+                          className="inline-flex h-5 w-5 items-center justify-center rounded-full"
+                          style={{ border: `1.5px solid ${item.checked ? GREEN : BORDER}`, backgroundColor: "#fff" }}
+                        >
+                          <span
+                            className="h-2.5 w-2.5 rounded-full"
+                            style={{ backgroundColor: item.checked ? GREEN : "transparent" }}
+                          />
+                        </span>
+                        <span style={{ color: INK, fontSize: "0.9rem" }}>{item.label}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div className="rounded-2xl p-4" style={{ backgroundColor: "#fcfcf8", border: `1px solid ${BORDER}` }}>
+                  <div className="text-[11px] tracking-[0.2em] uppercase mb-3" style={{ color: MUTED }}>
+                    Switch
+                  </div>
+                  <div className="space-y-3">
+                    {[
+                      { label: lang === "en" ? "Verified reviewers only" : "Chỉ reviewer đã xác minh", on: true },
+                      { label: lang === "en" ? "Show nearby first" : "Ưu tiên gần đây", on: true },
+                      { label: lang === "en" ? "Hide crowded places" : "Ẩn chỗ quá đông", on: false },
+                    ].map((item) => (
+                      <div key={item.label} className="flex items-center justify-between gap-3">
+                        <span style={{ color: INK, fontSize: "0.9rem" }}>{item.label}</span>
+                        <span
+                          className="inline-flex h-7 w-12 items-center rounded-full p-1"
+                          style={{ backgroundColor: item.on ? GREEN : BORDER, justifyContent: item.on ? "flex-end" : "flex-start" }}
+                        >
+                          <span className="h-5 w-5 rounded-full" style={{ backgroundColor: "#fff" }} />
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -2049,40 +2180,125 @@ export function AngAng() {
           <div className="lg:col-span-5 space-y-4">
             <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
               <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
-                Input · sizes & states
+                {lang === "en" ? "Button Group" : "Button Group"}
               </div>
-              <div className="space-y-3">
-                {(["SM", "MD", "LG"] as const).map((sz) => {
-                  const py = sz === "SM" ? "py-2" : sz === "MD" ? "py-2.5" : "py-3.5";
-                  const fs = sz === "SM" ? "0.78rem" : sz === "MD" ? "0.88rem" : "1rem";
-                  return (
-                    <div key={sz} className="flex items-center gap-3">
-                      <div className="w-8 text-[10px] tracking-[0.2em]" style={{ color: MUTED }}>{sz}</div>
-                      <div
-                        className={`flex-1 px-4 rounded-xl ${py}`}
-                        style={{ backgroundColor: BG, border: `1px solid ${BORDER}`, fontSize: fs, color: MUTED }}
+              <div className="space-y-4">
+                <div className="inline-flex rounded-full p-1" style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}>
+                  {[
+                    lang === "en" ? "All" : "Tất cả",
+                    lang === "en" ? "Open" : "Đang mở",
+                    lang === "en" ? "Date" : "Hẹn hò",
+                    lang === "en" ? "Group" : "Đi nhóm",
+                  ].map((b, i) => (
+                    <button
+                      key={b}
+                      className="px-4 py-1.5 rounded-full text-sm"
+                      style={{
+                        backgroundColor: i === 1 ? GREEN : "transparent",
+                        color: i === 1 ? "#fff" : INK,
+                        fontWeight: i === 1 ? 600 : 400,
+                      }}
+                    >
+                      {b}
+                    </button>
+                  ))}
+                </div>
+                <div className="inline-flex rounded-2xl p-1 gap-1" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+                  {[
+                    { icon: Search, active: true },
+                    { icon: Heart, active: false },
+                    { icon: MapPin, active: false },
+                    { icon: Users, active: false },
+                  ].map((item, i) => {
+                    const Icon = item.icon;
+                    return (
+                      <button
+                        key={i}
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-xl"
+                        style={{
+                          backgroundColor: item.active ? GREEN_LIGHT : "#fff",
+                          color: item.active ? GREEN_DARK : MUTED,
+                        }}
                       >
-                        Placeholder
-                      </div>
+                        <Icon size={16} />
+                      </button>
+                    );
+                  })}
+                </div>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    lang === "en" ? "Lunch break" : "Ăn trưa",
+                    lang === "en" ? "Quiet catch-up" : "Gặp bạn yên tĩnh",
+                    lang === "en" ? "Budget pick" : "Tiết kiệm",
+                    lang === "en" ? "Late night" : "Ăn khuya",
+                  ].map((item, i) => (
+                    <button
+                      key={item}
+                      className="px-4 py-3 rounded-2xl text-left text-sm"
+                      style={{
+                        backgroundColor: i === 0 ? GREEN_LIGHT : "#fff",
+                        border: `1px solid ${i === 0 ? GREEN : BORDER}`,
+                        color: i === 0 ? GREEN_DARK : INK,
+                      }}
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+              <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
+                {lang === "en" ? "Badge, avatar, and progress" : "Badge, avatar và progress"}
+              </div>
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { name: "Success", bg: "#cdfee5", fg: "#00674a", solid: "#00bc7d" },
+                    { name: "Warning", bg: "#fff3c5", fg: "#7c320b", solid: "#fe9a00" },
+                    { name: "Error", bg: "#fee2e2", fg: "#7f1d1d", solid: "#ef4444" },
+                    { name: "Info", bg: "#dbe8fe", fg: "#1e478a", solid: "#3b82f6" },
+                    { name: "Neutral", bg: "#f6f6f6", fg: "#262626", solid: "#737373" },
+                  ].map((s) => (
+                    <div key={s.name} className="flex flex-col gap-1.5">
+                      <span
+                        className="text-xs px-3 py-1 rounded-full inline-flex items-center gap-1.5"
+                        style={{ backgroundColor: s.solid, color: "#fff", fontWeight: 600 }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#fff" }} />
+                        {s.name}
+                      </span>
+                      <span
+                        className="text-xs px-3 py-1 rounded-full inline-flex items-center gap-1.5"
+                        style={{ backgroundColor: s.bg, color: s.fg }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: s.solid }} />
+                        {s.name}
+                      </span>
                     </div>
-                  );
-                })}
-                <div className="flex items-center gap-3">
-                  <div className="w-8 text-[10px] tracking-[0.2em]" style={{ color: GREEN_DARK }}>FOC</div>
-                  <div
-                    className="flex-1 px-4 py-2.5 rounded-xl"
-                    style={{ backgroundColor: "#fff", border: `2px solid ${GREEN}`, color: INK, fontSize: "0.88rem" }}
-                  >
-                    Focused input
-                  </div>
+                  ))}
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 text-[10px] tracking-[0.2em]" style={{ color: RED }}>ERR</div>
-                  <div
-                    className="flex-1 px-4 py-2.5 rounded-xl"
-                    style={{ backgroundColor: "#fff", border: `2px solid ${RED}`, color: RED, fontSize: "0.88rem" }}
-                  >
-                    Field required
+                <div className="flex items-center justify-between gap-4">
+                  <div className="flex items-center -space-x-2">
+                    {["#9dd325", "#ffd346", "#fe9a00", "#3b82f6"].map((c, i) => (
+                      <span
+                        key={c}
+                        className="inline-flex h-10 w-10 items-center justify-center rounded-full border-2 text-xs font-semibold"
+                        style={{ backgroundColor: c, color: i === 1 ? INK : "#fff", borderColor: "#fff" }}
+                      >
+                        {["AN", "VR", "UX", "CM"][i]}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between text-xs mb-2" style={{ color: MUTED }}>
+                      <span>{lang === "en" ? "Trust profile completion" : "Mức hoàn thiện hồ sơ uy tín"}</span>
+                      <span>72%</span>
+                    </div>
+                    <div className="h-2 rounded-full overflow-hidden" style={{ backgroundColor: BG }}>
+                      <div className="h-full rounded-full" style={{ width: "72%", backgroundColor: GREEN }} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -2090,54 +2306,37 @@ export function AngAng() {
 
             <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
               <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
-                Badge & Chip · semantic
+                {lang === "en" ? "Helper primitives" : "Helper primitives"}
               </div>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  { name: "Success", bg: "#cdfee5", fg: "#00674a", solid: "#00bc7d" },
-                  { name: "Warning", bg: "#fff3c5", fg: "#7c320b", solid: "#fe9a00" },
-                  { name: "Error", bg: "#fee2e2", fg: "#7f1d1d", solid: "#ef4444" },
-                  { name: "Info", bg: "#dbe8fe", fg: "#1e478a", solid: "#3b82f6" },
-                  { name: "Neutral", bg: "#f6f6f6", fg: "#262626", solid: "#737373" },
-                ].map((s) => (
-                  <div key={s.name} className="flex flex-col gap-1.5">
-                    <span
-                      className="text-xs px-3 py-1 rounded-full inline-flex items-center gap-1.5"
-                      style={{ backgroundColor: s.solid, color: "#fff", fontWeight: 600 }}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "#fff" }} />
-                      {s.name}
-                    </span>
-                    <span
-                      className="text-xs px-3 py-1 rounded-full inline-flex items-center gap-1.5"
-                      style={{ backgroundColor: s.bg, color: s.fg }}
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: s.solid }} />
-                      {s.name}
-                    </span>
+              <div className="space-y-4">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs" style={{ color: MUTED }}>
+                    {lang === "en" ? "Tooltip" : "Tooltip"}
+                  </span>
+                  <div className="px-3 py-2 rounded-xl text-sm" style={{ backgroundColor: INK, color: "#fff" }}>
+                    {lang === "en" ? "Verified users get context-first reviews." : "Người dùng đã xác minh sẽ có review theo ngữ cảnh."}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
-              <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
-                Button Group · segmented
-              </div>
-              <div className="inline-flex rounded-full p-1" style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}>
-                {["All", "Open", "Date", "Group"].map((b, i) => (
-                  <button
-                    key={b}
-                    className="px-4 py-1.5 rounded-full text-sm"
-                    style={{
-                      backgroundColor: i === 1 ? GREEN : "transparent",
-                      color: i === 1 ? "#fff" : INK,
-                      fontWeight: i === 1 ? 600 : 400,
-                    }}
-                  >
-                    {b}
-                  </button>
-                ))}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    lang === "en" ? "New" : "Mới",
+                    lang === "en" ? "Featured" : "Nổi bật",
+                    lang === "en" ? "Verified" : "Xác minh",
+                  ].map((item, i) => (
+                    <span
+                      key={item}
+                      className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs"
+                      style={{
+                        backgroundColor: i === 2 ? GREEN_LIGHT : "#fff",
+                        color: i === 2 ? GREEN_DARK : INK,
+                        border: `1px solid ${i === 2 ? GREEN : BORDER}`,
+                      }}
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: i === 2 ? GREEN : MUTED }} />
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -2151,16 +2350,122 @@ export function AngAng() {
         <p className="mt-5 max-w-[60ch]" style={{ color: MUTED, lineHeight: 1.65 }}>
           {t.icons.body}
         </p>
-        <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-10 gap-3 mt-10">
-          {[Utensils, MapPin, Search, Heart, Star, Users, Clock, Wallet, Smile, UsersRound].map((Icon, i) => (
-            <div
-              key={i}
-              className="aspect-square rounded-2xl flex items-center justify-center"
-              style={{ backgroundColor: BG, border: `1px solid ${BORDER}`, color: GREEN_DARK }}
-            >
-              <Icon size={22} />
+        <div className="grid lg:grid-cols-12 gap-6 mt-10">
+          <div className="lg:col-span-7 rounded-3xl p-6" style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}>
+            <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
+              {lang === "en" ? "Icon library" : "Thư viện icon"}
             </div>
-          ))}
+            <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+              {[Utensils, MapPin, Search, Heart, Star, Users, Clock, Wallet, Smile, UsersRound].map((Icon, i) => (
+                <div
+                  key={i}
+                  className="aspect-square rounded-2xl flex items-center justify-center"
+                  style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}`, color: GREEN_DARK }}
+                >
+                  <Icon size={22} strokeWidth={1.8} />
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 grid sm:grid-cols-3 gap-3">
+              {[
+                {
+                  label: lang === "en" ? "Shape" : "Hình thái",
+                  value: lang === "en" ? "Rounded corners, low visual noise" : "Bo tròn, ít nhiễu thị giác",
+                },
+                {
+                  label: lang === "en" ? "Role" : "Vai trò",
+                  value: lang === "en" ? "Navigation, filters, trust cues" : "Điều hướng, bộ lọc, tín hiệu tin cậy",
+                },
+                {
+                  label: lang === "en" ? "Tone" : "Sắc độ",
+                  value: lang === "en" ? "Green-led accents with neutral fallback" : "Nhấn xanh chủ đạo, lùi về neutral khi cần",
+                },
+              ].map((item) => (
+                <div key={item.label} className="rounded-2xl p-4" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+                  <div className="text-[10px] tracking-[0.2em] uppercase" style={{ color: MUTED }}>
+                    {item.label}
+                  </div>
+                  <div className="mt-2 text-sm" style={{ color: INK, lineHeight: 1.55 }}>
+                    {item.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 space-y-4">
+            <div className="rounded-3xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+              <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
+                {lang === "en" ? "Sizes & containers" : "Size & container"}
+              </div>
+              <div className="space-y-4">
+                {[
+                  { label: "16", box: 32, icon: 16 },
+                  { label: "20", box: 40, icon: 20 },
+                  { label: "24", box: 48, icon: 24 },
+                ].map((item, i) => {
+                  const Icon = [Search, Heart, MapPin][i];
+                  return (
+                    <div key={item.label} className="flex items-center justify-between gap-4">
+                      <div className="text-xs tracking-[0.2em] uppercase min-w-10" style={{ color: MUTED }}>
+                        {item.label}px
+                      </div>
+                      <div className="flex-1 flex items-center gap-3">
+                        <div
+                          className="inline-flex items-center justify-center rounded-2xl"
+                          style={{ width: item.box, height: item.box, backgroundColor: BG, border: `1px solid ${BORDER}`, color: GREEN_DARK }}
+                        >
+                          <Icon size={item.icon} strokeWidth={1.8} />
+                        </div>
+                        <div className="text-sm" style={{ color: MUTED }}>
+                          {lang === "en"
+                            ? item.icon === 16
+                              ? "Dense controls"
+                              : item.icon === 20
+                              ? "Standard actions"
+                              : "Featured moments"
+                            : item.icon === 16
+                            ? "Control dày"
+                            : item.icon === 20
+                            ? "Action tiêu chuẩn"
+                            : "Điểm nhấn nổi bật"}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="rounded-3xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+              <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
+                {lang === "en" ? "Mini illustration accents" : "Điểm nhấn minh hoạ nhỏ"}
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { title: lang === "en" ? "Mood" : "Mood", bg: GREEN_LIGHT, icon: Smile, text: lang === "en" ? "Light, friendly, quick" : "Nhẹ, thân thiện, nhanh" },
+                  { title: lang === "en" ? "Trust" : "Tin cậy", bg: "#dbe8fe", icon: Star, text: lang === "en" ? "Verified, recent, contextual" : "Xác minh, gần đây, theo ngữ cảnh" },
+                  { title: lang === "en" ? "Budget" : "Ngân sách", bg: "#fff3c5", icon: Wallet, text: lang === "en" ? "Clear, practical cues" : "Tín hiệu rõ và thực dụng" },
+                  { title: lang === "en" ? "Group" : "Đi nhóm", bg: "#fee2e2", icon: UsersRound, text: lang === "en" ? "Shared decision moments" : "Bối cảnh ra quyết định chung" },
+                ].map((item) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={item.title} className="rounded-2xl p-4" style={{ backgroundColor: item.bg, border: `1px solid ${BORDER}` }}>
+                      <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl" style={{ backgroundColor: "#fff", color: GREEN_DARK }}>
+                        <Icon size={18} strokeWidth={1.8} />
+                      </div>
+                      <div className="mt-3" style={{ fontFamily: "Fraunces, serif", fontSize: "1.05rem", color: INK }}>
+                        {item.title}
+                      </div>
+                      <div className="mt-1 text-sm" style={{ color: MUTED, lineHeight: 1.5 }}>
+                        {item.text}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -2183,8 +2488,9 @@ export function AngAng() {
               style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}
             >
               <div
-                className="overflow-hidden flex items-center justify-center"
+                className="overflow-hidden flex items-center justify-center cursor-zoom-in"
                 style={{ aspectRatio: "4 / 3", backgroundColor: "#fafaf6" }}
+                onClick={() => setActiveWireframe({ src: w.src, title: w.t })}
               >
                 <img
                   src={w.src}
@@ -2210,6 +2516,48 @@ export function AngAng() {
           ))}
         </div>
       </Section>
+
+      {activeWireframe && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8"
+          style={{ backgroundColor: "rgba(18, 24, 10, 0.8)" }}
+          onClick={() => setActiveWireframe(null)}
+        >
+          <div
+            className="relative w-full max-w-6xl rounded-[28px] overflow-hidden"
+            style={{ backgroundColor: "#fff", border: `1px solid rgba(255,255,255,0.18)` }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full text-[28px] leading-none"
+              style={{ backgroundColor: "rgba(38,38,38,0.82)", color: "#fff" }}
+              onClick={() => setActiveWireframe(null)}
+              aria-label={lang === "en" ? "Close image preview" : "Đóng ảnh phóng to"}
+            >
+              ×
+            </button>
+            <div className="px-5 pt-5 pb-3 sm:px-7 sm:pt-7">
+              <div className="text-xs tracking-[0.2em] uppercase" style={{ color: GREEN_DARK }}>
+                {lang === "en" ? "Wireframe preview" : "Xem wireframe"}
+              </div>
+              <div className="mt-2" style={{ fontFamily: "Fraunces, serif", fontSize: "1.5rem", lineHeight: 1.2 }}>
+                {activeWireframe.title}
+              </div>
+            </div>
+            <div className="px-5 pb-5 sm:px-7 sm:pb-7">
+              <div className="overflow-auto rounded-2xl" style={{ backgroundColor: "#fafaf6", maxHeight: "78vh" }}>
+                <img
+                  src={activeWireframe.src}
+                  alt={activeWireframe.title}
+                  className="block w-full h-auto"
+                  style={{ minWidth: 720 }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* FINAL UI PREVIEW */}
       <Section id="ui" bg={GREEN_LIGHT}>
@@ -2257,8 +2605,21 @@ export function AngAng() {
           </a>
           <a
             href="#case/murror"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm transition-colors hover:bg-white hover:text-[#1F2A1F]"
-            style={{ border: "1px solid rgba(255,255,255,0.3)", color: "#fff" }}
+            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm transition-colors"
+            style={{
+              border: "1px solid rgba(255,255,255,0.3)",
+              color: "#fff",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "rgba(222,243,163,0.16)";
+              e.currentTarget.style.borderColor = "rgba(222,243,163,0.52)";
+              e.currentTarget.style.color = "#DEF3A3";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "transparent";
+              e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)";
+              e.currentTarget.style.color = "#fff";
+            }}
           >
             {t.reflection.cta2} <ArrowUpRight size={16} />
           </a>
