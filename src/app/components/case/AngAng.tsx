@@ -1122,45 +1122,23 @@ export function AngAng() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href="#research"
-                  className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm transition-all duration-300"
+                  className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm transition-all"
                   style={{ backgroundColor: GREEN, color: "#fff" }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = GREEN_DARK;
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = GREEN;
-                  }}
                 >
                   <span>{t.cta1}</span>
                   <span
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
+                    className="w-8 h-8 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform"
                     style={{ backgroundColor: "#fff", color: GREEN_DARK }}
                   >
-                    <ArrowUpRight size={18} />
+                    <ArrowUpRight size={16} />
                   </span>
                 </a>
                 <a
                   href="#system"
-                  className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm border transition-all duration-300"
+                  className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors"
                   style={{ borderColor: GREEN_DARK, color: GREEN_DARK }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = GREEN;
-                    e.currentTarget.style.borderColor = GREEN;
-                    e.currentTarget.style.color = "#fff";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                    e.currentTarget.style.borderColor = GREEN_DARK;
-                    e.currentTarget.style.color = GREEN_DARK;
-                  }}
                 >
-                  <span>{t.cta2}</span>
-                  <span
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
-                    style={{ backgroundColor: "#fff", color: GREEN_DARK }}
-                  >
-                    <ArrowUpRight size={18} />
-                  </span>
+                  {t.cta2}
                 </a>
               </div>
             </div>
@@ -2626,48 +2604,32 @@ export function AngAng() {
         <div className="mt-12 flex flex-wrap gap-3">
           <a
             href="#"
-            className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm transition-all duration-300"
+            className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm transition-all"
             style={{ backgroundColor: GREEN, color: "#fff" }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = GREEN_DARK;
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = GREEN;
-            }}
           >
             <span>{t.reflection.cta1}</span>
             <span
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
+              className="w-8 h-8 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform"
               style={{ backgroundColor: "#fff", color: GREEN_DARK }}
             >
-              <ArrowUpRight size={18} />
+              <ArrowUpRight size={16} />
             </span>
           </a>
           <a
             href="#case/murror"
-            className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm transition-all duration-300"
+            className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors"
             style={{
               border: "1px solid rgba(255,255,255,0.3)",
               color: "#fff",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = GREEN;
-              e.currentTarget.style.borderColor = GREEN;
-              e.currentTarget.style.color = "#fff";
+              e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
-              e.currentTarget.style.borderColor = "rgba(255,255,255,0.3)";
-              e.currentTarget.style.color = "#fff";
             }}
           >
-            <span>{t.reflection.cta2}</span>
-            <span
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
-              style={{ backgroundColor: "#fff", color: GREEN_DARK }}
-            >
-              <ArrowUpRight size={18} />
-            </span>
+            {t.reflection.cta2}
           </a>
         </div>
         <div
@@ -2676,13 +2638,13 @@ export function AngAng() {
         >
           <div>© 2025 Huỳnh Minh Huy · Ăng Ăng Case Study</div>
           <div className="flex gap-5">
-            <a href="#" className="hover:text-white">
+            <a href="https://www.behance.net/minhhuyhunh2" target="_blank" rel="noreferrer" className="hover:text-white">
               Behance
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="https://www.linkedin.com/in/huy-huynh-minh/" target="_blank" rel="noreferrer" className="hover:text-white">
               LinkedIn
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="mailto:huylem1800vn@gmail.com" className="hover:text-white">
               Email
             </a>
             <a href="#" className="hover:text-white">

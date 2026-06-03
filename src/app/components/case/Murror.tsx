@@ -2,6 +2,22 @@ import { motion } from "motion/react";
 import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp } from "lucide-react";
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
+import onboardingJoy from "../../../imports/murror/ui/onboarding-joy.png";
+import onboardingSadness from "../../../imports/murror/ui/onboarding-sadness.png";
+import onboardingDisgust from "../../../imports/murror/ui/onboarding-disgust.png";
+import onboardingAnger from "../../../imports/murror/ui/onboarding-anger.png";
+import onboardingFear from "../../../imports/murror/ui/onboarding-fear.png";
+import onboardingEnvy from "../../../imports/murror/ui/onboarding-envy.png";
+import profileMinhHuyAqua from "../../../imports/murror/ui/profile-minh-huy-aqua.png";
+import profileMinhHuyYellow from "../../../imports/murror/ui/profile-minh-huy-yellow.png";
+import profileMinhHuyOrange from "../../../imports/murror/ui/profile-minh-huy-orange.png";
+import profileMinhHuyBlue from "../../../imports/murror/ui/profile-minh-huy-blue.png";
+import profileMinhHuyPurple from "../../../imports/murror/ui/profile-minh-huy-purple.png";
+import profileMinhHuyGreen from "../../../imports/murror/ui/profile-minh-huy-green.png";
+import chatHome from "../../../imports/murror/ui/chat-home.png";
+import chatMoodCheckin from "../../../imports/murror/ui/chat-mood-checkin.png";
+import chatAiModePicker from "../../../imports/murror/ui/chat-ai-mode-picker.png";
+import chatActiveConversation from "../../../imports/murror/ui/chat-active-conversation.png";
 
 const VIOLET = "#a59cff";
 const BLUE = "#6b8cff";
@@ -9,6 +25,13 @@ const INK = "#0b0d18";
 const FG = "#f4f1ea";
 const GLASS = "rgba(255,255,255,0.06)";
 const BORDER = "rgba(255,255,255,0.12)";
+const CREAM = "#f8f3ea";
+const SUN = "#ffd45f";
+const MINT = "#bfe7b2";
+const BLUSH = "#ffc9d9";
+const SKY = "#b9ddff";
+const LAVENDER = "#d9d0ff";
+const SLATE = "#1a2030";
 
 const COPY = {
   en: {
@@ -109,7 +132,7 @@ const COPY = {
 
     ui: {
       tag: "( 08 · UI Direction )",
-      body: "Dark mode by default, a soft blue violet gradient, glassmorphism cards, rounded components, generous breathing space, minimal copy, emotion based visual input, and subtle motion that never feels intrusive.",
+      body: "The final UI balances softness and clarity through a creamy base, pastel emotional colors, rounded cards, a friendly mascot, and compact interaction blocks that lower the pressure of typing. The design system supports both emotional warmth and structured reflection.",
       screensLabel: "( 09 · Final Screens )",
       screens: [
         "Onboarding",
@@ -233,7 +256,7 @@ const COPY = {
 
     ui: {
       tag: "( 08 · Hướng UI )",
-      body: "Giao diện dùng dark mode mặc định, gradient xanh tím dịu, các thẻ glassmorphism, component bo tròn, khoảng thở rộng, ít chữ, cách nhập liệu giàu cảm xúc và animation đủ nhẹ để không làm người dùng thấy mệt.",
+      body: "UI cuối cùng cân bằng giữa cảm giác dịu và sự rõ ràng bằng nền kem sáng, bảng màu pastel theo cảm xúc, thẻ bo tròn, mascot thân thiện và những khối tương tác gọn để giảm áp lực phải gõ. Design system này vừa đủ ấm để nâng đỡ cảm xúc, vừa đủ có cấu trúc để hỗ trợ phản chiếu.",
       screensLabel: "( 09 · Màn hình cuối )",
       screens: [
         "Onboarding",
@@ -269,9 +292,126 @@ function FIcon({ name }: { name: string }) {
   return <TrendingUp {...p} />;
 }
 
+const TOKEN_GROUPS = [
+  {
+    name: "Emotional Palette",
+    chips: [
+      { label: "Sun", hex: SUN },
+      { label: "Sky", hex: SKY },
+      { label: "Mint", hex: MINT },
+      { label: "Blush", hex: BLUSH },
+      { label: "Lavender", hex: LAVENDER },
+      { label: "Cream", hex: CREAM },
+    ],
+  },
+  {
+    name: "Core Materials",
+    chips: [
+      { label: "Primary text", hex: FG },
+      { label: "Night", hex: SLATE },
+      { label: "Glass", hex: "#FFFFFF14" },
+      { label: "Border", hex: "#FFFFFF1F" },
+    ],
+  },
+];
+
+const UI_PRINCIPLES = {
+  en: [
+    { title: "Color as emotional shorthand", body: "Pastel blocks help users choose a feeling before they are ready to explain it." },
+    { title: "Friendly character cues", body: "The mascot and tiny delight moments soften the experience without turning it childish." },
+    { title: "Rounded, low-friction layout", body: "Large corner radii, compact cards, and clear spacing keep each step approachable." },
+  ],
+  vi: [
+    { title: "Màu sắc như cách gọi tên cảm xúc", body: "Những mảng pastel giúp người dùng chọn một cảm giác trước khi họ sẵn sàng giải thích nó." },
+    { title: "Mascot thân thiện và những điểm vui nhỏ", body: "Nhân vật và các khoảnh khắc nhỏ mang tính động viên làm trải nghiệm mềm hơn mà không bị trẻ con hóa." },
+    { title: "Bố cục bo tròn, ít ma sát", body: "Bo góc lớn, card gọn và khoảng thở rõ ràng khiến từng bước trở nên dễ tiếp cận hơn." },
+  ],
+};
+
+const UI_SHOWCASES = {
+  en: [
+    {
+      title: "Onboarding",
+      desc: "The onboarding sequence is shown screen by screen from the Figma file, keeping the mascot-led emotional entry intact.",
+      screens: [
+        { title: "Joy", body: "A bright and welcoming start that frames the product as playful, encouraging, and emotionally safe.", src: onboardingJoy },
+        { title: "Sadness", body: "A softer, more tender tone that acknowledges heaviness without making the user feel judged.", src: onboardingSadness },
+        { title: "Disgust", body: "The character becomes uneasy and tense, showing how even uncomfortable feelings are given space and recognition.", src: onboardingDisgust },
+        { title: "Anger", body: "Sharp energy and stronger contrast help express heat, frustration, and emotional intensity more honestly.", src: onboardingAnger },
+        { title: "Fear", body: "A hesitant and overstimulated visual tone reflects anxiety, caution, and the need for reassurance.", src: onboardingFear },
+        { title: "Envy", body: "The green variant presents comparison, insecurity, and internal discomfort through a more unsettled expression.", src: onboardingEnvy },
+      ],
+    },
+    {
+      title: "Profile",
+      desc: "These exact Figma screens show how the daily profile changes its mascot expression, background color, and visual accents based on that day's emotion.",
+      screens: [
+        { title: "Aqua state", body: "Represents a restless, overstimulated day. The aqua palette feels airy but uneasy, with the mascot showing agitation and emotional noise.", src: profileMinhHuyAqua },
+        { title: "Yellow state", body: "Represents joy and optimism. Warm yellow tones and a smiling mascot make the profile feel light, open, and rewarding.", src: profileMinhHuyYellow },
+        { title: "Orange state", body: "Represents anger and high emotional heat. The orange background and explosive character silhouette amplify tension and urgency.", src: profileMinhHuyOrange },
+        { title: "Blue state", body: "Represents sadness and emotional heaviness. Cool blue tones and watery shapes make the interface feel quieter and more inward.", src: profileMinhHuyBlue },
+        { title: "Purple state", body: "Represents overwhelm and confusion. The purple palette and scattered decorative accents suggest a mind that feels crowded and unsteady.", src: profileMinhHuyPurple },
+        { title: "Green state", body: "Represents discomfort, resistance, or disgust. The green screen shifts the mascot into a strained expression, making the mood feel uneasy and withdrawn.", src: profileMinhHuyGreen },
+      ],
+    },
+    {
+      title: "Chat",
+      desc: "The chat flow is shown through the real screens for entry, mood check-in, response mode selection, and the active reflection conversation.",
+      screens: [
+        { title: "Chat home", body: "The entry screen opens with low-pressure prompts and clear action paths instead of a demanding blank conversation.", src: chatHome },
+        { title: "Mood check-in", body: "Emotion choices appear upfront so the user can express themselves before needing to explain anything in words.", src: chatMoodCheckin },
+        { title: "Response mode", body: "The interface offers different ways to process a feeling, giving users more control over how they want support.", src: chatAiModePicker },
+        { title: "Active conversation", body: "Once the user enters the flow, the tone stays conversational and reflective rather than diagnostic or overly robotic.", src: chatActiveConversation },
+      ],
+    },
+  ],
+  vi: [
+    {
+      title: "Onboarding",
+      desc: "Phần onboarding được show theo từng màn hình thật trong Figma để giữ nguyên nhịp mascot và cách đi vào cảm xúc ban đầu.",
+      screens: [
+        { title: "Joy", body: "Mở đầu sáng và thân thiện, giúp sản phẩm xuất hiện như một nơi vui vẻ, an toàn và dễ bước vào.", src: onboardingJoy },
+        { title: "Sadness", body: "Tông dịu và mềm hơn, thừa nhận cảm giác nặng lòng mà không khiến người dùng thấy mình bị phán xét.", src: onboardingSadness },
+        { title: "Disgust", body: "Nhân vật trở nên khó chịu và căng hơn, cho thấy cả những cảm xúc không dễ chịu cũng được nhìn nhận rõ ràng.", src: onboardingDisgust },
+        { title: "Anger", body: "Năng lượng sắc và tương phản mạnh giúp cảm giác tức giận, bức bối và quá tải được thể hiện trung thực hơn.", src: onboardingAnger },
+        { title: "Fear", body: "Không khí do dự và kích thích quá mức phản chiếu nỗi lo âu, dè chừng và nhu cầu được trấn an.", src: onboardingFear },
+        { title: "Envy", body: "Biến thể xanh lá gợi cảm giác so sánh, bất an và khó chịu nội tâm qua biểu cảm kém ổn định hơn.", src: onboardingEnvy },
+      ],
+    },
+    {
+      title: "Profile",
+      desc: "Đây là đúng 6 màn hình profile trong Figma, thể hiện cách icon nhân vật, màu nền và visual accent đổi theo cảm xúc của ngày hôm đó.",
+      screens: [
+        { title: "Mood xanh ngọc", body: "Tượng trưng cho một ngày bồn chồn và hơi quá tải. Sắc xanh ngọc thoáng nhưng bất an, còn mascot thể hiện sự nhiễu và khó yên.", src: profileMinhHuyAqua },
+        { title: "Mood vàng", body: "Tượng trưng cho niềm vui và sự lạc quan. Màu vàng ấm cùng mascot tươi cười khiến profile trở nên mở, nhẹ và đầy năng lượng tích cực.", src: profileMinhHuyYellow },
+        { title: "Mood cam", body: "Tượng trưng cho tức giận và nhiệt cảm xúc cao. Nền cam và hình khối bùng nổ của mascot làm cảm giác căng thẳng hiện lên rất rõ.", src: profileMinhHuyOrange },
+        { title: "Mood xanh dương", body: "Tượng trưng cho nỗi buồn và cảm giác nặng lòng. Tông xanh lạnh cùng những hình mềm như nước khiến giao diện lắng và hướng nội hơn.", src: profileMinhHuyBlue },
+        { title: "Mood tím", body: "Tượng trưng cho choáng ngợp và rối trí. Bảng tím cùng các accent rải rác gợi cảm giác đầu óc đông đúc và thiếu ổn định.", src: profileMinhHuyPurple },
+        { title: "Mood xanh lá", body: "Tượng trưng cho khó chịu, kháng cự hoặc ghê sợ. Màn xanh lá đẩy mascot vào biểu cảm gượng gạo hơn, làm mood trở nên bất ổn và khép lại.", src: profileMinhHuyGreen },
+      ],
+    },
+    {
+      title: "Chat",
+      desc: "Nhóm chat dùng các màn hình thật cho điểm vào hội thoại, check-in cảm xúc, chọn mode phản hồi và màn trò chuyện đang diễn ra.",
+      screens: [
+        { title: "Trang chat", body: "Điểm vào hội thoại mở ra bằng các hướng dẫn nhẹ nhàng và action rõ ràng, thay vì buộc người dùng đối diện ngay với một ô chat trống.", src: chatHome },
+        { title: "Check-in cảm xúc", body: "Các lựa chọn cảm xúc được đặt lên trước để người dùng có thể biểu đạt mình trước khi phải diễn giải bằng chữ.", src: chatMoodCheckin },
+        { title: "Chọn mode phản hồi", body: "Giao diện cho phép chọn cách được đồng hành, từ đó người dùng có cảm giác kiểm soát nhiều hơn với kiểu hỗ trợ mình muốn nhận.", src: chatAiModePicker },
+        { title: "Hội thoại đang diễn ra", body: "Khi đã vào luồng trò chuyện, giọng điệu vẫn giữ tính đối thoại và phản chiếu, tránh cảm giác chẩn đoán hay máy móc.", src: chatActiveConversation },
+      ],
+    },
+  ],
+} as const;
+
 export function Murror() {
   const { lang } = useI18n();
   const c = COPY[lang];
+  const socialLinks = [
+    { label: "Behance", href: "https://www.behance.net/minhhuyhunh2" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/huy-huynh-minh/" },
+    { label: "Email", href: "mailto:huylem1800vn@gmail.com" },
+    { label: "Resume", href: "#" },
+  ];
 
   return (
     <div className="min-h-screen relative" style={{ backgroundColor: INK, color: FG }}>
@@ -522,30 +662,88 @@ export function Murror() {
         <Section id="ui" tag={c.ui.tag}>
           <p className="max-w-[60ch] leading-relaxed opacity-85" style={{ fontSize: "1.125rem" }}>{c.ui.body}</p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
-            {["Dark", "Gradient", "Glass", "Rounded", "Minimal text", "Gentle motion"].map((t) => (
-              <span key={t} className="px-4 py-2 rounded-full text-sm backdrop-blur-md" style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}>
-                {t}
-              </span>
-            ))}
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-4">
+            <div className="lg:col-span-5 p-6 md:p-7 rounded-3xl backdrop-blur-md" style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}>
+              <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: VIOLET }}>
+                {lang === "en" ? "Design Tokens" : "Design Tokens"}
+              </div>
+              <div className="space-y-5">
+                {TOKEN_GROUPS.map((group) => (
+                  <div key={group.name}>
+                    <div className="text-sm mb-3 opacity-80" style={{ fontFamily: "Fraunces, serif" }}>{group.name}</div>
+                    <div className="flex flex-wrap gap-2">
+                      {group.chips.map((chip) => (
+                        <div
+                          key={chip.label}
+                          className="rounded-2xl px-3 py-2 inline-flex items-center gap-2"
+                          style={{ backgroundColor: "rgba(255,255,255,0.05)", border: `1px solid ${BORDER}` }}
+                        >
+                          <span className="w-4 h-4 rounded-full" style={{ backgroundColor: chip.hex, border: "1px solid rgba(255,255,255,0.2)" }} />
+                          <span className="text-xs opacity-80">{chip.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 grid md:grid-cols-3 gap-4">
+              {UI_PRINCIPLES[lang].map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: i * 0.05 }}
+                  className="p-6 rounded-3xl backdrop-blur-md"
+                  style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+                >
+                  <div className="text-[10px] tracking-[0.2em] uppercase mb-3" style={{ color: VIOLET }}>
+                    0{i + 1}
+                  </div>
+                  <div className="mb-3" style={{ fontFamily: "Fraunces, serif", fontSize: "1.2rem" }}>
+                    {item.title}
+                  </div>
+                  <p className="text-sm leading-relaxed opacity-75">{item.body}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <div className="mt-16 text-xs tracking-[0.2em] uppercase mb-8" style={{ color: VIOLET }}>
             {c.ui.screensLabel}
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {c.ui.screens.map((label, i) => (
+          <div className="space-y-6">
+            {UI_SHOWCASES[lang].map((group, i) => (
               <motion.div
-                key={i}
+                key={group.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="rounded-2xl overflow-hidden backdrop-blur-md flex flex-col"
+                className="rounded-[28px] p-5 md:p-6 backdrop-blur-md"
                 style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
               >
-                <PhoneScreen index={i} />
-                <div className="p-4 text-sm opacity-80">{label}</div>
+                <div className="mb-5 md:mb-6">
+                  <div className="text-lg mb-2" style={{ fontFamily: "Fraunces, serif" }}>{group.title}</div>
+                  <div className="text-sm opacity-70 leading-relaxed max-w-[70ch]">{group.desc}</div>
+                </div>
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                  {group.screens.map((screen) => (
+                    <div key={screen.title} className="rounded-2xl p-3" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+                      <div className="overflow-hidden rounded-[22px]" style={{ border: `1px solid ${BORDER}` }}>
+                        <img
+                          src={screen.src}
+                          alt={`Murror UI Design · ${group.title} · ${screen.title}`}
+                          className="block w-full h-auto"
+                        />
+                      </div>
+                      <div className="text-xs uppercase tracking-[0.16em] opacity-70 mt-3">{screen.title}</div>
+                      <div className="text-sm opacity-70 leading-relaxed mt-2">{screen.body}</div>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -586,9 +784,15 @@ export function Murror() {
               © 2026 Huỳnh Minh Huy · Murror Case Study
             </div>
             <div className="flex flex-wrap gap-6 text-sm">
-              {["Behance", "LinkedIn", "Email", "Resume"].map((l) => (
-                <a key={l} href="#" className="hover:opacity-100 opacity-70 transition-opacity inline-flex items-center gap-1">
-                  {l} <ArrowUpRight size={14} />
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target={link.href === "#" ? undefined : "_blank"}
+                  rel={link.href === "#" ? undefined : "noreferrer"}
+                  className="hover:opacity-100 opacity-70 transition-opacity inline-flex items-center gap-1"
+                >
+                  {link.label} <ArrowUpRight size={14} />
                 </a>
               ))}
             </div>
@@ -624,61 +828,5 @@ function GlassCard({ children, delay = 0 }: { children: React.ReactNode; delay?:
     >
       {children}
     </motion.div>
-  );
-}
-
-function PhoneScreen({ index }: { index: number }) {
-  return (
-    <div className="aspect-[3/4] relative overflow-hidden" style={{ background: `linear-gradient(160deg, ${INK}, ${BLUE}22, ${VIOLET}33)` }}>
-      <div className="absolute inset-4 rounded-2xl backdrop-blur-md p-4 flex flex-col" style={{ backgroundColor: "rgba(11,13,24,0.4)", border: `1px solid ${BORDER}` }}>
-        <div className="text-[9px] tracking-[0.2em] uppercase opacity-60">Murror</div>
-        {index === 0 && (
-          <div className="mt-3 text-[14px] leading-tight" style={{ fontFamily: "Fraunces, serif" }}>
-            How are you, <span style={{ color: VIOLET }}>quietly</span>?
-          </div>
-        )}
-        {index === 1 && (
-          <div className="mt-3 text-[14px]" style={{ fontFamily: "Fraunces, serif" }}>One tap to begin today.</div>
-        )}
-        {index === 2 && (
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {["Calm", "Heavy", "Tense", "Soft", "Foggy"].map((m, i) => (
-              <span key={m} className="text-[8px] px-2 py-1 rounded-full" style={{ backgroundColor: i === 2 ? VIOLET : "rgba(255,255,255,0.08)", color: i === 2 ? INK : FG }}>{m}</span>
-            ))}
-          </div>
-        )}
-        {index === 3 && (
-          <div className="mt-auto mb-auto flex flex-col items-center justify-center gap-2">
-            <div className="w-14 h-14 rounded-full animate-pulse" style={{ background: `radial-gradient(circle, ${VIOLET}, transparent)` }} />
-            <div className="text-[9px] opacity-70">Breathe in… 4s</div>
-          </div>
-        )}
-        {index === 4 && (
-          <div className="mt-3 text-[11px] leading-snug opacity-90" style={{ fontFamily: "Fraunces, serif" }}>
-            “It sounds like you're holding a lot today. That's okay.”
-          </div>
-        )}
-        {index === 5 && (
-          <div className="mt-auto">
-            <div className="text-[9px] opacity-60 mb-1">One small step</div>
-            <div className="p-2 rounded-lg text-[10px]" style={{ backgroundColor: VIOLET, color: INK }}>Drink a glass of water</div>
-          </div>
-        )}
-        {index === 6 && (
-          <div className="mt-3 flex gap-1 items-end h-16">
-            {[24, 32, 18, 40, 28, 36, 22].map((h, i) => (
-              <div key={i} className="flex-1 rounded-sm" style={{ height: h, background: `linear-gradient(to top, ${BLUE}, ${VIOLET})`, opacity: 0.7 }} />
-            ))}
-          </div>
-        )}
-        {index === 7 && (
-          <div className="mt-3 space-y-1.5">
-            {["Mon · Foggy", "Tue · Calm", "Wed · Tense"].map((s) => (
-              <div key={s} className="p-1.5 rounded text-[9px]" style={{ backgroundColor: "rgba(255,255,255,0.06)" }}>{s}</div>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
   );
 }

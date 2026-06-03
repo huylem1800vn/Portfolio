@@ -3,9 +3,9 @@ import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "../i18n";
 
 const channels = [
-  { label: "Email", value: "minhhuy.designs@email.com", href: "mailto:minhhuy.designs@email.com" },
-  { label: "Behance", value: "behance.net/minhhuy", href: "https://www.behance.net/" },
-  { label: "LinkedIn", value: "linkedin.com/in/minhhuy", href: "https://www.linkedin.com/" },
+  { label: "Email", value: "huylem1800vn@gmail.com", href: "mailto:huylem1800vn@gmail.com" },
+  { label: "Behance", value: "behance.net/minhhuyhunh2", href: "https://www.behance.net/minhhuyhunh2" },
+  { label: "LinkedIn", value: "linkedin.com/in/huy-huynh-minh", href: "https://www.linkedin.com/in/huy-huynh-minh/" },
 ];
 
 export function Contact() {
@@ -70,6 +70,8 @@ export function Contact() {
                 >
                   <a
                     href={c.href}
+                    target="_blank"
+                    rel="noreferrer"
                     className="group flex items-center justify-between py-6 hover:pl-3 transition-all"
                   >
                     <div className="flex items-baseline gap-6">
