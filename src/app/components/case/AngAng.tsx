@@ -1122,17 +1122,45 @@ export function AngAng() {
               <div className="mt-10 flex flex-wrap gap-3">
                 <a
                   href="#research"
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm transition-opacity hover:opacity-90"
+                  className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm transition-all duration-300"
                   style={{ backgroundColor: GREEN, color: "#fff" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = GREEN_DARK;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = GREEN;
+                  }}
                 >
-                  {t.cta1} <ArrowUpRight size={16} />
+                  <span>{t.cta1}</span>
+                  <span
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
+                    style={{ backgroundColor: "#fff", color: GREEN_DARK }}
+                  >
+                    <ArrowUpRight size={18} />
+                  </span>
                 </a>
                 <a
                   href="#system"
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm border transition-colors hover:bg-white"
+                  className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm border transition-all duration-300"
                   style={{ borderColor: GREEN_DARK, color: GREEN_DARK }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = GREEN;
+                    e.currentTarget.style.borderColor = GREEN;
+                    e.currentTarget.style.color = "#fff";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.borderColor = GREEN_DARK;
+                    e.currentTarget.style.color = GREEN_DARK;
+                  }}
                 >
-                  {t.cta2} <ArrowUpRight size={16} />
+                  <span>{t.cta2}</span>
+                  <span
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
+                    style={{ backgroundColor: "#fff", color: GREEN_DARK }}
+                  >
+                    <ArrowUpRight size={18} />
+                  </span>
                 </a>
               </div>
             </div>
@@ -2598,22 +2626,34 @@ export function AngAng() {
         <div className="mt-12 flex flex-wrap gap-3">
           <a
             href="#"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm transition-opacity hover:opacity-90"
+            className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm transition-all duration-300"
             style={{ backgroundColor: GREEN, color: "#fff" }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = GREEN_DARK;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = GREEN;
+            }}
           >
-            {t.reflection.cta1} <ArrowUpRight size={16} />
+            <span>{t.reflection.cta1}</span>
+            <span
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
+              style={{ backgroundColor: "#fff", color: GREEN_DARK }}
+            >
+              <ArrowUpRight size={18} />
+            </span>
           </a>
           <a
             href="#case/murror"
-            className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm transition-colors"
+            className="group inline-flex items-center gap-4 rounded-full pl-7 pr-2 py-2.5 text-sm transition-all duration-300"
             style={{
               border: "1px solid rgba(255,255,255,0.3)",
               color: "#fff",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "rgba(222,243,163,0.16)";
-              e.currentTarget.style.borderColor = "rgba(222,243,163,0.52)";
-              e.currentTarget.style.color = "#DEF3A3";
+              e.currentTarget.style.backgroundColor = GREEN;
+              e.currentTarget.style.borderColor = GREEN;
+              e.currentTarget.style.color = "#fff";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent";
@@ -2621,7 +2661,13 @@ export function AngAng() {
               e.currentTarget.style.color = "#fff";
             }}
           >
-            {t.reflection.cta2} <ArrowUpRight size={16} />
+            <span>{t.reflection.cta2}</span>
+            <span
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full transition-transform duration-300 group-hover:rotate-45"
+              style={{ backgroundColor: "#fff", color: GREEN_DARK }}
+            >
+              <ArrowUpRight size={18} />
+            </span>
           </a>
         </div>
         <div
