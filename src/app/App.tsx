@@ -19,10 +19,10 @@ function Home() {
       <Nav />
       <main>
         <Hero />
+        <About />
         <Marquee />
         <Work />
         <Process />
-        <About />
         <Contact />
       </main>
     </div>

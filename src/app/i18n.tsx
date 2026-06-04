@@ -79,14 +79,14 @@ const en: Dict = {
     headline:
       "Designing the point where user needs, product logic, and technical execution meet naturally.",
     intro:
-      "I am a UI/UX designer with a background in software development. I care about shaping user flows that feel clear, interfaces that feel grounded, and design systems that can grow beautifully while still being realistic to build.",
+      "I am a UI/UX Designer with a background in software development, driven by the desire to create experiences that are clear, meaningful, and truly useful. My strength lies in connecting design thinking with technical logic, transforming complex ideas into intuitive user flows, structured interfaces, and scalable design systems that are both visually refined and realistic to build.",
     cta1: "View Projects",
     cta2: "Download CV",
     scroll: "Scroll to explore",
     label1: "( 01 ) Designer",
-    label2: "( 02 ) Currently",
+    label2: "( 02 ) Direction",
     currently:
-      "A UI/UX designer moving between design and code, currently building case studies around food discovery, e commerce, and AI for self growth.",
+      "My goal is to grow into a product minded designer who can look beyond the interface and understand the real problems behind each user journey. I am focused on strengthening my problem solving mindset, designing for complex workflows, and collaborating closely with different roles in a team to create digital products that are thoughtful, practical, and valuable to people.",
   },
   marquee: [
     "User needs",
@@ -206,14 +206,14 @@ const vi: Dict = {
     headline:
       "Thiết kế điểm chạm nơi nhu cầu người dùng, logic sản phẩm và khả năng triển khai kỹ thuật gặp nhau một cách tự nhiên.",
     intro:
-      "Tôi là một UI/UX Designer có nền tảng về phát triển phần mềm. Tôi muốn tạo ra những luồng trải nghiệm rõ ràng, những giao diện gần gũi và những hệ thống thiết kế có thể lớn lên theo sản phẩm mà vẫn thực tế để triển khai.",
+      "Tôi là một UI/UX Designer có nền tảng phát triển phần mềm, luôn hướng đến việc tạo ra những trải nghiệm rõ ràng, có chiều sâu và thật sự hữu ích cho người dùng. Thế mạnh của tôi nằm ở khả năng kết nối tư duy thiết kế với logic kỹ thuật, biến những ý tưởng phức tạp thành luồng trải nghiệm mạch lạc, giao diện có cấu trúc và hệ thống thiết kế dễ mở rộng, vừa đảm bảo tính thẩm mỹ vừa có khả năng triển khai thực tế.",
     cta1: "Xem dự án",
     cta2: "Tải CV",
     scroll: "Cuộn để khám phá",
     label1: "( 01 ) Nhà thiết kế",
-    label2: "( 02 ) Hiện tại",
+    label2: "( 02 ) Định hướng",
     currently:
-      "Hiện tại tôi đang đi qua cả hai phía của thiết kế và code, đồng thời xây dựng các case study xoay quanh khám phá ẩm thực, thương mại điện tử và AI cho hành trình phát triển bản thân.",
+      "Mục tiêu của tôi là phát triển thành một nhà thiết kế có tư duy sản phẩm, không chỉ nhìn vào giao diện mà còn hiểu được vấn đề thật sự phía sau mỗi hành trình người dùng. Tôi đang tập trung rèn luyện tư duy giải quyết vấn đề, thiết kế cho các luồng thao tác phức tạp và hợp tác chặt chẽ với nhiều vai trò khác nhau trong đội ngũ để tạo ra những sản phẩm số chỉn chu, thực tế và mang lại giá trị bền vững.",
   },
   marquee: [
     "Nhu cầu người dùng",

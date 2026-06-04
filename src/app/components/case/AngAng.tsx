@@ -2647,7 +2647,7 @@ export function AngAng() {
             <a href="mailto:huylem1800vn@gmail.com" className="hover:text-white">
               Email
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="https://drive.google.com/file/d/1XJvgg20SB51G5W7yzD5_PQ2MueP6lxBR/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white">
               Resume
             </a>
           </div>

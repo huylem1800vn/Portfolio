@@ -406,11 +406,12 @@ const UI_SHOWCASES = {
 export function Murror() {
   const { lang } = useI18n();
   const c = COPY[lang];
+  const resumeHref = "https://drive.google.com/file/d/1XJvgg20SB51G5W7yzD5_PQ2MueP6lxBR/view?usp=sharing";
   const socialLinks = [
     { label: "Behance", href: "https://www.behance.net/minhhuyhunh2" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/huy-huynh-minh/" },
     { label: "Email", href: "mailto:huylem1800vn@gmail.com" },
-    { label: "Resume", href: "#" },
+    { label: "Resume", href: resumeHref },
   ];
 
   return (
@@ -788,8 +789,8 @@ export function Murror() {
                 <a
                   key={link.label}
                   href={link.href}
-                  target={link.href === "#" ? undefined : "_blank"}
-                  rel={link.href === "#" ? undefined : "noreferrer"}
+                  target="_blank"
+                  rel="noreferrer"
                   className="hover:opacity-100 opacity-70 transition-opacity inline-flex items-center gap-1"
                 >
                   {link.label} <ArrowUpRight size={14} />
