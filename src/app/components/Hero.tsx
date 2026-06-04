@@ -11,15 +11,15 @@ export function Hero() {
       initial={{ opacity: 0, y: 22, rotate: 1 }}
       animate={{ opacity: 1, y: 0, rotate: 0 }}
       transition={{ duration: 0.75, delay: 0.22 }}
-      className="w-full"
+      className="w-full md:flex md:justify-end"
     >
-      <div className="group relative mx-auto w-full max-w-[280px] sm:max-w-[310px] md:max-w-[340px] lg:max-w-[370px]">
+      <div className="group relative mx-auto w-full max-w-[280px] sm:max-w-[310px] md:mx-0 md:max-w-[340px] lg:max-w-[370px]">
         <div
           className="absolute -inset-6 opacity-50 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
           style={{ background: "radial-gradient(circle at 50% 45%, rgba(107,92,255,0.15), transparent 65%)" }}
         />
         <div className="relative mx-auto aspect-[760/1080] w-full">
-          <div className="absolute inset-[5.9%_7.1%_6.5%_7.1%] overflow-hidden">
+          <div className="absolute inset-[6.94%_7.89%_6.94%_7.89%] overflow-hidden">
             <img
               src={portraitIllustrationFlowers}
               alt="Illustrated portrait of Huỳnh Minh Huy holding flowers"
@@ -37,16 +37,76 @@ export function Hero() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M74 34L684 52L726 106L716 998L680 1048L82 1032L42 986L50 92L74 34Z" stroke="#111111" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M74 34L90 96L50 92" stroke="#111111" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M684 52L660 104L726 106" stroke="#111111" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M82 1032L100 976L42 986" stroke="#111111" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M680 1048L656 992L716 998" stroke="#111111" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M92 96L660 104L654 992L100 976L92 96Z" stroke="#111111" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M97 101L654 108" stroke="#111111" strokeWidth="3" strokeLinecap="round" opacity="0.72" />
-            <path d="M100 974L652 988" stroke="#111111" strokeWidth="3" strokeLinecap="round" opacity="0.72" />
-            <path d="M92 96L100 976" stroke="#111111" strokeWidth="2.5" strokeLinecap="round" opacity="0.45" />
-            <path d="M660 104L654 992" stroke="#111111" strokeWidth="2.5" strokeLinecap="round" opacity="0.45" />
+            {/* Outer Frame (wobbly) */}
+            <path
+              d="M 20 25 C 260 27 500 23 740 25 C 742 360 738 720 740 1055 C 500 1057 260 1053 20 1055 C 18 720 22 360 20 25 Z"
+              stroke="#111111"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            {/* Inner Frame (wobbly) */}
+            <path
+              d="M 60 75 C 270 77 490 73 700 75 C 702 385 698 695 700 1005 C 490 1007 270 1003 60 1005 C 58 695 62 385 60 75 Z"
+              stroke="#111111"
+              strokeWidth="6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            {/* Corner Bevel Lines */}
+            <path
+              d="M 20 25 C 33 41 47 58 60 75"
+              stroke="#111111"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 740 25 C 727 41 713 58 700 75"
+              stroke="#111111"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 740 1055 C 727 1039 713 1022 700 1005"
+              stroke="#111111"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            <path
+              d="M 20 1055 C 33 1039 47 1022 60 1005"
+              stroke="#111111"
+              strokeWidth="8"
+              strokeLinecap="round"
+            />
+            {/* Sketchy shadow/lip highlights */}
+            <path
+              d="M 65 80 C 270 82 490 78 695 80"
+              stroke="#111111"
+              strokeWidth="3"
+              strokeLinecap="round"
+              opacity="0.72"
+            />
+            <path
+              d="M 65 1000 C 490 1002 270 998 695 1000"
+              stroke="#111111"
+              strokeWidth="3"
+              strokeLinecap="round"
+              opacity="0.72"
+            />
+            <path
+              d="M 65 80 C 63 385 67 695 65 1000"
+              stroke="#111111"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              opacity="0.45"
+            />
+            <path
+              d="M 695 80 C 697 385 693 695 695 1000"
+              stroke="#111111"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              opacity="0.45"
+            />
           </svg>
         </div>
       </div>
@@ -107,7 +167,7 @@ export function Hero() {
               </motion.p>
             </div>
 
-            <div className="md:col-span-5 md:self-center md:-mt-2">{portraitCard}</div>
+            <div className="md:col-span-5 md:-mt-2 md:self-center">{portraitCard}</div>
           </div>
 
           <motion.div
