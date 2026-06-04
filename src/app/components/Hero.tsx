@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { useI18n } from "../i18n";
@@ -6,6 +7,28 @@ import originalPhoto from "../../imports/hero/original-photo.JPG";
 
 export function Hero() {
   const { t, lang } = useI18n();
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [isPortraitToggled, setIsPortraitToggled] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || typeof window.matchMedia !== "function") return;
+
+    const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse)");
+    const updateTouchMode = () => {
+      const nextIsTouchDevice = mediaQuery.matches;
+      setIsTouchDevice(nextIsTouchDevice);
+      if (!nextIsTouchDevice) {
+        setIsPortraitToggled(false);
+      }
+    };
+
+    updateTouchMode();
+    mediaQuery.addEventListener("change", updateTouchMode);
+
+    return () => mediaQuery.removeEventListener("change", updateTouchMode);
+  }, []);
+
+  const showOriginalPhoto = isTouchDevice && isPortraitToggled;
   const portraitCard = (
     <motion.div
       initial={{ opacity: 0, y: 22, rotate: 1 }}
@@ -13,7 +36,24 @@ export function Hero() {
       transition={{ duration: 0.75, delay: 0.22 }}
       className="w-full md:flex md:justify-end"
     >
-      <div className="group relative mx-auto w-full max-w-[280px] sm:max-w-[310px] md:mx-0 md:max-w-[340px] lg:max-w-[370px]">
+      <div
+        className="group relative mx-auto w-full max-w-[280px] sm:max-w-[310px] md:mx-0 md:max-w-[340px] lg:max-w-[370px]"
+        onClick={() => {
+          if (isTouchDevice) {
+            setIsPortraitToggled((current) => !current);
+          }
+        }}
+        role={isTouchDevice ? "button" : undefined}
+        tabIndex={isTouchDevice ? 0 : undefined}
+        onKeyDown={(event) => {
+          if (!isTouchDevice) return;
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            setIsPortraitToggled((current) => !current);
+          }
+        }}
+        aria-label={isTouchDevice ? "Tap to switch portrait image" : undefined}
+      >
         <div
           className="absolute -inset-6 opacity-50 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
           style={{ background: "radial-gradient(circle at 50% 45%, rgba(107,92,255,0.15), transparent 65%)" }}
@@ -24,11 +64,19 @@ export function Hero() {
               src={portraitIllustrationFlowers}
               alt="Illustrated portrait of Huỳnh Minh Huy holding flowers"
               className="block h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-[1.015] group-hover:opacity-0"
+              style={{
+                opacity: showOriginalPhoto ? 0 : 1,
+                transform: showOriginalPhoto ? "scale(1.015)" : undefined,
+              }}
             />
             <img
               src={originalPhoto}
               alt="Graduation photo of Huỳnh Minh Huy"
               className="absolute inset-0 block h-full w-full object-cover object-[63%_42%] opacity-0 scale-[1.01] transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100"
+              style={{
+                opacity: showOriginalPhoto ? 1 : undefined,
+                transform: showOriginalPhoto ? "scale(1)" : undefined,
+              }}
             />
           </div>
           <svg
