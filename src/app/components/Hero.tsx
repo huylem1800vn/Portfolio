@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { useI18n } from "../i18n";
-import portraitIllustrationFlowers from "../../imports/hero/portrait-illustration-flowers.png";
+import portraitIllustrationFlowers from "../../imports/hero/portrait-illustration-flowers.jpeg";
 import originalPhoto from "../../imports/hero/original-photo.JPG";
 
 export function Hero() {
