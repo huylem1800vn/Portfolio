@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { useI18n } from "../i18n";
+import { CV_URL } from "../config/links";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,7 +18,7 @@ export function Nav() {
     { label: t.nav.work, href: "#work" },
     { label: t.nav.process, href: "#process" },
     { label: t.nav.about, href: "#about" },
-    { label: t.nav.resume, href: "#contact" },
+    { label: t.nav.resume, href: CV_URL, external: true },
   ];
 
   return (
@@ -43,6 +44,8 @@ export function Nav() {
             <a
               key={l.href}
               href={l.href}
+              target={l.external ? "_blank" : undefined}
+              rel={l.external ? "noreferrer" : undefined}
               className="relative text-sm tracking-wide text-neutral-700 hover:text-neutral-950 transition-colors group"
             >
               {l.label}

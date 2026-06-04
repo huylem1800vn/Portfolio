@@ -1,8 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "../i18n";
-
-const resumeHref = "https://drive.google.com/file/d/1XJvgg20SB51G5W7yzD5_PQ2MueP6lxBR/view?usp=sharing";
+import { CV_URL } from "../config/links";
 
 const channels = [
   { label: "Email", value: "huylem1800vn@gmail.com", href: "mailto:huylem1800vn@gmail.com" },
@@ -49,7 +48,7 @@ export function Contact() {
             </p>
 
             <a
-              href={resumeHref}
+              href={CV_URL}
               target="_blank"
               rel="noreferrer"
               className="mt-10 inline-flex items-center gap-3 bg-[#f7f5f1] text-neutral-950 rounded-full pl-6 pr-2 py-2 hover:bg-[#a59cff] hover:text-neutral-950 transition-colors group"

@@ -14,8 +14,14 @@ export function useRoute(): Route {
   );
   useEffect(() => {
     const onHash = () => {
-      setRoute(parse(window.location.hash));
-      window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+      const nextRoute = parse(window.location.hash);
+      setRoute(nextRoute);
+
+      // Keep in-page anchors like #work or #about working normally.
+      // Only force scroll-to-top for dedicated case-study routes.
+      if (window.location.hash.startsWith("#case/")) {
+        window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+      }
     };
     window.addEventListener("hashchange", onHash);
     return () => window.removeEventListener("hashchange", onHash);

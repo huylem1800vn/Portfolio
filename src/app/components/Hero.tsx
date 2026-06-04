@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { useI18n } from "../i18n";
+import { CV_URL } from "../config/links";
 import portraitIllustrationFlowers from "../../imports/hero/portrait-illustration-flowers.jpeg";
 import originalPhoto from "../../imports/hero/original-photo.JPG";
 
@@ -234,7 +235,9 @@ export function Hero() {
               </span>
             </a>
             <a
-              href="#contact"
+              href={CV_URL}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-neutral-900/30 px-5 py-3 text-sm transition-colors hover:border-neutral-900 hover:bg-neutral-950 hover:text-[#f7f5f1]"
             >
               {t.hero.cta2}

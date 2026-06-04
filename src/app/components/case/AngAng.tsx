@@ -32,6 +32,7 @@ import LocalProfile from "../../../imports/LocalProfile/LocalProfile";
 import VerifiedProfile from "../../../imports/VertifiedProfile/VertifiedProfile";
 import LogoMark from "../../../imports/Frame1-1/Frame1-13-12627";
 import logoIconPaths from "../../../imports/Frame1-1/svg-s6l1fubn7v";
+import { CV_URL } from "../../config/links";
 import wireframeHome from "../../../imports/image-5.png";
 import wireframeNav from "../../../imports/image-2.png";
 import wireframeDetail from "../../../imports/image-3.png";
@@ -2647,7 +2648,7 @@ export function AngAng() {
             <a href="mailto:huylem1800vn@gmail.com" className="hover:text-white">
               Email
             </a>
-            <a href="https://drive.google.com/file/d/1XJvgg20SB51G5W7yzD5_PQ2MueP6lxBR/view?usp=sharing" target="_blank" rel="noreferrer" className="hover:text-white">
+            <a href={CV_URL} target="_blank" rel="noreferrer" className="hover:text-white">
               Resume
             </a>
           </div>

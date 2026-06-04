@@ -18,6 +18,7 @@ import chatHome from "../../../imports/murror/ui/chat-home.png";
 import chatMoodCheckin from "../../../imports/murror/ui/chat-mood-checkin.png";
 import chatAiModePicker from "../../../imports/murror/ui/chat-ai-mode-picker.png";
 import chatActiveConversation from "../../../imports/murror/ui/chat-active-conversation.png";
+import { CV_URL } from "../../config/links";
 
 const VIOLET = "#a59cff";
 const BLUE = "#6b8cff";
@@ -406,12 +407,11 @@ const UI_SHOWCASES = {
 export function Murror() {
   const { lang } = useI18n();
   const c = COPY[lang];
-  const resumeHref = "https://drive.google.com/file/d/1XJvgg20SB51G5W7yzD5_PQ2MueP6lxBR/view?usp=sharing";
   const socialLinks = [
     { label: "Behance", href: "https://www.behance.net/minhhuyhunh2" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/huy-huynh-minh/" },
     { label: "Email", href: "mailto:huylem1800vn@gmail.com" },
-    { label: "Resume", href: resumeHref },
+    { label: "Resume", href: CV_URL },
   ];
 
   return (
