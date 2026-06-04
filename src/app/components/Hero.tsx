@@ -38,7 +38,7 @@ export function Hero() {
       className="w-full md:flex md:justify-end"
     >
       <div
-        className="group relative mx-auto w-full max-w-[280px] sm:max-w-[310px] md:mx-0 md:max-w-[340px] lg:max-w-[370px]"
+        className="relative mx-auto w-full max-w-[280px] sm:max-w-[310px] md:mx-0 md:max-w-[340px] lg:max-w-[370px]"
         onClick={() => {
           if (isTouchDevice) {
             setIsPortraitToggled((current) => !current);
@@ -56,10 +56,10 @@ export function Hero() {
         aria-label={isTouchDevice ? "Tap to switch portrait image" : undefined}
       >
         <div
-          className="absolute -inset-6 opacity-50 blur-3xl transition-opacity duration-500 group-hover:opacity-70"
+          className="pointer-events-none absolute -inset-6 opacity-50 blur-3xl transition-opacity duration-500"
           style={{ background: "radial-gradient(circle at 50% 45%, rgba(107,92,255,0.15), transparent 65%)" }}
         />
-        <div className="relative mx-auto aspect-[760/1080] w-full">
+        <div className="group relative mx-auto aspect-[760/1080] w-full">
           <div className="absolute inset-[6.94%_7.89%_6.94%_7.89%] overflow-hidden">
             <img
               src={portraitIllustrationFlowers}
@@ -165,7 +165,7 @@ export function Hero() {
   return (
     <section id="top" className="relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="flex min-h-[100svh] flex-col justify-center pt-24 pb-10 md:pt-28 md:pb-12">
+        <div className="flex min-h-[100svh] flex-col justify-center pt-20 pb-8 md:pt-24 md:pb-10">
           <motion.div
             key={`badge-${lang}`}
             initial={{ opacity: 0, y: 8 }}
@@ -177,20 +177,20 @@ export function Hero() {
             {t.hero.badge}
           </motion.div>
 
-          <div className="mt-10 md:mt-14 flex flex-wrap items-baseline gap-x-6 gap-y-2 text-xs tracking-[0.2em] uppercase text-neutral-600">
+          <div className="mt-7 md:mt-9 flex flex-wrap items-baseline gap-x-5 gap-y-2 text-xs tracking-[0.2em] uppercase text-neutral-600">
             <span key={`name-${lang}`}>{t.hero.name}</span>
             <span className="text-neutral-400">/</span>
             <span>{t.hero.role}</span>
           </div>
 
-          <div className="mt-6 grid grid-cols-1 items-center gap-8 md:mt-8 md:grid-cols-12 md:gap-12">
+          <div className="mt-4 grid grid-cols-1 items-center gap-6 md:mt-6 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <motion.h1
                 key={`bridge-${lang}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.05 }}
-                className="mt-4 tracking-[-0.05em] leading-[0.85]"
+                className="mt-3 tracking-[-0.05em] leading-[0.85]"
                 style={{
                   fontFamily: "Fraunces, serif",
                   fontWeight: 400,
@@ -205,7 +205,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.15 }}
-                className="mt-8 md:mt-10 max-w-[28ch] tracking-[-0.02em] leading-[1.1]"
+                className="mt-6 md:mt-8 max-w-[28ch] tracking-[-0.02em] leading-[1.1]"
                 style={{
                   fontFamily: "Fraunces, serif",
                   fontWeight: 400,
@@ -216,14 +216,14 @@ export function Hero() {
               </motion.p>
             </div>
 
-            <div className="md:col-span-5 md:-mt-2 md:self-center">{portraitCard}</div>
+            <div className="md:col-span-5 md:self-center">{portraitCard}</div>
           </div>
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-10 flex flex-wrap items-center gap-4 md:mt-12"
+            className="mt-8 flex flex-wrap items-center gap-4 md:mt-10"
           >
             <a
               href="#work"
@@ -248,7 +248,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-10 flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-neutral-500 md:mt-14"
+            className="mt-8 flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-neutral-500 md:mt-10"
           >
             <ArrowDown size={14} />
             {t.hero.scroll}
