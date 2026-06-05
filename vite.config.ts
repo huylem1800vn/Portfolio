@@ -1,8 +1,13 @@
-import { defineConfig } from 'vite'
+import fs from 'fs'
 import path from 'path'
+import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
+const projectRoot = __dirname
+const importsRoot = path.resolve(projectRoot, 'src/imports')
+const cloudManifestPath = path.resolve(projectRoot, 'src/app/config/cloudinary-assets.generated.json')
+const cloudAssetExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp'])
 
 function figmaAssetResolver() {
   return {
@@ -16,9 +21,76 @@ function figmaAssetResolver() {
   }
 }
 
+function loadCloudAssetMap() {
+  if (!fs.existsSync(cloudManifestPath)) {
+    return new Map<string, string>()
+  }
+
+  const raw = fs.readFileSync(cloudManifestPath, 'utf8')
+  const parsed = JSON.parse(raw) as {
+    assets?: Record<string, { secureUrl?: string }>
+  }
+
+  const map = new Map<string, string>()
+
+  for (const [relativePath, asset] of Object.entries(parsed.assets ?? {})) {
+    if (!asset?.secureUrl) continue
+    const absolutePath = path.resolve(importsRoot, relativePath)
+    map.set(path.normalize(absolutePath), asset.secureUrl)
+  }
+
+  return map
+}
+
+function cloudinaryAssetResolver() {
+  let cloudAssetMap = new Map<string, string>()
+
+  return {
+    name: 'cloudinary-asset-resolver',
+    enforce: 'pre' as const,
+    configResolved() {
+      cloudAssetMap = loadCloudAssetMap()
+    },
+    resolveId(source: string, importer?: string) {
+      if (!importer || source.startsWith('figma:asset/')) {
+        return null
+      }
+
+      const extension = path.extname(source).toLowerCase()
+      if (!cloudAssetExtensions.has(extension)) {
+        return null
+      }
+
+      const resolvedPath = path.normalize(path.resolve(path.dirname(importer), source))
+      const secureUrl = cloudAssetMap.get(resolvedPath)
+
+      if (!secureUrl) {
+        return null
+      }
+
+      return `\0cloudinary-asset:${resolvedPath}`
+    },
+    load(id: string) {
+      if (!id.startsWith('\0cloudinary-asset:')) {
+        return null
+      }
+
+      const resolvedPath = id.replace('\0cloudinary-asset:', '')
+      const secureUrl = cloudAssetMap.get(resolvedPath)
+
+      if (!secureUrl) {
+        return null
+      }
+
+      return `export default ${JSON.stringify(secureUrl)};`
+    },
+  }
+}
+
 export default defineConfig({
   plugins: [
     figmaAssetResolver(),
+    cloudinaryAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them
     react(),

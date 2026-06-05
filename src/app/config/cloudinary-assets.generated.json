@@ -1,0 +1,642 @@
+{
+  "generatedAt": "2026-06-05T06:37:26.408Z",
+  "cloudName": "dlasbipjr",
+  "folder": "Portfolio Minh Huy",
+  "deletedLocalFiles": true,
+  "excluded": [
+    "hero/original-photo.JPG",
+    "hero/portrait-illustration-flowers.jpeg"
+  ],
+  "assets": {
+    "BảnDồ/0cd5c5a0271f0c00e29953c7ba9b577839023d17.png": {
+      "relativePath": "BảnDồ/0cd5c5a0271f0c00e29953c7ba9b577839023d17.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633483/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/0cd5c5a0271f0c00e29953c7ba9b577839023d17.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/0cd5c5a0271f0c00e29953c7ba9b577839023d17",
+      "bytes": 1006254,
+      "width": 900,
+      "height": 500,
+      "format": "png"
+    },
+    "BảnDồ/30a7133951f87983951d99b5aead7f836090c2fe.png": {
+      "relativePath": "BảnDồ/30a7133951f87983951d99b5aead7f836090c2fe.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633511/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/30a7133951f87983951d99b5aead7f836090c2fe.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/30a7133951f87983951d99b5aead7f836090c2fe",
+      "bytes": 1164517,
+      "width": 1598,
+      "height": 1200,
+      "format": "png"
+    },
+    "BảnDồ/3c60c5489ce812147382baede7aa1d7fbc1b945b.png": {
+      "relativePath": "BảnDồ/3c60c5489ce812147382baede7aa1d7fbc1b945b.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633535/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/3c60c5489ce812147382baede7aa1d7fbc1b945b.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/3c60c5489ce812147382baede7aa1d7fbc1b945b",
+      "bytes": 1198395,
+      "width": 1200,
+      "height": 676,
+      "format": "png"
+    },
+    "BảnDồ/434b801ddb6fcff125708fede14940362ce0d04d.png": {
+      "relativePath": "BảnDồ/434b801ddb6fcff125708fede14940362ce0d04d.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633550/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/434b801ddb6fcff125708fede14940362ce0d04d.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/434b801ddb6fcff125708fede14940362ce0d04d",
+      "bytes": 567132,
+      "width": 800,
+      "height": 450,
+      "format": "png"
+    },
+    "BảnDồ/44648f4fd82e5c79022311daa20611f2aea18203.png": {
+      "relativePath": "BảnDồ/44648f4fd82e5c79022311daa20611f2aea18203.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633551/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/44648f4fd82e5c79022311daa20611f2aea18203.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/44648f4fd82e5c79022311daa20611f2aea18203",
+      "bytes": 21851,
+      "width": 108,
+      "height": 108,
+      "format": "png"
+    },
+    "BảnDồ/49e7697a31bc8886b1b62ff3ba037e558b3f611c.png": {
+      "relativePath": "BảnDồ/49e7697a31bc8886b1b62ff3ba037e558b3f611c.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633558/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/49e7697a31bc8886b1b62ff3ba037e558b3f611c.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/49e7697a31bc8886b1b62ff3ba037e558b3f611c",
+      "bytes": 1667350,
+      "width": 910,
+      "height": 1604,
+      "format": "png"
+    },
+    "BảnDồ/8565f0b1f7db0a597a8f9eef583e407d87ef380b.png": {
+      "relativePath": "BảnDồ/8565f0b1f7db0a597a8f9eef583e407d87ef380b.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633559/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/8565f0b1f7db0a597a8f9eef583e407d87ef380b.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/8565f0b1f7db0a597a8f9eef583e407d87ef380b",
+      "bytes": 9870,
+      "width": 72,
+      "height": 72,
+      "format": "png"
+    },
+    "BảnDồ/934aebc28a2c946f62e42cb7c0d5f0a55355b522.png": {
+      "relativePath": "BảnDồ/934aebc28a2c946f62e42cb7c0d5f0a55355b522.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633560/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/934aebc28a2c946f62e42cb7c0d5f0a55355b522.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/934aebc28a2c946f62e42cb7c0d5f0a55355b522",
+      "bytes": 364389,
+      "width": 500,
+      "height": 333,
+      "format": "png"
+    },
+    "BảnDồ/d270c0d35ac3b552f85ef06edc991d9243b55c18.png": {
+      "relativePath": "BảnDồ/d270c0d35ac3b552f85ef06edc991d9243b55c18.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633567/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/d270c0d35ac3b552f85ef06edc991d9243b55c18.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/d270c0d35ac3b552f85ef06edc991d9243b55c18",
+      "bytes": 2277133,
+      "width": 1080,
+      "height": 1350,
+      "format": "png"
+    },
+    "BảnDồ/d296e2f06704ed9d7672913c699e54cc229f8e84.png": {
+      "relativePath": "BảnDồ/d296e2f06704ed9d7672913c699e54cc229f8e84.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633573/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/d296e2f06704ed9d7672913c699e54cc229f8e84.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/d296e2f06704ed9d7672913c699e54cc229f8e84",
+      "bytes": 855431,
+      "width": 1024,
+      "height": 817,
+      "format": "png"
+    },
+    "BảnDồ/f345d35da812df235dbaf6f5174195d045aec916.png": {
+      "relativePath": "BảnDồ/f345d35da812df235dbaf6f5174195d045aec916.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633681/Portfolio%20Minh%20Huy/Ba%CC%89nDo%CC%82%CC%80/f345d35da812df235dbaf6f5174195d045aec916.png",
+      "publicId": "Portfolio Minh Huy/BảnDồ/f345d35da812df235dbaf6f5174195d045aec916",
+      "bytes": 925077,
+      "width": 900,
+      "height": 500,
+      "format": "png"
+    },
+    "CảmXuc/067663b262c4095779f86037c77e49725e1724c9.png": {
+      "relativePath": "CảmXuc/067663b262c4095779f86037c77e49725e1724c9.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633688/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/067663b262c4095779f86037c77e49725e1724c9.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/067663b262c4095779f86037c77e49725e1724c9",
+      "bytes": 129762,
+      "width": 736,
+      "height": 1104,
+      "format": "jpg"
+    },
+    "CảmXuc/0a9a4faac107ab6c5ebbecc820e36020cee17a3c.png": {
+      "relativePath": "CảmXuc/0a9a4faac107ab6c5ebbecc820e36020cee17a3c.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633692/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/0a9a4faac107ab6c5ebbecc820e36020cee17a3c.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/0a9a4faac107ab6c5ebbecc820e36020cee17a3c",
+      "bytes": 128824,
+      "width": 736,
+      "height": 736,
+      "format": "jpg"
+    },
+    "CảmXuc/275422289dd9015e93fec6eaa76e0bc03ce58f1d.png": {
+      "relativePath": "CảmXuc/275422289dd9015e93fec6eaa76e0bc03ce58f1d.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633697/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/275422289dd9015e93fec6eaa76e0bc03ce58f1d.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/275422289dd9015e93fec6eaa76e0bc03ce58f1d",
+      "bytes": 118172,
+      "width": 736,
+      "height": 920,
+      "format": "jpg"
+    },
+    "CảmXuc/3051894948d2bf6f5b15e962a9b1396f61df84aa.png": {
+      "relativePath": "CảmXuc/3051894948d2bf6f5b15e962a9b1396f61df84aa.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633699/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/3051894948d2bf6f5b15e962a9b1396f61df84aa.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/3051894948d2bf6f5b15e962a9b1396f61df84aa",
+      "bytes": 111860,
+      "width": 736,
+      "height": 736,
+      "format": "jpg"
+    },
+    "CảmXuc/3609830dd9bd88850417109a84487adc6aeef9b9.png": {
+      "relativePath": "CảmXuc/3609830dd9bd88850417109a84487adc6aeef9b9.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633710/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/3609830dd9bd88850417109a84487adc6aeef9b9.png",
+      "publicId": "Portfolio Minh Huy/CảmXuc/3609830dd9bd88850417109a84487adc6aeef9b9",
+      "bytes": 1146877,
+      "width": 832,
+      "height": 1456,
+      "format": "png"
+    },
+    "CảmXuc/43a83a7cd34469649975680ae03a9816da97e90e.png": {
+      "relativePath": "CảmXuc/43a83a7cd34469649975680ae03a9816da97e90e.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633727/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/43a83a7cd34469649975680ae03a9816da97e90e.png",
+      "publicId": "Portfolio Minh Huy/CảmXuc/43a83a7cd34469649975680ae03a9816da97e90e",
+      "bytes": 838172,
+      "width": 3510,
+      "height": 1755,
+      "format": "png"
+    },
+    "CảmXuc/50fb50082f523e25568d5e5b6fc4204458dc0320.png": {
+      "relativePath": "CảmXuc/50fb50082f523e25568d5e5b6fc4204458dc0320.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633729/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/50fb50082f523e25568d5e5b6fc4204458dc0320.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/50fb50082f523e25568d5e5b6fc4204458dc0320",
+      "bytes": 117256,
+      "width": 736,
+      "height": 736,
+      "format": "jpg"
+    },
+    "CảmXuc/a9594e5812e6419a5265ad4aba26406cf667c99b.png": {
+      "relativePath": "CảmXuc/a9594e5812e6419a5265ad4aba26406cf667c99b.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633771/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/a9594e5812e6419a5265ad4aba26406cf667c99b.png",
+      "publicId": "Portfolio Minh Huy/CảmXuc/a9594e5812e6419a5265ad4aba26406cf667c99b",
+      "bytes": 1025680,
+      "width": 3510,
+      "height": 1755,
+      "format": "png"
+    },
+    "CảmXuc/b81a2bf1ad548b77bef052cfa2c4a8db13fce013.png": {
+      "relativePath": "CảmXuc/b81a2bf1ad548b77bef052cfa2c4a8db13fce013.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633778/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/b81a2bf1ad548b77bef052cfa2c4a8db13fce013.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/b81a2bf1ad548b77bef052cfa2c4a8db13fce013",
+      "bytes": 91453,
+      "width": 736,
+      "height": 736,
+      "format": "jpg"
+    },
+    "CảmXuc/daccc3ee417097067074f7b7ba72d664a92ad170.png": {
+      "relativePath": "CảmXuc/daccc3ee417097067074f7b7ba72d664a92ad170.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633808/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/daccc3ee417097067074f7b7ba72d664a92ad170.png",
+      "publicId": "Portfolio Minh Huy/CảmXuc/daccc3ee417097067074f7b7ba72d664a92ad170",
+      "bytes": 984187,
+      "width": 3510,
+      "height": 1755,
+      "format": "png"
+    },
+    "CảmXuc/e065e2290787489038b70bce15e37ee492666074.png": {
+      "relativePath": "CảmXuc/e065e2290787489038b70bce15e37ee492666074.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633810/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/e065e2290787489038b70bce15e37ee492666074.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/e065e2290787489038b70bce15e37ee492666074",
+      "bytes": 113892,
+      "width": 736,
+      "height": 1107,
+      "format": "jpg"
+    },
+    "CảmXuc/e8b31995f6337f5206f3091d22bc96db7ca0b04f.png": {
+      "relativePath": "CảmXuc/e8b31995f6337f5206f3091d22bc96db7ca0b04f.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633825/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/e8b31995f6337f5206f3091d22bc96db7ca0b04f.png",
+      "publicId": "Portfolio Minh Huy/CảmXuc/e8b31995f6337f5206f3091d22bc96db7ca0b04f",
+      "bytes": 686204,
+      "width": 1024,
+      "height": 1024,
+      "format": "png"
+    },
+    "CảmXuc/ee02056a3436ab1933e9f8b1b7ed9244a511fdfc.png": {
+      "relativePath": "CảmXuc/ee02056a3436ab1933e9f8b1b7ed9244a511fdfc.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633827/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/ee02056a3436ab1933e9f8b1b7ed9244a511fdfc.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/ee02056a3436ab1933e9f8b1b7ed9244a511fdfc",
+      "bytes": 107248,
+      "width": 736,
+      "height": 736,
+      "format": "jpg"
+    },
+    "CảmXuc/fb030adc55253f8f25b81e6231819e818d40dd00.png": {
+      "relativePath": "CảmXuc/fb030adc55253f8f25b81e6231819e818d40dd00.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633828/Portfolio%20Minh%20Huy/Ca%CC%89mXuc/fb030adc55253f8f25b81e6231819e818d40dd00.jpg",
+      "publicId": "Portfolio Minh Huy/CảmXuc/fb030adc55253f8f25b81e6231819e818d40dd00",
+      "bytes": 116625,
+      "width": 736,
+      "height": 736,
+      "format": "jpg"
+    },
+    "Home/067663b262c4095779f86037c77e49725e1724c9.png": {
+      "relativePath": "Home/067663b262c4095779f86037c77e49725e1724c9.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633829/Portfolio%20Minh%20Huy/Home/067663b262c4095779f86037c77e49725e1724c9.jpg",
+      "publicId": "Portfolio Minh Huy/Home/067663b262c4095779f86037c77e49725e1724c9",
+      "bytes": 129762,
+      "width": 736,
+      "height": 1104,
+      "format": "jpg"
+    },
+    "Home/3609830dd9bd88850417109a84487adc6aeef9b9.png": {
+      "relativePath": "Home/3609830dd9bd88850417109a84487adc6aeef9b9.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633851/Portfolio%20Minh%20Huy/Home/3609830dd9bd88850417109a84487adc6aeef9b9.png",
+      "publicId": "Portfolio Minh Huy/Home/3609830dd9bd88850417109a84487adc6aeef9b9",
+      "bytes": 1146877,
+      "width": 832,
+      "height": 1456,
+      "format": "png"
+    },
+    "Home/50fb50082f523e25568d5e5b6fc4204458dc0320.png": {
+      "relativePath": "Home/50fb50082f523e25568d5e5b6fc4204458dc0320.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633852/Portfolio%20Minh%20Huy/Home/50fb50082f523e25568d5e5b6fc4204458dc0320.jpg",
+      "publicId": "Portfolio Minh Huy/Home/50fb50082f523e25568d5e5b6fc4204458dc0320",
+      "bytes": 117256,
+      "width": 736,
+      "height": 736,
+      "format": "jpg"
+    },
+    "Home/b24feb21d76668b3d4f86dd1de6ff9c0f8b4f4c8.png": {
+      "relativePath": "Home/b24feb21d76668b3d4f86dd1de6ff9c0f8b4f4c8.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633866/Portfolio%20Minh%20Huy/Home/b24feb21d76668b3d4f86dd1de6ff9c0f8b4f4c8.png",
+      "publicId": "Portfolio Minh Huy/Home/b24feb21d76668b3d4f86dd1de6ff9c0f8b4f4c8",
+      "bytes": 476838,
+      "width": 1080,
+      "height": 1280,
+      "format": "png"
+    },
+    "Home/b833e8424bb930049e049e051fa13e903c0c162f.png": {
+      "relativePath": "Home/b833e8424bb930049e049e051fa13e903c0c162f.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633888/Portfolio%20Minh%20Huy/Home/b833e8424bb930049e049e051fa13e903c0c162f.png",
+      "publicId": "Portfolio Minh Huy/Home/b833e8424bb930049e049e051fa13e903c0c162f",
+      "bytes": 923316,
+      "width": 1080,
+      "height": 1280,
+      "format": "png"
+    },
+    "LocalProfile/007cf8243a0bb2edb0fb045e3c6a5f526ad48e07.png": {
+      "relativePath": "LocalProfile/007cf8243a0bb2edb0fb045e3c6a5f526ad48e07.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633889/Portfolio%20Minh%20Huy/LocalProfile/007cf8243a0bb2edb0fb045e3c6a5f526ad48e07.png",
+      "publicId": "Portfolio Minh Huy/LocalProfile/007cf8243a0bb2edb0fb045e3c6a5f526ad48e07",
+      "bytes": 24851,
+      "width": 128,
+      "height": 128,
+      "format": "png"
+    },
+    "VertifiedProfile/0e0645df59f87e3dcef1f4cad6d6fea10a5c6853.png": {
+      "relativePath": "VertifiedProfile/0e0645df59f87e3dcef1f4cad6d6fea10a5c6853.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633890/Portfolio%20Minh%20Huy/VertifiedProfile/0e0645df59f87e3dcef1f4cad6d6fea10a5c6853.png",
+      "publicId": "Portfolio Minh Huy/VertifiedProfile/0e0645df59f87e3dcef1f4cad6d6fea10a5c6853",
+      "bytes": 26592,
+      "width": 128,
+      "height": 128,
+      "format": "png"
+    },
+    "VertifiedProfile/48d938b86b748feb1ce5357c395c4f6cb391ceef.png": {
+      "relativePath": "VertifiedProfile/48d938b86b748feb1ce5357c395c4f6cb391ceef.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633902/Portfolio%20Minh%20Huy/VertifiedProfile/48d938b86b748feb1ce5357c395c4f6cb391ceef.png",
+      "publicId": "Portfolio Minh Huy/VertifiedProfile/48d938b86b748feb1ce5357c395c4f6cb391ceef",
+      "bytes": 264823,
+      "width": 1024,
+      "height": 1024,
+      "format": "png"
+    },
+    "VertifiedProfile/635d9ad8dd4ed18748bdff06eb61c21a494a2f14.png": {
+      "relativePath": "VertifiedProfile/635d9ad8dd4ed18748bdff06eb61c21a494a2f14.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633911/Portfolio%20Minh%20Huy/VertifiedProfile/635d9ad8dd4ed18748bdff06eb61c21a494a2f14.png",
+      "publicId": "Portfolio Minh Huy/VertifiedProfile/635d9ad8dd4ed18748bdff06eb61c21a494a2f14",
+      "bytes": 350876,
+      "width": 1024,
+      "height": 1024,
+      "format": "png"
+    },
+    "VertifiedProfile/ce655b2915a425c343bfd64958242ef1087b2e87.png": {
+      "relativePath": "VertifiedProfile/ce655b2915a425c343bfd64958242ef1087b2e87.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633918/Portfolio%20Minh%20Huy/VertifiedProfile/ce655b2915a425c343bfd64958242ef1087b2e87.png",
+      "publicId": "Portfolio Minh Huy/VertifiedProfile/ce655b2915a425c343bfd64958242ef1087b2e87",
+      "bytes": 334289,
+      "width": 1024,
+      "height": 1024,
+      "format": "png"
+    },
+    "VertifiedProfile/f80d9376747b66133c851ae7c57c10847905097e.png": {
+      "relativePath": "VertifiedProfile/f80d9376747b66133c851ae7c57c10847905097e.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780633947/Portfolio%20Minh%20Huy/VertifiedProfile/f80d9376747b66133c851ae7c57c10847905097e.png",
+      "publicId": "Portfolio Minh Huy/VertifiedProfile/f80d9376747b66133c851ae7c57c10847905097e",
+      "bytes": 349874,
+      "width": 1024,
+      "height": 1024,
+      "format": "png"
+    },
+    "hero/portrait-illustration.png": {
+      "relativePath": "hero/portrait-illustration.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634000/Portfolio%20Minh%20Huy/hero/portrait-illustration.png",
+      "publicId": "Portfolio Minh Huy/hero/portrait-illustration",
+      "bytes": 2504223,
+      "width": 1023,
+      "height": 1537,
+      "format": "png"
+    },
+    "image-2.png": {
+      "relativePath": "image-2.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634010/Portfolio%20Minh%20Huy/image-2.png",
+      "publicId": "Portfolio Minh Huy/image-2",
+      "bytes": 554818,
+      "width": 792,
+      "height": 522,
+      "format": "png"
+    },
+    "image-3.png": {
+      "relativePath": "image-3.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634021/Portfolio%20Minh%20Huy/image-3.png",
+      "publicId": "Portfolio Minh Huy/image-3",
+      "bytes": 654603,
+      "width": 792,
+      "height": 530,
+      "format": "png"
+    },
+    "image-4.png": {
+      "relativePath": "image-4.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634025/Portfolio%20Minh%20Huy/image-4.png",
+      "publicId": "Portfolio Minh Huy/image-4",
+      "bytes": 662418,
+      "width": 816,
+      "height": 525,
+      "format": "png"
+    },
+    "image-5.png": {
+      "relativePath": "image-5.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634027/Portfolio%20Minh%20Huy/image-5.png",
+      "publicId": "Portfolio Minh Huy/image-5",
+      "bytes": 270452,
+      "width": 800,
+      "height": 519,
+      "format": "png"
+    },
+    "image-6.png": {
+      "relativePath": "image-6.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634029/Portfolio%20Minh%20Huy/image-6.png",
+      "publicId": "Portfolio Minh Huy/image-6",
+      "bytes": 468393,
+      "width": 845,
+      "height": 521,
+      "format": "png"
+    },
+    "image-7.png": {
+      "relativePath": "image-7.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634030/Portfolio%20Minh%20Huy/image-7.png",
+      "publicId": "Portfolio Minh Huy/image-7",
+      "bytes": 305205,
+      "width": 541,
+      "height": 406,
+      "format": "png"
+    },
+    "murror/ui/chat-active-conversation.png": {
+      "relativePath": "murror/ui/chat-active-conversation.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634031/Portfolio%20Minh%20Huy/murror/ui/chat-active-conversation.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/chat-active-conversation",
+      "bytes": 81637,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/chat-ai-mode-picker.png": {
+      "relativePath": "murror/ui/chat-ai-mode-picker.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634032/Portfolio%20Minh%20Huy/murror/ui/chat-ai-mode-picker.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/chat-ai-mode-picker",
+      "bytes": 80909,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/chat-home.png": {
+      "relativePath": "murror/ui/chat-home.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634032/Portfolio%20Minh%20Huy/murror/ui/chat-home.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/chat-home",
+      "bytes": 149517,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/chat-mood-checkin.png": {
+      "relativePath": "murror/ui/chat-mood-checkin.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634033/Portfolio%20Minh%20Huy/murror/ui/chat-mood-checkin.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/chat-mood-checkin",
+      "bytes": 63504,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/onboarding-anger.png": {
+      "relativePath": "murror/ui/onboarding-anger.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634034/Portfolio%20Minh%20Huy/murror/ui/onboarding-anger.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/onboarding-anger",
+      "bytes": 30555,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/onboarding-disgust.png": {
+      "relativePath": "murror/ui/onboarding-disgust.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634035/Portfolio%20Minh%20Huy/murror/ui/onboarding-disgust.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/onboarding-disgust",
+      "bytes": 32399,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/onboarding-envy.png": {
+      "relativePath": "murror/ui/onboarding-envy.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634036/Portfolio%20Minh%20Huy/murror/ui/onboarding-envy.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/onboarding-envy",
+      "bytes": 30453,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/onboarding-fear.png": {
+      "relativePath": "murror/ui/onboarding-fear.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634036/Portfolio%20Minh%20Huy/murror/ui/onboarding-fear.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/onboarding-fear",
+      "bytes": 31561,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/onboarding-joy.png": {
+      "relativePath": "murror/ui/onboarding-joy.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634037/Portfolio%20Minh%20Huy/murror/ui/onboarding-joy.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/onboarding-joy",
+      "bytes": 32487,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/onboarding-sadness.png": {
+      "relativePath": "murror/ui/onboarding-sadness.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634038/Portfolio%20Minh%20Huy/murror/ui/onboarding-sadness.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/onboarding-sadness",
+      "bytes": 38844,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-ai-personalization.png": {
+      "relativePath": "murror/ui/profile-ai-personalization.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634039/Portfolio%20Minh%20Huy/murror/ui/profile-ai-personalization.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-ai-personalization",
+      "bytes": 174556,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-anger-variant.png": {
+      "relativePath": "murror/ui/profile-anger-variant.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634043/Portfolio%20Minh%20Huy/murror/ui/profile-anger-variant.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-anger-variant",
+      "bytes": 275400,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-disgust.png": {
+      "relativePath": "murror/ui/profile-disgust.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634044/Portfolio%20Minh%20Huy/murror/ui/profile-disgust.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-disgust",
+      "bytes": 277692,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-edit.png": {
+      "relativePath": "murror/ui/profile-edit.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634045/Portfolio%20Minh%20Huy/murror/ui/profile-edit.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-edit",
+      "bytes": 41106,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-envy.png": {
+      "relativePath": "murror/ui/profile-envy.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634046/Portfolio%20Minh%20Huy/murror/ui/profile-envy.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-envy",
+      "bytes": 273613,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-fear.png": {
+      "relativePath": "murror/ui/profile-fear.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634047/Portfolio%20Minh%20Huy/murror/ui/profile-fear.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-fear",
+      "bytes": 279549,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-home.png": {
+      "relativePath": "murror/ui/profile-home.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634047/Portfolio%20Minh%20Huy/murror/ui/profile-home.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-home",
+      "bytes": 235501,
+      "width": 348,
+      "height": 900,
+      "format": "png"
+    },
+    "murror/ui/profile-joy-variant.png": {
+      "relativePath": "murror/ui/profile-joy-variant.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634048/Portfolio%20Minh%20Huy/murror/ui/profile-joy-variant.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-joy-variant",
+      "bytes": 269681,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-minh-huy-aqua.png": {
+      "relativePath": "murror/ui/profile-minh-huy-aqua.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634052/Portfolio%20Minh%20Huy/murror/ui/profile-minh-huy-aqua.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-minh-huy-aqua",
+      "bytes": 254575,
+      "width": 375,
+      "height": 880,
+      "format": "png"
+    },
+    "murror/ui/profile-minh-huy-blue.png": {
+      "relativePath": "murror/ui/profile-minh-huy-blue.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634058/Portfolio%20Minh%20Huy/murror/ui/profile-minh-huy-blue.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-minh-huy-blue",
+      "bytes": 235355,
+      "width": 375,
+      "height": 880,
+      "format": "png"
+    },
+    "murror/ui/profile-minh-huy-green.png": {
+      "relativePath": "murror/ui/profile-minh-huy-green.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634061/Portfolio%20Minh%20Huy/murror/ui/profile-minh-huy-green.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-minh-huy-green",
+      "bytes": 255963,
+      "width": 375,
+      "height": 880,
+      "format": "png"
+    },
+    "murror/ui/profile-minh-huy-orange.png": {
+      "relativePath": "murror/ui/profile-minh-huy-orange.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634062/Portfolio%20Minh%20Huy/murror/ui/profile-minh-huy-orange.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-minh-huy-orange",
+      "bytes": 245923,
+      "width": 375,
+      "height": 880,
+      "format": "png"
+    },
+    "murror/ui/profile-minh-huy-purple.png": {
+      "relativePath": "murror/ui/profile-minh-huy-purple.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634064/Portfolio%20Minh%20Huy/murror/ui/profile-minh-huy-purple.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-minh-huy-purple",
+      "bytes": 228947,
+      "width": 375,
+      "height": 880,
+      "format": "png"
+    },
+    "murror/ui/profile-minh-huy-yellow.png": {
+      "relativePath": "murror/ui/profile-minh-huy-yellow.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634065/Portfolio%20Minh%20Huy/murror/ui/profile-minh-huy-yellow.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-minh-huy-yellow",
+      "bytes": 243125,
+      "width": 375,
+      "height": 880,
+      "format": "png"
+    },
+    "murror/ui/profile-sadness.png": {
+      "relativePath": "murror/ui/profile-sadness.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634066/Portfolio%20Minh%20Huy/murror/ui/profile-sadness.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-sadness",
+      "bytes": 274796,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui/profile-settings.png": {
+      "relativePath": "murror/ui/profile-settings.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634067/Portfolio%20Minh%20Huy/murror/ui/profile-settings.png",
+      "publicId": "Portfolio Minh Huy/murror/ui/profile-settings",
+      "bytes": 47880,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "murror/ui-design-board.png": {
+      "relativePath": "murror/ui-design-board.png",
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1780634068/Portfolio%20Minh%20Huy/murror/ui-design-board.png",
+      "publicId": "Portfolio Minh Huy/murror/ui-design-board",
+      "bytes": 382113,
+      "width": 1696,
+      "height": 2200,
+      "format": "png"
+    }
+  }
+}
