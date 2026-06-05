@@ -3,8 +3,10 @@ import { motion } from "motion/react";
 import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { useI18n } from "../i18n";
 import { CV_URL } from "../config/links";
-import portraitIllustrationFlowers from "../../imports/hero/portrait-illustration-flowers.jpeg";
-import originalPhoto from "../../imports/hero/original-photo.JPG";
+import {
+  ORIGINAL_PHOTO_URL,
+  PORTRAIT_ILLUSTRATION_FLOWERS_URL,
+} from "../config/cloudinary-hero.generated";
 
 export function Hero() {
   const { t, lang } = useI18n();
@@ -62,7 +64,7 @@ export function Hero() {
         <div className="group relative mx-auto aspect-[760/1080] w-full">
           <div className="absolute inset-[6.94%_7.89%_6.94%_7.89%] overflow-hidden">
             <img
-              src={portraitIllustrationFlowers}
+              src={PORTRAIT_ILLUSTRATION_FLOWERS_URL}
               alt="Illustrated portrait of Huỳnh Minh Huy holding flowers"
               className="block h-full w-full object-cover transition-all duration-500 ease-out group-hover:scale-[1.015] group-hover:opacity-0"
               style={{
@@ -71,7 +73,7 @@ export function Hero() {
               }}
             />
             <img
-              src={originalPhoto}
+              src={ORIGINAL_PHOTO_URL}
               alt="Graduation photo of Huỳnh Minh Huy"
               className="absolute inset-0 block h-full w-full object-cover object-[63%_42%] opacity-0 scale-[1.01] transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100"
               style={{

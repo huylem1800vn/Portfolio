@@ -6,6 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
+    "upload:cloudinary:hero": "node scripts/upload-cloudinary-hero.cjs",
     "upload:cloudinary": "node scripts/upload-cloudinary-assets.cjs",
     "upload:cloudinary:prune": "node scripts/upload-cloudinary-assets.cjs --delete-local"
   },
