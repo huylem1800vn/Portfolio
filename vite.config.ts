@@ -9,6 +9,15 @@ const importsRoot = path.resolve(projectRoot, 'src/imports')
 const cloudManifestPath = path.resolve(projectRoot, 'src/app/config/cloudinary-assets.generated.json')
 const cloudAssetExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp'])
 
+function canonicalAssetPath(value: string) {
+  return path.normalize(value).replace(/\\/g, '/').normalize('NFC')
+}
+
+function assetPathVariants(value: string) {
+  const base = path.normalize(value).replace(/\\/g, '/')
+  return new Set([base, base.normalize('NFC'), base.normalize('NFD')])
+}
+
 function figmaAssetResolver() {
   return {
     name: 'figma-asset-resolver',
@@ -36,7 +45,9 @@ function loadCloudAssetMap() {
   for (const [relativePath, asset] of Object.entries(parsed.assets ?? {})) {
     if (!asset?.secureUrl) continue
     const absolutePath = path.resolve(importsRoot, relativePath)
-    map.set(path.normalize(absolutePath), asset.secureUrl)
+    for (const variant of assetPathVariants(absolutePath)) {
+      map.set(variant, asset.secureUrl)
+    }
   }
 
   return map
@@ -61,7 +72,7 @@ function cloudinaryAssetResolver() {
         return null
       }
 
-      const resolvedPath = path.normalize(path.resolve(path.dirname(importer), source))
+      const resolvedPath = canonicalAssetPath(path.resolve(path.dirname(importer), source))
       const secureUrl = cloudAssetMap.get(resolvedPath)
 
       if (!secureUrl) {
