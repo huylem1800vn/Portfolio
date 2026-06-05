@@ -1,11 +1,11 @@
 
-  # Modern Portfolio Website
+# Modern Portfolio Website
 
-  This is a code bundle for Modern Portfolio Website. The original project is available at https://www.figma.com/design/niiRFcNKHz6WQYV97VaGRf/Modern-Portfolio-Website.
+Personal portfolio website built with Vite, React, and Tailwind CSS.
 
-  ## Running the code
+## Running the project
 
-  Run `npm i` to install the dependencies.
+Run `npm install` to install dependencies.
 
-  Run `npm run dev` to start the development server.
+Run `npm run dev` to start the development server.
   

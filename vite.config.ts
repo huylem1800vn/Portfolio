@@ -102,8 +102,8 @@ export default defineConfig({
   plugins: [
     figmaAssetResolver(),
     cloudinaryAssetResolver(),
-    // The React and Tailwind plugins are both required for Make, even if
-    // Tailwind is not being actively used – do not remove them
+    // The React and Tailwind plugins are both required for this project setup,
+    // even if Tailwind is not being actively used in every component.
     react(),
     tailwindcss(),
   ],
