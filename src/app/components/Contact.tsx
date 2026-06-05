@@ -75,14 +75,14 @@ export function Contact() {
                     href={c.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="group flex items-center justify-between py-6 hover:pl-3 transition-all"
+                    className="group flex flex-col items-start gap-4 py-6 transition-all md:flex-row md:items-center md:justify-between md:hover:pl-3"
                   >
-                    <div className="flex items-baseline gap-6">
-                      <span className="text-xs tracking-[0.2em] uppercase text-neutral-400 w-20">
+                    <div className="flex min-w-0 flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-6">
+                      <span className="text-xs tracking-[0.2em] uppercase text-neutral-400 sm:w-20">
                         {c.label}
                       </span>
                       <span
-                        className="tracking-[-0.01em]"
+                        className="min-w-0 break-all tracking-[-0.01em] sm:break-normal"
                         style={{
                           fontFamily: "Fraunces, serif",
                           fontWeight: 400,
@@ -94,7 +94,7 @@ export function Contact() {
                     </div>
                     <ArrowUpRight
                       size={22}
-                      className="text-neutral-400 group-hover:text-[#a59cff] group-hover:rotate-45 transition-transform"
+                      className="text-neutral-400 transition-transform group-hover:text-[#a59cff] group-hover:rotate-45"
                     />
                   </a>
                 </motion.li>

@@ -173,7 +173,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center gap-3 text-xs tracking-[0.2em] uppercase text-neutral-500"
+            className="flex flex-wrap items-center gap-3 text-xs tracking-[0.2em] uppercase text-neutral-500"
           >
             <span className="w-2 h-2 rounded-full bg-[#6b5cff]" />
             {t.hero.badge}
@@ -196,7 +196,7 @@ export function Hero() {
                 style={{
                   fontFamily: "Fraunces, serif",
                   fontWeight: 400,
-                  fontSize: "clamp(4.5rem, 18vw, 16rem)",
+                  fontSize: "clamp(3.5rem, 18vw, 16rem)",
                 }}
               >
                 BRI<span className="italic text-[#6b5cff]">D</span>GE
