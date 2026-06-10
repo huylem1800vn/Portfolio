@@ -257,39 +257,6 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="pb-24 pt-6 md:pb-36 md:pt-10">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 items-start">
-            <motion.div
-              key={`intro-${lang}`}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="max-w-none"
-            >
-              <div className="mb-3 text-xs tracking-[0.2em] uppercase text-neutral-500">
-                {t.hero.label1}
-              </div>
-              <p className="max-w-[64ch] leading-relaxed text-neutral-700" style={{ fontSize: "1.0625rem" }}>
-                {t.hero.intro}
-              </p>
-            </motion.div>
-
-            <motion.div
-              key={`now-${lang}`}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.35 }}
-              className="max-w-none"
-            >
-              <div className="mb-3 text-xs tracking-[0.2em] uppercase text-neutral-500">
-                {t.hero.label2}
-              </div>
-              <p className="max-w-[64ch] leading-relaxed text-neutral-700" style={{ fontSize: "1.0625rem" }}>
-                {t.hero.currently}
-              </p>
-            </motion.div>
-          </div>
-        </div>
       </div>
     </section>
   );

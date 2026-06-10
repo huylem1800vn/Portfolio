@@ -16,8 +16,8 @@ export function Nav() {
 
   const links = [
     { label: t.nav.work, href: "#work" },
-    { label: t.nav.process, href: "#process" },
     { label: t.nav.about, href: "#about" },
+    { label: t.nav.process, href: "#process" },
     { label: t.nav.resume, href: CV_URL, external: true },
   ];
 

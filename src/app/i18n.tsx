@@ -52,6 +52,7 @@ type Dict = {
     italic: string;
     title2: string;
     body: string;
+    introSections: Array<{ tag: string; body: string }>;
     facts: Array<{ k: string; v: string }>;
     skillsLabel: string;
     learningLabel: string;
@@ -173,9 +174,19 @@ const en: Dict = {
     italic: "ship",
     title2: " the build.",
     body: "I am Minh Huy, a UI/UX designer from Vietnam with a foundation in software development. I am drawn to digital products that feel clear, practical, and ready to grow. My work stays close to user flows, interface systems, and real problems, always shaped by design thinking that respects what can truly be built.",
+    introSections: [
+      {
+        tag: "( 01 ) Designer",
+        body: "I am a UI/UX Designer with a background in software development, driven by the desire to create experiences that are clear, meaningful, and truly useful. My strength lies in connecting design thinking with technical logic, transforming complex ideas into intuitive user flows, structured interfaces, and scalable design systems that are both visually refined and realistic to build.",
+      },
+      {
+        tag: "( 02 ) Direction",
+        body: "My goal is to grow into a product minded designer who can look beyond the interface and understand the real problems behind each user journey. I am focused on strengthening my problem solving mindset, designing for complex workflows, and collaborating closely with different roles in a team to create digital products that are thoughtful, practical, and valuable to people.",
+      },
+    ],
     facts: [
-      { k: "Based in", v: "Vietnam" },
-      { k: "Background", v: "Software Development" },
+      { k: "Background", v: "Bachelor of Science in Computer Science" },
+      { k: "Project Background", v: "Backend Development" },
       { k: "Focus", v: "Product UX & UI" },
       { k: "Open to", v: "Internships, junior roles" },
     ],
@@ -300,9 +311,19 @@ const vi: Dict = {
     italic: "triển khai",
     title2: " được sản phẩm.",
     body: "Tôi là Minh Huy, một UI/UX Designer đến từ Việt Nam với nền tảng phát triển phần mềm. Tôi yêu những sản phẩm số rõ ràng, thực tế và có khả năng lớn lên cùng nhu cầu của người dùng. Công việc của tôi xoay quanh user flow, hệ thống giao diện và những vấn đề thật, luôn được dẫn dắt bởi tư duy thiết kế nhưng vẫn bám sát điều gì có thể triển khai ngoài đời.",
+    introSections: [
+      {
+        tag: "( 01 ) Nhà thiết kế",
+        body: "Tôi là một UI/UX Designer có nền tảng phát triển phần mềm, luôn hướng đến việc tạo ra những trải nghiệm rõ ràng, có chiều sâu và thật sự hữu ích cho người dùng. Thế mạnh của tôi nằm ở khả năng kết nối tư duy thiết kế với logic kỹ thuật, biến những ý tưởng phức tạp thành luồng trải nghiệm mạch lạc, giao diện có cấu trúc và hệ thống thiết kế dễ mở rộng, vừa đảm bảo tính thẩm mỹ vừa có khả năng triển khai thực tế.",
+      },
+      {
+        tag: "( 02 ) Định hướng",
+        body: "Mục tiêu của tôi là phát triển thành một nhà thiết kế có tư duy sản phẩm, không chỉ nhìn vào giao diện mà còn hiểu được vấn đề thật sự phía sau mỗi hành trình người dùng. Tôi đang tập trung rèn luyện tư duy giải quyết vấn đề, thiết kế cho các luồng thao tác phức tạp và hợp tác chặt chẽ với nhiều vai trò khác nhau trong đội ngũ để tạo ra những sản phẩm số chỉn chu, thực tế và mang lại giá trị bền vững.",
+      },
+    ],
     facts: [
-      { k: "Sinh sống tại", v: "Việt Nam" },
-      { k: "Nền tảng", v: "Phát triển phần mềm" },
+      { k: "Nền tảng", v: "Cử nhân Khoa học Máy tính" },
+      { k: "Nền tảng dự án", v: "Phát triển Backend" },
       { k: "Tập trung", v: "Product UX & UI" },
       { k: "Sẵn sàng cho", v: "Thực tập, vị trí junior" },
     ],
