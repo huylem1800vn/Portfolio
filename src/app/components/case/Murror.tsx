@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp } from "lucide-react";
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
+import { scrollToCaseSection } from "./scrollToCaseSection";
 import onboardingJoy from "../../../imports/murror/ui/onboarding-joy.png";
 import onboardingSadness from "../../../imports/murror/ui/onboarding-sadness.png";
 import onboardingDisgust from "../../../imports/murror/ui/onboarding-disgust.png";
@@ -488,8 +489,9 @@ export function Murror() {
             </div>
 
             <div className="mt-12 flex flex-wrap items-center gap-4">
-              <a
-                href="#flow"
+              <button
+                type="button"
+                onClick={() => scrollToCaseSection("flow")}
                 className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 transition-all"
                 style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK }}
               >
@@ -497,14 +499,15 @@ export function Murror() {
                 <span className="w-8 h-8 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform" style={{ backgroundColor: INK, color: FG }}>
                   <ArrowUpRight size={16} />
                 </span>
-              </a>
-              <a
-                href="#ui"
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollToCaseSection("ui")}
                 className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors hover:bg-white/5"
                 style={{ border: `1px solid ${BORDER}` }}
               >
                 {c.cta2}
-              </a>
+              </button>
             </div>
           </div>
         </section>

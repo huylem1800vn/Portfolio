@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import { useI18n } from "../../i18n";
+import { scrollToCaseSection } from "./scrollToCaseSection";
 
 type Section = { id: string; label: string };
 
@@ -37,17 +38,18 @@ export function CaseNav({
 
         <nav className="hidden lg:flex items-center gap-7 text-sm">
           {sections.map((s) => (
-            <a
+            <button
               key={s.id}
-              href={`#${s.id}`}
-              className="relative group opacity-80 hover:opacity-100 transition-opacity"
+              type="button"
+              onClick={() => scrollToCaseSection(s.id)}
+              className="relative group text-sm font-normal leading-none opacity-80 hover:opacity-100 transition-opacity appearance-none bg-transparent border-0 p-0 m-0"
             >
               {s.label}
               <span
                 className="absolute left-0 -bottom-1 h-px w-0 transition-all duration-300 group-hover:w-full"
                 style={{ backgroundColor: accent }}
               />
-            </a>
+            </button>
           ))}
         </nav>
 

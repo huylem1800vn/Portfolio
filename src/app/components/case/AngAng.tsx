@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
+import { scrollToCaseSection } from "./scrollToCaseSection";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import Onboarding from "../../../imports/Onboarding/Onboarding";
 import HomeScreen from "../../../imports/Home/Home";
@@ -1121,8 +1122,9 @@ export function AngAng() {
                 {t.description}
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
-                <a
-                  href="#research"
+                <button
+                  type="button"
+                  onClick={() => scrollToCaseSection("research")}
                   className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm transition-all"
                   style={{ backgroundColor: GREEN, color: "#fff" }}
                 >
@@ -1133,14 +1135,15 @@ export function AngAng() {
                   >
                     <ArrowUpRight size={16} />
                   </span>
-                </a>
-                <a
-                  href="#system"
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollToCaseSection("system")}
                   className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors"
                   style={{ borderColor: GREEN_DARK, color: GREEN_DARK }}
                 >
                   {t.cta2}
-                </a>
+                </button>
               </div>
             </div>
 
