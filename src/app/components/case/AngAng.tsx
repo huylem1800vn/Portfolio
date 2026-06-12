@@ -34,6 +34,7 @@ import VerifiedProfile from "../../../imports/VertifiedProfile/VertifiedProfile"
 import LogoMark from "../../../imports/Frame1-1/Frame1-13-12627";
 import logoIconPaths from "../../../imports/Frame1-1/svg-s6l1fubn7v";
 import { CV_URL } from "../../config/links";
+import { BAO_TRAN_PERSONA_AVATAR_URL, DUY_KHOI_PERSONA_AVATAR_URL } from "../../config/persona-avatars";
 import wireframeHome from "../../../imports/image-5.png";
 import wireframeNav from "../../../imports/image-2.png";
 import wireframeDetail from "../../../imports/image-3.png";
@@ -128,8 +129,6 @@ const MOODBOARD = [
   "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900",
   "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900",
 ];
-const PERSONA_IMG =
-  "https://images.unsplash.com/photo-1611403119860-57c4937ef987?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=900";
 
 const COPY = {
   en: {
@@ -175,8 +174,21 @@ const COPY = {
       body:
         "Most food platforms show plenty of restaurant options, yet users still feel unsure because they do not have information that feels trustworthy, contextual, and current enough to act on.",
     },
+    goals: {
+      tag: "( 03 · Research Goals )",
+      title: "What the research needed to uncover before any screen could be justified",
+      intro:
+        "Before moving into product direction, the research focused on clarifying the real situations, triggers, trust gaps, and decision criteria behind how young users choose where to eat.",
+      questions: [
+        "In what situations do users usually search for restaurants?",
+        "What factors influence their restaurant choice the most?",
+        "What makes them hesitate before choosing a place?",
+        "Which information sources do they currently trust or distrust?",
+        "What product opportunities could help users make better food decisions?",
+      ],
+    },
     process: {
-      tag: "( 03 · Research Process )",
+      tag: "( 04 · Research Process )",
       title: "From desk research to meaningful design directions",
       steps: [
         { t: "Desk Research", d: "Understand current food discovery behavior." },
@@ -189,8 +201,66 @@ const COPY = {
         { t: "Design Opportunities", d: "Translate insights into product directions." },
       ],
     },
+    secondaryResearch: {
+      tag: "( 05 · Secondary Research )",
+      title: "Market signals that confirm this problem is worth solving",
+      intro:
+        "A synthesis of public market reports and desk research helped validate both the scale of the food category and the trust gaps users face before making a choice.",
+      summary:
+        "This step was important because Ăng Ăng is not only responding to a user pain point. It is also entering a category where demand is already strong, user spending is rising, and trust in review quality still feels fragile.",
+      items: [
+        {
+          stat: "590,000B VND",
+          body: "Vietnam's F&B industry reached more than 590,000 billion VND in revenue in 2023, up 11.47%.",
+          source: "Source · iPOS",
+        },
+        {
+          stat: "14.9%",
+          body: "More users are willing to spend above 100,000 VND for a dinner meal, showing a stronger appetite for eating out.",
+          source: "Source · market synthesis",
+        },
+        {
+          stat: "1.4B USD",
+          body: "Vietnam's food delivery GMV reached 1.4 billion USD in 2023, reflecting how deeply digital food behavior has grown after COVID.",
+          source: "Source · Momentum Works",
+        },
+        {
+          stat: "87%",
+          body: "Users still read reviews before deciding, but fake or low-trust reviews continue to weaken confidence in the final choice.",
+          source: "Source · desk research synthesis",
+        },
+      ],
+    },
+    primaryResearch: {
+      tag: "( 06 · Primary Research )",
+      title: "What users kept repeating once the conversations became concrete",
+      intro:
+        "Primary research helped move the project from broad market understanding into real user behavior. The goal was not just to hear what people say they want, but to trace how they actually compare, validate, and finally choose a place.",
+      clusters: [
+        {
+          title: "Decision contexts",
+          body:
+            "Restaurant search happens in different emotional and practical moments: quick lunch, after-work dinner, date night, group gathering, weekend exploration, or finding something nearby right now.",
+        },
+        {
+          title: "Trusted inputs",
+          body:
+            "Users rarely rely on one source. They cross-check Google Maps, social media, review apps, delivery apps, and recommendations from friends before feeling safe enough to decide.",
+        },
+        {
+          title: "Repeated friction",
+          body:
+            "Many options feel visually similar, reviews can be noisy or outdated, and users often struggle to compare whether a place is truly right for the current occasion.",
+        },
+        {
+          title: "Missing cues",
+          body:
+            "The biggest gap is not more listings. It is practical context: whether the place is open, crowded, worth the price, suitable for the vibe, and still reliable at this moment.",
+        },
+      ],
+    },
     competitors: {
-      tag: "( 04 · Competitor Analysis )",
+      tag: "( 07 · Competitor Analysis )",
       title: "What existing platforms do well, and what still feels missing",
       cols: [
         "Discovery",
@@ -216,7 +286,7 @@ const COPY = {
         "Existing platforms help users discover more places, but they still fall short when a decision depends on mood, occasion, live status, and the social context around the meal.",
     },
     users: {
-      tag: "( 05 · Target Users )",
+      tag: "( 08 · Target Users )",
       title: "Who Ăng Ăng is designed for",
       primaryLabel: "Primary users",
       primary: "Young users in Ho Chi Minh City, around 19–33 years old.",
@@ -236,7 +306,7 @@ const COPY = {
         "Before deciding where to eat, users often move back and forth between Google Maps, social media, review apps, delivery apps, and their friends' recommendations.",
     },
     insights: {
-      tag: "( 06 · Key Insights )",
+      tag: "( 09 · Key Insights )",
       title: "Four insights that quietly reshaped the product",
       items: [
         {
@@ -272,37 +342,57 @@ const COPY = {
       ],
     },
     persona: {
-      tag: "( 07 · Persona )",
-      name: "Linh, 24",
-      role: "Young office worker · Ho Chi Minh City",
-      context:
-        "Often looks for restaurants after work or on weekends. Eats out with colleagues, friends, and her partner.",
-      goalsLabel: "Goals",
-      goals: [
-        "Find suitable restaurants quickly",
-        "Avoid disappointing food experiences",
-        "Choose places that match the occasion",
-        "Save time when planning with friends",
-      ],
-      painsLabel: "Pain Points",
-      pains: [
-        "Too many options",
-        "Reviews are not always trustworthy",
-        "Hard to know if the place is crowded",
-        "Hard to agree on a place with friends",
-        "Photos and info may be outdated",
-      ],
-      needsLabel: "Needs",
-      needs: [
-        "Clear filters",
-        "Trustworthy recommendations",
-        "Real-time restaurant info",
-        "Mood and occasion-based suggestions",
-        "Easy comparison between options",
+      tag: "( 10 · Persona Synthesis )",
+      title: "Two representative archetypes synthesized from recurring research patterns",
+      note:
+        "Instead of showing one fictional user in isolation, these personas combine the strongest patterns that repeatedly appeared across interview and survey responses.",
+      cards: [
+        {
+          title: "Persona 1 · Busy professionals",
+          name: "Nguyen Hoang Bao Tran",
+          role: "25 · Office worker in Ho Chi Minh City",
+          demographic: [
+            "Works and lives in Ho Chi Minh City",
+            "Often eats lunch or dinner near the office",
+            "Has a medium-to-comfortable budget",
+          ],
+          context:
+            "Usually has very limited time and wants a meal that is quick, filling, and nearby. Often eats with colleagues or a small work-related group.",
+          userStory:
+            "As a busy office worker, I want to find a nearby restaurant with fast service and a reasonable price so I can avoid being late while still eating something that fits my taste.",
+          goal: "Find a suitable place in under 5 minutes and keep travel time under 10 minutes.",
+          gainPoints:
+            "Recommendations that feel accurate to their taste, clear information, and a direct path to a decision without comparing too many options.",
+          painPoints:
+            "Generic recommendations, inaccurate real-world information, not knowing whether there are seats, and reviews that look polished but do not reflect the actual experience.",
+          personality:
+            "Practical, speed-oriented, not very exploratory when busy, but likely to stay loyal if the app keeps making the right call.",
+        },
+        {
+          title: "Persona 2 · Students, young couples, and curious explorers",
+          name: "Tran Duy Khoi",
+          role: "20 · Student and social explorer",
+          demographic: [
+            "Student or young couple",
+            "Limited budget",
+            "Easily influenced by TikTok trends and community buzz",
+          ],
+          context:
+            "Often gathers with friends or goes on casual dates and ends up not knowing what to eat. Enjoys trying new places and choosing spaces that feel fun, photogenic, or worth sharing.",
+          userStory:
+            "As a student or a young person going out with friends or a partner, I want suggestions that match my mood and budget, with trustworthy photos and reviews, so I can enjoy the outing without worrying that the place will disappoint us.",
+          goal: "Discover well-rated new places that feel near enough and affordable enough to decide within 5 to 15 minutes.",
+          gainPoints:
+            "Mood-based suggestions, deals or promotions, good check-in spots, and shared lists that make group discovery feel exciting.",
+          painPoints:
+            "Missing or inaccurate information, places that look closed or inactive in reality, and suggestions that do not match the actual vibe they are looking for.",
+          personality:
+            "Curious, FOMO-driven, likes personalization, and is strongly influenced by social proof and community signals.",
+        },
       ],
     },
     journey: {
-      tag: "( 08 · User Journey )",
+      tag: "( 11 · User Journey )",
       title: "From the first craving to the feeling after the meal",
       stages: [
         { s: "Trigger", a: "User wants to eat out or plan a meal.", th: "“Where should we eat today?”", p: "No clear starting point.", o: "Mood / occasion-based entry point." },
@@ -314,7 +404,7 @@ const COPY = {
       ],
     },
     hmw: {
-      tag: "( 09 · How Might We )",
+      tag: "( 12 · How Might We )",
       title: "Turning insights into design questions worth answering",
       items: [
         "How might we reduce choice overload when users search for restaurants?",
@@ -325,7 +415,7 @@ const COPY = {
       ],
     },
     mapping: {
-      tag: "( 10 · Research to Design )",
+      tag: "( 13 · Research to Design )",
       title: "How the findings begin to take shape as features",
       cols: ["Research Finding", "Design Opportunity", "Possible Feature"],
       rows: [
@@ -337,7 +427,7 @@ const COPY = {
       ],
     },
     brand: {
-      tag: "( 11 · Brand Identity )",
+      tag: "( 14 · Brand Identity )",
       title: "Ăng Ăng feels fresh, friendly, and easy to say yes to",
       logoCaption: "Primary Ăng Ăng logo with the Baloo Bhaijaan wordmark",
       keywordsLabel: "Brand keywords",
@@ -348,7 +438,7 @@ const COPY = {
       moodLabel: "Moodboard",
     },
     color: {
-      tag: "( 12 · Color System )",
+      tag: "( 15 · Color System )",
       title: "A full token based palette built around the Ăng Ăng green",
       desc:
         "Primary 500 (#9dd325) anchors the logo, main CTAs, active states, and highlights. Neutral supports text and surfaces, while Success, Warning, Error, Info, and Secondary help with feedback and category cues. Each palette comes with a full 50 to 950 scale so every component can rely on a proper token.",
@@ -357,7 +447,7 @@ const COPY = {
       hexLabel: "HEX",
     },
     typo: {
-      tag: "( 13 · Typography )",
+      tag: "( 16 · Typography )",
       title: "SF Pro feels clean, modern, and native to mobile",
       body:
         "SF Pro supports the Ăng Ăng interface with a clean, familiar, and easy to read experience on mobile. It helps information feel clear and keeps food decisions light, quick, and approachable.",
@@ -373,7 +463,7 @@ const COPY = {
       ],
     },
     grid: {
-      tag: "( 14 · Grid System )",
+      tag: "( 17 · Grid System )",
       title: "A two grid layout system grounded in an 8 point baseline",
       desc:
         "The Ăng Ăng app frame uses two stretch column grids, a 4 column grid for compact mobile screens and a 6 column grid for wider layouts. Both share a 12 px margin and 12 px gutter, while the whole vertical rhythm stays aligned to an 8 px baseline.",
@@ -416,7 +506,7 @@ const COPY = {
       spacing: [4, 8, 12, 16, 24, 32, 48, 64, 96],
     },
     components: {
-      tag: "( 15 · Component System )",
+      tag: "( 18 · Component System )",
       title: "A UI kit built from reusable primitives, not one-off screen pieces",
       desc:
         "The Ăng Ăng component kit centers on reusable interaction primitives such as Button, Button Group, Input, Badge, and selection controls. Their sizes, styles, and states are defined up front so the interface can stay consistent as new flows are added.",
@@ -450,13 +540,13 @@ const COPY = {
       totalLabel: "Total composable states",
     },
     icons: {
-      tag: "( 16 · Icon & Illustration )",
+      tag: "( 19 · Icon & Illustration )",
       title: "A lightweight icon language with small supporting brand moments",
       body:
         "The visual support system stays compact and functional. Icons use a simple rounded style for fast scanning on mobile, while small illustration-like accents from the color system help highlight mood, trust, and food context without overpowering the interface.",
     },
     wireframe: {
-      tag: "( 17 · Wireframes )",
+      tag: "( 20 · Wireframes )",
       title: "First strokes, sketching the flow of choosing where to eat",
       body:
         "Before moving into polished UI, I sketched the core screens on paper to test hierarchy, navigation patterns, and the way each insight might become a flow people could actually use.",
@@ -470,7 +560,7 @@ const COPY = {
       ],
     },
     ui: {
-      tag: "( 18 · Final UI Preview )",
+      tag: "( 21 · Final UI Preview )",
       title: "Where research insights begin to feel like product screens",
       screens: [
         { t: "Home", d: "Mood-based entry + personalized feed" },
@@ -484,7 +574,7 @@ const COPY = {
       ],
     },
     reflection: {
-      tag: "( 19 · Reflection )",
+      tag: "( 22 · Reflection )",
       body:
         "This project helped me see that food discovery is not just about showing more options. A better experience should ease uncertainty, bring the right context into view, and help people choose with more confidence based on their mood, their moment, and the people they are with.",
       cta1: "Back to Portfolio",
@@ -548,8 +638,21 @@ const COPY = {
       body:
         "Phần lớn các nền tảng ăn uống đều đưa ra rất nhiều lựa chọn, nhưng người dùng vẫn thấy phân vân vì thiếu những thông tin đủ đáng tin, đủ đúng ngữ cảnh và đủ mới để họ thật sự yên tâm quyết định.",
     },
+    goals: {
+      tag: "( 03 · Mục tiêu nghiên cứu )",
+      title: "Những câu hỏi cần được làm rõ trước khi một màn hình được phép xuất hiện",
+      intro:
+        "Trước khi đi vào hướng sản phẩm hay giao diện, nghiên cứu cần trả lời rõ các tình huống sử dụng, yếu tố ra quyết định, khoảng trống niềm tin và cơ hội nào thật sự đáng để thiết kế giải quyết.",
+      questions: [
+        "Người dùng thường tìm quán ăn trong những tình huống nào?",
+        "Những yếu tố nào ảnh hưởng mạnh nhất đến quyết định chọn quán?",
+        "Điều gì khiến họ phân vân trước khi chốt một địa điểm?",
+        "Họ đang tin hoặc không tin nguồn thông tin nào?",
+        "Cơ hội sản phẩm nào có thể giúp người dùng ra quyết định tốt hơn?",
+      ],
+    },
     process: {
-      tag: "( 03 · Quá trình nghiên cứu )",
+      tag: "( 04 · Quá trình nghiên cứu )",
       title: "Từ desk research đến những hướng thiết kế thật sự có ý nghĩa",
       steps: [
         { t: "Desk Research", d: "Hiểu hành vi khám phá ăn uống hiện tại." },
@@ -562,8 +665,66 @@ const COPY = {
         { t: "Cơ hội thiết kế", d: "Chuyển insight thành hướng sản phẩm." },
       ],
     },
+    secondaryResearch: {
+      tag: "( 05 · Secondary Research )",
+      title: "Những tín hiệu thị trường xác thực vì sao vấn đề này đáng để giải",
+      intro:
+        "Tổng hợp dữ liệu công khai và báo cáo ngành giúp mình kiểm tra lại quy mô của thị trường, mức chi tiêu cho ăn uống, và khoảng trống niềm tin mà người dùng vẫn gặp trước khi chốt quán.",
+      summary:
+        "Secondary research giúp chứng minh rằng Ăng Ăng không chỉ chạm vào một nỗi đau cá nhân, mà đang bước vào một lĩnh vực có nhu cầu rất thật, mức chi tiêu đang tăng, và sự hoài nghi với review vẫn còn đủ lớn để tạo ra cơ hội thiết kế.",
+      items: [
+        {
+          stat: "590.000 tỷ đồng",
+          body: "Ngành F&B Việt Nam năm 2023 đạt doanh thu hơn 590.000 tỷ đồng, tăng 11,47%.",
+          source: "Nguồn · iPOS",
+        },
+        {
+          stat: "14,9%",
+          body: "Người Việt ngày càng chi nhiều hơn cho ăn ngoài, với 14,9% sẵn sàng chi trên 100.000đ cho một bữa tối.",
+          source: "Nguồn · tổng hợp dữ liệu thị trường",
+        },
+        {
+          stat: "1,4 tỷ USD",
+          body: "GMV giao đồ ăn tại Việt Nam đạt 1,4 tỷ USD trong năm 2023, cho thấy hành vi ăn uống số đã tăng mạnh sau COVID.",
+          source: "Nguồn · Momentum Works",
+        },
+        {
+          stat: "87%",
+          body: "Người dùng vẫn đọc review trước khi chọn quán, nhưng cảm giác nghi ngờ review giả vẫn làm suy giảm niềm tin khi ra quyết định.",
+          source: "Nguồn · tổng hợp desk research",
+        },
+      ],
+    },
+    primaryResearch: {
+      tag: "( 06 · Primary Research )",
+      title: "Những điều người dùng lặp lại khi cuộc trò chuyện đi vào thực tế",
+      intro:
+        "Primary research giúp dự án đi từ bức tranh thị trường sang hành vi thật của người dùng. Mục tiêu không chỉ là nghe họ nói muốn gì, mà là nhìn ra họ đã so sánh, kiểm chứng và chốt quán như thế nào trong đời sống thường ngày.",
+      clusters: [
+        {
+          title: "Ngữ cảnh ra quyết định",
+          body:
+            "Việc tìm quán không chỉ xảy ra trong một tình huống duy nhất mà trải dài từ ăn trưa nhanh, ăn tối sau giờ làm, hẹn hò, tụ tập nhóm, đi chơi cuối tuần cho tới lúc cần tìm một nơi gần ngay bây giờ.",
+        },
+        {
+          title: "Nguồn thông tin được tin",
+          body:
+            "Người dùng hiếm khi tin một nguồn duy nhất. Họ thường đi qua Google Maps, mạng xã hội, app review, app giao đồ ăn và gợi ý từ bạn bè trước khi cảm thấy đủ yên tâm để chọn.",
+        },
+        {
+          title: "Điểm nghẽn lặp lại",
+          body:
+            "Nhiều quán trông giống nhau, review dễ nhiễu hoặc cũ, và người dùng thường gặp khó khi so sánh xem quán nào thật sự hợp với đúng dịp mình đang cần.",
+        },
+        {
+          title: "Ngữ cảnh còn thiếu",
+          body:
+            "Khoảng trống lớn nhất không nằm ở chuyện thiếu danh sách quán, mà là thiếu tín hiệu thực tế: quán còn mở không, có đông không, có đáng tiền không, có đúng vibe không và lúc này còn đáng tin hay không.",
+        },
+      ],
+    },
     competitors: {
-      tag: "( 04 · Phân tích đối thủ )",
+      tag: "( 07 · Phân tích đối thủ )",
       title: "Các nền tảng hiện tại làm được gì, và đâu là khoảng trống còn bỏ lại",
       cols: [
         "Khám phá",
@@ -589,7 +750,7 @@ const COPY = {
         "Các nền tảng hiện tại giúp người dùng biết đến nhiều quán hơn, nhưng vẫn chưa đồng hành tốt với việc ra quyết định khi tâm trạng, dịp đi ăn, trạng thái thời gian thực và bối cảnh xã hội đều cùng lúc tác động lên lựa chọn ấy.",
     },
     users: {
-      tag: "( 05 · Người dùng mục tiêu )",
+      tag: "( 08 · Người dùng mục tiêu )",
       title: "Ăng Ăng được thiết kế cho ai",
       primaryLabel: "Người dùng chính",
       primary: "Người trẻ tại TP.HCM, khoảng 19–33 tuổi.",
@@ -609,7 +770,7 @@ const COPY = {
         "Trước khi chọn quán, người dùng thường phải đi qua nhiều nơi cùng lúc, từ Google Maps, mạng xã hội, app review, app giao đồ ăn cho tới lời gợi ý từ bạn bè.",
     },
     insights: {
-      tag: "( 06 · Insight chính )",
+      tag: "( 09 · Insight chính )",
       title: "Bốn insight đã âm thầm định hình lại sản phẩm",
       items: [
         {
@@ -645,37 +806,57 @@ const COPY = {
       ],
     },
     persona: {
-      tag: "( 07 · Persona )",
-      name: "Linh, 24",
-      role: "Nhân viên văn phòng trẻ · TP.HCM",
-      context:
-        "Thường tìm quán ăn sau giờ làm hoặc cuối tuần. Đi ăn cùng đồng nghiệp, bạn bè và người yêu.",
-      goalsLabel: "Mục tiêu",
-      goals: [
-        "Tìm quán phù hợp nhanh chóng",
-        "Tránh trải nghiệm ăn uống thất vọng",
-        "Chọn nơi phù hợp với dịp",
-        "Tiết kiệm thời gian khi rủ bạn bè",
-      ],
-      painsLabel: "Pain Points",
-      pains: [
-        "Quá nhiều lựa chọn",
-        "Review không phải lúc nào cũng đáng tin",
-        "Khó biết quán đông hay vắng",
-        "Khó thống nhất với nhóm bạn",
-        "Ảnh và thông tin có thể cũ",
-      ],
-      needsLabel: "Nhu cầu",
-      needs: [
-        "Bộ lọc rõ ràng",
-        "Gợi ý đáng tin",
-        "Thông tin thời gian thực",
-        "Gợi ý theo mood và dịp",
-        "So sánh dễ giữa các lựa chọn",
+      tag: "( 10 · Persona tổng hợp )",
+      title: "Hai archetype đại diện được chắt lại từ những pattern lặp lại trong nghiên cứu",
+      note:
+        "Thay vì chỉ mô tả một người dùng giả định đơn lẻ, phần này tổng hợp hai archetype rõ nhất xuất hiện xuyên suốt trong khảo sát và phỏng vấn.",
+      cards: [
+        {
+          title: "Persona 1 · Người đi làm bận rộn",
+          name: "Nguyễn Hoàng Bảo Trân",
+          role: "25 tuổi · Nhân viên văn phòng tại TP.HCM",
+          demographic: [
+            "Sống và làm việc tại TP.HCM",
+            "Thường ăn trưa hoặc ăn tối gần công ty",
+            "Thu nhập trung bình đến khá",
+          ],
+          context:
+            "Quỹ thời gian ít, muốn ăn nhanh, đủ no, ở gần. Thường đi cùng đồng nghiệp hoặc một nhóm đối tác nhỏ.",
+          userStory:
+            "Là người đi làm bận rộn, tôi muốn tìm quán gần, phục vụ nhanh, giá hợp lý để không trễ giờ mà vẫn ăn đúng gu.",
+          goal: "Tìm được quán phù hợp trong dưới 5 phút, với thời gian di chuyển không quá 10 phút.",
+          gainPoints:
+            "Gợi ý sát gu, thông tin rõ ràng và đi thẳng tới quyết định mà không phải tốn nhiều công so sánh.",
+          painPoints:
+            "Gợi ý còn chung chung, thông tin sai thực tế, không biết quán còn chỗ hay không, và nhiều review trông đẹp nhưng không đúng.",
+          personality:
+            "Thực dụng, ưu tiên tốc độ, ít khám phá khi đang bận, nhưng sẵn sàng trung thành nếu app đoán đúng nhu cầu.",
+        },
+        {
+          title: "Persona 2 · HSSV và các cặp đôi ưa khám phá",
+          name: "Trần Duy Khôi",
+          role: "20 tuổi · Sinh viên và người thích đi ăn cùng bạn bè",
+          demographic: [
+            "Sinh viên hoặc người trẻ đang hẹn hò",
+            "Ngân sách còn hạn chế",
+            "Dễ bị ảnh hưởng bởi trend TikTok và cộng đồng",
+          ],
+          context:
+            "Hay tụ tập bạn bè hoặc đi hẹn hò và thường rơi vào cảnh không biết ăn gì. Thích thử món mới, thích không gian đẹp và có cảm giác vui khi khám phá.",
+          userStory:
+            "Là sinh viên hoặc người trẻ đi ăn cùng bạn bè hay người yêu, tôi muốn được gợi ý theo tâm trạng và ngân sách, có ảnh thật và đánh giá thật để đi ăn cho vui mà không sợ hớ.",
+          goal: "Khám phá quán mới rating cao, gần và hợp túi tiền, rồi ra quyết định trong khoảng 5 đến 15 phút.",
+          gainPoints:
+            "Gợi ý hợp mood, có deal hoặc ưu đãi, có điểm check-in đẹp, và có thể lưu hoặc chia sẻ cho nhóm bạn cùng xem.",
+          painPoints:
+            "Thông tin thiếu chính xác, quán ngoài đời không giống kỳ vọng, hoặc gợi ý không liên quan đến vibe đang muốn tìm.",
+          personality:
+            "Tò mò, dễ FOMO, thích cảm giác cá nhân hoá và bị ảnh hưởng khá mạnh bởi tín hiệu xã hội cùng cộng đồng.",
+        },
       ],
     },
     journey: {
-      tag: "( 08 · User Journey )",
+      tag: "( 11 · User Journey )",
       title: "Từ cơn thèm ăn đầu tiên đến cảm giác sau khi đã chọn quán",
       stages: [
         { s: "Trigger", a: "Muốn đi ăn hoặc lên kế hoạch bữa ăn.", th: "“Hôm nay ăn gì đây?”", p: "Không có điểm bắt đầu rõ ràng.", o: "Entry point theo mood / dịp." },
@@ -687,7 +868,7 @@ const COPY = {
       ],
     },
     hmw: {
-      tag: "( 09 · How Might We )",
+      tag: "( 12 · How Might We )",
       title: "Đặt lại insight thành những câu hỏi thiết kế đáng để theo đuổi",
       items: [
         "Làm sao giảm choáng ngợp lựa chọn khi tìm quán?",
@@ -698,7 +879,7 @@ const COPY = {
       ],
     },
     mapping: {
-      tag: "( 10 · Research to Design )",
+      tag: "( 13 · Research to Design )",
       title: "Cách những phát hiện nghiên cứu dần thành hình trong tính năng",
       cols: ["Research Finding", "Cơ hội thiết kế", "Tính năng khả thi"],
       rows: [
@@ -710,7 +891,7 @@ const COPY = {
       ],
     },
     brand: {
-      tag: "( 11 · Bộ nhận diện )",
+      tag: "( 14 · Bộ nhận diện )",
       title: "Ăng Ăng mang cảm giác tươi mới, thân thiện và dễ khiến người ta muốn chọn",
       logoCaption: "Logo chính của Ăng Ăng với wordmark dùng font Baloo Bhaijaan",
       keywordsLabel: "Brand keywords",
@@ -721,7 +902,7 @@ const COPY = {
       moodLabel: "Moodboard",
     },
     color: {
-      tag: "( 12 · Color System )",
+      tag: "( 15 · Color System )",
       title: "Một hệ palette token đầy đủ, được xây quanh sắc xanh của Ăng Ăng",
       desc:
         "Primary 500 (#9dd325) là sắc xanh chủ đạo cho logo, CTA chính, trạng thái active và highlight. Neutral nâng đỡ phần chữ và bề mặt, còn Success, Warning, Error, Info và Secondary hỗ trợ cho phản hồi và phân loại. Mỗi nhóm đều có thang từ 50 đến 950 để mọi component đều có một token đúng nghĩa để bám vào.",
@@ -730,7 +911,7 @@ const COPY = {
       hexLabel: "HEX",
     },
     typo: {
-      tag: "( 13 · Typography )",
+      tag: "( 16 · Typography )",
       title: "SF Pro gọn gàng, hiện đại và rất hợp với cảm giác mobile",
       body:
         "SF Pro giúp giao diện của Ăng Ăng trở nên sạch, quen thuộc và dễ đọc trên mobile. Nó giữ cho thông tin đủ rõ ràng để việc chọn món và chọn quán diễn ra nhanh, nhẹ và tự nhiên hơn.",
@@ -746,7 +927,7 @@ const COPY = {
       ],
     },
     grid: {
-      tag: "( 14 · Grid System )",
+      tag: "( 17 · Grid System )",
       title: "Hệ lưới kép được giữ nhịp trên baseline 8 điểm",
       desc:
         "Khung app của Ăng Ăng dùng hai lưới stretch, một lưới 4 cột cho màn hình mobile và một lưới 6 cột cho những layout rộng hơn. Cả hai cùng dùng margin 12 và gutter 12, trong khi toàn bộ nhịp dọc đều bám theo baseline 8 px.",
@@ -789,7 +970,7 @@ const COPY = {
       spacing: [4, 8, 12, 16, 24, 32, 48, 64, 96],
     },
     components: {
-      tag: "( 15 · Component System )",
+      tag: "( 18 · Component System )",
       title: "Một UI kit được dựng từ các primitive có thể tái sử dụng, thay vì những mảnh màn hình rời rạc",
       desc:
         "Component kit của Ăng Ăng xoay quanh các primitive tương tác có thể tái sử dụng như Button, Button Group, Input, Badge và nhóm selection controls. Size, style và state của chúng được định nghĩa sẵn để giao diện giữ được sự nhất quán khi mở rộng thêm flow mới.",
@@ -823,13 +1004,13 @@ const COPY = {
       totalLabel: "Tổng số state có thể ráp",
     },
     icons: {
-      tag: "( 16 · Icon & Minh hoạ )",
+      tag: "( 19 · Icon & Minh hoạ )",
       title: "Một ngôn ngữ icon gọn nhẹ, đi cùng những điểm nhấn thương hiệu nhỏ",
       body:
         "Hệ visual support được giữ gọn và thực dụng. Icon dùng nét đơn giản, bo tròn để người dùng quét nhanh trên mobile, trong khi các điểm nhấn minh hoạ nhỏ từ hệ màu giúp làm rõ mood, cảm giác tin cậy và bối cảnh ăn uống mà không lấn át nội dung chính.",
     },
     wireframe: {
-      tag: "( 17 · Wireframe )",
+      tag: "( 20 · Wireframe )",
       title: "Những nét vẽ đầu tiên cho flow chọn quán ăn",
       body:
         "Trước khi đi tới phần UI hoàn chỉnh, tôi phác thảo các màn hình cốt lõi trên giấy để thử hệ thống bố cục, điều hướng và xem mỗi insight có thể đi vào một flow thật sự dùng được như thế nào.",
@@ -843,7 +1024,7 @@ const COPY = {
       ],
     },
     ui: {
-      tag: "( 18 · Final UI Preview )",
+      tag: "( 21 · Final UI Preview )",
       title: "Nơi những insight nghiên cứu bắt đầu chạm thành màn hình sản phẩm",
       screens: [
         { t: "Home", d: "Mood entry + feed cá nhân hoá" },
@@ -857,7 +1038,7 @@ const COPY = {
       ],
     },
     reflection: {
-      tag: "( 19 · Reflection )",
+      tag: "( 22 · Reflection )",
       body:
         "Dự án này giúp tôi nhận ra rằng khám phá địa điểm ăn uống không chỉ nằm ở việc đưa ra thêm nhiều lựa chọn. Một trải nghiệm tốt hơn cần làm dịu sự phân vân, đưa đúng ngữ cảnh ra trước mắt và giúp người dùng chọn quán với nhiều tự tin hơn, dựa trên tâm trạng, thời điểm và bối cảnh xã hội của riêng họ.",
       cta1: "Về Portfolio",
@@ -1139,8 +1320,18 @@ export function AngAng() {
                 <button
                   type="button"
                   onClick={() => scrollToCaseSection("system")}
-                  className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors"
-                  style={{ borderColor: GREEN_DARK, color: GREEN_DARK }}
+                  className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-all hover:-translate-y-0.5"
+                  style={{
+                    border: `1px solid ${GREEN_DARK}`,
+                    color: GREEN_DARK,
+                    backgroundColor: "rgba(157, 211, 37, 0.08)",
+                  }}
+                  onMouseEnter={(event) => {
+                    event.currentTarget.style.backgroundColor = "rgba(157, 211, 37, 0.16)";
+                  }}
+                  onMouseLeave={(event) => {
+                    event.currentTarget.style.backgroundColor = "rgba(157, 211, 37, 0.08)";
+                  }}
                 >
                   {t.cta2}
                 </button>
@@ -1238,8 +1429,43 @@ export function AngAng() {
         </div>
       </Section>
 
+      {/* RESEARCH GOALS */}
+      <Section bg="#fff">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-5">
+            <Tag>{t.goals.tag}</Tag>
+            <H2>{t.goals.title}</H2>
+          </div>
+          <div className="lg:col-span-7">
+            <p className="max-w-[60ch]" style={{ color: MUTED, lineHeight: 1.7 }}>
+              {t.goals.intro}
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 mt-8">
+              {t.goals.questions.map((question, index) => (
+                <motion.div
+                  key={question}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: index * 0.04 }}
+                  className="rounded-[28px] p-6"
+                  style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}
+                >
+                  <div className="inline-flex items-center justify-center w-9 h-9 rounded-full text-xs" style={{ backgroundColor: GREEN_DARK, color: "#fff" }}>
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <p className="mt-4" style={{ fontFamily: "Fraunces, serif", fontSize: "1.25rem", lineHeight: 1.35 }}>
+                    {question}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* RESEARCH PROCESS */}
-      <Section id="research" bg="#fff">
+      <Section id="research" bg={BG}>
         <div className="mb-12">
           <Tag>{t.process.tag}</Tag>
           <H2>{t.process.title}</H2>
@@ -1255,7 +1481,11 @@ export function AngAng() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: i * 0.04 }}
                 className="rounded-2xl p-6"
-                style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}
+                style={{
+                  backgroundColor: "#fff",
+                  border: `1px solid ${BORDER}`,
+                  boxShadow: "0 20px 44px -32px rgba(61, 79, 24, 0.22)",
+                }}
               >
                 <div className="flex items-center justify-between mb-5">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: GREEN, color: "#fff" }}>
@@ -1275,8 +1505,209 @@ export function AngAng() {
         </div>
       </Section>
 
-      {/* COMPETITORS */}
+      {/* SECONDARY RESEARCH */}
+      <Section bg="#fff">
+        <div className="grid lg:grid-cols-12 gap-8 items-start">
+          <div className="lg:col-span-5">
+            <Tag>{t.secondaryResearch.tag}</Tag>
+            <H2>{t.secondaryResearch.title}</H2>
+            <p className="mt-5 max-w-[56ch]" style={{ color: MUTED, lineHeight: 1.7 }}>
+              {t.secondaryResearch.intro}
+            </p>
+          </div>
+          <div className="lg:col-span-7">
+            <div
+              className="rounded-[32px] p-6 md:p-8"
+              style={{
+                backgroundColor: "rgba(255,255,255,0.72)",
+                border: `1px solid ${BORDER}`,
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div className="text-xs tracking-[0.22em] uppercase" style={{ color: GREEN_DARK }}>
+                {lang === "en" ? "Why this matters" : "Vì sao phần này quan trọng"}
+              </div>
+              <p className="mt-3" style={{ color: INK, lineHeight: 1.75 }}>
+                {t.secondaryResearch.summary}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="relative mt-12 rounded-[40px] overflow-hidden p-6 md:p-8 lg:p-12"
+          style={{
+            background: `linear-gradient(160deg, ${GREEN_LIGHT} 0%, ${BG} 48%, #ffffff 100%)`,
+            border: `1px solid ${BORDER}`,
+          }}
+        >
+          <svg
+            className="pointer-events-none absolute inset-0 hidden lg:block"
+            viewBox="0 0 1200 720"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path d="M110 640 Q 160 410 350 360 T 980 610" fill="none" stroke={GREEN_DARK} strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+            <path d="M110 640 Q 170 290 470 270 T 1080 420" fill="none" stroke={GREEN_DARK} strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+            <path d="M110 640 Q 185 170 560 150 T 1160 270" fill="none" stroke={GREEN_DARK} strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+            <path d="M110 640 L 1120 640" fill="none" stroke={GREEN_DARK} strokeWidth="3" strokeLinecap="round" opacity="0.8" />
+          </svg>
+
+          <div className="hidden lg:block relative h-[620px]">
+            {t.secondaryResearch.items.map((item, index) => {
+              const positions = [
+                "left-[6%] top-[63%] w-[24%]",
+                "left-[31%] top-[46%] w-[24%]",
+                "left-[56%] top-[29%] w-[21%]",
+                "left-[79%] top-[8%] w-[16%]",
+              ];
+              const isGreenCard = index % 2 === 1;
+
+              return (
+                <motion.div
+                  key={item.stat}
+                  initial={{ opacity: 0, y: 18 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.06 }}
+                  className={`absolute rounded-[28px] p-6 ${positions[index]}`}
+                  style={{
+                    backgroundColor: isGreenCard ? GREEN_DARK : "rgba(255,255,255,0.96)",
+                    border: isGreenCard ? `1px solid ${GREEN_DARK}` : `1px solid ${BORDER}`,
+                    boxShadow: "0 24px 60px -36px rgba(61, 79, 24, 0.28)",
+                  }}
+                >
+                  <div
+                    className="inline-flex items-center rounded-full px-3 py-1.5 text-[10px] tracking-[0.18em] uppercase"
+                    style={{
+                      backgroundColor: isGreenCard ? "rgba(255,255,255,0.14)" : GREEN_LIGHT,
+                      color: isGreenCard ? "#ffffff" : GREEN_DARK,
+                    }}
+                  >
+                    {lang === "en" ? "Data source" : "Nguồn dữ liệu"} · {item.source.replace(/^Source · |^Nguồn · /, "")}
+                  </div>
+                  <div
+                    className="mt-4"
+                    style={{
+                      fontFamily: "Fraunces, serif",
+                      fontSize: index === 0 ? "2.2rem" : "2rem",
+                      lineHeight: 1,
+                      color: isGreenCard ? "#ffffff" : GREEN,
+                      fontStyle: "italic",
+                    }}
+                  >
+                    {item.stat}
+                  </div>
+                  <p
+                    className="mt-4"
+                    style={{
+                      color: isGreenCard ? "rgba(255,255,255,0.92)" : INK,
+                      lineHeight: 1.6,
+                      fontSize: "0.98rem",
+                    }}
+                  >
+                    {item.body}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 lg:hidden relative">
+            {t.secondaryResearch.items.map((item, index) => {
+              const isGreenCard = index % 2 === 1;
+
+              return (
+              <motion.div
+                key={item.stat}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="rounded-[28px] p-6"
+                style={{
+                  backgroundColor: isGreenCard ? GREEN_DARK : "rgba(255,255,255,0.96)",
+                  border: isGreenCard ? `1px solid ${GREEN_DARK}` : `1px solid ${BORDER}`,
+                }}
+              >
+                <div
+                  className="inline-flex items-center rounded-full px-3 py-1.5 text-[10px] tracking-[0.18em] uppercase"
+                  style={{
+                    backgroundColor: isGreenCard ? "rgba(255,255,255,0.14)" : GREEN_LIGHT,
+                    color: isGreenCard ? "#ffffff" : GREEN_DARK,
+                  }}
+                >
+                  {lang === "en" ? "Data source" : "Nguồn dữ liệu"} · {item.source.replace(/^Source · |^Nguồn · /, "")}
+                </div>
+                <div
+                  className="mt-4"
+                  style={{
+                    fontFamily: "Fraunces, serif",
+                    fontSize: "2rem",
+                    lineHeight: 1,
+                    color: isGreenCard ? "#ffffff" : GREEN,
+                    fontStyle: "italic",
+                  }}
+                >
+                  {item.stat}
+                </div>
+                <p
+                  className="mt-4"
+                  style={{
+                    color: isGreenCard ? "rgba(255,255,255,0.92)" : INK,
+                    lineHeight: 1.65,
+                  }}
+                >
+                  {item.body}
+                </p>
+              </motion.div>
+            );
+            })}
+          </div>
+        </div>
+      </Section>
+
+      {/* PRIMARY RESEARCH */}
       <Section bg={BG}>
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-5">
+            <Tag>{t.primaryResearch.tag}</Tag>
+            <H2>{t.primaryResearch.title}</H2>
+            <p className="mt-5 max-w-[58ch]" style={{ color: MUTED, lineHeight: 1.7 }}>
+              {t.primaryResearch.intro}
+            </p>
+          </div>
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4">
+            {t.primaryResearch.clusters.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.05 }}
+                className="rounded-[28px] p-6 md:p-7"
+                style={{
+                  backgroundColor: index % 2 === 0 ? "#fff" : GREEN_LIGHT,
+                  border: `1px solid ${BORDER}`,
+                }}
+              >
+                <div className="text-xs tracking-[0.22em] uppercase" style={{ color: GREEN_DARK }}>
+                  {lang === "en" ? "Research theme" : "Cụm phát hiện"}
+                </div>
+                <div className="mt-3" style={{ fontFamily: "Fraunces, serif", fontSize: "1.4rem", lineHeight: 1.25 }}>
+                  {item.title}
+                </div>
+                <p className="mt-4" style={{ lineHeight: 1.65, color: INK }}>
+                  {item.body}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* COMPETITORS */}
+      <Section bg="#fff">
         <div className="mb-10">
           <Tag>{t.competitors.tag}</Tag>
           <H2>{t.competitors.title}</H2>
@@ -1337,7 +1768,7 @@ export function AngAng() {
       </Section>
 
       {/* TARGET USERS */}
-      <Section bg="#fff">
+      <Section bg={BG}>
         <Tag>{t.users.tag}</Tag>
         <H2>{t.users.title}</H2>
         <div className="grid lg:grid-cols-3 gap-6 mt-10">
@@ -1377,7 +1808,7 @@ export function AngAng() {
       </Section>
 
       {/* INSIGHTS */}
-      <Section id="insights" bg={BG}>
+      <Section id="insights" bg="#fff">
         <Tag>{t.insights.tag}</Tag>
         <H2>{t.insights.title}</H2>
         <div className="grid md:grid-cols-2 gap-5 mt-10">
@@ -1410,49 +1841,97 @@ export function AngAng() {
       </Section>
 
       {/* PERSONA */}
-      <Section bg="#fff">
+      <Section bg={BG}>
         <Tag>{t.persona.tag}</Tag>
-        <div className="grid lg:grid-cols-12 gap-8 items-start mt-2">
-          <div className="lg:col-span-4">
-            <div className="rounded-3xl overflow-hidden" style={{ aspectRatio: "4 / 5", backgroundColor: GREEN_LIGHT }}>
-              <ImageWithFallback src={PERSONA_IMG} alt="Persona portrait · Linh, 24" className="w-full h-full object-cover" />
-            </div>
-            <div className="mt-5 rounded-2xl p-5" style={{ backgroundColor: INK, color: "#fff" }}>
-              <div style={{ fontFamily: "Fraunces, serif", fontSize: "1.6rem" }}>{t.persona.name}</div>
-              <div className="text-xs tracking-[0.18em] uppercase mt-1" style={{ color: GREEN }}>
-                {t.persona.role}
+        <H2>{t.persona.title}</H2>
+        <p className="mt-5 max-w-[62ch]" style={{ color: MUTED, lineHeight: 1.7 }}>
+          {t.persona.note}
+        </p>
+        <div className="grid lg:grid-cols-2 gap-6 mt-8">
+          {t.persona.cards.map((card, index) => (
+            <motion.article
+              key={card.title}
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, delay: index * 0.06 }}
+              className="rounded-[32px] p-6 md:p-8"
+              style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}
+            >
+              <div className="inline-flex rounded-full px-4 py-2 text-sm md:text-[1.05rem]" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}`, fontWeight: 600 }}>
+                {card.title}
               </div>
-              <p className="mt-3" style={{ fontSize: "0.92rem", opacity: 0.8, lineHeight: 1.55 }}>
-                {t.persona.context}
-              </p>
-            </div>
-          </div>
-          <div className="lg:col-span-8 grid sm:grid-cols-3 gap-4">
-            {[
-              { label: t.persona.goalsLabel, items: t.persona.goals, color: GREEN_DARK },
-              { label: t.persona.painsLabel, items: t.persona.pains, color: RED },
-              { label: t.persona.needsLabel, items: t.persona.needs, color: ORANGE },
-            ].map((col) => (
-              <div key={col.label} className="rounded-2xl p-5" style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}>
-                <div className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: col.color, fontWeight: 600 }}>
-                  {col.label}
+
+              <div className="mt-6 grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)]">
+                <div>
+                  <div
+                    className="rounded-[24px] p-4 overflow-hidden"
+                    style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}
+                  >
+                    <div
+                      className="rounded-[20px] overflow-hidden"
+                      style={{ aspectRatio: "1 / 1", backgroundColor: "#f5eceb" }}
+                    >
+                      <ImageWithFallback
+                        src={index === 0 ? BAO_TRAN_PERSONA_AVATAR_URL : DUY_KHOI_PERSONA_AVATAR_URL}
+                        alt={`${card.name} persona avatar`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="mt-4 rounded-2xl p-5" style={{ backgroundColor: INK, color: "#fff" }}>
+                    <div style={{ fontFamily: "Fraunces, serif", fontSize: "1.45rem", lineHeight: 1.2 }}>
+                      {card.name}
+                    </div>
+                    <div className="text-xs tracking-[0.18em] uppercase mt-2" style={{ color: GREEN }}>
+                      {card.role}
+                    </div>
+                  </div>
                 </div>
-                <ul className="space-y-2">
-                  {col.items.map((x) => (
-                    <li key={x} className="flex items-start gap-2" style={{ fontSize: "0.92rem", lineHeight: 1.5 }}>
-                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: col.color }} />
-                      {x}
-                    </li>
+
+                <div className="space-y-5">
+                  <div>
+                    <div className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: GREEN_DARK, fontWeight: 600 }}>
+                      {lang === "en" ? "Demographic" : "Demographic"}
+                    </div>
+                    <ul className="space-y-2">
+                      {card.demographic.map((item) => (
+                        <li key={item} className="flex items-start gap-2" style={{ fontSize: "0.96rem", lineHeight: 1.6 }}>
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: GREEN_DARK }} />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {[
+                    { label: lang === "en" ? "Context" : "Bối cảnh", value: card.context },
+                    { label: lang === "en" ? "User story" : "User story", value: card.userStory },
+                    { label: lang === "en" ? "Goal" : "Mục tiêu", value: card.goal },
+                    { label: lang === "en" ? "Gain points" : "Gain points", value: card.gainPoints },
+                    { label: lang === "en" ? "Pain points" : "Pain points", value: card.painPoints },
+                    { label: lang === "en" ? "Personality" : "Tính cách", value: card.personality },
+                  ].map((item, itemIndex) => (
+                    <div
+                      key={item.label}
+                      className="pt-4"
+                      style={{ borderTop: itemIndex === 0 ? `1px solid ${BORDER}` : `1px solid ${BORDER}` }}
+                    >
+                      <div className="text-xs tracking-[0.2em] uppercase mb-2" style={{ color: item.label === (lang === "en" ? "Pain points" : "Pain points") ? RED : item.label === (lang === "en" ? "Gain points" : "Gain points") ? ORANGE : MUTED, fontWeight: 600 }}>
+                        {item.label}
+                      </div>
+                      <p style={{ fontSize: "0.96rem", lineHeight: 1.65 }}>{item.value}</p>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
-            ))}
-          </div>
+            </motion.article>
+          ))}
         </div>
       </Section>
 
       {/* JOURNEY */}
-      <Section id="journey" bg={BG}>
+      <Section id="journey" bg="#fff">
         <Tag>{t.journey.tag}</Tag>
         <H2>{t.journey.title}</H2>
         <div className="mt-10 overflow-x-auto pb-4 -mx-6 px-6 md:-mx-12 md:px-12">

@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useI18n } from "../i18n";
+import { ANG_ANG_PROJECT_COVER_URL } from "../config/project-covers";
 
 const meta = [
   {
@@ -10,9 +11,8 @@ const meta = [
     href: "#case/angang",
     tags: ["UX Research", "Mobile App", "Food Discovery", "Personalization", "UI Design"],
     year: "2025",
-    image:
-      "https://images.unsplash.com/photo-1611854064186-d8dccbccb031?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1400",
-    imageAlt: "A bustling food stall scene representing the Ăng Ăng food discovery app",
+    image: ANG_ANG_PROJECT_COVER_URL,
+    imageAlt: "Ăng Ăng project cover showing the app identity and key mobile screens",
     accent: "#f0ead6",
   },
   {
