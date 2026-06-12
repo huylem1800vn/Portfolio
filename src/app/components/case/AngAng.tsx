@@ -394,13 +394,37 @@ const COPY = {
     journey: {
       tag: "( 11 · User Journey )",
       title: "From the first craving to the feeling after the meal",
-      stages: [
-        { s: "Trigger", a: "User wants to eat out or plan a meal.", th: "“Where should we eat today?”", p: "No clear starting point.", o: "Mood / occasion-based entry point." },
-        { s: "Search", a: "Checks social media, maps, review apps, asks friends.", th: "“There are too many places.”", p: "Choice overload.", o: "Smart filters based on context." },
-        { s: "Compare", a: "Opens multiple restaurant options.", th: "“Which one is actually suitable?”", p: "Hard to compare similar info.", o: "Comparison cards: price, distance, crowd, vibe, fit." },
-        { s: "Validate", a: "Checks reviews, photos, opening status.", th: "“Is this place still good?”", p: "Review noise, outdated info.", o: "Contextual + recent review highlights." },
-        { s: "Decide", a: "Chooses a restaurant.", th: "“I hope this is the right choice.”", p: "Low confidence before going.", o: "Decision confidence + reason-based recs." },
-        { s: "Experience", a: "Visits the restaurant.", th: "“Was this worth it?”", p: "Experience may not match expectation.", o: "Post-visit feedback + personalized future recs." },
+      intro:
+        "The research board splits the journey into two real decision patterns instead of one generic flow. One is driven by speed and practicality, while the other is driven by mood, social context, and the desire to discover somewhere worth going.",
+      maps: [
+        {
+          title: "Journey 1 · Busy office worker choosing a fast nearby meal",
+          persona: "Nguyen Hoang Bao Tran",
+          summary:
+            "A practical flow where the user wants to make a quick decision with minimal risk, limited time, and clear trust signals before leaving the office.",
+          stages: [
+            { s: "Trigger", a: "Feels hungry during a workday and needs a quick lunch or dinner plan.", th: "“I need something nearby and reliable.”", p: "Time pressure starts immediately.", o: "Entry point based on time, distance, and solo or coworker mode." },
+            { s: "Search nearby", a: "Looks for restaurants around the office area.", th: "“Show me what is actually close.”", p: "Too many nearby options still feel noisy.", o: "Distance-first discovery with fast-service cues." },
+            { s: "Scan essentials", a: "Checks price range, food type, opening hours, and estimated travel time.", th: "“Can I get there, eat, and come back on time?”", p: "Key practical details are often scattered.", o: "Condensed decision cards with the essentials up front." },
+            { s: "Validate trust", a: "Glances at recent reviews and real photos to avoid bad surprises.", th: "“Is this information still trustworthy?”", p: "Polished but outdated reviews reduce confidence.", o: "Recent review highlights and signals from verified visits." },
+            { s: "Decide fast", a: "Picks one place and heads there.", th: "“I just want to feel safe choosing this.”", p: "Still worries about making the wrong call under time pressure.", o: "Reason-based recommendation with confidence cues." },
+            { s: "Eat and reflect", a: "Experiences the restaurant and judges whether it matched the promise.", th: "“Would I come back here next time?”", p: "Expectation can still miss reality.", o: "Lightweight feedback loop and save-as-go-to-place behavior." },
+          ],
+        },
+        {
+          title: "Journey 2 · Student or young couple exploring for mood and vibe",
+          persona: "Tran Duy Khoi",
+          summary:
+            "A more exploratory journey where the user is not only trying to eat, but also trying to match a mood, budget, and social moment with a place that feels worth the outing.",
+          stages: [
+            { s: "Plan the outing", a: "Starts with a casual plan to hang out, date, or gather with friends.", th: "“We want somewhere fun, not just somewhere to eat.”", p: "The need is emotional, not only functional.", o: "Occasion-based starting points such as date night, chill, group hangout, or comfort food." },
+            { s: "Browse inspiration", a: "Looks through photos, trending places, and community recommendations.", th: "“What feels exciting right now?”", p: "Inspiration sources are fragmented across apps.", o: "Discovery feed that blends trend, vibe, and food categories." },
+            { s: "Match budget and mood", a: "Narrows down options by price, atmosphere, and distance.", th: "“It has to be fun but still affordable.”", p: "Many places look attractive but do not match the real budget or vibe.", o: "Filters and tags for budget, mood, and social setting." },
+            { s: "Check social proof", a: "Reads reviews, checks photos, and looks for signs the place is still active.", th: "“Does this place really look like that in real life?”", p: "Trust drops when photos and reviews feel staged or old.", o: "Authentic photo signals, recent activity, and vibe-focused review snippets." },
+            { s: "Align with the group", a: "Shares options with friends or a partner and tries to agree on one choice.", th: "“Can we decide without talking in circles?”", p: "Group decision making creates friction and delays.", o: "Shortlist, share, and lightweight voting tools." },
+            { s: "Go, post, remember", a: "Visits the place, takes photos, and remembers whether it was worth recommending.", th: "“Was it as fun as it looked?”", p: "The outing can disappoint if the real atmosphere is flat.", o: "Post-visit memory cues, saved lists, and future recommendations by vibe." },
+          ],
+        },
       ],
     },
     hmw: {
@@ -858,13 +882,37 @@ const COPY = {
     journey: {
       tag: "( 11 · User Journey )",
       title: "Từ cơn thèm ăn đầu tiên đến cảm giác sau khi đã chọn quán",
-      stages: [
-        { s: "Trigger", a: "Muốn đi ăn hoặc lên kế hoạch bữa ăn.", th: "“Hôm nay ăn gì đây?”", p: "Không có điểm bắt đầu rõ ràng.", o: "Entry point theo mood / dịp." },
-        { s: "Tìm kiếm", a: "Xem MXH, map, app review, hỏi bạn bè.", th: "“Nhiều quán quá.”", p: "Choáng ngợp lựa chọn.", o: "Bộ lọc thông minh theo ngữ cảnh." },
-        { s: "So sánh", a: "Mở nhiều quán cùng lúc.", th: "“Cái nào hợp hơn?”", p: "Thông tin giống nhau, khó so sánh.", o: "Thẻ so sánh: giá, khoảng cách, đông/vắng, vibe." },
-        { s: "Xác thực", a: "Đọc review, xem ảnh, check giờ mở.", th: "“Quán này còn ổn không?”", p: "Review nhiễu, thông tin cũ.", o: "Review theo ngữ cảnh + bài gần đây." },
-        { s: "Quyết định", a: "Chọn một quán.", th: "“Mong là chọn đúng.”", p: "Thiếu tự tin trước khi đi.", o: "Confidence score + gợi ý có lý do." },
-        { s: "Trải nghiệm", a: "Đến quán.", th: "“Có đáng không?”", p: "Trải nghiệm có thể không khớp kỳ vọng.", o: "Phản hồi sau và gợi ý cá nhân hoá tiếp theo." },
+      intro:
+        "Trong board UX, hành trình người dùng không được gom thành một flow chung, mà tách thành hai kiểu ra quyết định rất khác nhau. Một nhóm ưu tiên tốc độ và sự chắc chắn, trong khi nhóm còn lại ưu tiên mood, bối cảnh đi cùng người khác và cảm giác khám phá.",
+      maps: [
+        {
+          title: "Journey 1 · Người đi làm bận rộn cần chọn quán nhanh và gần",
+          persona: "Nguyễn Hoàng Bảo Trân",
+          summary:
+            "Đây là hành trình thiên về tính thực dụng. Người dùng muốn chốt nhanh, ít rủi ro, ít mất thời gian và cần các tín hiệu đủ đáng tin trước khi rời công ty đi ăn.",
+          stages: [
+            { s: "Khởi phát nhu cầu", a: "Bắt đầu thấy đói trong ngày làm việc và cần lên kế hoạch ăn trưa hoặc ăn tối nhanh.", th: "“Mình cần một chỗ gần và đáng tin.”", p: "Áp lực thời gian xuất hiện ngay từ đầu.", o: "Điểm vào theo khung giờ, khoảng cách và ngữ cảnh đi một mình hay đi cùng đồng nghiệp." },
+            { s: "Tìm quán gần", a: "Tìm các quán quanh khu vực công ty.", th: "“Cho mình thấy những chỗ thật sự gần.”", p: "Dù ở gần vẫn có quá nhiều lựa chọn gây nhiễu.", o: "Khám phá ưu tiên khoảng cách kèm tín hiệu phục vụ nhanh." },
+            { s: "Quét thông tin cốt lõi", a: "Xem giá, loại món, giờ mở cửa và thời gian di chuyển.", th: "“Mình có kịp đi, ăn rồi quay lại không?”", p: "Thông tin thiết yếu thường bị rải rác.", o: "Thẻ quyết định ngắn gọn gom các dữ liệu cần nhất lên đầu." },
+            { s: "Xác thực độ tin cậy", a: "Lướt review gần đây và ảnh thật để tránh chọn nhầm.", th: "“Thông tin này còn đáng tin không?”", p: "Review đẹp nhưng cũ làm giảm niềm tin.", o: "Review gần đây, review xác minh ghé thăm và tín hiệu thực tế." },
+            { s: "Ra quyết định nhanh", a: "Chọn một quán và đi ngay.", th: "“Mình chỉ muốn yên tâm là chọn đúng.”", p: "Vẫn có cảm giác lo chọn sai khi đang vội.", o: "Gợi ý có lý do và tín hiệu tự tin trước khi chốt." },
+            { s: "Ăn xong và ghi nhớ", a: "Trải nghiệm tại quán và tự đánh giá xem có nên quay lại không.", th: "“Lần sau mình có tiếp tục chọn quán này không?”", p: "Kỳ vọng vẫn có thể lệch khỏi thực tế.", o: "Vòng phản hồi nhanh và hành vi lưu quán quen cho lần sau." },
+          ],
+        },
+        {
+          title: "Journey 2 · Sinh viên hoặc cặp đôi tìm quán theo mood và trải nghiệm",
+          persona: "Trần Duy Khôi",
+          summary:
+            "Đây là hành trình có tính khám phá nhiều hơn. Người dùng không chỉ muốn ăn, mà muốn tìm được một nơi hợp mood, hợp túi tiền và đủ thú vị để xứng đáng cho buổi đi chơi.",
+          stages: [
+            { s: "Lên ý định đi chơi", a: "Bắt đầu từ một buổi hẹn, buổi tụ tập hoặc đơn giản là muốn đổi gió đi ăn ngoài.", th: "“Tụi mình cần một nơi vui chứ không chỉ là chỗ ăn.”", p: "Nhu cầu mang tính cảm xúc nhiều hơn chức năng.", o: "Điểm vào theo dịp như hẹn hò, chill, đi nhóm hay ăn cho đỡ buồn." },
+            { s: "Tìm cảm hứng", a: "Xem ảnh, quán trend và gợi ý từ cộng đồng.", th: "“Chỗ nào đang thấy thú vị nhỉ?”", p: "Nguồn cảm hứng bị phân mảnh trên nhiều nền tảng.", o: "Feed khám phá kết hợp trend, vibe và món ăn." },
+            { s: "Lọc theo ngân sách và mood", a: "Thu hẹp lựa chọn theo giá, không gian và khoảng cách.", th: "“Phải vui nhưng vẫn vừa túi tiền.”", p: "Nhiều nơi nhìn hấp dẫn nhưng không đúng budget hoặc vibe thật.", o: "Bộ lọc và tag theo ngân sách, mood và bối cảnh đi cùng ai." },
+            { s: "Kiểm tra tín hiệu xã hội", a: "Đọc đánh giá, xem ảnh và kiểm tra xem quán còn hoạt động tốt không.", th: "“Ngoài đời có thật sự giống như vậy không?”", p: "Niềm tin giảm mạnh khi ảnh và review trông dàn dựng hoặc quá cũ.", o: "Ảnh thật, tín hiệu hoạt động gần đây và review nhấn vào vibe." },
+            { s: "Chốt cùng bạn đi cùng", a: "Gửi option cho bạn bè hoặc người yêu rồi cùng chốt một quán.", th: "“Làm sao chọn nhanh mà không bàn mãi?”", p: "Quyết định theo nhóm dễ kéo dài và gây mệt.", o: "Shortlist, chia sẻ và vote nhẹ để chốt nhanh hơn." },
+            { s: "Đi ăn và lưu lại cảm xúc", a: "Đến quán, chụp hình, trải nghiệm và ghi nhớ xem có đáng giới thiệu không.", th: "“Nó có vui như mình tưởng không?”", p: "Buổi đi chơi dễ hụt nếu không khí thật không như kỳ vọng.", o: "Gợi nhớ sau trải nghiệm, danh sách lưu lại và gợi ý tiếp theo theo vibe." },
+          ],
+        },
       ],
     },
     hmw: {
@@ -1934,32 +1982,85 @@ export function AngAng() {
       <Section id="journey" bg="#fff">
         <Tag>{t.journey.tag}</Tag>
         <H2>{t.journey.title}</H2>
-        <div className="mt-10 overflow-x-auto pb-4 -mx-6 px-6 md:-mx-12 md:px-12">
-          <div className="grid grid-cols-6 gap-3" style={{ minWidth: 1100 }}>
-            {t.journey.stages.map((s, i) => (
-              <div
-                key={s.s}
-                className="rounded-2xl p-5"
-                style={{
-                  backgroundColor: i % 2 === 0 ? "#fff" : GREEN_LIGHT,
-                  border: `1px solid ${BORDER}`,
-                }}
-              >
-                <div className="w-7 h-7 rounded-full flex items-center justify-center text-xs" style={{ backgroundColor: GREEN, color: "#fff" }}>
-                  {i + 1}
+        <p className="mt-5 max-w-4xl text-lg leading-relaxed" style={{ color: MUTED }}>
+          {t.journey.intro}
+        </p>
+        <div className="mt-10 space-y-8">
+          {t.journey.maps.map((map, mapIndex) => (
+            <div
+              key={map.title}
+              className="rounded-[32px] p-6 md:p-8"
+              style={{
+                backgroundColor: mapIndex % 2 === 0 ? GREEN_LIGHT : "#fff",
+                border: `1px solid ${BORDER}`,
+              }}
+            >
+              <div className="grid lg:grid-cols-[320px_minmax(0,1fr)] gap-6 lg:gap-8">
+                <div>
+                  <div
+                    className="inline-flex items-center rounded-full px-4 py-2 text-xs tracking-[0.22em] uppercase"
+                    style={{
+                      backgroundColor: mapIndex % 2 === 0 ? "#fff" : GREEN_LIGHT,
+                      color: GREEN_DARK,
+                    }}
+                  >
+                    {map.persona}
+                  </div>
+                  <h3
+                    className="mt-4"
+                    style={{
+                      fontFamily: "Fraunces, serif",
+                      fontSize: "clamp(1.6rem, 2vw, 2.2rem)",
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    {map.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-relaxed" style={{ color: MUTED }}>
+                    {map.summary}
+                  </p>
                 </div>
-                <div className="mt-3" style={{ fontFamily: "Fraunces, serif", fontSize: "1.2rem" }}>
-                  {s.s}
-                </div>
-                <div className="mt-4 space-y-3">
-                  <Field label={L.action} v={s.a} />
-                  <Field label={L.thought} v={s.th} italic />
-                  <Field label={L.pain} v={s.p} color={RED} />
-                  <Field label={L.opportunity} v={s.o} color={GREEN_DARK} />
+
+                <div className="overflow-x-auto pb-4 -mx-2 px-2">
+                  <div
+                    className="grid gap-3"
+                    style={{
+                      gridTemplateColumns: `repeat(${map.stages.length}, minmax(180px, 1fr))`,
+                      minWidth: map.stages.length * 190,
+                    }}
+                  >
+                    {map.stages.map((s, i) => (
+                      <div
+                        key={`${map.title}-${s.s}`}
+                        className="rounded-2xl p-5"
+                        style={{
+                          backgroundColor: i % 2 === 0 ? "#fff" : GREEN_LIGHT,
+                          border: `1px solid ${BORDER}`,
+                          boxShadow: "0 10px 30px rgba(17,24,39,0.04)",
+                        }}
+                      >
+                        <div
+                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs"
+                          style={{ backgroundColor: GREEN, color: "#fff" }}
+                        >
+                          {i + 1}
+                        </div>
+                        <div className="mt-3" style={{ fontFamily: "Fraunces, serif", fontSize: "1.2rem" }}>
+                          {s.s}
+                        </div>
+                        <div className="mt-4 space-y-3">
+                          <Field label={L.action} v={s.a} />
+                          <Field label={L.thought} v={s.th} italic />
+                          <Field label={L.pain} v={s.p} color={RED} />
+                          <Field label={L.opportunity} v={s.o} color={GREEN_DARK} />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </Section>
 
