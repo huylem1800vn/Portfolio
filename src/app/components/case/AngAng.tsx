@@ -633,7 +633,7 @@ const COPY = {
       { id: "system", label: "Hệ thống" },
       { id: "ui", label: "Giao diện" },
     ],
-    badge: "UX Research + Design System · 2025 · Concept Mobile App",
+    badge: "UX Research + Design System · 2025 · Concept ứng dụng di động",
     title: "Ăng Ăng · Nghiên cứu UX về hành vi chọn quán ăn",
     concept: "DECIDE",
     headline:
@@ -646,7 +646,7 @@ const COPY = {
       { k: "Loại dự án", v: "UX Research · Concept Mobile App" },
       { k: "Người dùng", v: "Người trẻ tại TP.HCM · 19–33" },
       { k: "Trọng tâm", v: "Hành vi ra quyết định chọn quán" },
-      { k: "Vai trò", v: "Research · Framing · Journey · Insight · UI · Design System" },
+      { k: "Vai trò", v: "Nghiên cứu · Định nghĩa vấn đề · Hành trình người dùng · Insight · UI · Hệ thống thiết kế" },
     ],
     overview: {
       tag: "( 01 · Tổng quan dự án )",
@@ -664,9 +664,9 @@ const COPY = {
     },
     goals: {
       tag: "( 03 · Mục tiêu nghiên cứu )",
-      title: "Những câu hỏi cần được làm rõ trước khi một màn hình được phép xuất hiện",
+      title: "Những điều cần hiểu thật rõ trước khi bắt đầu vẽ ra bất kỳ màn hình nào",
       intro:
-        "Trước khi đi vào hướng sản phẩm hay giao diện, nghiên cứu cần trả lời rõ các tình huống sử dụng, yếu tố ra quyết định, khoảng trống niềm tin và cơ hội nào thật sự đáng để thiết kế giải quyết.",
+        "Trước khi bàn đến tính năng hay giao diện, mình muốn hiểu rõ người dùng đang chọn quán trong hoàn cảnh nào, điều gì khiến họ chần chừ, họ đang tin vào đâu và khoảng trống nào thật sự đáng để sản phẩm can thiệp.",
       questions: [
         "Người dùng thường tìm quán ăn trong những tình huống nào?",
         "Những yếu tố nào ảnh hưởng mạnh nhất đến quyết định chọn quán?",
@@ -677,25 +677,25 @@ const COPY = {
     },
     process: {
       tag: "( 04 · Quá trình nghiên cứu )",
-      title: "Từ desk research đến những hướng thiết kế thật sự có ý nghĩa",
+      title: "Từ việc gom dữ liệu ban đầu đến lúc nhìn ra hướng thiết kế rõ ràng hơn",
       steps: [
-        { t: "Desk Research", d: "Hiểu hành vi khám phá ăn uống hiện tại." },
-        { t: "Phân tích đối thủ", d: "Khảo sát app food, delivery, map, review." },
+        { t: "Nghiên cứu thứ cấp", d: "Hiểu bối cảnh và hành vi khám phá ăn uống hiện tại." },
+        { t: "Phân tích đối thủ", d: "Xem các app ăn uống, giao đồ ăn, bản đồ và review." },
         { t: "Khảo sát / Phỏng vấn", d: "Hành vi, nỗi đau, yếu tố ra quyết định." },
-        { t: "Affinity Mapping", d: "Nhóm pattern lặp lại thành chủ đề." },
-        { t: "Persona", d: "Xây dựng chân dung người dùng đại diện." },
-        { t: "User Journey", d: "Mapping quá trình ra quyết định." },
-        { t: "Tổng hợp Insight", d: "Chuyển findings thành insight cốt lõi." },
-        { t: "Cơ hội thiết kế", d: "Chuyển insight thành hướng sản phẩm." },
+        { t: "Nhóm hoá dữ liệu", d: "Gom các điểm lặp lại thành từng chủ đề rõ ràng." },
+        { t: "Persona", d: "Phác lại hai chân dung người dùng tiêu biểu." },
+        { t: "Hành trình người dùng", d: "Nhìn lại từng bước họ đi qua trước khi chốt quán." },
+        { t: "Tổng hợp insight", d: "Rút ra những điều thực sự chi phối quyết định." },
+        { t: "Cơ hội thiết kế", d: "Biến insight thành hướng đi cụ thể cho sản phẩm." },
       ],
     },
     secondaryResearch: {
       tag: "( 05 · Secondary Research )",
-      title: "Những tín hiệu thị trường xác thực vì sao vấn đề này đáng để giải",
+      title: "Nhìn từ thị trường, đây thật sự là một vấn đề đáng để làm",
       intro:
-        "Tổng hợp dữ liệu công khai và báo cáo ngành giúp mình kiểm tra lại quy mô của thị trường, mức chi tiêu cho ăn uống, và khoảng trống niềm tin mà người dùng vẫn gặp trước khi chốt quán.",
+        "Mình dùng dữ liệu công khai và các báo cáo ngành để nhìn rộng hơn một chút: người Việt đang chi cho việc ăn ngoài như thế nào, hành vi chọn quán đã dịch chuyển ra sao, và vì sao cảm giác thiếu tin tưởng trước lúc quyết định vẫn còn rất rõ.",
       summary:
-        "Secondary research giúp chứng minh rằng Ăng Ăng không chỉ chạm vào một nỗi đau cá nhân, mà đang bước vào một lĩnh vực có nhu cầu rất thật, mức chi tiêu đang tăng, và sự hoài nghi với review vẫn còn đủ lớn để tạo ra cơ hội thiết kế.",
+        "Nhờ phần này, mình thấy rõ Ăng Ăng không xuất phát từ một nỗi băn khoăn cá nhân rồi cố gượng ép thành sản phẩm. Nó chạm vào một nhu cầu có thật, trong một thị trường vẫn đang tăng trưởng, nơi người dùng vẫn cần một cách chọn quán đáng tin hơn.",
       items: [
         {
           stat: "590.000 tỷ đồng",
@@ -714,8 +714,8 @@ const COPY = {
         },
         {
           stat: "87%",
-          body: "Người dùng vẫn đọc review trước khi chọn quán, nhưng cảm giác nghi ngờ review giả vẫn làm suy giảm niềm tin khi ra quyết định.",
-          source: "Nguồn · tổng hợp desk research",
+          body: "Người dùng vẫn đọc review trước khi chốt quán, nhưng cảm giác hoài nghi về review giả vẫn khiến họ khó yên tâm khi quyết định.",
+          source: "Nguồn · tổng hợp nghiên cứu thứ cấp",
         },
       ],
     },
@@ -723,7 +723,7 @@ const COPY = {
       tag: "( 06 · Primary Research )",
       title: "Những điều người dùng lặp lại khi cuộc trò chuyện đi vào thực tế",
       intro:
-        "Primary research giúp dự án đi từ bức tranh thị trường sang hành vi thật của người dùng. Mục tiêu không chỉ là nghe họ nói muốn gì, mà là nhìn ra họ đã so sánh, kiểm chứng và chốt quán như thế nào trong đời sống thường ngày.",
+        "Nếu secondary research cho mình cái nhìn rộng, thì primary research kéo mọi thứ về đúng đời sống thật của người dùng. Điều mình cần không chỉ là nghe họ nói họ muốn gì, mà là nhìn ra họ thật sự đã so sánh, kiểm tra và chốt quán ra sao trong những lần đi ăn thường ngày.",
       clusters: [
         {
           title: "Ngữ cảnh ra quyết định",
@@ -733,7 +733,7 @@ const COPY = {
         {
           title: "Nguồn thông tin được tin",
           body:
-            "Người dùng hiếm khi tin một nguồn duy nhất. Họ thường đi qua Google Maps, mạng xã hội, app review, app giao đồ ăn và gợi ý từ bạn bè trước khi cảm thấy đủ yên tâm để chọn.",
+            "Người dùng hiếm khi tin vào một nơi duy nhất. Họ thường phải đi qua Google Maps, mạng xã hội, app review, app giao đồ ăn và cả lời gợi ý từ bạn bè rồi mới thấy đủ yên tâm để chọn.",
         },
         {
           title: "Điểm nghẽn lặp lại",
@@ -743,7 +743,7 @@ const COPY = {
         {
           title: "Ngữ cảnh còn thiếu",
           body:
-            "Khoảng trống lớn nhất không nằm ở chuyện thiếu danh sách quán, mà là thiếu tín hiệu thực tế: quán còn mở không, có đông không, có đáng tiền không, có đúng vibe không và lúc này còn đáng tin hay không.",
+            "Khoảng trống lớn nhất không nằm ở chuyện thiếu quán để xem, mà nằm ở chỗ thiếu những tín hiệu rất đời thường: quán còn mở không, có đông không, có đáng tiền không, có đúng không khí mình đang cần không, và lúc này còn đáng tin hay không.",
         },
       ],
     },
@@ -771,7 +771,7 @@ const COPY = {
         { name: "Ăng Ăng (concept)", v: [1, 1, 1, 1, 0, 1, 1, 1, 1] },
       ],
       conclusion:
-        "Các nền tảng hiện tại giúp người dùng biết đến nhiều quán hơn, nhưng vẫn chưa đồng hành tốt với việc ra quyết định khi tâm trạng, dịp đi ăn, trạng thái thời gian thực và bối cảnh xã hội đều cùng lúc tác động lên lựa chọn ấy.",
+        "Các nền tảng hiện tại giúp người dùng biết đến nhiều quán hơn, nhưng chưa thật sự giúp họ chốt nhanh hơn khi tâm trạng, dịp đi ăn, tình trạng thực tế của quán và người đi cùng đều đang ảnh hưởng đến quyết định đó.",
     },
     users: {
       tag: "( 08 · Người dùng mục tiêu )",
@@ -795,7 +795,7 @@ const COPY = {
     },
     insights: {
       tag: "( 09 · Insight chính )",
-      title: "Bốn insight đã âm thầm định hình lại sản phẩm",
+      title: "Bốn insight dần kéo hướng sản phẩm về đúng chỗ cần làm",
       items: [
         {
           n: "01",
@@ -806,11 +806,11 @@ const COPY = {
         },
         {
           n: "02",
-          t: "Nhiễu Review",
+          t: "Nhiễu từ review",
           d:
-            "Người dùng đọc review nhưng không chắc review có thật, có mới, có phù hợp nhu cầu.",
+            "Người dùng vẫn đọc review, nhưng không chắc review đó có thật, còn mới hay có liên quan đến đúng nhu cầu của mình hay không.",
           impl:
-            "Review nên được gắn theo ngữ cảnh như hẹn hò, đi nhóm, ăn nhanh, ngân sách thấp, yên tĩnh hay đẹp để chụp ảnh.",
+            "Review nên được gắn với từng bối cảnh cụ thể như hẹn hò, đi nhóm, ăn nhanh, ngân sách thấp, yên tĩnh hay đẹp để chụp ảnh.",
         },
         {
           n: "03",
@@ -825,15 +825,15 @@ const COPY = {
           d:
             "Người dùng thường chọn món theo tâm trạng và tình huống xã hội, không chỉ theo loại món.",
           impl:
-            "Có thể mở ra một flow khám phá theo mood như chill, hẹn hò, ăn nhanh, đồ ăn chữa lành, đi nhóm hay thử điều mới.",
+            "Có thể mở ra một hành trình khám phá theo tâm trạng như chill, hẹn hò, ăn nhanh, đồ ăn chữa lành, đi nhóm hay thử điều mới.",
         },
       ],
     },
     persona: {
       tag: "( 10 · Persona tổng hợp )",
-      title: "Hai archetype đại diện được chắt lại từ những pattern lặp lại trong nghiên cứu",
+      title: "Hai chân dung người dùng được chắt lại từ những điểm lặp nổi bật nhất",
       note:
-        "Thay vì chỉ mô tả một người dùng giả định đơn lẻ, phần này tổng hợp hai archetype rõ nhất xuất hiện xuyên suốt trong khảo sát và phỏng vấn.",
+        "Thay vì dựng ra một nhân vật hư cấu đơn lẻ, mình gom lại hai chân dung xuất hiện rõ nhất xuyên suốt khảo sát và phỏng vấn để nhìn vấn đề gần với thực tế hơn.",
       cards: [
         {
           title: "Persona 1 · Người đi làm bận rộn",
@@ -863,7 +863,7 @@ const COPY = {
           demographic: [
             "Sinh viên hoặc người trẻ đang hẹn hò",
             "Ngân sách còn hạn chế",
-            "Dễ bị ảnh hưởng bởi trend TikTok và cộng đồng",
+            "Dễ bị ảnh hưởng bởi xu hướng trên TikTok và cộng đồng",
           ],
           context:
             "Hay tụ tập bạn bè hoặc đi hẹn hò và thường rơi vào cảnh không biết ăn gì. Thích thử món mới, thích không gian đẹp và có cảm giác vui khi khám phá.",
@@ -871,7 +871,7 @@ const COPY = {
             "Là sinh viên hoặc người trẻ đi ăn cùng bạn bè hay người yêu, tôi muốn được gợi ý theo tâm trạng và ngân sách, có ảnh thật và đánh giá thật để đi ăn cho vui mà không sợ hớ.",
           goal: "Khám phá quán mới rating cao, gần và hợp túi tiền, rồi ra quyết định trong khoảng 5 đến 15 phút.",
           gainPoints:
-            "Gợi ý hợp mood, có deal hoặc ưu đãi, có điểm check-in đẹp, và có thể lưu hoặc chia sẻ cho nhóm bạn cùng xem.",
+            "Gợi ý hợp tâm trạng, có ưu đãi, có chỗ check-in đẹp và có thể lưu hoặc chia sẻ để cả nhóm cùng xem.",
           painPoints:
             "Thông tin thiếu chính xác, quán ngoài đời không giống kỳ vọng, hoặc gợi ý không liên quan đến vibe đang muốn tìm.",
           personality:
@@ -883,32 +883,32 @@ const COPY = {
       tag: "( 11 · User Journey )",
       title: "Từ cơn thèm ăn đầu tiên đến cảm giác sau khi đã chọn quán",
       intro:
-        "Trong board UX, hành trình người dùng không được gom thành một flow chung, mà tách thành hai kiểu ra quyết định rất khác nhau. Một nhóm ưu tiên tốc độ và sự chắc chắn, trong khi nhóm còn lại ưu tiên mood, bối cảnh đi cùng người khác và cảm giác khám phá.",
+        "Khi nhìn lại dữ liệu nghiên cứu, mình thấy hành trình chọn quán không nên bị gộp vào một flow chung. Có một nhóm cần quyết nhanh và chắc, còn một nhóm lại đi theo cảm xúc, người đi cùng và cảm giác muốn khám phá một nơi thú vị hơn.",
       maps: [
         {
-          title: "Journey 1 · Người đi làm bận rộn cần chọn quán nhanh và gần",
+          title: "Hành trình 1 · Người đi làm bận rộn cần chọn quán nhanh và gần",
           persona: "Nguyễn Hoàng Bảo Trân",
           summary:
-            "Đây là hành trình thiên về tính thực dụng. Người dùng muốn chốt nhanh, ít rủi ro, ít mất thời gian và cần các tín hiệu đủ đáng tin trước khi rời công ty đi ăn.",
+            "Đây là kiểu hành trình rất thực dụng. Người dùng muốn chốt nhanh, ít rủi ro, ít tốn thời gian và cần đủ tín hiệu đáng tin trước khi rời công ty đi ăn.",
           stages: [
             { s: "Khởi phát nhu cầu", a: "Bắt đầu thấy đói trong ngày làm việc và cần lên kế hoạch ăn trưa hoặc ăn tối nhanh.", th: "“Mình cần một chỗ gần và đáng tin.”", p: "Áp lực thời gian xuất hiện ngay từ đầu.", o: "Điểm vào theo khung giờ, khoảng cách và ngữ cảnh đi một mình hay đi cùng đồng nghiệp." },
             { s: "Tìm quán gần", a: "Tìm các quán quanh khu vực công ty.", th: "“Cho mình thấy những chỗ thật sự gần.”", p: "Dù ở gần vẫn có quá nhiều lựa chọn gây nhiễu.", o: "Khám phá ưu tiên khoảng cách kèm tín hiệu phục vụ nhanh." },
             { s: "Quét thông tin cốt lõi", a: "Xem giá, loại món, giờ mở cửa và thời gian di chuyển.", th: "“Mình có kịp đi, ăn rồi quay lại không?”", p: "Thông tin thiết yếu thường bị rải rác.", o: "Thẻ quyết định ngắn gọn gom các dữ liệu cần nhất lên đầu." },
-            { s: "Xác thực độ tin cậy", a: "Lướt review gần đây và ảnh thật để tránh chọn nhầm.", th: "“Thông tin này còn đáng tin không?”", p: "Review đẹp nhưng cũ làm giảm niềm tin.", o: "Review gần đây, review xác minh ghé thăm và tín hiệu thực tế." },
+            { s: "Xác thực độ tin cậy", a: "Lướt review gần đây và ảnh thật để tránh chọn nhầm.", th: "“Thông tin này còn đáng tin không?”", p: "Review trông ổn nhưng cũ dễ làm người dùng chùn lại.", o: "Review gần đây, review xác minh ghé thăm và tín hiệu thực tế." },
             { s: "Ra quyết định nhanh", a: "Chọn một quán và đi ngay.", th: "“Mình chỉ muốn yên tâm là chọn đúng.”", p: "Vẫn có cảm giác lo chọn sai khi đang vội.", o: "Gợi ý có lý do và tín hiệu tự tin trước khi chốt." },
             { s: "Ăn xong và ghi nhớ", a: "Trải nghiệm tại quán và tự đánh giá xem có nên quay lại không.", th: "“Lần sau mình có tiếp tục chọn quán này không?”", p: "Kỳ vọng vẫn có thể lệch khỏi thực tế.", o: "Vòng phản hồi nhanh và hành vi lưu quán quen cho lần sau." },
           ],
         },
         {
-          title: "Journey 2 · Sinh viên hoặc cặp đôi tìm quán theo mood và trải nghiệm",
+          title: "Hành trình 2 · Sinh viên hoặc cặp đôi tìm quán theo tâm trạng và trải nghiệm",
           persona: "Trần Duy Khôi",
           summary:
-            "Đây là hành trình có tính khám phá nhiều hơn. Người dùng không chỉ muốn ăn, mà muốn tìm được một nơi hợp mood, hợp túi tiền và đủ thú vị để xứng đáng cho buổi đi chơi.",
+            "Đây là hành trình thiên về cảm xúc và khám phá hơn. Người dùng không chỉ muốn tìm chỗ để ăn, mà muốn tìm một nơi hợp tâm trạng, vừa túi tiền và đủ thú vị cho buổi đi chơi.",
           stages: [
             { s: "Lên ý định đi chơi", a: "Bắt đầu từ một buổi hẹn, buổi tụ tập hoặc đơn giản là muốn đổi gió đi ăn ngoài.", th: "“Tụi mình cần một nơi vui chứ không chỉ là chỗ ăn.”", p: "Nhu cầu mang tính cảm xúc nhiều hơn chức năng.", o: "Điểm vào theo dịp như hẹn hò, chill, đi nhóm hay ăn cho đỡ buồn." },
             { s: "Tìm cảm hứng", a: "Xem ảnh, quán trend và gợi ý từ cộng đồng.", th: "“Chỗ nào đang thấy thú vị nhỉ?”", p: "Nguồn cảm hứng bị phân mảnh trên nhiều nền tảng.", o: "Feed khám phá kết hợp trend, vibe và món ăn." },
-            { s: "Lọc theo ngân sách và mood", a: "Thu hẹp lựa chọn theo giá, không gian và khoảng cách.", th: "“Phải vui nhưng vẫn vừa túi tiền.”", p: "Nhiều nơi nhìn hấp dẫn nhưng không đúng budget hoặc vibe thật.", o: "Bộ lọc và tag theo ngân sách, mood và bối cảnh đi cùng ai." },
-            { s: "Kiểm tra tín hiệu xã hội", a: "Đọc đánh giá, xem ảnh và kiểm tra xem quán còn hoạt động tốt không.", th: "“Ngoài đời có thật sự giống như vậy không?”", p: "Niềm tin giảm mạnh khi ảnh và review trông dàn dựng hoặc quá cũ.", o: "Ảnh thật, tín hiệu hoạt động gần đây và review nhấn vào vibe." },
+            { s: "Lọc theo ngân sách và tâm trạng", a: "Thu hẹp lựa chọn theo giá, không gian và khoảng cách.", th: "“Phải vui nhưng vẫn vừa túi tiền.”", p: "Nhiều nơi nhìn hấp dẫn nhưng không đúng ngân sách hoặc không đúng không khí thật.", o: "Bộ lọc và tag theo ngân sách, tâm trạng và bối cảnh đi cùng ai." },
+            { s: "Kiểm tra tín hiệu xã hội", a: "Đọc đánh giá, xem ảnh và kiểm tra xem quán còn hoạt động tốt không.", th: "“Ngoài đời có thật sự giống như vậy không?”", p: "Niềm tin giảm mạnh khi ảnh và review trông dàn dựng hoặc đã quá cũ.", o: "Ảnh thật, tín hiệu hoạt động gần đây và review nhấn vào không khí của quán." },
             { s: "Chốt cùng bạn đi cùng", a: "Gửi option cho bạn bè hoặc người yêu rồi cùng chốt một quán.", th: "“Làm sao chọn nhanh mà không bàn mãi?”", p: "Quyết định theo nhóm dễ kéo dài và gây mệt.", o: "Shortlist, chia sẻ và vote nhẹ để chốt nhanh hơn." },
             { s: "Đi ăn và lưu lại cảm xúc", a: "Đến quán, chụp hình, trải nghiệm và ghi nhớ xem có đáng giới thiệu không.", th: "“Nó có vui như mình tưởng không?”", p: "Buổi đi chơi dễ hụt nếu không khí thật không như kỳ vọng.", o: "Gợi nhớ sau trải nghiệm, danh sách lưu lại và gợi ý tiếp theo theo vibe." },
           ],
@@ -921,39 +921,39 @@ const COPY = {
       items: [
         "Làm sao giảm choáng ngợp lựa chọn khi tìm quán?",
         "Làm sao giúp người dùng tin tưởng thông tin quán dễ dàng hơn?",
-        "Làm sao gợi ý quán theo mood, dịp và ngữ cảnh thời gian thực?",
+        "Làm sao gợi ý quán theo tâm trạng, dịp đi ăn và ngữ cảnh thời gian thực?",
         "Làm sao giúp nhóm bạn quyết định nhanh hơn?",
         "Làm sao biến khám phá ăn uống thành quyết định tự tin?",
       ],
     },
     mapping: {
-      tag: "( 13 · Research to Design )",
-      title: "Cách những phát hiện nghiên cứu dần thành hình trong tính năng",
-      cols: ["Research Finding", "Cơ hội thiết kế", "Tính năng khả thi"],
+      tag: "( 13 · Từ nghiên cứu đến thiết kế )",
+      title: "Từ những gì nghe được trong nghiên cứu đến những gì có thể đưa vào sản phẩm",
+      cols: ["Phát hiện nghiên cứu", "Cơ hội thiết kế", "Tính năng khả thi"],
       rows: [
-        ["Quá nhiều lựa chọn", "Lọc theo ngữ cảnh", "Lọc mood, dịp, ngân sách, khoảng cách, số người"],
-        ["Mất niềm tin vào review", "Cấu trúc review minh bạch", "Context tag, review gần đây, xác minh ghé thăm"],
+        ["Quá nhiều lựa chọn", "Lọc theo ngữ cảnh", "Lọc theo tâm trạng, dịp, ngân sách, khoảng cách, số người"],
+        ["Mất niềm tin vào review", "Cấu trúc review minh bạch", "Gắn ngữ cảnh, review gần đây, xác minh ghé thăm"],
         ["Thiếu thông tin thời gian thực", "Tín hiệu quyết định thực tế", "Đang mở, đông/vắng, thời gian chờ, ghế trống"],
-        ["Quyết định nhóm khó", "Flow quyết định chung", "Shortlist, vote nhóm, chia sẻ danh sách"],
-        ["Nhu cầu theo mood", "Hành trình khám phá cảm xúc", "Onboarding “Bạn đang muốn ăn gì?”"],
+        ["Quyết định nhóm khó", "Hỗ trợ chốt cùng nhau", "Danh sách rút gọn, vote nhóm, chia sẻ danh sách"],
+        ["Nhu cầu theo tâm trạng", "Hành trình khám phá cảm xúc", "Onboarding “Bạn đang muốn ăn gì?”"],
       ],
     },
     brand: {
       tag: "( 14 · Bộ nhận diện )",
       title: "Ăng Ăng mang cảm giác tươi mới, thân thiện và dễ khiến người ta muốn chọn",
       logoCaption: "Logo chính của Ăng Ăng với wordmark dùng font Baloo Bhaijaan",
-      keywordsLabel: "Brand keywords",
+      keywordsLabel: "Từ khoá thương hiệu",
       keywords: ["Tươi mới", "Thân thiện", "Trẻ trung", "Đơn giản", "Gần gũi", "Đáng tin", "Dễ quyết định"],
-      toneLabel: "Visual tone",
+      toneLabel: "Tinh thần thị giác",
       tone:
-        "Màu xanh #9DD325 được chọn làm màu chủ đạo vì mang lại cảm giác tươi mới, năng động và thân thiện. Đây là một sắc xanh có độ sáng cao, tạo cảm nhận tích cực ngay từ ánh nhìn đầu tiên và rất phù hợp với tinh thần của Ăng Ăng, một trải nghiệm ăn uống gần gũi, vui vẻ và dễ tiếp cận với người dùng trẻ. Trong bối cảnh UX research, người dùng thường mong một nền tảng liên quan đến ăn uống không chỉ giúp họ tìm món nhanh hơn mà còn tạo ra cảm giác dễ chịu, đáng tin và đủ gợi hứng để muốn khám phá thêm. Vì vậy, sắc xanh này không chỉ làm nhiệm vụ nhận diện thương hiệu mà còn góp phần nâng đỡ cảm xúc trong suốt quá trình sử dụng, khiến trải nghiệm trở nên nhẹ nhàng hơn, thoải mái hơn và bớt nặng tính thương mại. Màu #9DD325 gợi liên tưởng đến sự tươi ngon, tự nhiên và nguồn năng lượng tích cực, đồng thời vẫn đủ nổi bật để dùng cho các điểm nhấn quan trọng trong giao diện như nút chính, trạng thái được chọn, nhãn nổi bật hoặc những khu vực cần thu hút sự chú ý. Khi đi cùng nền trắng và typography bo tròn, tổng thể hình ảnh của Ăng Ăng trở nên trẻ trung, sạch sẽ và dễ ghi nhớ hơn.",
-      moodLabel: "Moodboard",
+        "Màu xanh #9DD325 được chọn làm màu chủ đạo vì nó tạo cảm giác tươi, sáng và dễ gần ngay từ cái nhìn đầu tiên. Với Ăng Ăng, mình muốn trải nghiệm ăn uống không chỉ nhanh và tiện, mà còn mang cảm giác vui, nhẹ và đủ đáng tin để người dùng muốn tiếp tục khám phá. Sắc xanh này gợi đến sự tươi mới, tự nhiên và tích cực, đồng thời vẫn đủ nổi bật để giữ vai trò ở những điểm nhấn quan trọng như nút chính, trạng thái được chọn hay những khu vực cần thu hút ánh nhìn. Khi đi cùng nền trắng và typography bo tròn, tổng thể của Ăng Ăng trở nên trẻ trung, sạch sẽ và dễ nhớ hơn.",
+      moodLabel: "Bảng cảm hứng",
     },
     color: {
       tag: "( 15 · Color System )",
-      title: "Một hệ palette token đầy đủ, được xây quanh sắc xanh của Ăng Ăng",
+      title: "Một bảng màu được xây quanh sắc xanh đặc trưng của Ăng Ăng",
       desc:
-        "Primary 500 (#9dd325) là sắc xanh chủ đạo cho logo, CTA chính, trạng thái active và highlight. Neutral nâng đỡ phần chữ và bề mặt, còn Success, Warning, Error, Info và Secondary hỗ trợ cho phản hồi và phân loại. Mỗi nhóm đều có thang từ 50 đến 950 để mọi component đều có một token đúng nghĩa để bám vào.",
+        "Primary 500 (#9DD325) là sắc xanh giữ vai trò trung tâm cho logo, nút chính, trạng thái đang chọn và các điểm nhấn quan trọng. Bảng Neutral nâng đỡ phần chữ và bề mặt, còn Success, Warning, Error, Info và Secondary hỗ trợ cho phản hồi và phân loại. Mỗi nhóm đều có thang sắc độ riêng để giao diện giữ được sự nhất quán khi mở rộng.",
       brandLabel: "Màu thương hiệu",
       shadeLabel: "Sắc độ",
       hexLabel: "HEX",
@@ -1018,10 +1018,10 @@ const COPY = {
       spacing: [4, 8, 12, 16, 24, 32, 48, 64, 96],
     },
     components: {
-      tag: "( 18 · Component System )",
-      title: "Một UI kit được dựng từ các primitive có thể tái sử dụng, thay vì những mảnh màn hình rời rạc",
+      tag: "( 18 · Hệ thống thành phần )",
+      title: "Một UI kit được dựng từ những thành phần có thể tái sử dụng, thay vì từng mảnh màn hình rời rạc",
       desc:
-        "Component kit của Ăng Ăng xoay quanh các primitive tương tác có thể tái sử dụng như Button, Button Group, Input, Badge và nhóm selection controls. Size, style và state của chúng được định nghĩa sẵn để giao diện giữ được sự nhất quán khi mở rộng thêm flow mới.",
+        "UI kit của Ăng Ăng xoay quanh những thành phần tương tác có thể dùng lại như Button, Button Group, Input, Badge và nhóm lựa chọn. Kích thước, kiểu hiển thị và trạng thái của chúng được định nghĩa từ sớm để giao diện vẫn giữ được sự nhất quán khi mở rộng thêm các luồng mới.",
       families: [
         {
           name: "Button",
@@ -1048,41 +1048,41 @@ const COPY = {
           states: ["Off", "On", "Focus", "Disabled", "Status"],
         },
       ],
-      labels: { variants: "Variant", sizes: "Size", states: "State" },
-      totalLabel: "Tổng số state có thể ráp",
+      labels: { variants: "Biến thể", sizes: "Kích thước", states: "Trạng thái" },
+      totalLabel: "Tổng số trạng thái có thể tạo",
     },
     icons: {
       tag: "( 19 · Icon & Minh hoạ )",
       title: "Một ngôn ngữ icon gọn nhẹ, đi cùng những điểm nhấn thương hiệu nhỏ",
       body:
-        "Hệ visual support được giữ gọn và thực dụng. Icon dùng nét đơn giản, bo tròn để người dùng quét nhanh trên mobile, trong khi các điểm nhấn minh hoạ nhỏ từ hệ màu giúp làm rõ mood, cảm giác tin cậy và bối cảnh ăn uống mà không lấn át nội dung chính.",
+        "Phần hình ảnh hỗ trợ được giữ gọn và vừa đủ. Icon dùng nét đơn giản, bo tròn để người dùng quét nhanh trên mobile, còn các điểm nhấn minh hoạ nhỏ từ hệ màu giúp làm rõ tâm trạng, cảm giác tin cậy và bối cảnh ăn uống mà không lấn át nội dung chính.",
     },
     wireframe: {
       tag: "( 20 · Wireframe )",
-      title: "Những nét vẽ đầu tiên cho flow chọn quán ăn",
+      title: "Những nét vẽ đầu tiên cho hành trình chọn quán ăn",
       body:
-        "Trước khi đi tới phần UI hoàn chỉnh, tôi phác thảo các màn hình cốt lõi trên giấy để thử hệ thống bố cục, điều hướng và xem mỗi insight có thể đi vào một flow thật sự dùng được như thế nào.",
+        "Trước khi đi tới phần UI hoàn chỉnh, mình phác các màn hình cốt lõi trên giấy để thử bố cục, điều hướng và xem mỗi insight có thể đi vào một hành trình thật sự dùng được như thế nào.",
       items: [
-        { src: wireframeHome, t: "Trang chủ · Mood entry", d: "Lời chào, thanh tìm kiếm, mood chips, quán gần đây và banner." },
-        { src: wireframeNav, t: "Layout & bottom nav", d: "Khung app, vùng hero, khối nội dung, bottom nav 5 tab." },
+        { src: wireframeHome, t: "Trang chủ · Điểm vào theo tâm trạng", d: "Lời chào, thanh tìm kiếm, chips tâm trạng, quán gần đây và banner." },
+        { src: wireframeNav, t: "Bố cục & thanh điều hướng dưới", d: "Khung app, vùng hero, khối nội dung, bottom nav 5 tab." },
         { src: wireframeDetail, t: "Chi tiết quán", d: "Ảnh bìa, headline, highlight, review theo ngữ cảnh, social proof." },
-        { src: wireframeProfile, t: "Biến thể profile", d: "Local profile và verified profile, cùng vị trí huy hiệu và các tín hiệu tạo cảm giác tin cậy." },
-        { src: wireframeExplore, t: "Explore & so sánh", d: "So sánh dạng thẻ với mood, giá và khoảng cách." },
+        { src: wireframeProfile, t: "Biến thể hồ sơ", d: "Hồ sơ người dùng thường và hồ sơ đã xác thực, cùng vị trí huy hiệu và các tín hiệu tạo cảm giác tin cậy." },
+        { src: wireframeExplore, t: "Khám phá & so sánh", d: "So sánh dạng thẻ với tâm trạng, giá và khoảng cách." },
         { src: wireframeReviewer, t: "Verified Reviewer", d: "Banner logo, danh sách quyền lợi và CTA cho màn onboarding tạo niềm tin." },
       ],
     },
     ui: {
-      tag: "( 21 · Final UI Preview )",
-      title: "Nơi những insight nghiên cứu bắt đầu chạm thành màn hình sản phẩm",
+      tag: "( 21 · Giao diện hoàn chỉnh )",
+      title: "Nơi những insight nghiên cứu bắt đầu hiện lên thành những màn hình cụ thể",
       screens: [
-        { t: "Home", d: "Mood entry + feed cá nhân hoá" },
+        { t: "Home", d: "Điểm vào theo tâm trạng + feed cá nhân hoá" },
         { t: "Explore", d: "Lọc thông minh · dịp · ngân sách" },
-        { t: "Mood Discovery", d: "“Bạn đang muốn ăn gì?”" },
-        { t: "Restaurant Detail", d: "Trạng thái real-time + review ngữ cảnh" },
+        { t: "Khám phá theo tâm trạng", d: "“Bạn đang muốn ăn gì?”" },
+        { t: "Chi tiết quán", d: "Trạng thái thời gian thực + review theo ngữ cảnh" },
         { t: "Map", d: "Đông/vắng + đang mở" },
         { t: "Reviews", d: "Tag · xác minh · gần đây" },
-        { t: "Saved", d: "Shortlist cho nhóm và hẹn hò" },
-        { t: "Decide", d: "Confidence score + lý do chọn" },
+        { t: "Saved", d: "Danh sách lưu cho nhóm và hẹn hò" },
+        { t: "Decide", d: "Mức độ tự tin + lý do chọn" },
       ],
     },
     reflection: {
@@ -1097,18 +1097,18 @@ const COPY = {
       designImplication: "Hệ quả thiết kế",
       action: "Hành động",
       thought: "Suy nghĩ",
-      pain: "Pain",
+      pain: "Điểm đau",
       opportunity: "Cơ hội",
       userThought: "Người dùng nghĩ",
       heroQuote: "Hôm nay ăn gì đây?",
       openNow: "Đang mở",
       platform: "Nền tảng",
       style: "Kiểu",
-      sizeLineWeight: "Size / Line / Weight",
+      sizeLineWeight: "Cỡ chữ / Line height / Độ đậm",
       preview: "Xem trước",
-      primaryTypeface: "Primary Typeface",
+      primaryTypeface: "Typeface chính",
       busy: "Đông vừa",
-      searchPlaceholder: "Tìm quán, mood, dịp…",
+      searchPlaceholder: "Tìm quán, tâm trạng, dịp…",
     },
   },
 } as const;
@@ -1119,7 +1119,7 @@ const MOOD_ICONS = [Smile, Heart, UsersRound, Wallet, Clock, Utensils, MapPin, S
 const REAL_SCREENS = [
   { Component: Onboarding, en: { t: "Onboarding", d: "First launch · brand intro" }, vi: { t: "Onboarding", d: "Mở lần đầu · giới thiệu thương hiệu" } },
   { Component: HomeScreen, en: { t: "Home", d: "Personalized feed + quick filters" }, vi: { t: "Trang chủ", d: "Feed cá nhân hoá + filter nhanh" } },
-  { Component: BanDo, en: { t: "Map", d: "Real-time map · open now signals" }, vi: { t: "Bản đồ", d: "Map real-time · đang mở" } },
+  { Component: BanDo, en: { t: "Map", d: "Real-time map · open now signals" }, vi: { t: "Bản đồ", d: "Bản đồ thời gian thực · đang mở" } },
   { Component: CamXuc, en: { t: "Mood Discovery", d: "“What are you in the mood for?”" }, vi: { t: "Cảm xúc", d: "“Bạn đang muốn ăn gì?”" } },
   { Component: Reviewer, en: { t: "Verified Reviewer", d: "Trust system & perks" }, vi: { t: "Verified Reviewer", d: "Hệ thống uy tín & đặc quyền" } },
   { Component: LocalProfile, en: { t: "Local Profile", d: "Public reviewer profile" }, vi: { t: "Local Profile", d: "Hồ sơ reviewer công khai" } },
@@ -1954,10 +1954,10 @@ export function AngAng() {
 
                   {[
                     { label: lang === "en" ? "Context" : "Bối cảnh", value: card.context },
-                    { label: lang === "en" ? "User story" : "User story", value: card.userStory },
+                    { label: lang === "en" ? "User story" : "Câu chuyện người dùng", value: card.userStory },
                     { label: lang === "en" ? "Goal" : "Mục tiêu", value: card.goal },
-                    { label: lang === "en" ? "Gain points" : "Gain points", value: card.gainPoints },
-                    { label: lang === "en" ? "Pain points" : "Pain points", value: card.painPoints },
+                    { label: lang === "en" ? "Gain points" : "Điểm tạo giá trị", value: card.gainPoints },
+                    { label: lang === "en" ? "Pain points" : "Điểm gây vướng", value: card.painPoints },
                     { label: lang === "en" ? "Personality" : "Tính cách", value: card.personality },
                   ].map((item, itemIndex) => (
                     <div
@@ -1965,7 +1965,7 @@ export function AngAng() {
                       className="pt-4"
                       style={{ borderTop: itemIndex === 0 ? `1px solid ${BORDER}` : `1px solid ${BORDER}` }}
                     >
-                      <div className="text-xs tracking-[0.2em] uppercase mb-2" style={{ color: item.label === (lang === "en" ? "Pain points" : "Pain points") ? RED : item.label === (lang === "en" ? "Gain points" : "Gain points") ? ORANGE : MUTED, fontWeight: 600 }}>
+                      <div className="text-xs tracking-[0.2em] uppercase mb-2" style={{ color: item.label === (lang === "en" ? "Pain points" : "Điểm gây vướng") ? RED : item.label === (lang === "en" ? "Gain points" : "Điểm tạo giá trị") ? ORANGE : MUTED, fontWeight: 600 }}>
                         {item.label}
                       </div>
                       <p style={{ fontSize: "0.96rem", lineHeight: 1.65 }}>{item.value}</p>
@@ -2896,7 +2896,7 @@ export function AngAng() {
 
             <div className="rounded-2xl p-6" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
               <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: GREEN_DARK }}>
-                {lang === "en" ? "Helper primitives" : "Helper primitives"}
+                {lang === "en" ? "Helper primitives" : "Thành phần hỗ trợ"}
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
