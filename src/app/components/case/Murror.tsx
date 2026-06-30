@@ -157,7 +157,7 @@ const COPY = {
     needLabel: "Need",
     oppLabel: "Opportunity",
     next: "Next case study",
-    nextProject: "Ăng Ăng · Food Discovery",
+    nextProject: "MeMe · YaMe Redesign",
   },
 
   vi: {
@@ -281,7 +281,7 @@ const COPY = {
     needLabel: "Nhu cầu",
     oppLabel: "Cơ hội",
     next: "Case study tiếp theo",
-    nextProject: "Ăng Ăng · Food Discovery",
+    nextProject: "MeMe · Redesign YaMe",
   },
 };
 
@@ -767,7 +767,7 @@ export function Murror() {
           </motion.p>
 
           <a
-            href="#case/angang"
+            href="#case/meme"
             className="mt-20 group inline-flex items-center justify-between w-full p-6 md:p-10 rounded-3xl backdrop-blur-md"
             style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
           >

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
-export type Route = "home" | "angang" | "murror";
+export type Route = "home" | "angang" | "meme" | "murror";
 
 function parse(hash: string): Route {
   if (hash.startsWith("#case/angang")) return "angang";
+  if (hash.startsWith("#case/meme")) return "meme";
   if (hash.startsWith("#case/murror")) return "murror";
   return "home";
 }

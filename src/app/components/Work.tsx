@@ -17,8 +17,8 @@ const meta = [
   },
   {
     index: "02",
-    title: "Meme",
-    href: "#work",
+    title: "MeMe",
+    href: "#case/meme",
     tags: ["UX Research", "E-commerce UX", "Website Redesign", "User Flow", "Figma"],
     year: "2025",
     image:

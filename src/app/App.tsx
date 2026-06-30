@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact";
 import { I18nProvider } from "./i18n";
 import { useRoute } from "./router";
 import { AngAng } from "./components/case/AngAng";
+import { MeMe } from "./components/case/MeMe";
 import { Murror } from "./components/case/Murror";
 
 function Home() {
@@ -32,6 +33,7 @@ function Home() {
 function Router() {
   const route = useRoute();
   if (route === "angang") return <AngAng />;
+  if (route === "meme") return <MeMe />;
   if (route === "murror") return <Murror />;
   return <Home />;
 }
