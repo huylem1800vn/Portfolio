@@ -102,13 +102,22 @@ const en: Dict = {
     title1: "Case studies,",
     italic: "not",
     title2: " screenshots.",
-    sub: "Three projects, each shaped around a real decision people actually need to make.",
+    sub: "Four projects, each shaped around a real decision people actually need to make.",
     problemLabel: "Problem",
     solutionLabel: "Solution",
     readMore: "Read full case study",
     typeLabel: "",
     yearLabel: "",
     projects: [
+      {
+        type: "Enterprise · Web / Mobile",
+        subtitle:
+          "Designing corporate Internet and Mobile Banking experiences for enterprise customers at HDBank.",
+        problem:
+          "Corporate banking workflows involve complex business rules, approval layers, dense forms, transaction states, and high expectations for reliability across web and mobile.",
+        solution:
+          "A clean enterprise banking experience with structured flows, reusable Figma components, clear status feedback, and interface patterns that support business users through critical financial operations.",
+      },
       {
         type: "Mobile · iOS / Android",
         subtitle:
@@ -239,13 +248,22 @@ const vi: Dict = {
     title1: "Case study,",
     italic: "không phải",
     title2: " ảnh chụp.",
-    sub: "Ba dự án, mỗi dự án đi vào một quyết định rất thật mà người dùng phải đối diện.",
+    sub: "Bốn dự án, mỗi dự án đi vào một quyết định rất thật mà người dùng phải đối diện.",
     problemLabel: "Vấn đề",
     solutionLabel: "Giải pháp",
     readMore: "Xem case study đầy đủ",
     typeLabel: "",
     yearLabel: "",
     projects: [
+      {
+        type: "Enterprise · Web / Mobile",
+        subtitle:
+          "Thiết kế trải nghiệm Internet Banking và Mobile Banking cho khách hàng doanh nghiệp của HDBank.",
+        problem:
+          "Các nghiệp vụ corporate banking có nhiều rule phức tạp, nhiều lớp phê duyệt, form dày thông tin, trạng thái giao dịch đa dạng và yêu cầu độ tin cậy rất cao trên cả web lẫn mobile.",
+        solution:
+          "Một trải nghiệm ngân hàng doanh nghiệp sạch, có cấu trúc rõ, dùng component Figma tái sử dụng, phản hồi trạng thái dễ hiểu và các pattern giao diện hỗ trợ người dùng xử lý nghiệp vụ tài chính quan trọng.",
+      },
       {
         type: "Mobile · iOS / Android",
         subtitle:

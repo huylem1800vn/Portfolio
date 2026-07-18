@@ -3,10 +3,22 @@ import { ArrowUpRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useI18n } from "../i18n";
 import { ANG_ANG_PROJECT_COVER_URL } from "../config/project-covers";
+import { HDBIZ_COVER_URL } from "../config/hdbiz-assets";
 
 const meta = [
   {
     index: "01",
+    title: "HDBiz",
+    href: "#case/hdbiz",
+    tags: ["Enterprise UX", "Digital Banking", "Internet Banking", "Mobile Banking", "Design System"],
+    year: "2026",
+    image: HDBIZ_COVER_URL,
+    imageAlt: "HDBiz corporate internet and mobile banking project cover",
+    accent: "#f7f5f1",
+    fit: "contain",
+  },
+  {
+    index: "02",
     title: "Ăng Ăng",
     href: "#case/angang",
     tags: ["UX Research", "Mobile App", "Food Discovery", "Personalization", "UI Design"],
@@ -14,9 +26,10 @@ const meta = [
     image: ANG_ANG_PROJECT_COVER_URL,
     imageAlt: "Ăng Ăng project cover showing the app identity and key mobile screens",
     accent: "#f0ead6",
+    fit: "cover",
   },
   {
-    index: "02",
+    index: "03",
     title: "MeMe",
     href: "#case/meme",
     tags: ["UX Research", "E-commerce UX", "Website Redesign", "User Flow", "Figma"],
@@ -25,9 +38,10 @@ const meta = [
       "https://images.unsplash.com/photo-1549298222-1c31e8915347?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1400",
     imageAlt: "Editorial magazine spread representing the Meme fashion e-commerce redesign",
     accent: "#e7e4f7",
+    fit: "cover",
   },
   {
-    index: "03",
+    index: "04",
     title: "Murror",
     href: "#case/murror",
     tags: ["AI Product", "Emotional UX", "Gamification", "Onboarding", "Mobile UI"],
@@ -36,6 +50,7 @@ const meta = [
       "https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1400",
     imageAlt: "Soft blue and pink abstract sea representing Murror's calm reflective experience",
     accent: "#dde6f5",
+    fit: "cover",
   },
 ];
 
@@ -96,7 +111,9 @@ export function Work() {
                         <ImageWithFallback
                           src={p.image}
                           alt={p.imageAlt}
-                          className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                          className={`w-full h-full transition-transform duration-[1200ms] ease-out group-hover:scale-105 ${
+                            p.fit === "contain" ? "object-contain" : "object-cover"
+                          }`}
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         <div className="absolute top-5 right-5 w-12 h-12 rounded-full bg-[#f7f5f1] text-neutral-950 flex items-center justify-center translate-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
