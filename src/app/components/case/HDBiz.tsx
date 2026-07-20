@@ -223,7 +223,7 @@ const COPY = {
     },
     overview: {
       tag: "( 01 · Tổng quan dự án )",
-      title: "Một nền tảng corporate banking cho các nghiệp vụ tài chính phức tạp.",
+      title: "Một nền tảng ngân hàng số giúp doanh nghiệp xử lý các nghiệp vụ tài chính quan trọng một cách rõ ràng và an toàn.",
       body:
         "HDBiz là nền tảng ngân hàng số dành cho khách hàng doanh nghiệp. Sản phẩm hỗ trợ người dùng quản lý tài khoản, thực hiện thanh toán, trả nợ vay, giải ngân khoản vay, theo dõi trạng thái giao dịch và hoàn tất các luồng phê duyệt một cách chính xác. Công việc thiết kế tập trung vào việc làm cho các nghiệp vụ ngân hàng phức tạp trở nên dễ hiểu hơn, an toàn hơn khi thao tác và nhất quán hơn trên Internet Banking lẫn Mobile Banking.",
       supports: [
