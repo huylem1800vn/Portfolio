@@ -305,7 +305,7 @@ const COPY = {
     },
     challenges: {
       tag: "( 07 · Thử thách )",
-      title: "Thiết kế enterprise banking là thiết kế bên trong nhiều ràng buộc.",
+      title: "Thiết kế ngân hàng doanh nghiệp là cân bằng giữa nghiệp vụ phức tạp, tính an toàn và trải nghiệm dễ dùng.",
       challengeLabel: "Thử thách",
       solutionLabel: "Cách xử lý",
       items: [
