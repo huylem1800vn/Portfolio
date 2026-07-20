@@ -329,7 +329,7 @@ const COPY = {
     },
     learnings: {
       tag: "( 09 · Điều tôi học được )",
-      title: "Dự án giúp tôi trưởng thành hơn trong tư duy sản phẩm enterprise.",
+      title: "Qua dự án này, tôi học cách nhìn một sản phẩm doanh nghiệp từ nghiệp vụ, cấu trúc hệ thống và trải nghiệm thật khi sử dụng.",
       items: [
         "Banking business analysis",
         "Enterprise UX",
