@@ -164,14 +164,14 @@ const COPY = {
     },
     impact: {
       tag: "( 08 · Key Contributions )",
-      title: "Contributions across design, collaboration, and delivery support.",
+      title: "My main contribution focused on loan repayment, part of loan disbursement, and additional screens across related banking features.",
       stats: [
-        ["20+", "banking screens designed"],
+        ["Core", "loan repayment screens"],
+        ["Partial", "loan disbursement screens"],
+        ["More", "supporting feature screens"],
         ["UX", "flows improved"],
         ["Client", "reviews supported"],
-        ["DS", "components contributed"],
         ["QA", "support during testing"],
-        ["BA/Dev", "cross-functional collaboration"],
       ],
     },
     learnings: {
@@ -300,7 +300,7 @@ const COPY = {
       tag: "( 06 · Design System )",
       title: "Component tái sử dụng cho giao diện ngân hàng nhất quán.",
       body:
-        "Quá trình thiết kế sử dụng Figma Components và Auto Layout để giữ sự nhất quán trên các màn hình web và mobile banking. Các pattern tái sử dụng giúp giảm mơ hồ trong form, trạng thái, bảng dữ liệu, popup và luồng phê duyệt.",
+        "Quá trình thiết kế sử dụng Figma Components và Auto Layout để giữ sự nhất quán trên các màn hình web và mobile banking. Các pattern tái sử dụng giúp form, trạng thái, bảng dữ liệu, popup và luồng phê duyệt có cùng cách hiển thị, cùng hành vi và dễ bàn giao hơn cho dev.",
       items: ["Components", "Buttons", "Inputs", "Tables", "Popups", "Status Chips", "Colors", "Typography", "Spacing"],
     },
     challenges: {
@@ -317,14 +317,14 @@ const COPY = {
     },
     impact: {
       tag: "( 08 · Đóng góp chính )",
-      title: "Đóng góp trải dài từ thiết kế, phối hợp team đến hỗ trợ bàn giao.",
+      title: "Tôi đảm nhiệm chính phần thiết kế màn hình cho chức năng Thanh Toán Vay, một phần chức năng Giải Ngân và thêm các màn hình thuộc những chức năng khác.",
       stats: [
-        ["20+", "màn hình banking đã thiết kế"],
+        ["Chính", "màn hình Thanh Toán Vay"],
+        ["Một phần", "màn hình Giải Ngân"],
+        ["Thêm", "màn hình chức năng khác"],
         ["UX", "luồng trải nghiệm được cải thiện"],
         ["Client", "hỗ trợ các buổi review"],
-        ["DS", "đóng góp component"],
         ["QA", "hỗ trợ trong giai đoạn test"],
-        ["BA/Dev", "phối hợp đa vai trò"],
       ],
     },
     learnings: {
@@ -399,7 +399,7 @@ export function HDBiz() {
                 {c.hero.title}
               </h1>
               <p className="mt-5 text-xl md:text-2xl text-[#475467]">{c.hero.subtitle}</p>
-              <h2 className="mt-8 max-w-[780px] text-3xl md:text-5xl leading-[1.05] tracking-[-0.04em]">
+              <h2 className="mt-8 max-w-[780px] text-2xl md:text-4xl lg:text-[2.75rem] leading-[1.08] tracking-[-0.035em]">
                 {c.hero.headline}
               </h2>
               <p className="mt-7 max-w-[680px] text-lg leading-relaxed" style={{ color: TEXT }}>{c.hero.body}</p>
@@ -431,7 +431,7 @@ export function HDBiz() {
           <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20">
             <div>
               <SectionLabel>{c.overview.tag}</SectionLabel>
-              <h2 className="tracking-[-0.04em] leading-[1.02]" style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(2.75rem, 6vw, 6.25rem)", fontWeight: 500 }}>
+              <h2 className="tracking-[-0.04em] leading-[1.04]" style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(2.25rem, 4.6vw, 4.75rem)", fontWeight: 500 }}>
                 {c.overview.title}
               </h2>
             </div>
@@ -455,7 +455,7 @@ export function HDBiz() {
           <div className="max-w-[1440px] mx-auto">
             <SectionLabel>{c.responsibilities.tag}</SectionLabel>
             <div className="max-w-[980px]">
-              <h2 className="text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.responsibilities.title}</h2>
+              <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.responsibilities.title}</h2>
             </div>
             <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {c.responsibilities.items.map(([title, body], index) => {
@@ -477,7 +477,7 @@ export function HDBiz() {
         <section id="collaboration" className="px-6 md:px-12 py-24 md:py-32 border-y" style={{ borderColor: LINE, backgroundColor: SOFT }}>
           <div className="max-w-[1440px] mx-auto">
             <SectionLabel>{c.collaboration.tag}</SectionLabel>
-            <h2 className="max-w-[1040px] text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.collaboration.title}</h2>
+            <h2 className="max-w-[1040px] text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.collaboration.title}</h2>
             <div className="mt-14 grid lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-12 items-center">
               <div className="rounded-[2rem] bg-white border p-8 md:p-10" style={{ borderColor: LINE }}>
                 <div className="mx-auto h-40 w-40 rounded-full flex items-center justify-center text-center text-white font-semibold shadow-xl" style={{ background: `linear-gradient(135deg, ${BLUE}, ${BLUE_DARK})` }}>
@@ -506,7 +506,7 @@ export function HDBiz() {
         <section id="process" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1440px] mx-auto">
             <SectionLabel>{c.process.tag}</SectionLabel>
-            <h2 className="text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.process.title}</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.process.title}</h2>
             <div className="mt-12 overflow-x-auto pb-4">
               <div className="min-w-[1100px] flex items-stretch gap-3">
                 {c.process.steps.map((step, index) => (
@@ -529,7 +529,7 @@ export function HDBiz() {
           <div className="max-w-[1440px] mx-auto">
             <SectionLabel>{c.features.tag}</SectionLabel>
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-              <h2 className="max-w-[980px] text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.features.title}</h2>
+              <h2 className="max-w-[980px] text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.features.title}</h2>
               <p className="max-w-[360px] text-sm leading-relaxed" style={{ color: MUTED }}>{c.features.note}</p>
             </div>
             <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -554,7 +554,7 @@ export function HDBiz() {
           <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-12 lg:gap-20">
             <div>
               <SectionLabel>{c.system.tag}</SectionLabel>
-              <h2 className="text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.system.title}</h2>
+              <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.system.title}</h2>
               <p className="mt-7 text-lg leading-relaxed" style={{ color: TEXT }}>{c.system.body}</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -576,7 +576,7 @@ export function HDBiz() {
         <section id="challenges" className="px-6 md:px-12 py-24 md:py-32 border-y" style={{ borderColor: LINE, backgroundColor: SOFT }}>
           <div className="max-w-[1440px] mx-auto">
             <SectionLabel>{c.challenges.tag}</SectionLabel>
-            <h2 className="max-w-[980px] text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.challenges.title}</h2>
+            <h2 className="max-w-[980px] text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.challenges.title}</h2>
             <div className="mt-12 grid lg:grid-cols-2 gap-5">
               {c.challenges.items.map(([challenge, solution]) => (
                 <div key={challenge} className="rounded-[1.75rem] bg-white border overflow-hidden" style={{ borderColor: LINE }}>
@@ -599,7 +599,7 @@ export function HDBiz() {
         <section id="impact" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1440px] mx-auto">
             <SectionLabel>{c.impact.tag}</SectionLabel>
-            <h2 className="max-w-[920px] text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.impact.title}</h2>
+            <h2 className="max-w-[1120px] text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.impact.title}</h2>
             <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {c.impact.stats.map(([value, label]) => (
                 <div key={`${value}-${label}`} className="rounded-[1.75rem] border bg-white p-7" style={{ borderColor: LINE }}>
@@ -612,7 +612,7 @@ export function HDBiz() {
             <div className="mt-20 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16">
               <div>
                 <SectionLabel>{c.learnings.tag}</SectionLabel>
-                <h2 className="text-4xl md:text-6xl tracking-[-0.05em] leading-[1.02]">{c.learnings.title}</h2>
+                <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.learnings.title}</h2>
               </div>
               <div className="grid sm:grid-cols-2 gap-3">
                 {c.learnings.items.map((item) => (
