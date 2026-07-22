@@ -28,18 +28,12 @@ const BLUE = "#19bff0";
 const ROYAL = "#3167e8";
 const BLACK = "#050505";
 
-const PRODUCT_IMAGES = [
-  "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=82&w=900",
-  "https://images.unsplash.com/photo-1506629905607-d405d7d3b0d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=82&w=900",
-  "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=82&w=900",
-  "https://images.unsplash.com/photo-1496747611176-843222e1e57c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=82&w=900",
-];
-
 const COPY = {
   en: {
     sections: [
       { id: "overview", label: "Overview" },
       { id: "audit", label: "Audit" },
+      { id: "competitors", label: "Competitors" },
       { id: "system", label: "System" },
       { id: "flow", label: "Flow" },
       { id: "ui", label: "UI" },
@@ -97,6 +91,40 @@ const COPY = {
         v: "Cart and payment steps should reduce surprise costs and keep users aware of what happens next.",
       },
     ],
+    competitorLabel: "( 03 · Competitor Research )",
+    competitorTitle:
+      "Looking at fashion ecommerce references to understand how users browse, compare, and trust products.",
+    competitorIntro:
+      "I reviewed Uniqlo, Routine, and IconDenim to see how each brand structures navigation, product discovery, product cards, and purchase confidence.",
+    competitorReference: "Reference",
+    competitorInsight: "Observation",
+    competitorTakeaway: "Design takeaway",
+    competitors: [
+      {
+        brand: "Uniqlo",
+        focus: "Clear catalog structure",
+        insight:
+          "Uniqlo keeps navigation calm and product information easy to scan, which helps users who already know what category they want.",
+        takeaway:
+          "Make categories easier to follow and reduce visual noise while users browse product lists.",
+      },
+      {
+        brand: "Routine",
+        focus: "Local fashion browsing",
+        insight:
+          "Routine feels close to Vietnamese shopping behavior, with familiar categories, campaign sections, and outfit-oriented discovery.",
+        takeaway:
+          "Keep the retail energy, but make promotions, category entry points, and listing pages easier to move through.",
+      },
+      {
+        brand: "IconDenim",
+        focus: "Style-led product confidence",
+        insight:
+          "IconDenim leans into denim attitude and brand personality, helping products feel more expressive instead of generic.",
+        takeaway:
+          "Balance clear product information with stronger fashion personality so the interface does not feel too plain.",
+      },
+    ],
     systemTitle: "Design direction",
     systemIntro:
       "The UI direction keeps YaMe's energetic retail feeling, then gives it more breathing room through sharper hierarchy, stronger product imagery, and repeatable components.",
@@ -141,6 +169,7 @@ const COPY = {
     sections: [
       { id: "overview", label: "Tổng quan" },
       { id: "audit", label: "Audit" },
+      { id: "competitors", label: "Đối thủ" },
       { id: "system", label: "Hệ thống" },
       { id: "flow", label: "Luồng mua" },
       { id: "ui", label: "Giao diện" },
@@ -196,6 +225,40 @@ const COPY = {
         icon: "bag",
         k: "Thanh toán rõ ràng",
         v: "Giỏ hàng và thanh toán cần giảm chi phí bất ngờ, đồng thời cho người dùng biết bước tiếp theo sẽ là gì.",
+      },
+    ],
+    competitorLabel: "( 03 · Nghiên cứu đối thủ )",
+    competitorTitle:
+      "Nhìn vào các website thời trang để hiểu cách người dùng xem, so sánh và tin vào sản phẩm.",
+    competitorIntro:
+      "Tôi tham khảo Uniqlo, Routine và IconDenim để xem mỗi thương hiệu tổ chức điều hướng, khám phá sản phẩm, product card và cảm giác tin tưởng khi mua như thế nào.",
+    competitorReference: "Tham chiếu",
+    competitorInsight: "Điểm quan sát",
+    competitorTakeaway: "Hướng áp dụng",
+    competitors: [
+      {
+        brand: "Uniqlo",
+        focus: "Cấu trúc danh mục rõ",
+        insight:
+          "Uniqlo giữ điều hướng khá bình tĩnh, thông tin sản phẩm dễ quét nhanh, phù hợp với người dùng đã biết mình muốn tìm nhóm sản phẩm nào.",
+        takeaway:
+          "Làm danh mục dễ theo hơn và giảm nhiễu thị giác trong lúc người dùng xem danh sách sản phẩm.",
+      },
+      {
+        brand: "Routine",
+        focus: "Hành vi mua sắm thời trang nội địa",
+        insight:
+          "Routine gần với thói quen mua sắm của người dùng Việt hơn, có nhóm sản phẩm quen thuộc, campaign section và cách khám phá theo outfit.",
+        takeaway:
+          "Giữ tinh thần bán lẻ năng động, nhưng làm khuyến mãi, điểm vào danh mục và listing dễ đi tiếp hơn.",
+      },
+      {
+        brand: "IconDenim",
+        focus: "Cá tính sản phẩm và niềm tin khi chọn",
+        insight:
+          "IconDenim nhấn vào chất denim và cá tính thương hiệu, giúp sản phẩm có cảm giác rõ style hơn thay vì chỉ là một item trong grid.",
+        takeaway:
+          "Cân bằng giữa thông tin sản phẩm rõ ràng và cá tính thời trang để giao diện không bị quá nhạt.",
       },
     ],
     systemTitle: "Hướng thiết kế",
@@ -260,44 +323,129 @@ function SectionLabel({ children }: { children: string }) {
 
 const COLOR_ROWS = [
   {
-    name: "Primary",
-    note: "Core text, footer, high contrast actions",
-    colors: ["#FFFFFF", "#F5F5F5", "#D9D9D9", "#A3A3A3", "#737373", "#404040", "#171717", "#050505"],
+    name: "Gray",
+    colors: [
+      ["50", "#f6f6f6"],
+      ["100", "#e7e7e7"],
+      ["200", "#d1d1d1"],
+      ["300", "#b0b0b0"],
+      ["400", "#888888"],
+      ["500", "#6d6d6d"],
+      ["600", "#5d5d5d"],
+      ["700", "#4f4f4f"],
+      ["800", "#454545"],
+      ["900", "#3d3d3d"],
+      ["950", "#000000"],
+    ],
   },
   {
-    name: "Danger",
-    note: "Sale tags, urgency, discount emphasis",
-    colors: ["#FEF2F2", "#FECACA", "#F87171", "#EF4444", "#B91C1C", "#7F1D1D"],
+    name: "Red",
+    colors: [
+      ["50", "#fef2f2"],
+      ["100", "#fee2e2"],
+      ["200", "#fecaca"],
+      ["300", "#fca5a5"],
+      ["400", "#f87171"],
+      ["500", "#ef4444"],
+      ["600", "#dc2626"],
+      ["700", "#b91c1c"],
+      ["800", "#991b1b"],
+      ["900", "#7f1d1d"],
+      ["950", "#450a0a"],
+    ],
   },
   {
-    name: "Warning",
-    note: "CTA highlight, promo, active retail moments",
-    colors: ["#FFFBEB", "#FDE68A", "#FBBF24", "#F59E0B", "#B45309", "#78350F"],
+    name: "Yellow",
+    colors: [
+      ["50", "#fefce8"],
+      ["100", "#fef9c3"],
+      ["200", "#fef08a"],
+      ["300", "#fde047"],
+      ["400", "#facc15"],
+      ["500", "#eab308"],
+      ["600", "#ca8a04"],
+      ["700", "#a16207"],
+      ["800", "#854d0e"],
+      ["900", "#713f12"],
+      ["950", "#713f12"],
+    ],
   },
   {
-    name: "Success",
-    note: "Available states, confirmation, positive feedback",
-    colors: ["#F0FDF4", "#BBF7D0", "#4ADE80", "#16A34A", "#15803D", "#14532D"],
+    name: "Green",
+    colors: [
+      ["50", "#f0fdf5"],
+      ["100", "#dcfce8"],
+      ["200", "#bbf7d1"],
+      ["300", "#86efad"],
+      ["400", "#4ade80"],
+      ["500", "#22c55e"],
+      ["600", "#16a34a"],
+      ["700", "#15803c"],
+      ["800", "#166533"],
+      ["900", "#14532b"],
+      ["950", "#052e14"],
+    ],
   },
   {
-    name: "Infor",
-    note: "Links, support information, secondary guidance",
-    colors: ["#EFF6FF", "#BFDBFE", "#60A5FA", "#2563EB", "#1D4ED8", "#1E3A8A"],
+    name: "Blue",
+    colors: [
+      ["50", "#eff5ff"],
+      ["100", "#dbe8fe"],
+      ["200", "#bfd7fe"],
+      ["300", "#93bbfd"],
+      ["400", "#609afa"],
+      ["500", "#3b82f6"],
+      ["600", "#2570eb"],
+      ["700", "#2570eb"],
+      ["800", "#1e55af"],
+      ["900", "#1e478a"],
+      ["950", "#172e54"],
+    ],
   },
   {
-    name: "Playful",
-    note: "Brand moments, campaign accents, expressive UI",
-    colors: ["#EEF2FF", "#C7D2FE", "#818CF8", "#4F46E5", "#4338CA", "#312E81"],
+    name: "Purple",
+    colors: [
+      ["50", "#eeeeff"],
+      ["100", "#e0e1ff"],
+      ["200", "#c7c8fe"],
+      ["300", "#a5a7fc"],
+      ["400", "#8184f8"],
+      ["500", "#6366f1"],
+      ["600", "#4649e5"],
+      ["700", "#383bca"],
+      ["800", "#3032a3"],
+      ["900", "#2e3081"],
+      ["950", "#1b1c4b"],
+    ],
   },
 ];
 
-const SEMANTIC_TOKENS = [
-  { k: "Background", v: "#FFFFFF", text: "#050505" },
-  { k: "Surface", v: "#F5F5F5", text: "#050505" },
-  { k: "Content", v: "#050505", text: "#FFFFFF" },
-  { k: "Border", v: "#D9D9D9", text: "#050505" },
-  { k: "Sale", v: "#EF4444", text: "#FFFFFF" },
-  { k: "CTA", v: "#F59E0B", text: "#050505" },
+const SHADE_GROUPS = [
+  {
+    name: "White",
+    colors: [
+      ["20%", "#ffffff", "rgba(255,255,255,0.2)"],
+      ["40%", "#ffffff", "rgba(255,255,255,0.4)"],
+      ["60%", "#ffffff", "rgba(255,255,255,0.6)"],
+      ["80%", "#ffffff", "rgba(255,255,255,0.8)"],
+    ],
+  },
+  {
+    name: "White&Black",
+    colors: [
+      ["00", "#ffffff", "#ffffff"],
+      ["50", "#000000", "#333333"],
+    ],
+  },
+  {
+    name: "Black",
+    colors: [
+      ["20%", "#000000", "rgba(0,0,0,0.2)"],
+      ["40%", "#000000", "rgba(0,0,0,0.4)"],
+      ["60%", "#000000", "rgba(0,0,0,0.6)"],
+      ["80%", "#000000", "rgba(0,0,0,0.8)"],
+    ],
+  },
 ];
 
 const UI_SCREENS = [
@@ -368,7 +516,7 @@ function ColorSystemPresentation() {
           </h3>
         </div>
         <p className="max-w-[420px] text-sm text-neutral-500 leading-relaxed">
-          Primary grayscale keeps the fashion layout clean, while semantic colors handle sale, CTA, status, and expressive campaign moments.
+          This palette follows the MeMe design system from Figma, with neutral colors for fashion layouts and supporting colors for sale, CTA, status, and campaign moments.
         </p>
       </div>
 
@@ -377,16 +525,19 @@ function ColorSystemPresentation() {
           <div key={row.name} className="grid lg:grid-cols-[180px_1fr] gap-4 lg:gap-7 items-center">
             <div>
               <div className="text-sm font-semibold">{row.name}</div>
-              <div className="mt-1 text-xs leading-relaxed text-neutral-500">{row.note}</div>
+              <div className="mt-1 text-xs leading-relaxed text-neutral-500">Scale 50 to 950</div>
             </div>
-            <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-2">
-              {row.colors.map((color) => (
-                <div key={`${row.name}-${color}`} className="group">
+            <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-11 gap-2">
+              {row.colors.map(([step, color]) => (
+                <div key={`${row.name}-${step}-${color}`} className="group min-w-0">
                   <div
-                    className="h-14 rounded-2xl border border-black/5 transition-transform duration-300 group-hover:-translate-y-1"
+                    className="h-14 rounded-xl border border-black/5 transition-transform duration-300 group-hover:-translate-y-1"
                     style={{ backgroundColor: color }}
                   />
-                  <div className="mt-2 text-[10px] tracking-[0.08em] text-neutral-400">{color}</div>
+                  <div className="mt-2 flex flex-col gap-0.5">
+                    <span className="text-[10px] font-semibold text-neutral-700">{step}</span>
+                    <span className="truncate text-[10px] tracking-[0.04em] text-neutral-400">{color}</span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -395,18 +546,119 @@ function ColorSystemPresentation() {
       </div>
 
       <div className="mt-8 pt-7 border-t border-neutral-200">
-        <div className="text-xs tracking-[0.22em] uppercase text-neutral-400 mb-4">Semantic tokens</div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-          {SEMANTIC_TOKENS.map((token) => (
-            <div
-              key={token.k}
-              className="rounded-2xl p-4 min-h-[110px] flex flex-col justify-between border border-black/5"
-              style={{ backgroundColor: token.v, color: token.text }}
-            >
-              <span className="text-xs tracking-[0.18em] uppercase opacity-70">{token.k}</span>
-              <span className="text-sm font-semibold">{token.v}</span>
+        <div className="text-xs tracking-[0.22em] uppercase text-neutral-400 mb-5">Shade</div>
+        <div className="grid md:grid-cols-3 gap-5">
+          {SHADE_GROUPS.map((group) => (
+            <div key={group.name}>
+              <div className="text-sm font-semibold mb-3">{group.name}</div>
+              <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2">
+                {group.colors.map(([step, hex, fill]) => (
+                  <div key={`${group.name}-${step}`} className="min-w-0">
+                    <div
+                      className="h-12 rounded-xl border border-black/5"
+                      style={{ backgroundColor: fill }}
+                    />
+                    <div className="mt-2 flex flex-col gap-0.5">
+                      <span className="text-[10px] font-semibold text-neutral-700">{step}</span>
+                      <span className="truncate text-[10px] tracking-[0.04em] text-neutral-400">{hex}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MeMeHeroPreview() {
+  const navItems = ["SALE", "GU", "ÁO", "QUẦN", "PHỤ KIỆN", "MỚI"];
+
+  return (
+    <div className="relative">
+      <div className="absolute -inset-6 rounded-[3rem] bg-[#19bff0]/20 blur-3xl" />
+      <div className="relative rounded-[2.5rem] bg-white border border-neutral-200 p-4 md:p-6 shadow-2xl">
+        <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] bg-white border border-neutral-200">
+          <div className="flex h-14 items-center justify-between border-b border-neutral-200 px-5 text-[10px] md:text-xs">
+            <div className="flex items-center gap-2 font-black tracking-tight text-lg">YaMe.vn</div>
+            <div className="hidden md:flex items-center gap-5 font-semibold text-neutral-700">
+              {navItems.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+            <div className="flex items-center gap-3 text-neutral-500">
+              <Search size={16} />
+              <ShoppingBag size={16} />
+            </div>
+          </div>
+
+          <div className="bg-[#fca5a5] px-5 py-2 text-center text-xs font-semibold text-black">
+            Sale 11/11 · Make browsing faster and clearer
+          </div>
+
+          <div className="relative min-h-[452px] bg-[#f7f8fb]">
+            <ImageWithFallback
+              src={homeScreen}
+              alt="MeMe redesigned YaMe homepage preview"
+              className="absolute inset-0 h-full w-full object-cover object-top opacity-95"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-white/20" />
+
+            <div className="relative z-10 p-6 md:p-8">
+              <div className="max-w-[360px]">
+                <div className="mb-4 inline-flex rounded-full bg-black px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-white">
+                  MeMe redesign
+                </div>
+                <h3
+                  className="tracking-[-0.06em] leading-[0.95] text-black"
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(3rem, 6vw, 5.75rem)" }}
+                >
+                  Fashion
+                  <br />
+                  made easier.
+                </h3>
+                <p className="mt-5 max-w-[300px] text-sm leading-relaxed text-neutral-600">
+                  Cleaner navigation, stronger product discovery, and a smoother path to checkout.
+                </p>
+              </div>
+            </div>
+
+            <div className="absolute right-5 top-24 hidden w-[44%] rounded-[1.75rem] border border-neutral-200 bg-white p-3 shadow-2xl md:block">
+              <div className="overflow-hidden rounded-[1.25rem] bg-neutral-100">
+                <ImageWithFallback
+                  src={guScreen}
+                  alt="MeMe style discovery page preview"
+                  className="h-40 w-full object-cover object-top"
+                />
+              </div>
+              <div className="mt-4 flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-semibold text-neutral-950">Style discovery</div>
+                  <div className="mt-1 text-[10px] text-neutral-500">GU · Outfit browsing</div>
+                </div>
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-white">
+                  <ArrowUpRight size={15} />
+                </span>
+              </div>
+            </div>
+
+            <div className="absolute bottom-5 right-5 grid w-[58%] grid-cols-3 gap-3">
+              {[accessoriesScreen, shirtsScreen, cartScreen].map((image, index) => (
+                <div key={index} className="overflow-hidden rounded-2xl border border-neutral-200 bg-white p-1 shadow-lg">
+                  <ImageWithFallback
+                    src={image}
+                    alt={`MeMe feature preview ${index + 1}`}
+                    className="h-24 w-full rounded-xl object-cover object-top"
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="absolute -left-10 bottom-16 h-28 w-28 rounded-[2rem] rotate-12 opacity-90" style={{ backgroundColor: ROYAL }} />
+            <div className="absolute -right-14 -top-12 h-36 w-36 rounded-full opacity-90" style={{ backgroundColor: BLUE }} />
+          </div>
         </div>
       </div>
     </div>
@@ -551,53 +803,7 @@ export function MeMe() {
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="absolute -inset-6 rounded-[3rem] bg-[#19bff0]/20 blur-3xl" />
-                <div className="relative rounded-[2.5rem] bg-white border border-neutral-200 p-4 md:p-6 shadow-2xl">
-                  <div className="rounded-[2rem] bg-black text-white p-6 md:p-8 overflow-hidden min-h-[520px] relative">
-                    <div className="flex items-center justify-between">
-                      <div className="font-black text-2xl tracking-tight">YaMe.vn</div>
-                      <span className="text-[10px] tracking-[0.2em] uppercase text-neutral-400">Redesign system</span>
-                    </div>
-                    <div className="mt-14 max-w-[420px]">
-                      <div className="text-xs tracking-[0.24em] uppercase mb-4" style={{ color: YELLOW }}>
-                        Team MeMe
-                      </div>
-                      <div
-                        className="text-5xl md:text-7xl leading-[0.9] tracking-[-0.06em]"
-                        style={{ fontFamily: "Fraunces, serif", fontWeight: 500 }}
-                      >
-                        Fashion
-                        <br />
-                        that moves
-                        <br />
-                        faster.
-                      </div>
-                    </div>
-                    <div className="absolute right-5 bottom-5 w-[58%] rounded-[2rem] bg-white text-black p-4 shadow-xl">
-                      <div className="grid grid-cols-2 gap-3">
-                        {PRODUCT_IMAGES.slice(0, 2).map((image, index) => (
-                          <div key={image} className="rounded-2xl overflow-hidden bg-neutral-100">
-                            <ImageWithFallback
-                              src={image}
-                              alt={`MeMe hero product preview ${index + 1}`}
-                              className="w-full aspect-[4/5] object-cover"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                      <div className="mt-4 flex items-center justify-between">
-                        <span className="text-sm font-semibold">New arrivals</span>
-                        <span className="w-9 h-9 rounded-full text-black flex items-center justify-center" style={{ background: YELLOW }}>
-                          <ArrowUpRight size={16} />
-                        </span>
-                      </div>
-                    </div>
-                    <div className="absolute -right-16 -top-16 w-48 h-48 rounded-full" style={{ background: BLUE }} />
-                    <div className="absolute -left-12 bottom-20 w-28 h-28 rounded-[2rem] rotate-12" style={{ background: ROYAL }} />
-                  </div>
-                </div>
-              </div>
+              <MeMeHeroPreview />
             </motion.div>
           </div>
         </section>
@@ -662,11 +868,82 @@ export function MeMe() {
           </div>
         </section>
 
-        <section id="system" className="px-6 md:px-12 py-24 md:py-32">
+        <section id="competitors" className="px-6 md:px-12 py-24 md:py-32">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-start">
+              <div className="lg:sticky lg:top-28">
+                <SectionLabel>{copy.competitorLabel}</SectionLabel>
+                <h2
+                  className="tracking-[-0.04em] leading-[1]"
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.5rem, 5.4vw, 5.6rem)" }}
+                >
+                  {copy.competitorTitle}
+                </h2>
+                <p className="mt-7 text-neutral-600 leading-relaxed text-lg">{copy.competitorIntro}</p>
+              </div>
+
+              <div className="grid gap-4">
+                {copy.competitors.map((item, index) => (
+                  <motion.div
+                    key={item.brand}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.45, delay: index * 0.08 }}
+                    className="rounded-[2rem] border border-neutral-200 bg-white p-6 md:p-7 shadow-sm"
+                  >
+                    <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                      <div>
+                        <div className="text-[10px] tracking-[0.22em] uppercase text-neutral-400">
+                          {copy.competitorReference} 0{index + 1}
+                        </div>
+                        <h3 className="mt-3 text-3xl md:text-4xl font-semibold tracking-[-0.05em]">
+                          {item.brand}
+                        </h3>
+                      </div>
+                      <div
+                        className="inline-flex w-fit rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em]"
+                        style={{
+                          backgroundColor: index === 1 ? INK : "#fff7d6",
+                          color: index === 1 ? "white" : INK,
+                        }}
+                      >
+                        {item.focus}
+                      </div>
+                    </div>
+
+                    <div className="mt-7 grid md:grid-cols-2 gap-4">
+                      <div className="rounded-[1.5rem] bg-[#f7f8fb] p-5">
+                        <div className="text-[10px] tracking-[0.2em] uppercase text-neutral-400">
+                          {copy.competitorInsight}
+                        </div>
+                        <p className="mt-3 leading-relaxed text-neutral-700">{item.insight}</p>
+                      </div>
+                      <div
+                        className="rounded-[1.5rem] p-5"
+                        style={{
+                          backgroundColor: index === 1 ? YELLOW : INK,
+                          color: index === 1 ? INK : "white",
+                        }}
+                      >
+                        <div className="text-[10px] tracking-[0.2em] uppercase opacity-60">
+                          {copy.competitorTakeaway}
+                        </div>
+                        <p className="mt-3 leading-relaxed opacity-85">{item.takeaway}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="system" className="px-6 md:px-12 py-24 md:py-32 bg-white">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               <div>
-                <SectionLabel>( 03 · Design System Direction )</SectionLabel>
+                <SectionLabel>( 04 · Design System Direction )</SectionLabel>
                 <h2
                   className="tracking-[-0.04em] leading-[1]"
                   style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6rem)" }}
@@ -698,9 +975,9 @@ export function MeMe() {
           </div>
         </section>
 
-        <section id="flow" className="px-6 md:px-12 py-24 md:py-32 bg-white">
+        <section id="flow" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1400px] mx-auto">
-            <SectionLabel>( 04 · Purchase Flow )</SectionLabel>
+            <SectionLabel>( 05 · Purchase Flow )</SectionLabel>
             <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-start">
               <div>
                 <h2
@@ -731,7 +1008,7 @@ export function MeMe() {
         <section id="ui" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1500px] mx-auto">
             <div className="max-w-[940px] mb-12 md:mb-16">
-              <SectionLabel>( 05 · Final UI )</SectionLabel>
+              <SectionLabel>( 06 · Final UI )</SectionLabel>
               <h2
                 className="tracking-[-0.04em] leading-[1]"
                 style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6.25rem)" }}
@@ -763,7 +1040,7 @@ export function MeMe() {
 
         <section id="reflection" className="px-6 md:px-12 py-24 md:py-32 bg-black text-white">
           <div className="max-w-[1200px] mx-auto">
-            <SectionLabel>( 06 · Reflection )</SectionLabel>
+            <SectionLabel>( 07 · Reflection )</SectionLabel>
             <h2
               className="tracking-[-0.04em] leading-[1]"
               style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6rem)" }}

@@ -28,6 +28,7 @@ type Dict = {
     problemLabel: string;
     solutionLabel: string;
     readMore: string;
+    originalWebsite: string;
     typeLabel: string;
     yearLabel: string;
     projects: Array<{
@@ -53,7 +54,7 @@ type Dict = {
     title2: string;
     body: string;
     introSections: Array<{ tag: string; body: string }>;
-    facts: Array<{ k: string; v: string }>;
+    facts: Array<{ k: string; v: string; sub?: string }>;
     skillsLabel: string;
     learningLabel: string;
     learning: string;
@@ -106,6 +107,7 @@ const en: Dict = {
     problemLabel: "Problem",
     solutionLabel: "Solution",
     readMore: "Read full case study",
+    originalWebsite: "Live website",
     typeLabel: "",
     yearLabel: "",
     projects: [
@@ -194,7 +196,7 @@ const en: Dict = {
       },
     ],
     facts: [
-      { k: "Background", v: "Bachelor of Science in Computer Science" },
+      { k: "Education", v: "Ho Chi Minh Open University", sub: "Computer Science · Graduated Oct 2024" },
       { k: "Project Background", v: "Backend Development" },
       { k: "Focus", v: "Product UX & UI" },
       { k: "Open to", v: "Internships, junior roles" },
@@ -252,6 +254,7 @@ const vi: Dict = {
     problemLabel: "Vấn đề",
     solutionLabel: "Giải pháp",
     readMore: "Xem case study đầy đủ",
+    originalWebsite: "Website đang hoạt động",
     typeLabel: "",
     yearLabel: "",
     projects: [
@@ -340,7 +343,7 @@ const vi: Dict = {
       },
     ],
     facts: [
-      { k: "Nền tảng", v: "Cử nhân Khoa học Máy tính" },
+      { k: "Học vấn", v: "Đại học Mở Thành phố Hồ Chí Minh", sub: "Khoa học Máy tính · Tốt nghiệp 10/2024" },
       { k: "Nền tảng dự án", v: "Phát triển Backend" },
       { k: "Tập trung", v: "Product UX & UI" },
       { k: "Sẵn sàng cho", v: "Thực tập, vị trí junior" },

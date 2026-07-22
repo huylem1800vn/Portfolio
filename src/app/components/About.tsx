@@ -1,18 +1,38 @@
 import { motion } from "motion/react";
 import { useI18n } from "../i18n";
 
-const skills = [
-  "Figma",
-  "FigJam",
-  "Auto Layout",
-  "Components",
-  "Design System Basics",
-  "Wireframing",
-  "Prototyping",
-  "UX Research",
-  "User Flow",
-  "Information Architecture",
-  "HTML / CSS / JavaScript",
+const skillGroups = [
+  {
+    title: "Design Tools",
+    items: ["Figma", "FigJam"],
+  },
+  {
+    title: "UI/UX",
+    items: [
+      "Wireframing",
+      "User Flow",
+      "Prototyping",
+      "Auto Layout",
+      "Components",
+      "Design System Basics",
+      "Button States",
+      "Input States",
+      "Spacing",
+      "Typography Consistency",
+    ],
+  },
+  {
+    title: "Research",
+    items: ["Survey", "User Interview", "Persona", "User Journey Mapping", "Competitor Review"],
+  },
+  {
+    title: "Frontend",
+    items: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+  },
+  {
+    title: "Technical Background",
+    items: ["Java", "C++", "C#", "Node.js", "MongoDB", "MySQL"],
+  },
 ];
 
 export function About() {
@@ -75,6 +95,9 @@ export function About() {
                     {f.k}
                   </div>
                   <div className="text-neutral-900">{f.v}</div>
+                  {f.sub && (
+                    <div className="mt-1 text-sm leading-relaxed text-neutral-500">{f.sub}</div>
+                  )}
                 </div>
               ))}
             </div>
@@ -91,16 +114,23 @@ export function About() {
               <div className="text-xs tracking-[0.2em] uppercase text-neutral-500 mb-6">
                 {t.about.skillsLabel}
               </div>
-              <ul className="flex flex-wrap gap-2">
-                {skills.map((s) => (
-                  <li
-                    key={s}
-                    className="px-4 py-2 rounded-full border border-neutral-900/15 text-sm text-neutral-800 hover:bg-neutral-950 hover:text-[#f7f5f1] hover:border-neutral-950 transition-colors cursor-default"
-                  >
-                    {s}
-                  </li>
+              <div className="space-y-5">
+                {skillGroups.map((group) => (
+                  <div key={group.title}>
+                    <div className="mb-2 text-sm font-medium text-neutral-900">{group.title}</div>
+                    <ul className="flex flex-wrap gap-2">
+                      {group.items.map((s) => (
+                        <li
+                          key={`${group.title}-${s}`}
+                          className="px-4 py-2 rounded-full border border-neutral-900/15 text-sm text-neutral-800 hover:bg-neutral-950 hover:text-[#f7f5f1] hover:border-neutral-950 transition-colors cursor-default"
+                        >
+                          {s}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div className="mt-8 md:mt-10 p-6 rounded-2xl bg-[#efeae0]/60 border border-neutral-900/5">
