@@ -436,7 +436,7 @@ export function Murror() {
         />
 
         {/* HERO */}
-        <section className="pt-24 md:pt-28 pb-12 md:pb-16">
+        <section className="overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 8 }}
@@ -449,66 +449,129 @@ export function Murror() {
               {c.badge}
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.05 }}
-              className="mt-4 text-xs tracking-[0.2em] uppercase opacity-70 font-medium"
-            >
-              {c.title}
-            </motion.div>
+            <div className="mt-8 grid items-center gap-12 lg:grid-cols-[minmax(0,0.88fr)_minmax(540px,1.12fr)] lg:gap-10">
+              <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.05 }}
+                  className="text-xs tracking-[0.2em] uppercase opacity-70 font-medium"
+                >
+                  {c.title}
+                </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="mt-2 tracking-[-0.05em] leading-[0.85]"
-              style={{ fontFamily: "Fraunces, serif", fontWeight: 300, fontSize: "clamp(3.5rem, 10vw, 7.5rem)" }}
-            >
-              UN<span className="italic" style={{ color: VIOLET }}>F</span>OLD
-            </motion.h1>
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1 }}
+                  className="mt-5 whitespace-nowrap leading-[0.82]"
+                  style={{
+                    fontFamily: "Fraunces, serif",
+                    fontWeight: 300,
+                    fontSize: "clamp(4.25rem, 8vw, 8.75rem)",
+                    letterSpacing: "0.035em",
+                  }}
+                >
+                  UN<span className="italic" style={{ color: VIOLET }}>F</span>OLD
+                </motion.h1>
 
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-              <motion.p
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="mt-8 max-w-[22ch] tracking-[-0.02em] leading-[1.15]"
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(1.5rem, 2.35vw, 2.25rem)" }}
+                >
+                  {c.headline}
+                </motion.p>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="mt-6 max-w-[56ch] leading-relaxed opacity-75"
+                  style={{ fontSize: "1rem" }}
+                >
+                  {c.description}
+                </motion.p>
+
+                <div className="mt-10 flex flex-wrap items-center gap-4">
+                  <button
+                    type="button"
+                    onClick={() => scrollToCaseSection("flow")}
+                    className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 transition-all"
+                    style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK }}
+                  >
+                    <span className="text-sm">{c.cta1}</span>
+                    <span className="w-8 h-8 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform" style={{ backgroundColor: INK, color: FG }}>
+                      <ArrowUpRight size={16} />
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => scrollToCaseSection("ui")}
+                    className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors hover:bg-white/5"
+                    style={{ border: `1px solid ${BORDER}` }}
+                  >
+                    {c.cta2}
+                  </button>
+                </div>
+              </div>
+
+              <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="md:col-span-7 tracking-[-0.02em] leading-[1.15]"
-                style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(1.35rem, 2.5vw, 2rem)" }}
+                transition={{ duration: 0.8, delay: 0.25 }}
+                className="relative min-h-[390px] overflow-hidden rounded-[2rem] border sm:min-h-[470px] lg:min-h-[590px] lg:rounded-[2.75rem]"
+                style={{
+                  borderColor: "rgba(255,255,255,0.18)",
+                  background:
+                    "linear-gradient(145deg, rgba(244,248,255,0.98) 0%, rgba(203,222,255,0.98) 48%, rgba(122,163,244,0.98) 100%)",
+                  boxShadow: "0 32px 90px rgba(68,94,176,0.22)",
+                }}
               >
-                {c.headline}
-              </motion.p>
-              <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="md:col-span-4 md:col-start-9 leading-relaxed opacity-75"
-                style={{ fontSize: "1rem" }}
-              >
-                {c.description}
-              </motion.p>
-            </div>
+                <div
+                  className="absolute -left-16 top-[-5%] h-56 w-56 rounded-full blur-3xl sm:h-72 sm:w-72"
+                  style={{ backgroundColor: "rgba(165,156,255,0.48)" }}
+                />
+                <div
+                  className="absolute -right-20 bottom-[-12%] h-64 w-64 rounded-full blur-3xl sm:h-80 sm:w-80"
+                  style={{ backgroundColor: "rgba(255,212,95,0.32)" }}
+                />
 
-            <div className="mt-12 flex flex-wrap items-center gap-4">
-              <button
-                type="button"
-                onClick={() => scrollToCaseSection("flow")}
-                className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 transition-all"
-                style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK }}
-              >
-                <span className="text-sm">{c.cta1}</span>
-                <span className="w-8 h-8 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform" style={{ backgroundColor: INK, color: FG }}>
-                  <ArrowUpRight size={16} />
-                </span>
-              </button>
-              <button
-                type="button"
-                onClick={() => scrollToCaseSection("ui")}
-                className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors hover:bg-white/5"
-                style={{ border: `1px solid ${BORDER}` }}
-              >
-                {c.cta2}
-              </button>
+                <div className="absolute left-5 top-5 z-20 flex items-center gap-2 rounded-full border border-white/50 bg-white/60 px-3 py-2 text-[10px] font-medium tracking-[0.2em] text-[#293453] uppercase backdrop-blur-md sm:left-7 sm:top-7">
+                  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: VIOLET }} />
+                  Feel · Reflect · Grow
+                </div>
+
+                <div className="absolute inset-x-0 bottom-0 top-14 sm:top-16">
+                  <div className="absolute left-[3%] top-[25%] z-10 w-[34%] -rotate-[8deg] overflow-hidden rounded-[1.5rem] border-[5px] border-white bg-white shadow-[0_24px_55px_rgba(36,50,99,0.32)] sm:rounded-[2rem] sm:border-[7px]">
+                    <img
+                      src={onboardingJoy}
+                      alt="Murror onboarding screen"
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                  <div className="absolute left-[32%] top-[5%] z-30 w-[38%] rotate-[1.5deg] overflow-hidden rounded-[1.5rem] border-[5px] border-white bg-white shadow-[0_30px_70px_rgba(36,50,99,0.36)] sm:rounded-[2rem] sm:border-[7px]">
+                    <img
+                      src={profileMinhHuyBlue}
+                      alt="Murror emotional profile screen"
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                  <div className="absolute right-[2%] top-[23%] z-20 w-[34%] rotate-[8deg] overflow-hidden rounded-[1.5rem] border-[5px] border-white bg-white shadow-[0_24px_55px_rgba(36,50,99,0.32)] sm:rounded-[2rem] sm:border-[7px]">
+                    <img
+                      src={chatHome}
+                      alt="Murror companion chat screen"
+                      className="block h-auto w-full"
+                    />
+                  </div>
+                </div>
+
+                <div className="absolute bottom-5 left-5 z-40 rounded-full border border-white/50 bg-white/65 px-4 py-2 text-[10px] font-medium tracking-[0.18em] text-[#293453] uppercase backdrop-blur-md sm:bottom-7 sm:left-7">
+                  Emotional companion · Mobile
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>

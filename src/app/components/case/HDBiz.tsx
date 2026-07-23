@@ -30,13 +30,16 @@ import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
 import { NextProjectFooter } from "./NextProjectFooter";
 
-const BLUE = "#0066CC";
-const BLUE_DARK = "#004A99";
-const INK = "#101828";
-const TEXT = "#344054";
-const MUTED = "#667085";
-const LINE = "#E4E7EC";
-const SOFT = "#F8FAFC";
+const PRIMARY = "#DA2128";
+const PRIMARY_DARK = "#A9151B";
+const ORANGE = "#F36C21";
+const INK = "#241F20";
+const TEXT = "#4A3E3C";
+const MUTED = "#776B68";
+const LINE = "#EADDD8";
+const PAPER = "#FFFCFA";
+const SOFT = "#FFF6F2";
+const PRIMARY_TINT = "#FDEBEC";
 
 const COPY = {
   en: {
@@ -352,12 +355,12 @@ const featureIcons = [CreditCard, Landmark, ShieldCheck, CheckCircle2, FileText,
 const systemIcons = [Boxes, CheckCircle2, FileText, Table2, Layers, ShieldCheck, BarChart3, PenTool, Workflow];
 
 function SectionLabel({ children }: { children: string }) {
-  return <div className="text-xs tracking-[0.24em] uppercase mb-5" style={{ color: BLUE }}>{children}</div>;
+  return <div className="text-xs tracking-[0.24em] uppercase mb-5" style={{ color: PRIMARY }}>{children}</div>;
 }
 
 function HDBizVisual() {
   return (
-    <div className="relative overflow-hidden rounded-[2.25rem] bg-white shadow-2xl ring-1 ring-black/5">
+    <div className="relative overflow-hidden rounded-[2.25rem] bg-white shadow-2xl ring-1 ring-[#DA2128]/10">
       <img
         src={HDBIZ_UI_CONCEPT_URL}
         alt="HDBank UI concept for HDBiz corporate banking platform"
@@ -369,9 +372,9 @@ function HDBizVisual() {
 
 function Placeholder({ label }: { label: string }) {
   return (
-    <div className="mt-6 rounded-2xl border border-dashed border-[#BBD7F5] bg-[#F7FBFF] p-5">
-      <div className="h-28 rounded-xl bg-white border border-[#D8E8FA] flex items-center justify-center">
-        <span className="text-xs tracking-[0.18em] uppercase" style={{ color: BLUE }}>{label}</span>
+    <div className="mt-6 rounded-2xl border border-dashed border-[#F0B5B8] bg-[#FFF7F5] p-5">
+      <div className="h-28 rounded-xl bg-white border border-[#F3D4D5] flex items-center justify-center">
+        <span className="text-xs tracking-[0.18em] uppercase" style={{ color: PRIMARY }}>{label}</span>
       </div>
     </div>
   );
@@ -382,20 +385,26 @@ export function HDBiz() {
   const c = COPY[lang];
 
   return (
-    <div className="min-h-screen bg-white text-[#101828] antialiased" style={{ fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}>
+    <div className="min-h-screen antialiased" style={{ backgroundColor: PAPER, color: INK, fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}>
       <CaseNav
         sections={c.sections}
-        accent={BLUE}
-        bg="rgba(255,255,255,0.9)"
+        accent={PRIMARY}
+        bg="rgba(255,252,250,0.92)"
         text={INK}
-        border="rgba(16,24,40,0.10)"
+        border="rgba(80,45,42,0.12)"
       />
 
       <main className="pt-12 md:pt-16">
-        <section className="px-6 md:px-12 pt-6 md:pt-8 pb-12 md:pb-16">
+        <section
+          className="px-6 md:px-12 pt-6 md:pt-8 pb-12 md:pb-16"
+          style={{
+            background:
+              "radial-gradient(circle at 82% 10%, rgba(218,33,40,0.08), transparent 26%), linear-gradient(180deg, #FFFCFA 0%, #FFF8F5 100%)",
+          }}
+        >
           <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-12 items-start">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <div className="text-xs tracking-[0.24em] uppercase mb-4" style={{ color: BLUE }}>{c.hero.badge}</div>
+              <div className="text-xs tracking-[0.24em] uppercase mb-4" style={{ color: PRIMARY }}>{c.hero.badge}</div>
               <h1 className="tracking-[-0.06em] leading-[0.92]" style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(3.2rem, 7.5vw, 5.8rem)" }}>
                 {c.hero.title}
               </h1>
@@ -405,10 +414,10 @@ export function HDBiz() {
               </h2>
               <p className="mt-4 max-w-[640px] text-sm md:text-base leading-relaxed" style={{ color: TEXT }}>{c.hero.body}</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                <button type="button" onClick={() => scrollToCaseSection("responsibilities")} className="rounded-full px-6 py-3 text-sm text-white font-medium transition-colors hover:bg-[#004A99]" style={{ backgroundColor: BLUE }}>
+                <button type="button" onClick={() => scrollToCaseSection("responsibilities")} className="rounded-full px-6 py-3 text-sm text-white font-medium transition-colors hover:bg-[#A9151B]" style={{ backgroundColor: PRIMARY }}>
                   {c.hero.cta1}
                 </button>
-                <button type="button" onClick={() => scrollToCaseSection("process")} className="rounded-full px-6 py-3 text-sm font-medium border transition-colors hover:bg-[#F7FBFF]" style={{ borderColor: LINE }}>
+                <button type="button" onClick={() => scrollToCaseSection("process")} className="rounded-full px-6 py-3 text-sm font-medium border transition-colors hover:bg-[#FFF0EE]" style={{ borderColor: LINE }}>
                   {c.hero.cta2}
                 </button>
               </div>
@@ -441,7 +450,7 @@ export function HDBiz() {
               <div className="mt-10 grid sm:grid-cols-2 gap-3">
                 {c.overview.supports.map((item) => (
                   <div key={item} className="flex items-center gap-3 rounded-2xl bg-white p-4 border" style={{ borderColor: LINE }}>
-                    <span className="h-9 w-9 rounded-full flex items-center justify-center bg-[#EAF3FF]" style={{ color: BLUE }}>
+                    <span className="h-9 w-9 rounded-full flex items-center justify-center" style={{ backgroundColor: PRIMARY_TINT, color: PRIMARY }}>
                       <CheckCircle2 size={17} />
                     </span>
                     <span className="font-medium">{item}</span>
@@ -463,7 +472,7 @@ export function HDBiz() {
                 const Icon = responsibilityIcons[index];
                 return (
                   <div key={title} className="rounded-[1.75rem] border p-6 bg-white hover:shadow-lg transition-shadow" style={{ borderColor: LINE }}>
-                    <div className="h-12 w-12 rounded-2xl flex items-center justify-center mb-7 bg-[#EAF3FF]" style={{ color: BLUE }}>
+                    <div className="h-12 w-12 rounded-2xl flex items-center justify-center mb-7" style={{ backgroundColor: PRIMARY_TINT, color: PRIMARY }}>
                       <Icon size={21} />
                     </div>
                     <h3 className="text-xl font-semibold tracking-[-0.03em]">{title}</h3>
@@ -481,13 +490,13 @@ export function HDBiz() {
             <h2 className="max-w-[1040px] text-3xl md:text-5xl lg:text-[3.5rem] tracking-[-0.045em] leading-[1.06]">{c.collaboration.title}</h2>
             <div className="mt-14 grid lg:grid-cols-[0.9fr_1.1fr] gap-8 lg:gap-12 items-center">
               <div className="rounded-[2rem] bg-white border p-8 md:p-10" style={{ borderColor: LINE }}>
-                <div className="mx-auto h-40 w-40 rounded-full flex items-center justify-center text-center text-white font-semibold shadow-xl" style={{ background: `linear-gradient(135deg, ${BLUE}, ${BLUE_DARK})` }}>
+                <div className="mx-auto h-40 w-40 rounded-full flex items-center justify-center text-center text-white font-semibold shadow-xl" style={{ background: `linear-gradient(135deg, ${PRIMARY}, ${PRIMARY_DARK})` }}>
                   {c.collaboration.center}
                 </div>
                 <div className="mt-8 grid grid-cols-2 gap-3">
                   {[BusinessIcon, BriefcaseBusiness, Code2, Bug, Landmark].map((Icon, index) => (
                     <div key={index} className="rounded-2xl border p-4 flex items-center justify-center" style={{ borderColor: LINE }}>
-                      <Icon size={22} color={BLUE} />
+                      <Icon size={22} color={PRIMARY} />
                     </div>
                   ))}
                 </div>
@@ -495,7 +504,7 @@ export function HDBiz() {
               <div className="grid sm:grid-cols-2 gap-4">
                 {c.collaboration.nodes.map(([title, body]) => (
                   <div key={title} className="rounded-[1.5rem] bg-white border p-6" style={{ borderColor: LINE }}>
-                    <div className="text-sm font-semibold" style={{ color: BLUE }}>{title}</div>
+                    <div className="text-sm font-semibold" style={{ color: PRIMARY }}>{title}</div>
                     <p className="mt-3 text-sm leading-relaxed" style={{ color: MUTED }}>{body}</p>
                   </div>
                 ))}
@@ -513,12 +522,12 @@ export function HDBiz() {
                 {c.process.steps.map((step, index) => (
                   <div key={step} className="flex items-center gap-3">
                     <div className="w-40 rounded-[1.5rem] border bg-white p-5 min-h-[150px]" style={{ borderColor: LINE }}>
-                      <div className="h-10 w-10 rounded-full flex items-center justify-center text-white text-sm mb-5" style={{ backgroundColor: BLUE }}>
+                      <div className="h-10 w-10 rounded-full flex items-center justify-center text-white text-sm mb-5" style={{ backgroundColor: PRIMARY }}>
                         {String(index + 1).padStart(2, "0")}
                       </div>
                       <div className="font-semibold leading-tight">{step}</div>
                     </div>
-                    {index < c.process.steps.length - 1 && <ArrowRight size={20} color={BLUE} />}
+                    {index < c.process.steps.length - 1 && <ArrowRight size={20} color={PRIMARY} />}
                   </div>
                 ))}
               </div>
@@ -539,7 +548,7 @@ export function HDBiz() {
                 return (
                   <div key={item} className="rounded-[1.5rem] border bg-white p-5" style={{ borderColor: LINE }}>
                     <div className="flex items-center justify-between">
-                      <Icon size={21} color={BLUE} />
+                      <Icon size={21} color={PRIMARY} />
                       <span className="text-xs" style={{ color: MUTED }}>{String(index + 1).padStart(2, "0")}</span>
                     </div>
                     <div className="mt-5 font-semibold">{item}</div>
@@ -563,10 +572,10 @@ export function HDBiz() {
                 const Icon = systemIcons[index];
                 return (
                   <div key={item} className="rounded-[1.5rem] border bg-white p-6 min-h-[170px]" style={{ borderColor: LINE }}>
-                    <Icon size={22} color={BLUE} />
+                    <Icon size={22} color={PRIMARY} />
                     <div className="mt-8 font-semibold">{item}</div>
-                    <div className="mt-3 h-2 w-full rounded-full bg-[#EAF3FF]" />
-                    <div className="mt-2 h-2 w-2/3 rounded-full bg-[#EAF3FF]" />
+                    <div className="mt-3 h-2 w-full rounded-full" style={{ backgroundColor: PRIMARY_TINT }} />
+                    <div className="mt-2 h-2 w-2/3 rounded-full" style={{ backgroundColor: PRIMARY_TINT }} />
                   </div>
                 );
               })}
@@ -586,8 +595,8 @@ export function HDBiz() {
                       <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: MUTED }}>{c.challenges.challengeLabel}</div>
                       <div className="text-xl font-semibold tracking-[-0.03em]">{challenge}</div>
                     </div>
-                    <div className="p-6 bg-[#F7FBFF]">
-                      <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: BLUE }}>{c.challenges.solutionLabel}</div>
+                    <div className="p-6 bg-[#FFF7F5]">
+                      <div className="text-xs tracking-[0.2em] uppercase mb-4" style={{ color: PRIMARY }}>{c.challenges.solutionLabel}</div>
                       <p className="leading-relaxed" style={{ color: TEXT }}>{solution}</p>
                     </div>
                   </div>
@@ -604,7 +613,7 @@ export function HDBiz() {
             <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {c.impact.stats.map(([value, label]) => (
                 <div key={`${value}-${label}`} className="rounded-[1.75rem] border bg-white p-7" style={{ borderColor: LINE }}>
-                  <div className="text-5xl font-semibold tracking-[-0.05em]" style={{ color: BLUE }}>{value}</div>
+                  <div className="text-5xl font-semibold tracking-[-0.05em]" style={{ color: PRIMARY }}>{value}</div>
                   <div className="mt-5 text-lg font-medium">{label}</div>
                 </div>
               ))}
@@ -618,7 +627,7 @@ export function HDBiz() {
               <div className="grid sm:grid-cols-2 gap-3">
                 {c.learnings.items.map((item) => (
                   <div key={item} className="rounded-2xl border p-5 flex items-center gap-3" style={{ borderColor: LINE }}>
-                    <CheckCircle2 size={18} color={BLUE} />
+                    <CheckCircle2 size={18} color={PRIMARY} />
                     <span className="font-medium">{item}</span>
                   </div>
                 ))}
@@ -627,7 +636,7 @@ export function HDBiz() {
           </div>
         </section>
 
-        <section className="px-6 md:px-12 py-20 text-white" style={{ background: `linear-gradient(135deg, ${BLUE_DARK}, ${BLUE})` }}>
+        <section className="px-6 md:px-12 py-20 text-white" style={{ background: `linear-gradient(135deg, ${PRIMARY_DARK} 0%, ${PRIMARY} 58%, ${ORANGE} 100%)` }}>
           <div className="max-w-[1200px] mx-auto">
             <p className="tracking-[-0.04em] leading-[1.08]" style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(2rem, 4vw, 4.5rem)" }}>
               “{c.ending}”
@@ -641,6 +650,6 @@ export function HDBiz() {
   );
 }
 
-function BusinessIcon({ size = 22, color = BLUE }: { size?: number; color?: string }) {
+function BusinessIcon({ size = 22, color = PRIMARY }: { size?: number; color?: string }) {
   return <Building2 size={size} color={color} />;
 }
