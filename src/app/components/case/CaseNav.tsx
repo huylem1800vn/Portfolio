@@ -60,10 +60,11 @@ export function CaseNav({
           aria-label="Language toggle"
         >
           <motion.span
-            layout
+            initial={false}
+            animate={{ x: lang === "en" ? 0 : 36 }}
             transition={{ type: "spring", stiffness: 500, damping: 35 }}
-            className="absolute top-1 bottom-1 w-9 rounded-full"
-            style={{ left: lang === "en" ? 4 : "calc(50% - 2px)", backgroundColor: accent }}
+            className="absolute left-1 top-1 bottom-1 w-9 rounded-full"
+            style={{ backgroundColor: accent }}
           />
           {(["en", "vi"] as const).map((l) => (
             <button

@@ -32,8 +32,8 @@ import BanDo from "../../../imports/BảnDồ/BảnDồ";
 import CamXuc from "../../../imports/CảmXuc/CảmXuc";
 import LocalProfile from "../../../imports/LocalProfile/LocalProfile";
 import VerifiedProfile from "../../../imports/VertifiedProfile/VertifiedProfile";
-import LogoMark from "../../../imports/Frame1-1/Frame1-13-12627";
-import logoIconPaths from "../../../imports/Frame1-1/svg-s6l1fubn7v";
+import BrandIdentityLogo from "../../../imports/AngAngBrand/BrandIdentityLogo";
+import logoMarkPath from "../../../imports/AngAngBrand/logo-mark-path";
 import { CV_URL } from "../../config/links";
 import { BAO_TRAN_PERSONA_AVATAR_URL, DUY_KHOI_PERSONA_AVATAR_URL } from "../../config/persona-avatars";
 import wireframeHome from "../../../imports/image-5.png";
@@ -1219,7 +1219,7 @@ function Logo({ size = 1 }: { size?: number }) {
     <div className="inline-flex items-center gap-3" style={{ transform: `scale(${size})`, transformOrigin: "left center" }}>
       <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ backgroundColor: GREEN }}>
         <svg viewBox="0 0 33.6973 41.2816" width="24" height="29" fill="none" preserveAspectRatio="xMidYMid meet">
-          <path d={logoIconPaths.p441a940} fill="#fff" />
+          <path d={logoMarkPath.p441a940} fill="#fff" />
         </svg>
       </div>
       <div
@@ -2134,7 +2134,7 @@ export function AngAng() {
           <div className="lg:col-span-5">
             <div className="w-full">
               <div className="flex items-center justify-center" style={{ width: "100%" }}>
-                <LogoMark />
+                <BrandIdentityLogo />
               </div>
             </div>
             <p className="mt-3 text-sm leading-relaxed" style={{ color: MUTED }}>
