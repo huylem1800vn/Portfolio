@@ -602,7 +602,7 @@ const COPY = {
       body:
         "This project helped me see that food discovery is not just about showing more options. A better experience should ease uncertainty, bring the right context into view, and help people choose with more confidence based on their mood, their moment, and the people they are with.",
       cta1: "Back to Portfolio",
-      cta2: "Next Project · MeMe",
+      cta2: "Next Project · Nếp Nhà",
     },
     labels: {
       coreMessage: "Core message",
@@ -1090,7 +1090,7 @@ const COPY = {
       body:
         "Dự án này giúp tôi nhận ra rằng khám phá địa điểm ăn uống không chỉ nằm ở việc đưa ra thêm nhiều lựa chọn. Một trải nghiệm tốt hơn cần làm dịu sự phân vân, đưa đúng ngữ cảnh ra trước mắt và giúp người dùng chọn quán với nhiều tự tin hơn, dựa trên tâm trạng, thời điểm và bối cảnh xã hội của riêng họ.",
       cta1: "Về Portfolio",
-      cta2: "Dự án tiếp theo · MeMe",
+      cta2: "Dự án tiếp theo · Nếp Nhà",
     },
     labels: {
       coreMessage: "Thông điệp cốt lõi",
@@ -3200,7 +3200,7 @@ export function AngAng() {
             </span>
           </a>
           <a
-            href="#case/meme"
+            href="#case/nepnha"
             className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors"
             style={{
               border: "1px solid rgba(255,255,255,0.3)",

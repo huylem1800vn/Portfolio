@@ -33,6 +33,8 @@ type Dict = {
     yearLabel: string;
     projects: Array<{
       type: string;
+      context?: string;
+      homeDetails?: Array<{ label: string; body: string }>;
       subtitle: string;
       problem: string;
       solution: string;
@@ -74,7 +76,7 @@ type Dict = {
 const en: Dict = {
   nav: { work: "Work", process: "Process", about: "About", resume: "Resume" },
   hero: {
-    badge: "Portfolio · 2026 · Open to internships",
+    badge: "Portfolio · 2026 · Open to fresher opportunities",
     name: "HUYNH MINH HUY",
     role: "UI/UX Designer",
     concept: "BRIDGE",
@@ -103,7 +105,7 @@ const en: Dict = {
     title1: "Case studies,",
     italic: "not",
     title2: " screenshots.",
-    sub: "Four projects, each shaped around a real decision people actually need to make.",
+    sub: "Five projects, each shaped around a real decision people actually need to make.",
     problemLabel: "Problem",
     solutionLabel: "Solution",
     readMore: "Read full case study",
@@ -112,9 +114,22 @@ const en: Dict = {
     yearLabel: "",
     projects: [
       {
-        type: "Enterprise · Web / Mobile",
+        type: "Professional Project · FPT IS",
+        context: "UI/UX Designer at FPT IS · Mar 2026 – Present",
+        homeDetails: [
+          {
+            label: "Who it serves",
+            body:
+              "Large corporations, SMEs, startups, non-financial organizations, independent businesses, and teams responsible for corporate finance.",
+          },
+          {
+            label: "Shared needs",
+            body:
+              "Although their operating scales differ, they all need a flexible online banking platform for managing accounts, cash flow, transfers, payments, financial reporting, and transaction approvals.",
+          },
+        ],
         subtitle:
-          "Designing corporate Internet and Mobile Banking experiences for enterprise customers at HDBank.",
+          "Contributing to HDBiz, HDBank’s corporate Internet and Mobile Banking platform, as part of the FPT IS project team.",
         problem:
           "Corporate banking workflows involve complex business rules, approval layers, dense forms, transaction states, and high expectations for reliability across web and mobile.",
         solution:
@@ -128,6 +143,15 @@ const en: Dict = {
           "Young users in Ho Chi Minh City often struggle to choose where to eat because there are too many options, reviews do not always feel trustworthy, and practical details like crowd level, opening status, or available seats are often missing.",
         solution:
           "A food discovery experience built around mood, trusted information, live restaurant status, and recommendations that feel more personal.",
+      },
+      {
+        type: "Mobile · Family Living",
+        subtitle:
+          "Helping different generations share routines, care for the home, and preserve family memories without feeling monitored.",
+        problem:
+          "Family members are gradually losing shared moments as work, study, screen habits, and generational differences pull their daily routines apart. Existing products focus on controlling devices but rarely create a shared space where people can check in, care for one another, and feel closer.",
+        solution:
+          "A shared digital home that brings together family updates, gentle reminders, home safety, shared routines, and private memories, helping each generation stay connected without feeling monitored.",
       },
       {
         type: "Web · Responsive",
@@ -199,7 +223,7 @@ const en: Dict = {
       { k: "Education", v: "Ho Chi Minh Open University", sub: "Computer Science · Graduated Oct 2024" },
       { k: "Project Background", v: "Backend Development" },
       { k: "Focus", v: "Product UX & UI" },
-      { k: "Open to", v: "Internships, junior roles" },
+      { k: "Open to", v: "Fresher UI/UX roles" },
     ],
     skillsLabel: "( Skills & Tools )",
     learningLabel: "Currently learning",
@@ -211,7 +235,7 @@ const en: Dict = {
     title1: "Have a ",
     italic: "project",
     title2: " in mind?",
-    body: "I am currently open to internships, junior UI/UX roles, and collaborative case studies. Email is the best way to reach me, and I usually reply within a day.",
+    body: "I am currently open to UI/UX Fresher opportunities and collaborative case studies. Email is the best way to reach me, and I usually reply within a day.",
     resume: "Download CV",
     backTop: "Back to top ↑",
     footer: "© 2026 Huỳnh Minh Huy · Designed and built with care",
@@ -221,7 +245,7 @@ const en: Dict = {
 const vi: Dict = {
   nav: { work: "Dự án", process: "Quy trình", about: "Giới thiệu", resume: "CV" },
   hero: {
-    badge: "Portfolio · 2026 · Đang tìm cơ hội thực tập",
+    badge: "Portfolio · 2026 · Đang tìm cơ hội Fresher",
     name: "HUỲNH MINH HUY",
     role: "UI/UX Designer",
     concept: "BRIDGE",
@@ -250,7 +274,7 @@ const vi: Dict = {
     title1: "Case study,",
     italic: "không phải",
     title2: " ảnh chụp.",
-    sub: "Bốn dự án, mỗi dự án đi vào một quyết định rất thật mà người dùng phải đối diện.",
+    sub: "Năm dự án, mỗi dự án đi vào một quyết định rất thật mà người dùng phải đối diện.",
     problemLabel: "Vấn đề",
     solutionLabel: "Giải pháp",
     readMore: "Xem case study đầy đủ",
@@ -259,9 +283,22 @@ const vi: Dict = {
     yearLabel: "",
     projects: [
       {
-        type: "Enterprise · Web / Mobile",
+        type: "Dự án thực tế · FPT IS",
+        context: "UI/UX Designer tại FPT IS · 03/2026 – Hiện tại",
+        homeDetails: [
+          {
+            label: "Phục vụ ai?",
+            body:
+              "Các tập đoàn lớn, SMEs, startup, tổ chức phi tài chính, doanh nghiệp cá nhân và những đội ngũ phụ trách tài chính doanh nghiệp.",
+          },
+          {
+            label: "Nhu cầu chung",
+            body:
+              "Dù có quy mô vận hành khác nhau, họ đều cần một nền tảng ngân hàng trực tuyến linh hoạt để quản lý tài khoản, dòng tiền, chuyển khoản, thanh toán, báo cáo tài chính và phê duyệt giao dịch.",
+          },
+        ],
         subtitle:
-          "Thiết kế trải nghiệm Internet Banking và Mobile Banking cho khách hàng doanh nghiệp của HDBank.",
+          "Tham gia thiết kế HDBiz, nền tảng Internet Banking và Mobile Banking dành cho khách hàng doanh nghiệp của HDBank, trong đội ngũ dự án tại FPT IS.",
         problem:
           "Các nghiệp vụ corporate banking có nhiều rule phức tạp, nhiều lớp phê duyệt, form dày thông tin, trạng thái giao dịch đa dạng và yêu cầu độ tin cậy rất cao trên cả web lẫn mobile.",
         solution:
@@ -275,6 +312,15 @@ const vi: Dict = {
           "Người trẻ ở TP.HCM thường khó chọn chỗ ăn vì có quá nhiều lựa chọn, review không phải lúc nào cũng đáng tin, và những thông tin thực tế như quán đang đông hay vắng, còn mở cửa hay còn chỗ ngồi lại thường thiếu.",
         solution:
           "Một trải nghiệm khám phá ẩm thực dựa trên tâm trạng, kết hợp thông tin đáng tin, trạng thái quán theo thời gian thực và những gợi ý mang cảm giác cá nhân hơn.",
+      },
+      {
+        type: "Mobile · Gia đình",
+        subtitle:
+          "Giúp nhiều thế hệ cùng chia sẻ nếp sinh hoạt, chăm sóc ngôi nhà và lưu giữ kỷ niệm mà không tạo cảm giác bị theo dõi.",
+        problem:
+          "Các thành viên trong gia đình ngày càng ít có thời gian và điểm chạm chung vì lịch học, công việc, thói quen dùng điện thoại và khoảng cách thế hệ. Trong khi đó, nhiều ứng dụng chỉ tập trung điều khiển thiết bị, chưa tạo được một không gian giúp mọi người quan tâm, chia sẻ và gần nhau hơn.",
+        solution:
+          "Một ngôi nhà số chung, nơi cập nhật gia đình, lời nhắc nhẹ nhàng, an toàn ngôi nhà, lịch sinh hoạt và kỷ niệm được kết nối để các thế hệ gần nhau hơn mà không tạo cảm giác bị theo dõi.",
       },
       {
         type: "Web · Responsive",
@@ -346,7 +392,7 @@ const vi: Dict = {
       { k: "Học vấn", v: "Đại học Mở Thành phố Hồ Chí Minh", sub: "Khoa học Máy tính · Tốt nghiệp 10/2024" },
       { k: "Nền tảng dự án", v: "Phát triển Backend" },
       { k: "Tập trung", v: "Product UX & UI" },
-      { k: "Sẵn sàng cho", v: "Thực tập, vị trí junior" },
+      { k: "Sẵn sàng cho", v: "Vị trí UI/UX Fresher" },
     ],
     skillsLabel: "( Kỹ năng & Công cụ )",
     learningLabel: "Đang học",
@@ -358,7 +404,7 @@ const vi: Dict = {
     title1: "Có một ",
     italic: "dự án",
     title2: " trong đầu?",
-    body: "Hiện tại tôi đang sẵn sàng cho cơ hội thực tập, vị trí UI/UX junior và những case study hợp tác. Nếu muốn kết nối, email vẫn là cách nhanh và dễ nhất, và tôi thường phản hồi trong vòng một ngày.",
+    body: "Hiện tại tôi đang tìm kiếm cơ hội UI/UX Fresher và sẵn sàng tham gia những case study hợp tác. Nếu muốn kết nối, email vẫn là cách nhanh và dễ nhất, và tôi thường phản hồi trong vòng một ngày.",
     resume: "Tải CV",
     backTop: "Lên đầu trang ↑",
     footer: "© 2026 Huỳnh Minh Huy · Được thiết kế và xây dựng với nhiều chăm chút",

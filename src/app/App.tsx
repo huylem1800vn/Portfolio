@@ -9,6 +9,7 @@ import { I18nProvider } from "./i18n";
 import { useRoute } from "./router";
 import { AngAng } from "./components/case/AngAng";
 import { HDBiz } from "./components/case/HDBiz";
+import { NepNha } from "./components/case/NepNha";
 import { MeMe } from "./components/case/MeMe";
 import { Murror } from "./components/case/Murror";
 
@@ -35,6 +36,7 @@ function Router() {
   const route = useRoute();
   if (route === "angang") return <AngAng />;
   if (route === "hdbiz") return <HDBiz />;
+  if (route === "nepnha") return <NepNha />;
   if (route === "meme") return <MeMe />;
   if (route === "murror") return <Murror />;
   return <Home />;

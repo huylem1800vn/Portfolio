@@ -5,6 +5,7 @@ import { useI18n } from "../i18n";
 import { ANG_ANG_PROJECT_COVER_URL } from "../config/project-covers";
 import { HDBIZ_COVER_URL } from "../config/hdbiz-assets";
 import { MEME_UI_BOARD_URL } from "../config/meme-assets";
+import { NEP_NHA_THUMBNAIL_URL } from "../config/nep-nha-assets";
 import {
   MURROR_CHAT_HOME_URL,
   MURROR_CHAT_MOOD_CHECKIN_URL,
@@ -16,7 +17,7 @@ const meta = [
     index: "01",
     title: "HDBiz",
     href: "#case/hdbiz",
-    tags: ["Enterprise UX", "Digital Banking", "Internet Banking", "Mobile Banking", "Design System"],
+    tags: ["FPT IS", "Enterprise UX", "Digital Banking", "Internet Banking", "Mobile Banking", "Design System"],
     year: "2026",
     image: HDBIZ_COVER_URL,
     imageAlt: "HDBiz corporate internet and mobile banking project cover",
@@ -36,6 +37,18 @@ const meta = [
   },
   {
     index: "03",
+    title: "Nếp Nhà",
+    href: "#case/nepnha",
+    tags: ["UX Research", "Family Living", "Smart Home", "Accessibility", "Mobile UI"],
+    year: "2026",
+    image: NEP_NHA_THUMBNAIL_URL,
+    imageAlt: "Nếp Nhà project thumbnail explaining the conical hat, home, and heart brand symbols",
+    accent: "#dfead3",
+    fit: "contain",
+    thumbnail: "nepnha",
+  },
+  {
+    index: "04",
     title: "MeMe",
     href: "#case/meme",
     tags: ["UX Research", "E-commerce UX", "Website Redesign", "User Flow", "Figma"],
@@ -48,7 +61,7 @@ const meta = [
     thumbnail: "meme",
   },
   {
-    index: "04",
+    index: "05",
     title: "Murror",
     href: "#case/murror",
     tags: ["AI Product", "Emotional UX", "Gamification", "Onboarding", "Mobile UI"],
@@ -60,6 +73,40 @@ const meta = [
     thumbnail: "murror",
   },
 ];
+
+function NepNhaProjectThumbnail({ lang }: { lang: "en" | "vi" }) {
+  return (
+    <div className="relative h-full w-full overflow-hidden bg-[#dfead3]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(255,255,255,0.9),transparent_26%),linear-gradient(135deg,#eef4e8_0%,#d7e5c8_100%)]" />
+      <div className="absolute left-7 top-7 z-10 max-w-[42%]">
+        <div className="text-[0.65rem] uppercase tracking-[0.22em] text-[#56783f]">
+          Family living · Mobile
+        </div>
+        <div
+          className="mt-5 leading-[0.9] tracking-[-0.05em] text-[#263522]"
+          style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(3rem, 7vw, 5.75rem)" }}
+        >
+          Nếp Nhà
+        </div>
+        <p className="mt-5 max-w-[18rem] text-sm leading-relaxed text-[#50604b] md:text-base">
+          {lang === "vi"
+            ? "Công nghệ âm thầm nâng đỡ nhịp sống và sự gắn kết trong gia đình."
+            : "Technology that quietly supports family rhythm and connection."}
+        </p>
+      </div>
+      <div className="absolute -bottom-10 right-[4%] h-[104%] w-[51%] rotate-[2deg] overflow-hidden rounded-[1.5rem] border-[7px] border-white bg-white shadow-2xl transition-transform duration-[1200ms] ease-out group-hover:-translate-y-3 group-hover:rotate-0">
+        <img src={NEP_NHA_THUMBNAIL_URL} alt="Nếp Nhà original project thumbnail" className="h-full w-full object-contain" />
+      </div>
+      <div className="absolute bottom-7 left-7 z-10 flex gap-2">
+        {["Care", "Home", "Memory"].map((item) => (
+          <span key={item} className="rounded-full bg-[#365b2b] px-3 py-1.5 text-[0.65rem] uppercase tracking-[0.14em] text-white">
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function MemeProjectThumbnail({ lang }: { lang: "en" | "vi" }) {
   const kicker = lang === "vi" ? "Website redesign" : "Website redesign";
@@ -221,8 +268,9 @@ export function Work() {
                           alt={p.imageAlt}
                           className={`w-full h-full transition-transform duration-[1200ms] ease-out group-hover:scale-105 ${
                             p.fit === "contain" ? "object-contain" : "object-cover"
-                          } ${p.thumbnail === "meme" || p.thumbnail === "murror" ? "hidden" : "block"}`}
+                          } ${p.thumbnail === "meme" || p.thumbnail === "murror" || p.thumbnail === "nepnha" ? "hidden" : "block"}`}
                         />
+                        {p.thumbnail === "nepnha" && <NepNhaProjectThumbnail lang={lang} />}
                         {p.thumbnail === "meme" && <MemeProjectThumbnail lang={lang} />}
                         {p.thumbnail === "murror" && <MurrorProjectThumbnail lang={lang} />}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -244,37 +292,60 @@ export function Work() {
                     >
                       {p.title}
                     </h3>
+                    {copy.context && (
+                      <div className="mt-4 inline-flex self-start rounded-full border border-neutral-900/15 bg-white/60 px-4 py-2 text-xs font-medium tracking-[0.04em] text-neutral-700">
+                        {copy.context}
+                      </div>
+                    )}
                     <p
-                      className="mt-3 text-neutral-600 leading-snug"
+                      className={`${copy.context ? "mt-5" : "mt-3"} text-neutral-600 leading-snug`}
                       style={{ fontSize: "1.0625rem" }}
                     >
                       {copy.subtitle}
                     </p>
 
-                    <div className="mt-8 space-y-5">
-                      <div>
-                        <div className="text-xs tracking-[0.18em] uppercase text-[#6b5cff] mb-2">
-                          {t.work.problemLabel}
-                        </div>
-                        <p
-                          className="text-neutral-800 leading-relaxed"
-                          style={{ fontSize: "0.95rem" }}
-                        >
-                          {copy.problem}
-                        </p>
+                    {copy.homeDetails ? (
+                      <div className="mt-8 space-y-5">
+                        {copy.homeDetails.map((detail) => (
+                          <div key={detail.label}>
+                            <div className="mb-2 text-xs uppercase tracking-[0.18em] text-[#6b5cff]">
+                              {detail.label}
+                            </div>
+                            <p
+                              className="leading-relaxed text-neutral-800"
+                              style={{ fontSize: "0.95rem" }}
+                            >
+                              {detail.body}
+                            </p>
+                          </div>
+                        ))}
                       </div>
-                      <div>
-                        <div className="text-xs tracking-[0.18em] uppercase text-[#6b5cff] mb-2">
-                          {t.work.solutionLabel}
+                    ) : (
+                      <div className="mt-8 space-y-5">
+                        <div>
+                          <div className="mb-2 text-xs uppercase tracking-[0.18em] text-[#6b5cff]">
+                            {t.work.problemLabel}
+                          </div>
+                          <p
+                            className="leading-relaxed text-neutral-800"
+                            style={{ fontSize: "0.95rem" }}
+                          >
+                            {copy.problem}
+                          </p>
                         </div>
-                        <p
-                          className="text-neutral-800 leading-relaxed"
-                          style={{ fontSize: "0.95rem" }}
-                        >
-                          {copy.solution}
-                        </p>
+                        <div>
+                          <div className="mb-2 text-xs uppercase tracking-[0.18em] text-[#6b5cff]">
+                            {t.work.solutionLabel}
+                          </div>
+                          <p
+                            className="leading-relaxed text-neutral-800"
+                            style={{ fontSize: "0.95rem" }}
+                          >
+                            {copy.solution}
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     <div className="mt-8 flex flex-wrap gap-2">
                       {p.tags.map((tag) => (
