@@ -61,6 +61,19 @@ function deleteLocalFile(relativePath) {
   }
 }
 
+function readExistingAssets() {
+  if (!fs.existsSync(outputFile)) {
+    return {};
+  }
+
+  try {
+    const manifest = JSON.parse(fs.readFileSync(outputFile, "utf8"));
+    return manifest.assets || {};
+  } catch {
+    return {};
+  }
+}
+
 async function uploadSingle(filePath) {
   const relativePath = toImportRelativePath(filePath);
   const publicId = toPublicId(relativePath);
@@ -103,7 +116,7 @@ async function main() {
     folder: cloudFolder,
     deletedLocalFiles: shouldDeleteLocal,
     excluded: Array.from(excludedRelativePaths),
-    assets: {},
+    assets: readExistingAssets(),
   };
 
   for (const entry of allFiles) {

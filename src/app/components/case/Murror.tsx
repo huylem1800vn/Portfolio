@@ -3,6 +3,7 @@ import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp 
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
+import { NextProjectFooter } from "./NextProjectFooter";
 import onboardingJoy from "../../../imports/murror/ui/onboarding-joy.png";
 import onboardingSadness from "../../../imports/murror/ui/onboarding-sadness.png";
 import onboardingDisgust from "../../../imports/murror/ui/onboarding-disgust.png";
@@ -157,7 +158,7 @@ const COPY = {
     needLabel: "Need",
     oppLabel: "Opportunity",
     next: "Next case study",
-    nextProject: "MeMe · YaMe Redesign",
+    nextProject: "Ăng Ăng · Food Discovery App",
   },
 
   vi: {
@@ -281,7 +282,7 @@ const COPY = {
     needLabel: "Nhu cầu",
     oppLabel: "Cơ hội",
     next: "Case study tiếp theo",
-    nextProject: "MeMe · Redesign YaMe",
+    nextProject: "Ăng Ăng · Food Discovery App",
   },
 };
 
@@ -435,7 +436,7 @@ export function Murror() {
         />
 
         {/* HERO */}
-        <section className="pt-32 md:pt-44 pb-20 md:pb-28">
+        <section className="pt-24 md:pt-28 pb-12 md:pb-16">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12">
             <motion.div
               initial={{ opacity: 0, y: 8 }}
@@ -452,7 +453,7 @@ export function Murror() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="mt-8 text-xs tracking-[0.2em] uppercase opacity-70"
+              className="mt-4 text-xs tracking-[0.2em] uppercase opacity-70 font-medium"
             >
               {c.title}
             </motion.div>
@@ -461,19 +462,19 @@ export function Murror() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="mt-3 tracking-[-0.05em] leading-[0.85]"
-              style={{ fontFamily: "Fraunces, serif", fontWeight: 300, fontSize: "clamp(4.5rem, 18vw, 16rem)" }}
+              className="mt-2 tracking-[-0.05em] leading-[0.85]"
+              style={{ fontFamily: "Fraunces, serif", fontWeight: 300, fontSize: "clamp(3.5rem, 10vw, 7.5rem)" }}
             >
               UN<span className="italic" style={{ color: VIOLET }}>F</span>OLD
             </motion.h1>
 
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
               <motion.p
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="md:col-span-7 tracking-[-0.02em] leading-[1.1]"
-                style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
+                className="md:col-span-7 tracking-[-0.02em] leading-[1.15]"
+                style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(1.35rem, 2.5vw, 2rem)" }}
               >
                 {c.headline}
               </motion.p>
@@ -766,42 +767,9 @@ export function Murror() {
             {c.reflection.body}
           </motion.p>
 
-          <a
-            href="#case/meme"
-            className="mt-20 group inline-flex items-center justify-between w-full p-6 md:p-10 rounded-3xl backdrop-blur-md"
-            style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
-          >
-            <div>
-              <div className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: VIOLET }}>{c.next}</div>
-              <div style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(2rem, 5vw, 3.5rem)" }}>{c.nextProject}</div>
-            </div>
-            <span className="w-14 h-14 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform" style={{ background: `linear-gradient(135deg, ${VIOLET}, ${BLUE})`, color: INK }}>
-              <ArrowUpRight size={20} />
-            </span>
-          </a>
         </Section>
 
-        {/* FOOTER */}
-        <footer className="py-16 border-t" style={{ borderColor: BORDER }}>
-          <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
-            <div className="text-xs tracking-[0.2em] uppercase opacity-50">
-              © 2026 Huỳnh Minh Huy · Murror Case Study
-            </div>
-            <div className="flex flex-wrap gap-6 text-sm">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:opacity-100 opacity-70 transition-opacity inline-flex items-center gap-1"
-                >
-                  {link.label} <ArrowUpRight size={14} />
-                </a>
-              ))}
-            </div>
-          </div>
-        </footer>
+        <NextProjectFooter currentSlug="murror" />
       </div>
     </div>
   );

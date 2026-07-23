@@ -1,10 +1,11 @@
-import logoMarkSvg from "./brand-identity-logo.svg?raw";
+import { ANG_ANG_BRAND_IDENTITY_LOGO_URL } from "../../app/config/ang-ang-assets";
 
 export default function Frame() {
   return (
-    <div
-      className="w-full [&>svg]:block [&>svg]:h-auto [&>svg]:w-full"
-      dangerouslySetInnerHTML={{ __html: logoMarkSvg }}
+    <img
+      src={ANG_ANG_BRAND_IDENTITY_LOGO_URL}
+      alt="Ăng Ăng brand identity logo"
+      className="block h-auto w-full"
     />
   );
 }

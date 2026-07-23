@@ -12,13 +12,18 @@ import {
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
+import { NextProjectFooter } from "./NextProjectFooter";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
-import homeScreen from "../../../imports/meme/screens/home.jpg";
-import guScreen from "../../../imports/meme/screens/gu.jpg";
-import accessoriesScreen from "../../../imports/meme/screens/accessories.jpg";
-import shirtsScreen from "../../../imports/meme/screens/shirts.jpg";
-import cartScreen from "../../../imports/meme/screens/cart.jpg";
-import searchScreen from "../../../imports/meme/screens/search.jpg";
+import { MEME_UI_SCREENS } from "../../config/meme-assets";
+
+const {
+  home: homeScreen,
+  gu: guScreen,
+  accessories: accessoriesScreen,
+  shirts: shirtsScreen,
+  cart: cartScreen,
+  search: searchScreen,
+} = MEME_UI_SCREENS;
 
 const INK = "#050816";
 const PAPER = "#f7f8fb";
@@ -755,40 +760,40 @@ export function MeMe() {
         border="rgba(5,8,22,0.10)"
       />
 
-      <main className="pt-16 md:pt-20">
-        <section className="min-h-[calc(100vh-5rem)] flex items-center px-6 md:px-12 py-20 md:py-28">
+      <main className="pt-12 md:pt-16">
+        <section className="px-6 md:px-12 pt-6 md:pt-8 pb-12 md:pb-16">
           <div className="max-w-[1400px] mx-auto w-full">
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="grid lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-16 items-center"
+              className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-12 items-start"
             >
               <div>
-                <div className="text-xs md:text-sm tracking-[0.22em] uppercase mb-7" style={{ color: YELLOW }}>
+                <div className="text-xs md:text-sm tracking-[0.22em] uppercase mb-4" style={{ color: YELLOW }}>
                   {copy.badge}
                 </div>
                 <h1
                   className="tracking-[-0.055em] leading-[0.92]"
-                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(3.5rem, 9vw, 9rem)" }}
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(3.2rem, 7.5vw, 5.8rem)" }}
                 >
                   MeMe
                 </h1>
-                <div className="mt-7 text-xs md:text-sm tracking-[0.28em] uppercase text-neutral-500">
+                <div className="mt-4 text-xs md:text-sm tracking-[0.28em] uppercase text-neutral-500 font-medium">
                   {copy.concept}
                 </div>
-                <h2 className="mt-5 max-w-[760px] text-3xl md:text-5xl leading-[1.05] tracking-[-0.04em]">
+                <h2 className="mt-4 max-w-[760px] text-2xl md:text-4xl leading-[1.08] tracking-[-0.04em]">
                   {copy.headline}
                 </h2>
-                <p className="mt-7 max-w-[640px] text-neutral-600 leading-relaxed text-lg">
+                <p className="mt-4 max-w-[640px] text-neutral-600 leading-relaxed text-sm md:text-base">
                   {copy.description}
                 </p>
 
-                <div className="mt-10 flex flex-col sm:flex-row gap-3">
+                <div className="mt-7 flex flex-col sm:flex-row gap-3">
                   <button
                     type="button"
                     onClick={() => scrollToCaseSection("ui")}
-                    className="inline-flex items-center justify-center gap-3 rounded-full bg-black text-white px-6 py-4 text-sm hover:bg-[#f4bd18] hover:text-black transition-colors"
+                    className="inline-flex items-center justify-center gap-3 rounded-full bg-black text-white px-6 py-3 text-sm font-medium hover:bg-[#f4bd18] hover:text-black transition-colors"
                   >
                     {copy.cta1}
                     <ArrowUpRight size={16} />
@@ -796,7 +801,7 @@ export function MeMe() {
                   <button
                     type="button"
                     onClick={() => scrollToCaseSection("flow")}
-                    className="inline-flex items-center justify-center gap-3 rounded-full border border-neutral-300 px-6 py-4 text-sm hover:border-black hover:bg-white transition-colors"
+                    className="inline-flex items-center justify-center gap-3 rounded-full border border-neutral-300 px-6 py-3 text-sm font-medium hover:border-black hover:bg-white transition-colors"
                   >
                     {copy.cta2}
                   </button>
@@ -1038,29 +1043,23 @@ export function MeMe() {
           </div>
         </section>
 
-        <section id="reflection" className="px-6 md:px-12 py-24 md:py-32 bg-black text-white">
+        <section id="reflection" className="px-6 md:px-12 py-20 bg-black text-white">
           <div className="max-w-[1200px] mx-auto">
             <SectionLabel>( 07 · Reflection )</SectionLabel>
             <h2
               className="tracking-[-0.04em] leading-[1]"
-              style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6rem)" }}
+              style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
             >
               {copy.reflectionTitle}
             </h2>
-            <p className="mt-8 text-xl md:text-2xl leading-relaxed text-neutral-300 max-w-[980px]">
+            <p className="mt-6 text-lg md:text-xl leading-relaxed text-neutral-300 max-w-[980px]">
               {copy.reflection}
             </p>
-
-            <a
-              href="#case/murror"
-              className="mt-14 inline-flex items-center gap-3 rounded-full border border-white/20 px-7 py-4 text-white hover:bg-white hover:text-black transition-colors"
-            >
-              {copy.next} · {copy.nextProject}
-              <ArrowUpRight size={18} />
-            </a>
           </div>
         </section>
       </main>
+
+      <NextProjectFooter currentSlug="meme" />
     </div>
   );
 }

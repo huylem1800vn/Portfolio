@@ -1,10 +1,12 @@
-export const NEP_NHA_THUMBNAIL_URL = "/assets/nep-nha/thumbnail.png";
-export const NEP_NHA_LOGO_MARK_URL = "/assets/nep-nha/logo-mark.svg";
+import { PROJECT_ASSETS } from "./project-assets.generated";
+
+export const NEP_NHA_THUMBNAIL_URL = PROJECT_ASSETS.nepNha.thumbnail.secureUrl;
+export const NEP_NHA_LOGO_MARK_URL = PROJECT_ASSETS.nepNha.logoMark.secureUrl;
 
 export const NEP_NHA_UI = {
-  onboarding: "/assets/nep-nha/onboarding.png",
-  today: "/assets/nep-nha/today.png",
-  family: "/assets/nep-nha/family.png",
-  home: "/assets/nep-nha/home.png",
-  memories: "/assets/nep-nha/memories.png",
+  onboarding: PROJECT_ASSETS.nepNha.onboarding.secureUrl,
+  today: PROJECT_ASSETS.nepNha.today.secureUrl,
+  family: PROJECT_ASSETS.nepNha.family.secureUrl,
+  home: PROJECT_ASSETS.nepNha.home.secureUrl,
+  memories: PROJECT_ASSETS.nepNha.memories.secureUrl,
 } as const;

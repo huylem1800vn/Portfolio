@@ -28,6 +28,7 @@ import { useI18n } from "../../i18n";
 import { HDBIZ_UI_CONCEPT_URL } from "../../config/hdbiz-assets";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
+import { NextProjectFooter } from "./NextProjectFooter";
 
 const BLUE = "#0066CC";
 const BLUE_DARK = "#004A99";
@@ -189,7 +190,7 @@ const COPY = {
     ending:
       "Designing banking products is not only about creating beautiful interfaces, but also about translating complex business requirements into intuitive and reliable user experiences.",
     next: "Next case study",
-    nextProject: "Ăng Ăng · Food Discovery",
+    nextProject: "Nếp Nhà · Family Living System",
   },
   vi: {
     sections: [
@@ -342,7 +343,7 @@ const COPY = {
     ending:
       "Thiết kế sản phẩm ngân hàng không chỉ là tạo ra giao diện đẹp, mà còn là chuyển hóa những yêu cầu nghiệp vụ phức tạp thành trải nghiệm trực quan, đáng tin và dễ sử dụng.",
     next: "Case study tiếp theo",
-    nextProject: "Ăng Ăng · Food Discovery",
+    nextProject: "Nếp Nhà · Family Living System",
   },
 };
 
@@ -390,24 +391,24 @@ export function HDBiz() {
         border="rgba(16,24,40,0.10)"
       />
 
-      <main className="pt-16 md:pt-20">
-        <section className="px-6 md:px-12 py-20 md:py-28">
-          <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-12 lg:gap-16 items-center">
+      <main className="pt-12 md:pt-16">
+        <section className="px-6 md:px-12 pt-6 md:pt-8 pb-12 md:pb-16">
+          <div className="max-w-[1440px] mx-auto grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-12 items-start">
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-              <div className="text-xs tracking-[0.24em] uppercase mb-6" style={{ color: BLUE }}>{c.hero.badge}</div>
-              <h1 className="tracking-[-0.06em] leading-[0.92]" style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(4rem, 10vw, 9rem)" }}>
+              <div className="text-xs tracking-[0.24em] uppercase mb-4" style={{ color: BLUE }}>{c.hero.badge}</div>
+              <h1 className="tracking-[-0.06em] leading-[0.92]" style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(3.2rem, 7.5vw, 5.8rem)" }}>
                 {c.hero.title}
               </h1>
-              <p className="mt-5 text-xl md:text-2xl text-[#475467]">{c.hero.subtitle}</p>
-              <h2 className="mt-8 max-w-[780px] text-2xl md:text-4xl lg:text-[2.75rem] leading-[1.08] tracking-[-0.035em]">
+              <p className="mt-3 text-lg md:text-xl font-medium text-[#475467]">{c.hero.subtitle}</p>
+              <h2 className="mt-5 max-w-[720px] text-xl md:text-3xl leading-[1.1] tracking-[-0.035em]">
                 {c.hero.headline}
               </h2>
-              <p className="mt-7 max-w-[680px] text-lg leading-relaxed" style={{ color: TEXT }}>{c.hero.body}</p>
-              <div className="mt-9 flex flex-col sm:flex-row gap-3">
-                <button type="button" onClick={() => scrollToCaseSection("responsibilities")} className="rounded-full px-6 py-4 text-sm text-white transition-colors hover:bg-[#004A99]" style={{ backgroundColor: BLUE }}>
+              <p className="mt-4 max-w-[640px] text-sm md:text-base leading-relaxed" style={{ color: TEXT }}>{c.hero.body}</p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <button type="button" onClick={() => scrollToCaseSection("responsibilities")} className="rounded-full px-6 py-3 text-sm text-white font-medium transition-colors hover:bg-[#004A99]" style={{ backgroundColor: BLUE }}>
                   {c.hero.cta1}
                 </button>
-                <button type="button" onClick={() => scrollToCaseSection("process")} className="rounded-full px-6 py-4 text-sm border transition-colors hover:bg-[#F7FBFF]" style={{ borderColor: LINE }}>
+                <button type="button" onClick={() => scrollToCaseSection("process")} className="rounded-full px-6 py-3 text-sm font-medium border transition-colors hover:bg-[#F7FBFF]" style={{ borderColor: LINE }}>
                   {c.hero.cta2}
                 </button>
               </div>
@@ -417,7 +418,7 @@ export function HDBiz() {
             </motion.div>
           </div>
 
-          <div className="max-w-[1440px] mx-auto mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="max-w-[1440px] mx-auto mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {c.hero.info.map(([k, v]) => (
               <div key={k} className="rounded-2xl border bg-white p-5" style={{ borderColor: LINE }}>
                 <div className="text-xs tracking-[0.18em] uppercase mb-2" style={{ color: MUTED }}>{k}</div>
@@ -626,18 +627,16 @@ export function HDBiz() {
           </div>
         </section>
 
-        <section className="px-6 md:px-12 py-24 md:py-32 text-white" style={{ background: `linear-gradient(135deg, ${BLUE_DARK}, ${BLUE})` }}>
+        <section className="px-6 md:px-12 py-20 text-white" style={{ background: `linear-gradient(135deg, ${BLUE_DARK}, ${BLUE})` }}>
           <div className="max-w-[1200px] mx-auto">
-            <p className="tracking-[-0.04em] leading-[1.08]" style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(2.25rem, 5vw, 5.5rem)" }}>
+            <p className="tracking-[-0.04em] leading-[1.08]" style={{ fontFamily: "Fraunces, serif", fontSize: "clamp(2rem, 4vw, 4.5rem)" }}>
               “{c.ending}”
             </p>
-            <a href="#case/angang" className="mt-14 inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-medium transition-transform hover:scale-[1.02]" style={{ color: BLUE_DARK }}>
-              {c.next} · {c.nextProject}
-              <ArrowUpRight size={17} />
-            </a>
           </div>
         </section>
       </main>
+
+      <NextProjectFooter currentSlug="hdbiz" />
     </div>
   );
 }

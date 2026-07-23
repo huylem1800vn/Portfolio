@@ -23,6 +23,7 @@ import {
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
+import { NextProjectFooter } from "./NextProjectFooter";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import Onboarding from "../../../imports/Onboarding/Onboarding";
 import HomeScreen from "../../../imports/Home/Home";
@@ -602,7 +603,7 @@ const COPY = {
       body:
         "This project helped me see that food discovery is not just about showing more options. A better experience should ease uncertainty, bring the right context into view, and help people choose with more confidence based on their mood, their moment, and the people they are with.",
       cta1: "Back to Portfolio",
-      cta2: "Next Project · Nếp Nhà",
+      cta2: "Next Project · HD Bank Business",
     },
     labels: {
       coreMessage: "Core message",
@@ -1090,7 +1091,7 @@ const COPY = {
       body:
         "Dự án này giúp tôi nhận ra rằng khám phá địa điểm ăn uống không chỉ nằm ở việc đưa ra thêm nhiều lựa chọn. Một trải nghiệm tốt hơn cần làm dịu sự phân vân, đưa đúng ngữ cảnh ra trước mắt và giúp người dùng chọn quán với nhiều tự tin hơn, dựa trên tâm trạng, thời điểm và bối cảnh xã hội của riêng họ.",
       cta1: "Về Portfolio",
-      cta2: "Dự án tiếp theo · Nếp Nhà",
+      cta2: "Dự án tiếp theo · HD Bank Business",
     },
     labels: {
       coreMessage: "Thông điệp cốt lõi",
@@ -1326,17 +1327,17 @@ export function AngAng() {
       />
 
       {/* HERO */}
-      <section className="pt-32 md:pt-40 pb-16 md:pb-24">
+      <section className="pt-24 md:pt-28 pb-12 md:pb-16">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             <div className="lg:col-span-7">
               <Logo />
-              <div className="mt-8 text-xs tracking-[0.22em] uppercase" style={{ color: GREEN_DARK, fontWeight: 500 }}>
+              <div className="mt-5 text-xs tracking-[0.22em] uppercase" style={{ color: GREEN_DARK, fontWeight: 500 }}>
                 {t.badge}
               </div>
               <h1
-                className="mt-5 tracking-[-0.03em] leading-[0.92]"
-                style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(3.5rem, 9vw, 8rem)" }}
+                className="mt-3 tracking-[-0.03em] leading-[0.92]"
+                style={{ fontFamily: "Fraunces, serif", fontWeight: 400, fontSize: "clamp(3.2rem, 7.5vw, 5.8rem)" }}
               >
                 {t.concept.split("").map((c, i) => (
                   <span key={i} style={{ color: i === 2 ? GREEN_DARK : INK, fontStyle: i === 2 ? "italic" : "normal" }}>
@@ -1344,17 +1345,17 @@ export function AngAng() {
                   </span>
                 ))}
               </h1>
-              <p className="mt-7 max-w-[60ch]" style={{ fontSize: "1.25rem", lineHeight: 1.5, color: INK }}>
+              <p className="mt-5 max-w-[60ch] font-medium" style={{ fontSize: "1.18rem", lineHeight: 1.45, color: INK }}>
                 {t.headline}
               </p>
-              <p className="mt-5 max-w-[58ch]" style={{ color: MUTED, lineHeight: 1.6 }}>
+              <p className="mt-3.5 max-w-[58ch] text-sm md:text-base" style={{ color: MUTED, lineHeight: 1.6 }}>
                 {t.description}
               </p>
-              <div className="mt-10 flex flex-wrap gap-3">
+              <div className="mt-7 flex flex-wrap gap-3">
                 <button
                   type="button"
                   onClick={() => scrollToCaseSection("research")}
-                  className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm transition-all"
+                  className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm font-medium transition-all"
                   style={{ backgroundColor: GREEN, color: "#fff" }}
                 >
                   <span>{t.cta1}</span>
@@ -1368,7 +1369,7 @@ export function AngAng() {
                 <button
                   type="button"
                   onClick={() => scrollToCaseSection("system")}
-                  className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-all hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 text-sm font-medium rounded-full px-5 py-3 transition-all hover:-translate-y-0.5"
                   style={{
                     border: `1px solid ${GREEN_DARK}`,
                     color: GREEN_DARK,
@@ -1387,34 +1388,34 @@ export function AngAng() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="relative rounded-[28px] overflow-hidden" style={{ backgroundColor: GREEN_LIGHT, aspectRatio: "4 / 5" }}>
+              <div className="relative rounded-[24px] overflow-hidden shadow-lg" style={{ backgroundColor: GREEN_LIGHT, aspectRatio: "16 / 11", maxHeight: "380px" }}>
                 <ImageWithFallback
                   src={HERO_IMG}
                   alt="Warm interior of a cozy local eatery in Ho Chi Minh City"
                   className="w-full h-full object-cover"
                 />
                 <div
-                  className="absolute -bottom-6 -left-6 px-5 py-4 rounded-2xl rotate-[-4deg]"
-                  style={{ backgroundColor: YELLOW, color: INK, boxShadow: "0 20px 40px -20px rgba(0,0,0,0.25)" }}
+                  className="absolute -bottom-4 -left-4 px-4 py-3 rounded-2xl rotate-[-3deg]"
+                  style={{ backgroundColor: YELLOW, color: INK, boxShadow: "0 16px 32px -16px rgba(0,0,0,0.25)" }}
                 >
-                  <div className="text-xs tracking-[0.18em] uppercase opacity-70">{L.userThought}</div>
-                  <div style={{ fontFamily: "Fraunces, serif", fontSize: "1.1rem" }}>{L.heroQuote}</div>
+                  <div className="text-[10px] tracking-[0.18em] uppercase opacity-70">{L.userThought}</div>
+                  <div style={{ fontFamily: "Fraunces, serif", fontSize: "1rem" }}>{L.heroQuote}</div>
                 </div>
                 <div
-                  className="absolute top-4 right-4 px-3 py-1.5 rounded-full text-xs"
+                  className="absolute top-4 right-4 px-3 py-1.5 rounded-full text-xs font-medium"
                   style={{ backgroundColor: "#fff", color: GREEN_DARK, border: `1px solid ${BORDER}` }}
                 >
                   ● {L.openNow}
                 </div>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 gap-3">
+              <div className="mt-5 grid grid-cols-2 gap-3">
                 {t.meta.map((m) => (
-                  <div key={m.k} className="rounded-2xl p-4" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
-                    <div className="text-[10px] tracking-[0.2em] uppercase" style={{ color: GREEN_DARK }}>
+                  <div key={m.k} className="rounded-xl p-3.5" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+                    <div className="text-[10px] tracking-[0.2em] uppercase font-semibold" style={{ color: GREEN_DARK }}>
                       {m.k}
                     </div>
-                    <div className="mt-1.5" style={{ fontSize: "0.92rem", lineHeight: 1.4 }}>
+                    <div className="mt-1 font-medium" style={{ fontSize: "0.88rem", lineHeight: 1.35 }}>
                       {m.v}
                     </div>
                   </div>
@@ -3185,58 +3186,9 @@ export function AngAng() {
         >
           {t.reflection.body}
         </p>
-        <div className="mt-12 flex flex-wrap gap-3">
-          <a
-            href="#"
-            className="group inline-flex items-center gap-2 rounded-full pl-6 pr-2 py-2 text-sm transition-all"
-            style={{ backgroundColor: GREEN, color: "#fff" }}
-          >
-            <span>{t.reflection.cta1}</span>
-            <span
-              className="w-8 h-8 rounded-full flex items-center justify-center group-hover:rotate-45 transition-transform"
-              style={{ backgroundColor: "#fff", color: GREEN_DARK }}
-            >
-              <ArrowUpRight size={16} />
-            </span>
-          </a>
-          <a
-            href="#case/nepnha"
-            className="inline-flex items-center gap-2 text-sm rounded-full px-5 py-3 transition-colors"
-            style={{
-              border: "1px solid rgba(255,255,255,0.3)",
-              color: "#fff",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.05)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "transparent";
-            }}
-          >
-            {t.reflection.cta2}
-          </a>
-        </div>
-        <div
-          className="mt-16 pt-8 flex flex-wrap items-center justify-between gap-4 text-xs"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.12)", color: "rgba(255,255,255,0.6)" }}
-        >
-          <div>© 2025 Huỳnh Minh Huy · Ăng Ăng Case Study</div>
-          <div className="flex gap-5">
-            <a href="https://www.behance.net/minhhuyhunh2" target="_blank" rel="noreferrer" className="hover:text-white">
-              Behance
-            </a>
-            <a href="https://www.linkedin.com/in/huy-huynh-minh/" target="_blank" rel="noreferrer" className="hover:text-white">
-              LinkedIn
-            </a>
-            <a href="mailto:huylem1800vn@gmail.com" className="hover:text-white">
-              Email
-            </a>
-            <a href={CV_URL} target="_blank" rel="noreferrer" className="hover:text-white">
-              Resume
-            </a>
-          </div>
-        </div>
       </Section>
+
+      <NextProjectFooter currentSlug="angang" />
     </div>
   );
 }
