@@ -8,13 +8,15 @@ import {
   Shirt,
   ShoppingBag,
   Sparkles,
+  Maximize2,
+  X,
 } from "lucide-react";
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
 import { NextProjectFooter } from "./NextProjectFooter";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
-import { MEME_UI_SCREENS } from "../../config/meme-assets";
+import { MEME_LEGACY_SCREENS, MEME_UI_SCREENS } from "../../config/meme-assets";
 
 const {
   home: homeScreen,
@@ -23,7 +25,15 @@ const {
   shirts: shirtsScreen,
   cart: cartScreen,
   search: searchScreen,
+  productDetail: productDetailScreen,
 } = MEME_UI_SCREENS;
+
+const {
+  home: legacyHomeScreen,
+  gu: legacyGuScreen,
+  listing: legacyListingScreen,
+  productDetail: legacyProductDetailScreen,
+} = MEME_LEGACY_SCREENS;
 
 const INK = "#050816";
 const PAPER = "#f7f8fb";
@@ -39,6 +49,7 @@ const COPY = {
       { id: "overview", label: "Overview" },
       { id: "audit", label: "Audit" },
       { id: "competitors", label: "Competitors" },
+      { id: "comparison", label: "Before / After" },
       { id: "system", label: "System" },
       { id: "flow", label: "Flow" },
       { id: "ui", label: "UI" },
@@ -73,27 +84,27 @@ const COPY = {
     ],
     auditTitle: "The main friction was not the catalog size, but how the catalog was presented.",
     auditIntro:
-      "The redesign started from a simple question: when a user enters a fashion store online, what helps them feel oriented enough to keep browsing?",
+      "I reviewed the old homepage, navigation, product grid, and product detail page to see where the interface made shoppers pause, scan twice, or work out the next step for themselves.",
     audit: [
       {
         icon: "search",
         k: "Product discovery",
-        v: "Users need faster ways to reach collections, new arrivals, promotions, and relevant categories without reading too much at once.",
+        v: "The homepage placed several promotional and product groups close together, so the best place to begin was not immediately clear.",
       },
       {
         icon: "grid",
         k: "Browsing rhythm",
-        v: "Product grids need stronger hierarchy for image, price, discount, size availability, and quick actions.",
+        v: "Product names, prices, discounts, and repeated cards were compact, which slowed down quick scanning and comparison.",
       },
       {
         icon: "shirt",
         k: "Product confidence",
-        v: "A product detail page should answer fit, material, variant, delivery, and return questions before users hesitate.",
+        v: "On the product page, variants, quantity, features, reviews, and actions shared a narrow column while large empty areas interrupted the reading flow.",
       },
       {
         icon: "bag",
         k: "Checkout clarity",
-        v: "Cart and payment steps should reduce surprise costs and keep users aware of what happens next.",
+        v: "Search and post-selection states offered little guidance when shoppers had not yet decided what to type or where to continue.",
       },
     ],
     competitorLabel: "( 03 · Competitor Research )",
@@ -128,6 +139,109 @@ const COPY = {
           "IconDenim leans into denim attitude and brand personality, helping products feel more expressive instead of generic.",
         takeaway:
           "Balance clear product information with stronger fashion personality so the interface does not feel too plain.",
+      },
+    ],
+    comparisonLabel: "( 04 · Before & After )",
+    comparisonTitle:
+      "The redesign changed more than the surface. It rebuilt how shoppers move from inspiration to a confident choice.",
+    comparisonIntro:
+      "A single before-and-after image can make redesign look like a visual refresh. I broke the shopping journey into six decisions to show where the old experience created friction and how MeMe responded at each step.",
+    comparisonBefore: "Before · YaMe website",
+    comparisonAfter: "After · MeMe redesign",
+    journeyLabel: "Shopping journey coverage",
+    journeyStages: [
+      "Start exploring",
+      "Choose by style",
+      "Narrow the options",
+      "Evaluate a product",
+      "Find something quickly",
+      "Review before checkout",
+    ],
+    observedLabel: "What the old UI made difficult",
+    responseLabel: "MeMe design response",
+    intentLabel: "Design intent",
+    evidenceLabel: "What changed in the interface",
+    comparisonChapters: [
+      {
+        stage: "01 · Start exploring",
+        title: "Homepage: from a promotion board to the beginning of a fashion story",
+        observed:
+          "The old homepage opened with sale information and a technology-led visual. Many product groups followed, but the page did not clearly signal whether shoppers should begin with a campaign, a category, or an offer.",
+        response:
+          "MeMe uses a fashion campaign as the opening layer, then creates a consistent sequence: highlighted products, style directions, best sellers, and supporting collections.",
+        intent:
+          "Guide shoppers from inspiration toward concrete products instead of asking them to assemble meaning from separate sales blocks.",
+        evidence: [
+          "Brand story appears before price-led content",
+          "Editorial sections lead naturally into products",
+          "A repeated visual rhythm makes the long page easier to follow",
+        ],
+      },
+      {
+        stage: "02 · Choose by style",
+        title: "Gu: from a long introduction to a practical way of discovering products",
+        observed:
+          "The original Gu page contained useful editorial content, but it sat inside a narrow column. Style explanation and products felt separated, so shoppers had to read for a while before knowing what they could explore next.",
+        response:
+          "The redesign turns Gu into three clear directions. Each one combines reference imagery, a short explanation, smaller style branches, and related products.",
+        intent:
+          "Make Gu an actual navigation model for shoppers who think in outfits and identity, not only in categories such as shirts or trousers.",
+        evidence: [
+          "Three style directions are visible from the start",
+          "References, descriptions, and products stay in one context",
+          "Every editorial block includes a clear path into shopping",
+        ],
+      },
+      {
+        stage: "03 · Narrow the options",
+        title: "Product listing: from a compressed catalog to a clearer comparison space",
+        observed:
+          "The old listing used a narrow content area with small cards and compact filters. It displayed many items at once, but product images, names, prices, and offers competed for attention.",
+        response:
+          "MeMe gives filters a stable sidebar, increases product image size, and keeps price, discount, sold count, color, and actions in a predictable order.",
+        intent:
+          "Show fewer products in one viewport, but help shoppers understand and compare each option with less effort.",
+        evidence: [
+          "Persistent filters remain visible while browsing",
+          "A three-column grid gives product imagery more weight",
+          "Every card follows the same information hierarchy",
+        ],
+      },
+      {
+        stage: "04 · Evaluate a product",
+        title: "Product detail: from a narrow information column to a guided purchase decision",
+        observed:
+          "In the old product page, size, quantity, actions, product features, and reviews shared a narrow column. Large empty areas also interrupted the connection between evaluation and related products.",
+        response:
+          "The redesigned page creates four layers: purchase controls, product information, quality evidence, then ratings and related products.",
+        intent:
+          "Answer the questions shoppers naturally ask in order: does it suit me, what is it made of, can I trust it, and what else should I consider?",
+        evidence: [
+          "Core purchase controls stay above the fold",
+          "Product features become scannable visual cards",
+          "Ratings, reviews, and related items support the final decision",
+        ],
+      },
+    ],
+    continuationLabel: "The journey continues",
+    continuationTitle:
+      "The redesign also covers the moments between choosing a product and committing to checkout.",
+    continuationIntro:
+      "Search and cart are not decorative extras. They preserve continuity when shoppers know what they want, change direction, or need one last review before paying.",
+    continuationStates: [
+      {
+        stage: "05 · Find something quickly",
+        title: "Search becomes a useful starting point",
+        description:
+          "A complete search state combines a clear input, popular keywords, a new-customer offer, and a store shortcut. It supports shoppers even before they know the exact product name.",
+        points: ["Suggested queries", "Promotional shortcut", "Store finder"],
+      },
+      {
+        stage: "06 · Review before checkout",
+        title: "Cart becomes a confirmation step",
+        description:
+          "Products, quantity, current price, original price, savings, notes, and the checkout action are separated so shoppers can verify their choices without rereading the entire page.",
+        points: ["Clear order summary", "Visible savings", "Focused checkout action"],
       },
     ],
     systemTitle: "Design direction",
@@ -175,6 +289,7 @@ const COPY = {
       { id: "overview", label: "Tổng quan" },
       { id: "audit", label: "Audit" },
       { id: "competitors", label: "Đối thủ" },
+      { id: "comparison", label: "Trước / Sau" },
       { id: "system", label: "Hệ thống" },
       { id: "flow", label: "Luồng mua" },
       { id: "ui", label: "Giao diện" },
@@ -209,27 +324,27 @@ const COPY = {
     ],
     auditTitle: "Điểm vướng chính không nằm ở việc có nhiều sản phẩm, mà nằm ở cách sản phẩm được trình bày.",
     auditIntro:
-      "Dự án bắt đầu từ một câu hỏi rất thực tế: khi người dùng bước vào một cửa hàng thời trang online, điều gì giúp họ đủ định hướng để tiếp tục xem?",
+      "Tôi xem lại trang chủ, thanh điều hướng, danh sách sản phẩm và trang chi tiết cũ để tìm những chỗ giao diện khiến người mua phải dừng lại, nhìn thêm lần nữa hoặc tự đoán bước tiếp theo.",
     audit: [
       {
         icon: "search",
         k: "Khám phá sản phẩm",
-        v: "Người dùng cần đi nhanh tới bộ sưu tập, hàng mới, ưu đãi và nhóm sản phẩm phù hợp mà không phải đọc quá nhiều cùng lúc.",
+        v: "Trang chủ đặt nhiều khối khuyến mãi và nhóm sản phẩm gần nhau, nên điểm bắt đầu phù hợp chưa hiện ra ngay.",
       },
       {
         icon: "grid",
         k: "Nhịp xem sản phẩm",
-        v: "Product grid cần phân cấp rõ hơn giữa hình ảnh, giá, khuyến mãi, tình trạng size và hành động nhanh.",
+        v: "Tên sản phẩm, giá, mức giảm và nhiều card lặp lại được đặt khá sát nhau, khiến việc lướt nhanh và so sánh chậm lại.",
       },
       {
         icon: "shirt",
         k: "Niềm tin khi chọn",
-        v: "Trang chi tiết cần trả lời sớm các câu hỏi về form, chất liệu, biến thể, giao hàng và đổi trả trước khi người dùng do dự.",
+        v: "Ở trang chi tiết, biến thể, số lượng, đặc điểm, đánh giá và hành động cùng nằm trong một cột hẹp, trong khi khoảng trắng lớn làm mạch đọc bị ngắt.",
       },
       {
         icon: "bag",
         k: "Thanh toán rõ ràng",
-        v: "Giỏ hàng và thanh toán cần giảm chi phí bất ngờ, đồng thời cho người dùng biết bước tiếp theo sẽ là gì.",
+        v: "Tìm kiếm và các trạng thái sau khi chọn sản phẩm chưa gợi ý nhiều cho người dùng khi họ chưa biết nên nhập gì hoặc đi tiếp theo hướng nào.",
       },
     ],
     competitorLabel: "( 03 · Nghiên cứu đối thủ )",
@@ -266,6 +381,109 @@ const COPY = {
           "Cân bằng giữa thông tin sản phẩm rõ ràng và cá tính thời trang để giao diện không bị quá nhạt.",
       },
     ],
+    comparisonLabel: "( 04 · Trước và sau redesign )",
+    comparisonTitle:
+      "MeMe không chỉ thay đổi vẻ ngoài mà còn làm lại cách người mua đi từ cảm hứng đến một lựa chọn đủ tin tưởng.",
+    comparisonIntro:
+      "Nếu chỉ đặt một cặp ảnh trước và sau cạnh nhau, redesign rất dễ bị hiểu thành một lần thay áo giao diện. Tôi tách hành trình mua sắm thành sáu quyết định để chỉ ra trải nghiệm cũ vướng ở đâu và MeMe đã xử lý từng điểm như thế nào.",
+    comparisonBefore: "Trước · Website YaMe",
+    comparisonAfter: "Sau · MeMe redesign",
+    journeyLabel: "Các bước được redesign",
+    journeyStages: [
+      "Bắt đầu khám phá",
+      "Chọn theo phong cách",
+      "Thu hẹp lựa chọn",
+      "Đánh giá sản phẩm",
+      "Tìm nhanh",
+      "Kiểm tra trước thanh toán",
+    ],
+    observedLabel: "Điểm vướng ở giao diện cũ",
+    responseLabel: "Cách MeMe xử lý",
+    intentLabel: "Mục đích thiết kế",
+    evidenceLabel: "Thay đổi thể hiện trên giao diện",
+    comparisonChapters: [
+      {
+        stage: "01 · Bắt đầu khám phá",
+        title: "Trang chủ: từ bảng khuyến mãi thành điểm bắt đầu của một câu chuyện thời trang",
+        observed:
+          "Trang cũ mở bằng thông tin sale và hình ảnh mang cảm giác công nghệ. Nhiều nhóm sản phẩm xuất hiện liên tiếp, nhưng người xem chưa biết nên bắt đầu từ campaign, danh mục hay ưu đãi.",
+        response:
+          "MeMe dùng campaign thời trang làm lớp mở đầu, sau đó sắp nội dung theo một nhịp thống nhất: sản phẩm nổi bật, các hướng Gu, best seller và những bộ sưu tập liên quan.",
+        intent:
+          "Dẫn người mua từ cảm hứng đến lựa chọn cụ thể, thay vì để họ tự ghép ý nghĩa từ nhiều khối bán hàng rời rạc.",
+        evidence: [
+          "Câu chuyện thương hiệu xuất hiện trước nội dung về giá",
+          "Khối editorial dẫn tự nhiên sang sản phẩm",
+          "Nhịp trình bày lặp lại giúp trang dài dễ theo dõi hơn",
+        ],
+      },
+      {
+        stage: "02 · Chọn theo phong cách",
+        title: "Gu: từ một bài giới thiệu dài thành cách khám phá sản phẩm thực tế",
+        observed:
+          "Trang Gu cũ có nội dung và hình ảnh khá đầy đủ nhưng nằm trong một cột hẹp. Phần giải thích phong cách và sản phẩm chưa nối liền, nên người xem phải đọc khá lâu trước khi biết có thể khám phá gì tiếp.",
+        response:
+          "Bản mới chia Gu thành ba hướng rõ ràng. Mỗi hướng kết hợp ảnh tham chiếu, mô tả ngắn, các nhánh phong cách nhỏ và sản phẩm liên quan.",
+        intent:
+          "Biến Gu thành một cách điều hướng dành cho người mua bắt đầu từ phong cách và bản sắc, thay vì chỉ tìm theo loại áo hoặc quần.",
+        evidence: [
+          "Ba hướng phong cách được nhìn thấy ngay từ đầu",
+          "Hình tham chiếu, mô tả và sản phẩm nằm cùng một ngữ cảnh",
+          "Mỗi khối editorial đều có đường dẫn rõ sang mua sắm",
+        ],
+      },
+      {
+        stage: "03 · Thu hẹp lựa chọn",
+        title: "Danh sách sản phẩm: từ lưới hàng hóa nhỏ sang không gian so sánh rõ ràng hơn",
+        observed:
+          "Danh sách cũ dùng khung nội dung hẹp, card nhỏ và bộ lọc khá gọn. Trang chứa được nhiều sản phẩm cùng lúc, nhưng ảnh, tên, giá và ưu đãi phải cạnh tranh sự chú ý.",
+        response:
+          "MeMe đặt bộ lọc vào sidebar ổn định, tăng kích thước hình sản phẩm và sắp giá, mức giảm, lượt bán, màu sắc cùng hành động theo một thứ tự dễ đoán.",
+        intent:
+          "Hiển thị ít sản phẩm hơn trong một khung hình, nhưng giúp người mua hiểu và so sánh từng lựa chọn nhanh hơn.",
+        evidence: [
+          "Bộ lọc vẫn hiện trong khi xem danh sách",
+          "Lưới ba cột dành nhiều không gian hơn cho hình sản phẩm",
+          "Mọi card dùng chung một thứ tự thông tin",
+        ],
+      },
+      {
+        stage: "04 · Đánh giá sản phẩm",
+        title: "Chi tiết sản phẩm: từ một cột thông tin hẹp thành quyết định mua có dẫn dắt",
+        observed:
+          "Ở trang cũ, size, số lượng, hành động mua, đặc điểm và đánh giá cùng dồn vào một cột hẹp. Khoảng trắng lớn cũng làm mối liên hệ giữa phần đánh giá và sản phẩm gợi ý bị đứt đoạn.",
+        response:
+          "Trang mới chia nội dung thành bốn lớp: thao tác mua, thông tin sản phẩm, bằng chứng về chất lượng, sau đó là đánh giá và sản phẩm liên quan.",
+        intent:
+          "Trả lời lần lượt những câu hỏi tự nhiên khi mua hàng: món này có hợp không, chất liệu ra sao, có đáng tin không và còn lựa chọn nào khác?",
+        evidence: [
+          "Thao tác mua chính nằm ngay trong vùng nhìn đầu tiên",
+          "Đặc điểm sản phẩm được tách thành card dễ quét",
+          "Đánh giá và sản phẩm liên quan hỗ trợ quyết định cuối",
+        ],
+      },
+    ],
+    continuationLabel: "Hành trình vẫn tiếp tục",
+    continuationTitle:
+      "MeMe còn xử lý những khoảnh khắc nằm giữa việc chọn được sản phẩm và sẵn sàng thanh toán.",
+    continuationIntro:
+      "Tìm kiếm và Giỏ hàng không phải hai màn hình trang trí thêm. Chúng giữ cho hành trình liền mạch khi người mua đã có mục tiêu, muốn đổi hướng hoặc cần kiểm tra lần cuối trước khi trả tiền.",
+    continuationStates: [
+      {
+        stage: "05 · Tìm nhanh",
+        title: "Tìm kiếm trở thành một điểm bắt đầu hữu ích",
+        description:
+          "Trạng thái tìm kiếm đầy đủ kết hợp ô nhập rõ ràng, từ khóa phổ biến, ưu đãi cho khách mới và lối tắt tìm cửa hàng. Người mua vẫn được hỗ trợ ngay cả khi chưa nhớ chính xác tên sản phẩm.",
+        points: ["Từ khóa gợi ý", "Lối tắt ưu đãi", "Tìm cửa hàng"],
+      },
+      {
+        stage: "06 · Kiểm tra trước thanh toán",
+        title: "Giỏ hàng trở thành một bước xác nhận",
+        description:
+          "Sản phẩm, số lượng, giá hiện tại, giá cũ, số tiền tiết kiệm, ghi chú và hành động thanh toán được tách rõ để người mua kiểm tra lựa chọn mà không phải đọc lại toàn bộ trang.",
+        points: ["Tóm tắt đơn rõ ràng", "Hiển thị phần tiết kiệm", "Hành động thanh toán tập trung"],
+      },
+    ],
     systemTitle: "Hướng thiết kế",
     systemIntro:
       "Phần giao diện giữ lại tinh thần bán lẻ năng động của YaMe, sau đó làm nó thoáng hơn bằng phân cấp rõ, hình sản phẩm nổi bật hơn và component có thể lặp lại.",
@@ -300,7 +518,7 @@ const COPY = {
     uiIntro:
       "UI board cuối giữ đúng các màn hình MeMe trong Figma: trang chủ, campaign section, danh sách sản phẩm, chi tiết sản phẩm, giỏ hàng, thanh toán, tài khoản, trạng thái đơn hàng và responsive variants.",
     previewLabel: "Figma UI board",
-    reflectionTitle: "Điều tôi học được",
+    reflectionTitle: "Điều em học được",
     reflection:
       "Một website thời trang không chỉ bán quần áo. Nó còn bán sự tự tin trong lựa chọn. Bài học lớn nhất của dự án là cân bằng giữa tinh thần editorial và độ rõ ràng của ecommerce, để giao diện vẫn có chất thời trang nhưng giúp người dùng ra quyết định nhanh hơn.",
     next: "Case study tiếp theo",
@@ -456,57 +674,57 @@ const SHADE_GROUPS = [
 const UI_SCREENS = [
   {
     key: "home",
-    title: "Home",
-    type: "Landing page",
+    category: "featured",
+    title: "Trang chủ (Homepage)",
+    type: "Landing Page · Ecommerce",
     image: homeScreen,
-    height: 560,
-    scrollable: true,
-    duration: 19000,
+    url: "yame.vn/home",
+    height: "460px",
   },
   {
     key: "gu",
-    title: "Gu",
-    type: "Style discovery",
+    category: "featured",
+    title: "Bộ sưu tập GU Phong cách",
+    type: "Style Discovery · Lookbook",
     image: guScreen,
-    height: 560,
-    scrollable: true,
-    duration: 16500,
-  },
-  {
-    key: "accessories",
-    title: "Phụ kiện",
-    type: "Category listing",
-    image: accessoriesScreen,
-    height: 520,
-    scrollable: true,
-    duration: 9500,
+    url: "yame.vn/gu-phong-cach",
+    height: "460px",
   },
   {
     key: "shirts",
-    title: "Áo",
-    type: "Product listing",
+    category: "catalog",
+    title: "Danh mục Áo nam",
+    type: "Product Listing Page",
     image: shirtsScreen,
-    height: 520,
-    scrollable: true,
-    duration: 9500,
+    url: "yame.vn/ao-nam",
+    height: "420px",
+  },
+  {
+    key: "accessories",
+    category: "catalog",
+    title: "Danh mục Phụ kiện",
+    type: "Accessories Category",
+    image: accessoriesScreen,
+    url: "yame.vn/phu-kien",
+    height: "420px",
   },
   {
     key: "cart",
-    title: "Giỏ hàng",
-    type: "Cart summary",
+    category: "checkout",
+    title: "Giỏ hàng & Đơn hàng",
+    type: "Cart & Checkout Flow",
     image: cartScreen,
-    height: 470,
-    scrollable: true,
-    duration: 6500,
+    url: "yame.vn/gio-hang",
+    height: "400px",
   },
   {
     key: "search",
-    title: "Search",
-    type: "Search overlay",
+    category: "checkout",
+    title: "Khung Tìm kiếm thông minh",
+    type: "Smart Search Overlay",
     image: searchScreen,
-    height: 260,
-    scrollable: false,
-    duration: 2600,
+    url: "yame.vn/tim-kiem",
+    height: "400px",
   },
 ];
 
@@ -670,72 +888,76 @@ function MeMeHeroPreview() {
   );
 }
 
-function ScrollableScreenCard({
+function BrowserMockupFrame({
+  src,
+  alt,
   title,
   type,
-  image,
-  height,
-  scrollable,
-  duration,
+  url = "yame.vn/redesign",
+  className = "",
+  maxHeight = "460px",
+  onClick,
 }: {
+  src: string;
+  alt: string;
   title: string;
   type: string;
-  image: string;
-  height: number;
-  scrollable: boolean;
-  duration: number;
+  url?: string;
+  className?: string;
+  maxHeight?: string;
+  onClick: () => void;
 }) {
-  const [active, setActive] = useState(false);
-
   return (
-    <button
-      type="button"
-      onClick={() => scrollable && setActive((current) => !current)}
-      data-active={active}
-      data-scrollable={scrollable}
-      className="meme-screen-card group text-left rounded-[2rem] bg-white border border-neutral-200 overflow-hidden shadow-sm focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:ring-offset-4 focus:ring-offset-[#f7f8fb]"
-      style={{
-        ["--preview-height" as string]: `${height}px`,
-        ["--scroll-duration" as string]: `${duration}ms`,
-      }}
-      aria-label={`${title} ${scrollable ? "preview. Hover or tap to auto scroll." : "preview."}`}
+    <div
+      onClick={onClick}
+      className={`group relative overflow-hidden rounded-[2rem] border border-neutral-200/90 bg-white shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl cursor-pointer ${className}`}
     >
-      <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-neutral-200">
-        <div>
-          <div className="text-[10px] tracking-[0.2em] uppercase text-neutral-400">{type}</div>
-          <div className="mt-1 text-lg font-semibold tracking-[-0.03em]">{title}</div>
+      {/* Browser Window Header Bar */}
+      <div className="flex h-11 items-center justify-between border-b border-neutral-200/80 bg-[#f6f7f9] px-4">
+        <div className="flex items-center gap-1.5">
+          <span className="h-3 w-3 rounded-full bg-[#ff5f56] transition-opacity group-hover:opacity-80" />
+          <span className="h-3 w-3 rounded-full bg-[#ffbd2e] transition-opacity group-hover:opacity-80" />
+          <span className="h-3 w-3 rounded-full bg-[#27c93f] transition-opacity group-hover:opacity-80" />
         </div>
-        {scrollable ? (
-          <span className="rounded-full bg-neutral-950 text-white px-3 py-1.5 text-[10px] tracking-[0.16em] uppercase">
-            Hover / Tap
-          </span>
-        ) : (
-          <span className="rounded-full bg-neutral-100 text-neutral-500 px-3 py-1.5 text-[10px] tracking-[0.16em] uppercase">
-            Static
-          </span>
-        )}
+
+        <div className="flex h-6.5 max-w-[200px] sm:max-w-[260px] flex-1 items-center justify-center rounded-lg border border-neutral-200/90 bg-white px-3 text-[11px] font-medium tracking-tight text-neutral-500 shadow-inner truncate mx-3">
+          🔒 {url}
+        </div>
+
+        <div className="flex items-center gap-1 text-xs font-semibold text-neutral-400 opacity-60 group-hover:opacity-100 transition-opacity">
+          <Maximize2 size={14} />
+        </div>
       </div>
-      <div
-        className="meme-screen-viewport relative overflow-hidden bg-[#f4f4f4]"
-        style={{ height }}
-      >
+
+      {/* Screen Preview Container */}
+      <div className="relative overflow-hidden bg-[#f4f5f8]" style={{ maxHeight }}>
         <ImageWithFallback
-          src={image}
-          alt={`${title} screen from MeMe Figma UI`}
-          className="meme-screen-image w-full h-auto block transition-transform ease-[cubic-bezier(0.22,1,0.36,1)]"
-          style={{ transitionDuration: "var(--scroll-duration)" }}
+          src={src}
+          alt={alt}
+          className="block w-full h-auto object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]"
         />
-        {scrollable && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/18 to-transparent opacity-100 transition-opacity duration-500 group-hover:opacity-0" />
-        )}
+        <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/5" />
       </div>
-    </button>
+
+      {/* Footer Title & Click Hint */}
+      <div className="flex items-center justify-between px-6 py-4 border-t border-neutral-100 bg-white">
+        <div>
+          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#F59E0B]">{type}</div>
+          <div className="text-base font-semibold text-neutral-900 mt-0.5 tracking-tight">{title}</div>
+        </div>
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-900 text-white transition-all group-hover:scale-110 group-hover:bg-[#f4bd18] group-hover:text-black">
+          <ArrowUpRight size={16} />
+        </span>
+      </div>
+    </div>
   );
 }
 
 export function MeMe() {
   const { lang } = useI18n();
   const copy = COPY[lang];
+  const [filterTab, setFilterTab] = useState<"all" | "featured" | "catalog" | "checkout">("all");
+  const [activeScreen, setActiveScreen] = useState<number | null>(null);
 
   return (
     <div
@@ -944,11 +1166,272 @@ export function MeMe() {
           </div>
         </section>
 
+        <section id="comparison" className="px-6 md:px-12 py-16 md:py-24 bg-[#050816] text-white">
+          <div className="max-w-[1400px] mx-auto">
+            <div className="grid lg:grid-cols-[0.78fr_1.22fr] gap-8 lg:gap-12 items-end">
+              <div>
+                <div className="text-xs md:text-sm tracking-[0.24em] uppercase text-[#f4bd18] mb-3">
+                  {copy.comparisonLabel}
+                </div>
+                <h2
+                  className="tracking-[-0.04em] leading-[1]"
+                  style={{
+                    fontFamily: "Fraunces, serif",
+                    fontWeight: 500,
+                    fontSize: "clamp(2.25rem, 4.2vw, 4.25rem)",
+                  }}
+                >
+                  {copy.comparisonTitle}
+                </h2>
+              </div>
+              <p className="max-w-[720px] text-base md:text-lg leading-relaxed text-white/65">
+                {copy.comparisonIntro}
+              </p>
+            </div>
+
+            <div className="mt-8 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-4 md:p-6">
+              <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-white/45">
+                {copy.journeyLabel}
+              </div>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-6">
+                {copy.journeyStages.map((stage, index) => (
+                  <div
+                    key={stage}
+                    className="relative rounded-[1.25rem] border border-white/10 bg-white/[0.04] px-4 py-3.5"
+                  >
+                    <div
+                      className="text-xs font-semibold"
+                      style={{ color: index < 4 ? YELLOW : BLUE }}
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div className="mt-2 text-xs leading-snug text-white/75">{stage}</div>
+                    {index < copy.journeyStages.length - 1 && (
+                      <ArrowUpRight
+                        size={14}
+                        className="absolute right-3 top-3 hidden text-white/20 lg:block"
+                      />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-14 space-y-16 md:space-y-20">
+              {copy.comparisonChapters.map((chapter, index) => {
+                const media = [
+                  {
+                    before: legacyHomeScreen,
+                    after: homeScreen,
+                    beforeAlt: "YaMe homepage before the MeMe redesign",
+                    afterAlt: "MeMe redesigned YaMe homepage",
+                  },
+                  {
+                    before: legacyGuScreen,
+                    after: guScreen,
+                    beforeAlt: "YaMe Gu page before the MeMe redesign",
+                    afterAlt: "MeMe redesigned style discovery page",
+                  },
+                  {
+                    before: legacyListingScreen,
+                    after: shirtsScreen,
+                    beforeAlt: "YaMe product listing before the MeMe redesign",
+                    afterAlt: "MeMe redesigned product listing",
+                  },
+                  {
+                    before: legacyProductDetailScreen,
+                    after: productDetailScreen,
+                    beforeAlt: "YaMe product detail before the MeMe redesign",
+                    afterAlt: "MeMe redesigned product detail",
+                  },
+                ][index];
+                const accent = [YELLOW, BLUE, "#ff6b6b", ROYAL][index];
+
+                return (
+                  <motion.article
+                    key={chapter.title}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-80px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-baseline gap-3 sm:gap-6 border-b border-white/10 pb-4 mb-6">
+                      <div
+                        className="text-xs font-semibold uppercase tracking-[0.2em]"
+                        style={{ color: accent }}
+                      >
+                        {chapter.stage}
+                      </div>
+                      <h3
+                        className="text-2xl sm:text-3xl md:text-4xl tracking-[-0.035em]"
+                        style={{ fontFamily: "Fraunces, serif", fontWeight: 500 }}
+                      >
+                        {chapter.title}
+                      </h3>
+                    </div>
+
+                    <div className="grid gap-5 lg:grid-cols-2">
+                      {[
+                        {
+                          label: copy.comparisonBefore,
+                          image: media.before,
+                          alt: media.beforeAlt,
+                          background: "#151824",
+                          foreground: "white",
+                        },
+                        {
+                          label: copy.comparisonAfter,
+                          image: media.after,
+                          alt: media.afterAlt,
+                          background: "white",
+                          foreground: INK,
+                        },
+                      ].map((item) => (
+                        <div
+                          key={item.label}
+                          className="overflow-hidden rounded-[1.75rem] border border-white/10 shadow-lg"
+                          style={{
+                            backgroundColor: item.background,
+                            color: item.foreground,
+                          }}
+                        >
+                          <div className="flex h-10 items-center gap-2 border-b border-current/10 px-4">
+                            <span className="h-2.5 w-2.5 rounded-full bg-current opacity-25" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-current opacity-15" />
+                            <span className="h-2.5 w-2.5 rounded-full bg-current opacity-10" />
+                            <span className="ml-auto text-[10px] font-bold uppercase tracking-[0.2em] opacity-60">
+                              {item.label}
+                            </span>
+                          </div>
+                          <div className="h-[260px] overflow-hidden bg-[#f2f3f5] sm:h-[340px] lg:h-[400px]">
+                            <ImageWithFallback
+                              src={item.image}
+                              alt={item.alt}
+                              className="h-full w-full object-cover object-top"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-4 grid overflow-hidden rounded-[1.5rem] bg-white text-[#050816] lg:grid-cols-3">
+                      {[
+                        [copy.observedLabel, chapter.observed],
+                        [copy.responseLabel, chapter.response],
+                        [copy.intentLabel, chapter.intent],
+                      ].map(([label, text], detailIndex) => (
+                        <div
+                          key={label}
+                          className={`p-5 md:p-6 ${
+                            detailIndex > 0 ? "border-t border-black/10 lg:border-l lg:border-t-0" : ""
+                          }`}
+                        >
+                          <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-black/40">
+                            {label}
+                          </div>
+                          <p className="mt-3 text-sm leading-relaxed text-black/75">{text}</p>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="mt-5 rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 md:p-8">
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/40">
+                        {copy.evidenceLabel}
+                      </div>
+                      <div className="mt-5 grid gap-3 md:grid-cols-3">
+                        {chapter.evidence.map((item, evidenceIndex) => (
+                          <div
+                            key={item}
+                            className="flex gap-3 rounded-[1.25rem] border border-white/10 bg-white/[0.04] p-4 text-sm leading-relaxed text-white/70"
+                          >
+                            <span className="font-semibold" style={{ color: accent }}>
+                              0{evidenceIndex + 1}
+                            </span>
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.article>
+                );
+              })}
+            </div>
+
+            <div className="mt-28 border-t border-white/10 pt-20">
+              <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-[#19bff0]">
+                  {copy.continuationLabel}
+                </div>
+                <div>
+                  <h3
+                    className="text-4xl leading-[1.02] tracking-[-0.045em] md:text-5xl"
+                    style={{ fontFamily: "Fraunces, serif", fontWeight: 500 }}
+                  >
+                    {copy.continuationTitle}
+                  </h3>
+                  <p className="mt-5 max-w-[780px] leading-relaxed text-white/60">
+                    {copy.continuationIntro}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-12 grid gap-5 lg:grid-cols-2">
+                {copy.continuationStates.map((state, index) => {
+                  const image = index === 0 ? searchScreen : cartScreen;
+                  const accent = index === 0 ? BLUE : YELLOW;
+                  return (
+                    <motion.article
+                      key={state.title}
+                      initial={{ opacity: 0, y: 24 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="overflow-hidden rounded-[2rem] bg-white text-[#050816]"
+                    >
+                      <div className="h-[280px] overflow-hidden bg-[#f2f3f5] sm:h-[350px]">
+                        <ImageWithFallback
+                          src={image}
+                          alt={state.title}
+                          className={`h-full w-full object-top ${
+                            index === 0 ? "object-contain" : "object-cover"
+                          }`}
+                        />
+                      </div>
+                      <div className="p-7 md:p-9">
+                        <div
+                          className="text-[10px] font-semibold uppercase tracking-[0.22em]"
+                          style={{ color: accent }}
+                        >
+                          {state.stage}
+                        </div>
+                        <h4 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.04em]">
+                          {state.title}
+                        </h4>
+                        <p className="mt-4 leading-relaxed text-black/60">{state.description}</p>
+                        <div className="mt-7 flex flex-wrap gap-2">
+                          {state.points.map((point) => (
+                            <span
+                              key={point}
+                              className="rounded-full border border-black/10 px-4 py-2 text-xs font-medium text-black/65"
+                            >
+                              {point}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.article>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="system" className="px-6 md:px-12 py-24 md:py-32 bg-white">
           <div className="max-w-[1400px] mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               <div>
-                <SectionLabel>( 04 · Design System Direction )</SectionLabel>
+                <SectionLabel>( 05 · Design System Direction )</SectionLabel>
                 <h2
                   className="tracking-[-0.04em] leading-[1]"
                   style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6rem)" }}
@@ -982,7 +1465,7 @@ export function MeMe() {
 
         <section id="flow" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1400px] mx-auto">
-            <SectionLabel>( 05 · Purchase Flow )</SectionLabel>
+            <SectionLabel>( 06 · Purchase Flow )</SectionLabel>
             <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-start">
               <div>
                 <h2
@@ -1011,41 +1494,66 @@ export function MeMe() {
         </section>
 
         <section id="ui" className="px-6 md:px-12 py-24 md:py-32">
-          <div className="max-w-[1500px] mx-auto">
-            <div className="max-w-[940px] mb-12 md:mb-16">
-              <SectionLabel>( 06 · Final UI )</SectionLabel>
+          <div className="max-w-[1400px] mx-auto">
+            <div className="max-w-[940px] mb-10 md:mb-12">
+              <SectionLabel>( 07 · Final UI Showcase )</SectionLabel>
               <h2
                 className="tracking-[-0.04em] leading-[1]"
                 style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6.25rem)" }}
               >
                 {copy.uiTitle}
               </h2>
-              <p className="mt-7 text-neutral-600 leading-relaxed text-lg">{copy.uiIntro}</p>
-              <p className="mt-4 text-sm text-neutral-500">
-                {lang === "en"
-                  ? "Hover each full-width preview to let long screens scroll slowly. On mobile, tap once to play and tap again to reset."
-                  : "Hover từng màn full-width để màn dài tự cuộn chậm. Trên mobile, chạm một lần để chạy và chạm lần nữa để quay lại."}
-              </p>
+              <p className="mt-6 text-neutral-600 leading-relaxed text-lg">{copy.uiIntro}</p>
             </div>
-            <div className="grid grid-cols-1 gap-8">
-              {UI_SCREENS.map((screen) => (
-                <ScrollableScreenCard
-                  key={screen.key}
-                  title={screen.title}
-                  type={screen.type}
-                  image={screen.image}
-                  height={screen.height}
-                  scrollable={screen.scrollable}
-                  duration={screen.duration}
-                />
+
+            {/* Filter Tabs */}
+            <div className="sticky top-[80px] z-30 mb-10 flex flex-wrap gap-2.5 rounded-2xl border border-neutral-200/90 bg-white/90 p-2 shadow-lg backdrop-blur-md">
+              {[
+                { id: "all", label: lang === "en" ? "All Screens (6)" : "Tất cả màn hình (6)" },
+                { id: "featured", label: lang === "en" ? "Home & GU" : "Trang chủ & GU" },
+                { id: "catalog", label: lang === "en" ? "Catalog & Shirts" : "Sản phẩm & Danh mục" },
+                { id: "checkout", label: lang === "en" ? "Cart & Search" : "Giỏ hàng & Search" },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setFilterTab(tab.id as any)}
+                  className={`rounded-xl px-5 py-2.5 text-xs font-semibold tracking-wide transition-all ${
+                    filterTab === tab.id
+                      ? "bg-neutral-900 text-white shadow-md"
+                      : "bg-transparent text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+                  }`}
+                >
+                  {tab.label}
+                </button>
               ))}
+            </div>
+
+            {/* Screens Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {UI_SCREENS.filter((s) => filterTab === "all" || s.category === filterTab).map((screen) => {
+                const globalIndex = UI_SCREENS.findIndex((item) => item.key === screen.key);
+                return (
+                  <div key={screen.key}>
+                    <BrowserMockupFrame
+                      src={screen.image}
+                      alt={screen.title}
+                      title={screen.title}
+                      type={screen.type}
+                      url={screen.url}
+                      maxHeight={screen.height}
+                      onClick={() => setActiveScreen(globalIndex)}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         <section id="reflection" className="px-6 md:px-12 py-20 bg-black text-white">
           <div className="max-w-[1200px] mx-auto">
-            <SectionLabel>( 07 · Reflection )</SectionLabel>
+            <SectionLabel>( 08 · Reflection )</SectionLabel>
             <h2
               className="tracking-[-0.04em] leading-[1]"
               style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
@@ -1060,6 +1568,46 @@ export function MeMe() {
       </main>
 
       <NextProjectFooter currentSlug="meme" />
+
+      {/* FULLSCREEN LIGHTBOX MODAL */}
+      {activeScreen !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setActiveScreen(null)}
+            className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
+            aria-label="Close modal"
+          >
+            <X size={22} />
+          </button>
+          <div className="relative max-h-[90vh] max-w-[1200px] w-full overflow-hidden rounded-[2.2rem] bg-white border border-neutral-200 shadow-2xl">
+            <div className="flex items-center justify-between border-b border-neutral-200 px-6 py-4 bg-[#f6f7f9]">
+              <div>
+                <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F59E0B]">
+                  {UI_SCREENS[activeScreen].type}
+                </div>
+                <div className="text-xl font-bold tracking-tight text-neutral-900">
+                  {UI_SCREENS[activeScreen].title}
+                </div>
+              </div>
+              <div className="hidden sm:block text-xs text-neutral-500 font-mono">
+                🔒 {UI_SCREENS[activeScreen].url}
+              </div>
+            </div>
+            <div className="max-h-[calc(90vh-80px)] overflow-y-auto bg-[#f4f5f8] p-4 md:p-8">
+              <ImageWithFallback
+                src={UI_SCREENS[activeScreen].image}
+                alt={UI_SCREENS[activeScreen].title}
+                className="mx-auto block h-auto w-full max-w-[1000px] rounded-2xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

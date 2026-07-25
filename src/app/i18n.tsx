@@ -252,14 +252,14 @@ const vi: Dict = {
     headline:
       "Thiết kế điểm chạm nơi nhu cầu người dùng, logic sản phẩm và khả năng triển khai kỹ thuật gặp nhau một cách tự nhiên.",
     intro:
-      "Tôi là một UI/UX Designer có nền tảng phát triển phần mềm, luôn hướng đến việc tạo ra những trải nghiệm rõ ràng, có chiều sâu và thật sự hữu ích cho người dùng. Thế mạnh của tôi nằm ở khả năng kết nối tư duy thiết kế với logic kỹ thuật, biến những ý tưởng phức tạp thành luồng trải nghiệm mạch lạc, giao diện có cấu trúc và hệ thống thiết kế dễ mở rộng, vừa đảm bảo tính thẩm mỹ vừa có khả năng triển khai thực tế.",
+      "Em là một UI/UX Designer có nền tảng phát triển phần mềm, luôn hướng đến việc tạo ra những trải nghiệm rõ ràng, có chiều sâu và thật sự hữu ích cho người dùng. Thế mạnh của em nằm ở khả năng kết nối tư duy thiết kế với logic kỹ thuật, biến những ý tưởng phức tạp thành luồng trải nghiệm mạch lạc, giao diện có cấu trúc và hệ thống thiết kế dễ mở rộng, vừa đảm bảo tính thẩm mỹ vừa có khả năng triển khai thực tế.",
     cta1: "Xem dự án",
     cta2: "Tải CV",
     scroll: "Cuộn để khám phá",
     label1: "( 01 ) Nhà thiết kế",
     label2: "( 02 ) Định hướng",
     currently:
-      "Mục tiêu của tôi là phát triển thành một nhà thiết kế có tư duy sản phẩm, không chỉ nhìn vào giao diện mà còn hiểu được vấn đề thật sự phía sau mỗi hành trình người dùng. Tôi đang tập trung rèn luyện tư duy giải quyết vấn đề, thiết kế cho các luồng thao tác phức tạp và hợp tác chặt chẽ với nhiều vai trò khác nhau trong đội ngũ để tạo ra những sản phẩm số chỉn chu, thực tế và mang lại giá trị bền vững.",
+      "Mục tiêu của em là phát triển thành một nhà thiết kế có tư duy sản phẩm, không chỉ nhìn vào giao diện mà còn hiểu được vấn đề thật sự phía sau mỗi hành trình người dùng. Em đang tập trung rèn luyện tư duy giải quyết vấn đề, thiết kế cho các luồng thao tác phức tạp và hợp tác chặt chẽ với nhiều vai trò khác nhau trong đội ngũ để tạo ra những sản phẩm số chỉn chu, thực tế và mang lại giá trị bền vững.",
   },
   marquee: [
     "Nhu cầu người dùng",
@@ -347,7 +347,7 @@ const vi: Dict = {
     title1: "Cách một dự án",
     italic: "tiến",
     title2: " về phía trước.",
-    desc: "Đây là năm bước tôi luôn quay lại trong mỗi dự án. Nó không phải một khuôn mẫu cứng. Nó giống nhịp làm việc mà tôi lặp lại cho tới khi trải nghiệm thật sự giúp người dùng đưa ra quyết định.",
+    desc: "Đây là năm bước em luôn quay lại trong mỗi dự án. Nó không phải một khuôn mẫu cứng. Nó giống nhịp làm việc mà em lặp lại cho tới khi trải nghiệm thật sự giúp người dùng đưa ra quyết định.",
     stepLabel: "Bước",
     steps: [
       {
@@ -368,7 +368,7 @@ const vi: Dict = {
       },
       {
         title: "Kiểm chứng",
-        desc: "Đánh giá khả năng sử dụng, lắng nghe phản hồi và tiếp tục chỉnh sửa. Phiên bản đầu tiên với tôi luôn chỉ là điểm khởi đầu.",
+        desc: "Đánh giá khả năng sử dụng, lắng nghe phản hồi và tiếp tục chỉnh sửa. Phiên bản đầu tiên với em luôn chỉ là điểm khởi đầu.",
       },
     ],
   },
@@ -377,15 +377,15 @@ const vi: Dict = {
     title1: "Một nhà thiết kế có thể ",
     italic: "triển khai",
     title2: " được sản phẩm.",
-    body: "Tôi là Minh Huy, một UI/UX Designer đến từ Việt Nam với nền tảng phát triển phần mềm. Tôi yêu những sản phẩm số rõ ràng, thực tế và có khả năng lớn lên cùng nhu cầu của người dùng. Công việc của tôi xoay quanh user flow, hệ thống giao diện và những vấn đề thật, luôn được dẫn dắt bởi tư duy thiết kế nhưng vẫn bám sát điều gì có thể triển khai ngoài đời.",
+    body: "Em là Minh Huy, một UI/UX Designer đến từ Việt Nam với nền tảng phát triển phần mềm. Em yêu những sản phẩm số rõ ràng, thực tế và có khả năng lớn lên cùng nhu cầu của người dùng. Công việc của em xoay quanh user flow, hệ thống giao diện và những vấn đề thật, luôn được dẫn dắt bởi tư duy thiết kế nhưng vẫn bám sát điều gì có thể triển khai ngoài đời.",
     introSections: [
       {
         tag: "( 01 ) Nhà thiết kế",
-        body: "Tôi là một UI/UX Designer có nền tảng phát triển phần mềm, luôn hướng đến việc tạo ra những trải nghiệm rõ ràng, có chiều sâu và thật sự hữu ích cho người dùng. Thế mạnh của tôi nằm ở khả năng kết nối tư duy thiết kế với logic kỹ thuật, biến những ý tưởng phức tạp thành luồng trải nghiệm mạch lạc, giao diện có cấu trúc và hệ thống thiết kế dễ mở rộng, vừa đảm bảo tính thẩm mỹ vừa có khả năng triển khai thực tế.",
+        body: "Em là một UI/UX Designer có nền tảng phát triển phần mềm, luôn hướng đến việc tạo ra những trải nghiệm rõ ràng, có chiều sâu và thật sự hữu ích cho người dùng. Thế mạnh của em nằm ở khả năng kết nối tư duy thiết kế với logic kỹ thuật, biến những ý tưởng phức tạp thành luồng trải nghiệm mạch lạc, giao diện có cấu trúc và hệ thống thiết kế dễ mở rộng, vừa đảm bảo tính thẩm mỹ vừa có khả năng triển khai thực tế.",
       },
       {
         tag: "( 02 ) Định hướng",
-        body: "Mục tiêu của tôi là phát triển thành một nhà thiết kế có tư duy sản phẩm, không chỉ nhìn vào giao diện mà còn hiểu được vấn đề thật sự phía sau mỗi hành trình người dùng. Tôi đang tập trung rèn luyện tư duy giải quyết vấn đề, thiết kế cho các luồng thao tác phức tạp và hợp tác chặt chẽ với nhiều vai trò khác nhau trong đội ngũ để tạo ra những sản phẩm số chỉn chu, thực tế và mang lại giá trị bền vững.",
+        body: "Mục tiêu của em là phát triển thành một nhà thiết kế có tư duy sản phẩm, không chỉ nhìn vào giao diện mà còn hiểu được vấn đề thật sự phía sau mỗi hành trình người dùng. Em đang tập trung rèn luyện tư duy giải quyết vấn đề, thiết kế cho các luồng thao tác phức tạp và hợp tác chặt chẽ với nhiều vai trò khác nhau trong đội ngũ để tạo ra những sản phẩm số chỉn chu, thực tế và mang lại giá trị bền vững.",
       },
     ],
     facts: [
@@ -397,14 +397,14 @@ const vi: Dict = {
     skillsLabel: "( Kỹ năng & Công cụ )",
     learningLabel: "Đang học",
     learning:
-      "Tôi đang học cách design system vận hành ở quy mô lớn, cách các mẫu accessibility thật sự sống trong sản phẩm, và cách biến kết quả nghiên cứu thành những quyết định giao diện có thể nhìn thấy và đo lường được.",
+      "Em đang học cách design system vận hành ở quy mô lớn, cách các mẫu accessibility thật sự sống trong sản phẩm, và cách biến kết quả nghiên cứu thành những quyết định giao diện có thể nhìn thấy và đo lường được.",
   },
   contact: {
     tag: "( Liên hệ · Cùng xây điều gì đó hữu ích )",
     title1: "Có một ",
     italic: "dự án",
     title2: " trong đầu?",
-    body: "Hiện tại tôi đang tìm kiếm cơ hội UI/UX Fresher và sẵn sàng tham gia những case study hợp tác. Nếu muốn kết nối, email vẫn là cách nhanh và dễ nhất, và tôi thường phản hồi trong vòng một ngày.",
+    body: "Hiện tại em đang tìm kiếm cơ hội UI/UX Fresher và sẵn sàng tham gia những case study hợp tác. Nếu muốn kết nối, email vẫn là cách nhanh và dễ nhất, và em thường phản hồi trong vòng một ngày.",
     resume: "Tải CV",
     backTop: "Lên đầu trang ↑",
     footer: "© 2026 Huỳnh Minh Huy · Được thiết kế và xây dựng với nhiều chăm chút",

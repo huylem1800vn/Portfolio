@@ -19,6 +19,17 @@ import {
   UsersRound,
   Utensils,
   Check,
+  Maximize2,
+  X,
+  Briefcase,
+  Timer,
+  Wrench,
+  UserCircle,
+  ChevronRight,
+  Layers,
+  Palette,
+  PenTool,
+  Award,
 } from "lucide-react";
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
@@ -848,7 +859,7 @@ const COPY = {
           context:
             "Quỹ thời gian ít, muốn ăn nhanh, đủ no, ở gần. Thường đi cùng đồng nghiệp hoặc một nhóm đối tác nhỏ.",
           userStory:
-            "Là người đi làm bận rộn, tôi muốn tìm quán gần, phục vụ nhanh, giá hợp lý để không trễ giờ mà vẫn ăn đúng gu.",
+            "Là người đi làm bận rộn, em muốn tìm quán gần, phục vụ nhanh, giá hợp lý để không trễ giờ mà vẫn ăn đúng gu.",
           goal: "Tìm được quán phù hợp trong dưới 5 phút, với thời gian di chuyển không quá 10 phút.",
           gainPoints:
             "Gợi ý sát gu, thông tin rõ ràng và đi thẳng tới quyết định mà không phải tốn nhiều công so sánh.",
@@ -869,7 +880,7 @@ const COPY = {
           context:
             "Hay tụ tập bạn bè hoặc đi hẹn hò và thường rơi vào cảnh không biết ăn gì. Thích thử món mới, thích không gian đẹp và có cảm giác vui khi khám phá.",
           userStory:
-            "Là sinh viên hoặc người trẻ đi ăn cùng bạn bè hay người yêu, tôi muốn được gợi ý theo tâm trạng và ngân sách, có ảnh thật và đánh giá thật để đi ăn cho vui mà không sợ hớ.",
+            "Là sinh viên hoặc người trẻ đi ăn cùng bạn bè hay người yêu, em muốn được gợi ý theo tâm trạng và ngân sách, có ảnh thật và đánh giá thật để đi ăn cho vui mà không sợ hớ.",
           goal: "Khám phá quán mới rating cao, gần và hợp túi tiền, rồi ra quyết định trong khoảng 5 đến 15 phút.",
           gainPoints:
             "Gợi ý hợp tâm trạng, có ưu đãi, có chỗ check-in đẹp và có thể lưu hoặc chia sẻ để cả nhóm cùng xem.",
@@ -1089,7 +1100,7 @@ const COPY = {
     reflection: {
       tag: "( 22 · Reflection )",
       body:
-        "Dự án này giúp tôi nhận ra rằng khám phá địa điểm ăn uống không chỉ nằm ở việc đưa ra thêm nhiều lựa chọn. Một trải nghiệm tốt hơn cần làm dịu sự phân vân, đưa đúng ngữ cảnh ra trước mắt và giúp người dùng chọn quán với nhiều tự tin hơn, dựa trên tâm trạng, thời điểm và bối cảnh xã hội của riêng họ.",
+        "Dự án này giúp em nhận ra rằng khám phá địa điểm ăn uống không chỉ nằm ở việc đưa ra thêm nhiều lựa chọn. Một trải nghiệm tốt hơn cần làm dịu sự phân vân, đưa đúng ngữ cảnh ra trước mắt và giúp người dùng chọn quán với nhiều tự tin hơn, dựa trên tâm trạng, thời điểm và bối cảnh xã hội của riêng họ.",
       cta1: "Về Portfolio",
       cta2: "Dự án tiếp theo · HD Bank Business",
     },
@@ -1118,31 +1129,47 @@ const PROCESS_ICONS = [Search, BarChart3, MessagesSquare, ClipboardList, Users, 
 const MOOD_ICONS = [Smile, Heart, UsersRound, Wallet, Clock, Utensils, MapPin, Star];
 
 const REAL_SCREENS = [
-  { Component: Onboarding, en: { t: "Onboarding", d: "First launch · brand intro" }, vi: { t: "Onboarding", d: "Mở lần đầu · giới thiệu thương hiệu" } },
-  { Component: HomeScreen, en: { t: "Home", d: "Personalized feed + quick filters" }, vi: { t: "Trang chủ", d: "Feed cá nhân hoá + filter nhanh" } },
-  { Component: BanDo, en: { t: "Map", d: "Real-time map · open now signals" }, vi: { t: "Bản đồ", d: "Bản đồ thời gian thực · đang mở" } },
-  { Component: CamXuc, en: { t: "Mood Discovery", d: "“What are you in the mood for?”" }, vi: { t: "Cảm xúc", d: "“Bạn đang muốn ăn gì?”" } },
-  { Component: Reviewer, en: { t: "Verified Reviewer", d: "Trust system & perks" }, vi: { t: "Verified Reviewer", d: "Hệ thống uy tín & đặc quyền" } },
-  { Component: LocalProfile, en: { t: "Local Profile", d: "Public reviewer profile" }, vi: { t: "Local Profile", d: "Hồ sơ reviewer công khai" } },
-  { Component: VerifiedProfile, en: { t: "Verified Profile", d: "Verified reviewer detail" }, vi: { t: "Verified Profile", d: "Chi tiết reviewer đã xác thực" } },
+  { key: "onboarding", category: "intro", Component: Onboarding, en: { t: "Onboarding", d: "First launch · brand intro" }, vi: { t: "Onboarding", d: "Mở lần đầu · giới thiệu thương hiệu" } },
+  { key: "home", category: "intro", Component: HomeScreen, en: { t: "Home Screen", d: "Personalized feed + quick filters" }, vi: { t: "Trang chủ", d: "Feed cá nhân hoá + filter nhanh" } },
+  { key: "bando", category: "discovery", Component: BanDo, en: { t: "Real-time Map", d: "Real-time map · open now signals" }, vi: { t: "Bản đồ thời gian thực", d: "Bản đồ thời gian thực · đang mở" } },
+  { key: "camxuc", category: "discovery", Component: CamXuc, en: { t: "Mood Discovery", d: "“What are you in the mood for?”" }, vi: { t: "Khám phá cảm xúc", d: "“Bạn đang muốn ăn gì?”" } },
+  { key: "reviewer", category: "reviewer", Component: Reviewer, en: { t: "Verified Reviewer", d: "Trust system & perks" }, vi: { t: "Verified Reviewer", d: "Hệ thống uy tín & đặc quyền" } },
+  { key: "localprofile", category: "reviewer", Component: LocalProfile, en: { t: "Local Profile", d: "Public reviewer profile" }, vi: { t: "Local Profile", d: "Hồ sơ reviewer công khai" } },
+  { key: "verifiedprofile", category: "reviewer", Component: VerifiedProfile, en: { t: "Verified Profile", d: "Verified reviewer detail" }, vi: { t: "Verified Profile", d: "Chi tiết reviewer đã xác thực" } },
 ];
 
-function RealPhone({ Component, title, desc }: { Component: React.ComponentType; title: string; desc: string }) {
+function RealPhone({
+  Component,
+  title,
+  desc,
+  onClick,
+}: {
+  Component: React.ComponentType;
+  title: string;
+  desc: string;
+  onClick: () => void;
+}) {
   const W = 240;
   const H = Math.round((W * 812) / 375);
   return (
-    <div>
+    <div
+      onClick={onClick}
+      className="group cursor-pointer rounded-[2rem] border border-neutral-200/80 bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left flex flex-col items-center"
+    >
+      {/* Outer Phone Shell */}
       <div
-        className="rounded-[28px] p-2 mx-auto"
-        style={{
-          backgroundColor: INK,
-          width: W + 16,
-          boxShadow: "0 30px 60px -30px rgba(31,42,31,0.45)",
-        }}
+        className="relative mx-auto rounded-[32px] bg-[#1a241a] p-[6px] shadow-[0_20px_40px_rgba(15,25,15,0.25)] ring-1 ring-black/10"
+        style={{ width: W + 12 }}
       >
+        {/* Side Volume & Power Buttons */}
+        <span className="absolute -left-[2px] top-[20%] h-[7%] w-[2px] rounded-l-full bg-[#111811]" aria-hidden="true" />
+        <span className="absolute -left-[2px] top-[29%] h-[11%] w-[2px] rounded-l-full bg-[#111811]" aria-hidden="true" />
+        <span className="absolute -right-[2px] top-[25%] h-[15%] w-[2px] rounded-r-full bg-[#111811]" aria-hidden="true" />
+
+        {/* Screen Clip Viewport */}
         <div
-          className="rounded-[20px] overflow-hidden relative"
-          style={{ width: W, height: H, backgroundColor: "#fff" }}
+          className="relative overflow-hidden rounded-[26px] bg-white"
+          style={{ width: W, height: H }}
         >
           <div
             style={{
@@ -1154,11 +1181,16 @@ function RealPhone({ Component, title, desc }: { Component: React.ComponentType;
           >
             <Component />
           </div>
+          <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/5" />
         </div>
       </div>
-      <div className="mt-4 text-center">
-        <div style={{ fontFamily: "Fraunces, serif", fontSize: "1.1rem", color: INK }}>{title}</div>
-        <div className="mt-0.5 text-xs" style={{ color: MUTED }}>
+
+      <div className="mt-4 text-center w-full">
+        <div className="flex items-center justify-center gap-1.5 font-semibold text-base" style={{ fontFamily: "Fraunces, serif", color: INK }}>
+          <span>{title}</span>
+          <ArrowUpRight size={14} className="opacity-40 group-hover:opacity-100 transition-opacity" style={{ color: GREEN_DARK }} />
+        </div>
+        <div className="mt-1 text-xs" style={{ color: MUTED }}>
           {desc}
         </div>
       </div>
@@ -1315,6 +1347,8 @@ export function AngAng() {
   const t = COPY[lang];
   const L = t.labels;
   const [activeWireframe, setActiveWireframe] = useState<null | { src: string; title: string }>(null);
+  const [uiFilterTab, setUiFilterTab] = useState<"all" | "intro" | "discovery" | "reviewer">("all");
+  const [activeRealScreen, setActiveRealScreen] = useState<number | null>(null);
 
   return (
     <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen">
@@ -1410,16 +1444,25 @@ export function AngAng() {
               </div>
 
               <div className="mt-5 grid grid-cols-2 gap-3">
-                {t.meta.map((m) => (
-                  <div key={m.k} className="rounded-xl p-3.5" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
-                    <div className="text-[10px] tracking-[0.2em] uppercase font-semibold" style={{ color: GREEN_DARK }}>
-                      {m.k}
+                {t.meta.map((m, idx) => {
+                  const metaIcons = [Briefcase, Users, Target, UserCircle];
+                  const MetaIcon = metaIcons[idx] || Briefcase;
+                  return (
+                    <div key={m.k} className="group rounded-xl p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg" style={{ backgroundColor: GREEN_LIGHT, color: GREEN_DARK }}>
+                          <MetaIcon size={14} />
+                        </span>
+                        <span className="text-[10px] tracking-[0.2em] uppercase font-semibold" style={{ color: GREEN_DARK }}>
+                          {m.k}
+                        </span>
+                      </div>
+                      <div className="font-medium" style={{ fontSize: "0.88rem", lineHeight: 1.35 }}>
+                        {m.v}
+                      </div>
                     </div>
-                    <div className="mt-1 font-medium" style={{ fontSize: "0.88rem", lineHeight: 1.35 }}>
-                      {m.v}
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -1453,6 +1496,13 @@ export function AngAng() {
           </div>
         </div>
       </Section>
+
+      {/* Dot Divider */}
+      <div className="flex items-center justify-center gap-2 py-2" style={{ backgroundColor: BG }}>
+        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GREEN }} />
+        <span className="h-1 w-1 rounded-full" style={{ backgroundColor: BORDER }} />
+        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GREEN }} />
+      </div>
 
       {/* PROBLEM */}
       <Section bg={BG}>
@@ -1761,7 +1811,7 @@ export function AngAng() {
           <Tag>{t.competitors.tag}</Tag>
           <H2>{t.competitors.title}</H2>
         </div>
-        <div className="rounded-3xl overflow-hidden" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
+        <div className="rounded-3xl overflow-hidden shadow-lg" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}>
           <div className="overflow-x-auto">
             <table className="w-full text-sm" style={{ minWidth: 880 }}>
               <thead>
@@ -1782,19 +1832,25 @@ export function AngAng() {
                   return (
                     <tr
                       key={r.name}
+                      className="transition-colors duration-200"
                       style={{
                         backgroundColor: isUs ? GREEN_LIGHT : ri % 2 === 0 ? "#fff" : BG,
                         borderTop: `1px solid ${BORDER}`,
                       }}
+                      onMouseEnter={(e) => { if (!isUs) e.currentTarget.style.backgroundColor = '#f0fad0'; }}
+                      onMouseLeave={(e) => { if (!isUs) e.currentTarget.style.backgroundColor = ri % 2 === 0 ? '#fff' : BG; }}
                     >
-                      <td className="p-4" style={{ fontWeight: isUs ? 600 : 500, color: isUs ? GREEN_DARK : INK }}>
-                        {r.name}
+                      <td className="p-4" style={{ fontWeight: isUs ? 700 : 500, color: isUs ? GREEN_DARK : INK }}>
+                        <div className="flex items-center gap-2">
+                          {isUs && <span className="inline-flex h-5 w-5 items-center justify-center rounded-full" style={{ backgroundColor: GREEN, color: '#fff' }}><Star size={10} /></span>}
+                          {r.name}
+                        </div>
                       </td>
                       {r.v.map((cell, ci) => (
                         <td key={ci} className="p-3 text-center">
                           {cell ? (
                             <span
-                              className="inline-flex w-6 h-6 rounded-full items-center justify-center"
+                              className="inline-flex w-6 h-6 rounded-full items-center justify-center shadow-sm"
                               style={{ backgroundColor: isUs ? GREEN_DARK : GREEN, color: "#fff" }}
                             >
                               <Check size={14} />
@@ -2022,41 +2078,49 @@ export function AngAng() {
                   </p>
                 </div>
 
-                <div className="overflow-x-auto pb-4 -mx-2 px-2">
-                  <div
-                    className="grid gap-3"
-                    style={{
-                      gridTemplateColumns: `repeat(${map.stages.length}, minmax(180px, 1fr))`,
-                      minWidth: map.stages.length * 190,
-                    }}
-                  >
-                    {map.stages.map((s, i) => (
-                      <div
-                        key={`${map.title}-${s.s}`}
-                        className="rounded-2xl p-5"
-                        style={{
-                          backgroundColor: i % 2 === 0 ? "#fff" : GREEN_LIGHT,
-                          border: `1px solid ${BORDER}`,
-                          boxShadow: "0 10px 30px rgba(17,24,39,0.04)",
-                        }}
-                      >
+                <div className="relative">
+                  <div className="overflow-x-auto pb-4 -mx-2 px-2 scroll-smooth">
+                    <div
+                      className="grid gap-3"
+                      style={{
+                        gridTemplateColumns: `repeat(${map.stages.length}, minmax(180px, 1fr))`,
+                        minWidth: map.stages.length * 190,
+                      }}
+                    >
+                      {map.stages.map((s, i) => (
                         <div
-                          className="w-7 h-7 rounded-full flex items-center justify-center text-xs"
-                          style={{ backgroundColor: GREEN, color: "#fff" }}
+                          key={`${map.title}-${s.s}`}
+                          className="rounded-2xl p-5"
+                          style={{
+                            backgroundColor: i % 2 === 0 ? "#fff" : GREEN_LIGHT,
+                            border: `1px solid ${BORDER}`,
+                            boxShadow: "0 10px 30px rgba(17,24,39,0.04)",
+                          }}
                         >
-                          {i + 1}
+                          <div
+                            className="w-7 h-7 rounded-full flex items-center justify-center text-xs"
+                            style={{ backgroundColor: GREEN, color: "#fff" }}
+                          >
+                            {i + 1}
+                          </div>
+                          <div className="mt-3" style={{ fontFamily: "Fraunces, serif", fontSize: "1.2rem" }}>
+                            {s.s}
+                          </div>
+                          <div className="mt-4 space-y-3">
+                            <Field label={L.action} v={s.a} />
+                            <Field label={L.thought} v={s.th} italic />
+                            <Field label={L.pain} v={s.p} color={RED} />
+                            <Field label={L.opportunity} v={s.o} color={GREEN_DARK} />
+                          </div>
                         </div>
-                        <div className="mt-3" style={{ fontFamily: "Fraunces, serif", fontSize: "1.2rem" }}>
-                          {s.s}
-                        </div>
-                        <div className="mt-4 space-y-3">
-                          <Field label={L.action} v={s.a} />
-                          <Field label={L.thought} v={s.th} italic />
-                          <Field label={L.pain} v={s.p} color={RED} />
-                          <Field label={L.opportunity} v={s.o} color={GREEN_DARK} />
-                        </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
+                  </div>
+                  {/* Scroll fade indicator */}
+                  <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 lg:hidden" style={{ background: `linear-gradient(to right, transparent, ${mapIndex % 2 === 0 ? GREEN_LIGHT : '#fff'}ee)` }} />
+                  <div className="mt-2 flex items-center gap-1.5 text-[10px] uppercase tracking-[0.18em] lg:hidden" style={{ color: MUTED }}>
+                    <ChevronRight size={12} />
+                    <span>{lang === 'en' ? 'Scroll to see more stages' : 'Vuốt sang để xem thêm'}</span>
                   </div>
                 </div>
               </div>
@@ -2064,6 +2128,13 @@ export function AngAng() {
           ))}
         </div>
       </Section>
+
+      {/* Dot Divider */}
+      <div className="flex items-center justify-center gap-2 py-2" style={{ backgroundColor: '#fff' }}>
+        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GREEN }} />
+        <span className="h-1 w-1 rounded-full" style={{ backgroundColor: BORDER }} />
+        <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GREEN }} />
+      </div>
 
       {/* HMW */}
       <Section bg={INK} text="#fff">
@@ -3067,7 +3138,7 @@ export function AngAng() {
         <p className="mt-5 max-w-[64ch]" style={{ color: MUTED, lineHeight: 1.65 }}>
           {t.wireframe.body}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12" style={{ gridAutoRows: 'auto' }}>
           {t.wireframe.items.map((w, i) => (
             <motion.figure
               key={w.t}
@@ -3075,7 +3146,7 @@ export function AngAng() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: i * 0.04 }}
-              className="rounded-2xl overflow-hidden"
+              className={`rounded-2xl overflow-hidden ${i === 0 ? 'sm:col-span-2 lg:col-span-1' : ''}`}
               style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}
             >
               <div
@@ -3154,18 +3225,48 @@ export function AngAng() {
       <Section id="ui" bg={GREEN_LIGHT}>
         <Tag>{t.ui.tag}</Tag>
         <H2>{t.ui.title}</H2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-12 mt-12">
-          {REAL_SCREENS.map((s, i) => {
+
+        {/* Filter Tabs */}
+        <div className="sticky top-[80px] z-30 my-8 flex flex-wrap gap-2.5 rounded-2xl border border-emerald-900/10 bg-white/90 p-2 shadow-lg backdrop-blur-md">
+          {[
+            { id: "all", label: lang === "en" ? "All Screens (7)" : "Tất cả màn hình (7)" },
+            { id: "intro", label: lang === "en" ? "Home & Onboarding" : "Trang chủ & Onboarding" },
+            { id: "discovery", label: lang === "en" ? "Map & Mood Discovery" : "Bản đồ & Cảm xúc" },
+            { id: "reviewer", label: lang === "en" ? "Reviewer Profiles" : "Hồ sơ Reviewer (3)" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => setUiFilterTab(tab.id as any)}
+              className={`rounded-xl px-5 py-2.5 text-xs font-semibold tracking-wide transition-all ${
+                uiFilterTab === tab.id
+                  ? "bg-[#1F2A1F] text-[#9DD325] shadow-md"
+                  : "bg-transparent text-neutral-600 hover:bg-emerald-50 hover:text-neutral-900"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
+          {REAL_SCREENS.filter((s) => uiFilterTab === "all" || s.category === uiFilterTab).map((s) => {
+            const globalIndex = REAL_SCREENS.findIndex((item) => item.key === s.key);
             const copy = s[lang];
             return (
               <motion.div
-                key={copy.t}
+                key={s.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.55, delay: i * 0.05 }}
+                transition={{ duration: 0.55 }}
               >
-                <RealPhone Component={s.Component} title={copy.t} desc={copy.d} />
+                <RealPhone
+                  Component={s.Component}
+                  title={copy.t}
+                  desc={copy.d}
+                  onClick={() => setActiveRealScreen(globalIndex)}
+                />
               </motion.div>
             );
           })}
@@ -3175,6 +3276,34 @@ export function AngAng() {
       {/* REFLECTION + FOOTER */}
       <Section bg={INK} text="#fff">
         <Tag color={GREEN}>{t.reflection.tag}</Tag>
+
+        {/* Impact Stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {[
+            { icon: Layers, n: "7", label: lang === 'en' ? 'Screens Designed' : 'Màn hình thiết kế' },
+            { icon: Users, n: "2", label: lang === 'en' ? 'Personas Created' : 'Persona xây dựng' },
+            { icon: PenTool, n: "5", label: lang === 'en' ? 'HMW Statements' : 'Câu hỏi HMW' },
+            { icon: Award, n: "4", label: lang === 'en' ? 'Key Insights' : 'Insight chính' },
+          ].map((stat) => {
+            const StatIcon = stat.icon;
+            return (
+              <div
+                key={stat.label}
+                className="rounded-2xl p-5 text-center"
+                style={{ backgroundColor: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)' }}
+              >
+                <StatIcon size={20} className="mx-auto mb-3 opacity-70" style={{ color: GREEN }} />
+                <div className="text-3xl font-bold tracking-tight" style={{ fontFamily: 'Fraunces, serif', color: GREEN }}>
+                  {stat.n}
+                </div>
+                <div className="mt-1 text-xs uppercase tracking-[0.18em] opacity-60">
+                  {stat.label}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
         <p
           style={{
             fontFamily: "Fraunces, serif",
@@ -3189,6 +3318,42 @@ export function AngAng() {
       </Section>
 
       <NextProjectFooter currentSlug="angang" />
+
+      {/* LIGHTBOX MODAL FOR ANGANG */}
+      {activeRealScreen !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setActiveRealScreen(null)}
+            className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
+            aria-label="Close modal"
+          >
+            <X size={22} />
+          </button>
+          <div className="relative max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#1F2A1F] p-4 text-white shadow-2xl">
+            <div className="text-center py-3 border-b border-white/10">
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#9DD325]">
+                {REAL_SCREENS[activeRealScreen][lang].t}
+              </div>
+              <div className="text-xs text-white/60 mt-0.5">
+                {REAL_SCREENS[activeRealScreen][lang].d}
+              </div>
+            </div>
+            <div className="mt-4 flex justify-center overflow-y-auto max-h-[calc(90vh-100px)] p-2">
+              <div className="w-[375px] h-[812px] bg-white rounded-[24px] overflow-hidden shadow-2xl shrink-0">
+                {(() => {
+                  const Comp = REAL_SCREENS[activeRealScreen].Component;
+                  return <Comp />;
+                })()}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -242,7 +242,7 @@ const COPY = {
       ],
     },
     responsibilities: {
-      tag: "( 02 · Vai trò của tôi )",
+      tag: "( 02 · Vai trò của em )",
       title: "Làm việc giữa nghiệp vụ, thiết kế giao diện và chất lượng triển khai.",
       items: [
         ["Phân tích yêu cầu nghiệp vụ", "Làm rõ nhu cầu người dùng, quy tắc sản phẩm và các ràng buộc vận hành trước khi thiết kế."],
@@ -332,8 +332,8 @@ const COPY = {
       ],
     },
     learnings: {
-      tag: "( 09 · Điều tôi học được )",
-      title: "Qua dự án này, tôi học cách nhìn một sản phẩm doanh nghiệp từ nghiệp vụ, cấu trúc hệ thống và trải nghiệm thật khi sử dụng.",
+      tag: "( 09 · Điều em học được )",
+      title: "Qua dự án này, em học cách nhìn một sản phẩm doanh nghiệp từ nghiệp vụ, cấu trúc hệ thống và trải nghiệm thật khi sử dụng.",
       items: [
         "Banking business analysis",
         "Enterprise UX",

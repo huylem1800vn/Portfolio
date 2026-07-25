@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { motion } from "motion/react";
-import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp } from "lucide-react";
+import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp, Maximize2, X } from "lucide-react";
 import { useI18n } from "../../i18n";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
@@ -275,7 +276,7 @@ const COPY = {
 
     reflection: {
       tag: "( 10 · Suy ngẫm )",
-      body: "Dự án này nhắc tôi rằng emotional UX không nằm ở việc thêm thật nhiều tính năng. Điều quan trọng hơn là biết giảm bớt áp lực đúng lúc. Một trải nghiệm hữu ích cần đưa người dùng đi từ cảm giác rối bời đến sự rõ ràng bằng những tương tác dịu, những lựa chọn vừa đủ và một logic sản phẩm có chủ đích.",
+      body: "Dự án này nhắc em rằng emotional UX không nằm ở việc thêm thật nhiều tính năng. Điều quan trọng hơn là biết giảm bớt áp lực đúng lúc. Một trải nghiệm hữu ích cần đưa người dùng đi từ cảm giác rối bời đến sự rõ ràng bằng những tương tác dịu, những lựa chọn vừa đủ và một logic sản phẩm có chủ đích.",
     },
 
     feelLabel: "Cảm xúc",
@@ -285,6 +286,25 @@ const COPY = {
     nextProject: "Ăng Ăng · Food Discovery App",
   },
 };
+
+function MurrorPhoneMockup({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
+  return (
+    <div
+      className={`relative isolate rounded-[2rem] bg-gradient-to-br from-[#77777c] via-[#202124] to-[#444448] p-[2px] shadow-[0_32px_75px_rgba(25,32,60,0.38)] sm:rounded-[2.4rem] ${className}`}
+    >
+      <span className="absolute -left-[2.5px] top-[22%] h-[8%] w-[2.5px] rounded-l-full bg-[#343438]" aria-hidden="true" />
+      <span className="absolute -left-[2.5px] top-[32%] h-[12%] w-[2.5px] rounded-l-full bg-[#343438]" aria-hidden="true" />
+      <span className="absolute -right-[2.5px] top-[28%] h-[16%] w-[2.5px] rounded-r-full bg-[#343438]" aria-hidden="true" />
+
+      <div className="relative rounded-[1.9rem] bg-[#080808] p-[5px] sm:p-[7px] ring-1 ring-white/10 sm:rounded-[2.3rem]">
+        <div className="relative overflow-hidden rounded-[1.6rem] bg-white sm:rounded-[2rem]">
+          <div className="absolute top-2 sm:top-3 left-1/2 z-30 h-2.5 sm:h-3.5 w-12 sm:w-16 -translate-x-1/2 rounded-full bg-[#000000] shadow-sm" />
+          <img src={src} alt={alt} className="block h-auto w-full object-cover" />
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function FIcon({ name }: { name: string }) {
   const p = { size: 20, color: VIOLET };
@@ -409,6 +429,8 @@ const UI_SHOWCASES = {
 export function Murror() {
   const { lang } = useI18n();
   const c = COPY[lang];
+  const [activeScreenModal, setActiveScreenModal] = useState<{ src: string; title: string; body: string } | null>(null);
+  const [uiTab, setUiTab] = useState<number | "all">("all");
   const socialLinks = [
     { label: "Behance", href: "https://www.behance.net/minhhuyhunh2" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/huy-huynh-minh/" },
@@ -545,26 +567,14 @@ export function Murror() {
                 </div>
 
                 <div className="absolute inset-x-0 bottom-0 top-14 sm:top-16">
-                  <div className="absolute left-[3%] top-[25%] z-10 w-[34%] -rotate-[8deg] overflow-hidden rounded-[1.5rem] border-[5px] border-white bg-white shadow-[0_24px_55px_rgba(36,50,99,0.32)] sm:rounded-[2rem] sm:border-[7px]">
-                    <img
-                      src={onboardingJoy}
-                      alt="Murror onboarding screen"
-                      className="block h-auto w-full"
-                    />
+                  <div className="absolute left-[3%] top-[25%] z-10 w-[34%] -rotate-[8deg]">
+                    <MurrorPhoneMockup src={onboardingJoy} alt="Murror onboarding screen" />
                   </div>
-                  <div className="absolute left-[32%] top-[5%] z-30 w-[38%] rotate-[1.5deg] overflow-hidden rounded-[1.5rem] border-[5px] border-white bg-white shadow-[0_30px_70px_rgba(36,50,99,0.36)] sm:rounded-[2rem] sm:border-[7px]">
-                    <img
-                      src={profileMinhHuyBlue}
-                      alt="Murror emotional profile screen"
-                      className="block h-auto w-full"
-                    />
+                  <div className="absolute left-[32%] top-[5%] z-30 w-[38%] rotate-[1.5deg]">
+                    <MurrorPhoneMockup src={profileMinhHuyBlue} alt="Murror emotional profile screen" />
                   </div>
-                  <div className="absolute right-[2%] top-[23%] z-20 w-[34%] rotate-[8deg] overflow-hidden rounded-[1.5rem] border-[5px] border-white bg-white shadow-[0_24px_55px_rgba(36,50,99,0.32)] sm:rounded-[2rem] sm:border-[7px]">
-                    <img
-                      src={chatHome}
-                      alt="Murror companion chat screen"
-                      className="block h-auto w-full"
-                    />
+                  <div className="absolute right-[2%] top-[23%] z-20 w-[34%] rotate-[8deg]">
+                    <MurrorPhoneMockup src={chatHome} alt="Murror companion chat screen" />
                   </div>
                 </div>
 
@@ -779,41 +789,77 @@ export function Murror() {
             </div>
           </div>
 
-          <div className="mt-16 text-xs tracking-[0.2em] uppercase mb-8" style={{ color: VIOLET }}>
-            {c.ui.screensLabel}
-          </div>
-          <div className="space-y-6">
+          <div className="sticky top-[80px] z-30 my-10 flex flex-wrap gap-2.5 rounded-2xl border border-white/15 bg-[#0f172e]/90 p-2 shadow-2xl backdrop-blur-md">
+            <button
+              type="button"
+              onClick={() => setUiTab("all")}
+              className={`rounded-xl px-5 py-2.5 text-xs font-semibold tracking-wide transition-all ${
+                uiTab === "all"
+                  ? "bg-[#a59cff] text-[#0b1329] shadow-md font-bold"
+                  : "bg-transparent text-white/70 hover:bg-white/10 hover:text-white"
+              }`}
+            >
+              {lang === "en" ? "All Screen Groups (3)" : "Tất cả nhóm màn hình (3)"}
+            </button>
             {UI_SHOWCASES[lang].map((group, i) => (
-              <motion.div
+              <button
                 key={group.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.05 }}
-                className="rounded-[28px] p-5 md:p-6 backdrop-blur-md"
-                style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+                type="button"
+                onClick={() => setUiTab(i)}
+                className={`rounded-xl px-5 py-2.5 text-xs font-semibold tracking-wide transition-all ${
+                  uiTab === i
+                    ? "bg-[#a59cff] text-[#0b1329] shadow-md font-bold"
+                    : "bg-transparent text-white/70 hover:bg-white/10 hover:text-white"
+                }`}
               >
-                <div className="mb-5 md:mb-6">
-                  <div className="text-lg mb-2" style={{ fontFamily: "Fraunces, serif" }}>{group.title}</div>
-                  <div className="text-sm opacity-70 leading-relaxed max-w-[70ch]">{group.desc}</div>
-                </div>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                  {group.screens.map((screen) => (
-                    <div key={screen.title} className="rounded-2xl p-3" style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
-                      <div className="overflow-hidden rounded-[22px]" style={{ border: `1px solid ${BORDER}` }}>
-                        <img
-                          src={screen.src}
-                          alt={`Murror UI Design · ${group.title} · ${screen.title}`}
-                          className="block w-full h-auto"
-                        />
-                      </div>
-                      <div className="text-xs uppercase tracking-[0.16em] opacity-70 mt-3">{screen.title}</div>
-                      <div className="text-sm opacity-70 leading-relaxed mt-2">{screen.body}</div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
+                {group.title}
+              </button>
             ))}
+          </div>
+
+          <div className="space-y-10">
+            {UI_SHOWCASES[lang]
+              .filter((_, i) => uiTab === "all" || uiTab === i)
+              .map((group, i) => (
+                <motion.div
+                  key={group.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.05 }}
+                  className="rounded-[28px] p-6 md:p-8 backdrop-blur-md"
+                  style={{ backgroundColor: GLASS, border: `1px solid ${BORDER}` }}
+                >
+                  <div className="mb-6 md:mb-8">
+                    <div className="text-xl md:text-2xl mb-2 tracking-tight" style={{ fontFamily: "Fraunces, serif", color: VIOLET }}>
+                      {group.title}
+                    </div>
+                    <div className="text-sm opacity-75 leading-relaxed max-w-[70ch]">{group.desc}</div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {group.screens.map((screen) => (
+                      <div
+                        key={screen.title}
+                        onClick={() => setActiveScreenModal({ src: screen.src, title: screen.title, body: screen.body })}
+                        className="group cursor-pointer rounded-2xl p-4 transition-all duration-300 hover:-translate-y-2 hover:bg-white/10"
+                        style={{ backgroundColor: "rgba(255,255,255,0.03)", border: `1px solid ${BORDER}` }}
+                      >
+                        <div className="relative overflow-hidden rounded-[24px]">
+                          <MurrorPhoneMockup src={screen.src} alt={`Murror UI Design · ${screen.title}`} />
+                        </div>
+                        <div className="mt-4 flex items-center justify-between">
+                          <span className="text-xs uppercase tracking-[0.16em] font-semibold text-[#a59cff]">
+                            {screen.title}
+                          </span>
+                          <ArrowUpRight size={14} className="opacity-40 group-hover:opacity-100 transition-opacity text-[#a59cff]" />
+                        </div>
+                        <div className="text-xs opacity-70 leading-relaxed mt-1.5 line-clamp-2">{screen.body}</div>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
           </div>
         </Section>
 
@@ -833,6 +879,38 @@ export function Murror() {
         </Section>
 
         <NextProjectFooter currentSlug="murror" />
+
+        {activeScreenModal !== null && (
+          <div
+            className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8"
+            role="dialog"
+            aria-modal="true"
+          >
+            <button
+              type="button"
+              onClick={() => setActiveScreenModal(null)}
+              className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
+              aria-label="Close modal"
+            >
+              <X size={22} />
+            </button>
+            <div className="relative max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#0d1527] p-5 text-white border border-white/20 shadow-2xl">
+              <div className="text-center pb-3 border-b border-white/10">
+                <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#a59cff]">
+                  {activeScreenModal.title}
+                </div>
+                <div className="text-xs text-white/60 mt-1 max-w-[320px] mx-auto">
+                  {activeScreenModal.body}
+                </div>
+              </div>
+              <div className="mt-4 flex justify-center overflow-y-auto max-h-[calc(90vh-110px)] p-2">
+                <div className="w-[340px] overflow-hidden rounded-[2rem] shadow-2xl shrink-0">
+                  <img src={activeScreenModal.src} alt={activeScreenModal.title} className="block w-full h-auto" />
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
