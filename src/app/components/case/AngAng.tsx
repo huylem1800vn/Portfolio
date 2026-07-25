@@ -678,7 +678,7 @@ const COPY = {
       tag: "( 03 · Mục tiêu nghiên cứu )",
       title: "Những điều cần hiểu thật rõ trước khi bắt đầu vẽ ra bất kỳ màn hình nào",
       intro:
-        "Trước khi bàn đến tính năng hay giao diện, mình muốn hiểu rõ người dùng đang chọn quán trong hoàn cảnh nào, điều gì khiến họ chần chừ, họ đang tin vào đâu và khoảng trống nào thật sự đáng để sản phẩm can thiệp.",
+        "Trước khi bàn đến tính năng hay giao diện, em muốn hiểu rõ người dùng đang chọn quán trong hoàn cảnh nào, điều gì khiến họ chần chừ, họ đang tin vào đâu và khoảng trống nào thật sự đáng để sản phẩm can thiệp.",
       questions: [
         "Người dùng thường tìm quán ăn trong những tình huống nào?",
         "Những yếu tố nào ảnh hưởng mạnh nhất đến quyết định chọn quán?",
@@ -705,9 +705,9 @@ const COPY = {
       tag: "( 05 · Secondary Research )",
       title: "Nhìn từ thị trường, đây thật sự là một vấn đề đáng để làm",
       intro:
-        "Mình dùng dữ liệu công khai và các báo cáo ngành để nhìn rộng hơn một chút: người Việt đang chi cho việc ăn ngoài như thế nào, hành vi chọn quán đã dịch chuyển ra sao, và vì sao cảm giác thiếu tin tưởng trước lúc quyết định vẫn còn rất rõ.",
+        "Em dùng dữ liệu công khai và các báo cáo ngành để nhìn rộng hơn một chút: người Việt đang chi cho việc ăn ngoài như thế nào, hành vi chọn quán đã dịch chuyển ra sao, và vì sao cảm giác thiếu tin tưởng trước lúc quyết định vẫn còn rất rõ.",
       summary:
-        "Nhờ phần này, mình thấy rõ Ăng Ăng không xuất phát từ một nỗi băn khoăn cá nhân rồi cố gượng ép thành sản phẩm. Nó chạm vào một nhu cầu có thật, trong một thị trường vẫn đang tăng trưởng, nơi người dùng vẫn cần một cách chọn quán đáng tin hơn.",
+        "Nhờ phần này, em thấy rõ Ăng Ăng không xuất phát từ một nỗi băn khoăn cá nhân rồi cố gượng ép thành sản phẩm. Nó chạm vào một nhu cầu có thật, trong một thị trường vẫn đang tăng trưởng, nơi người dùng vẫn cần một cách chọn quán đáng tin hơn.",
       items: [
         {
           stat: "590.000 tỷ đồng",
@@ -735,7 +735,7 @@ const COPY = {
       tag: "( 06 · Primary Research )",
       title: "Những điều người dùng lặp lại khi cuộc trò chuyện đi vào thực tế",
       intro:
-        "Nếu secondary research cho mình cái nhìn rộng, thì primary research kéo mọi thứ về đúng đời sống thật của người dùng. Điều mình cần không chỉ là nghe họ nói họ muốn gì, mà là nhìn ra họ thật sự đã so sánh, kiểm tra và chốt quán ra sao trong những lần đi ăn thường ngày.",
+        "Nếu secondary research cho em cái nhìn rộng, thì primary research kéo mọi thứ về đúng đời sống thật của người dùng. Điều em cần không chỉ là nghe họ nói họ muốn gì, mà là nhìn ra họ thật sự đã so sánh, kiểm tra và chốt quán ra sao trong những lần đi ăn thường ngày.",
       clusters: [
         {
           title: "Ngữ cảnh ra quyết định",
@@ -845,7 +845,7 @@ const COPY = {
       tag: "( 10 · Persona tổng hợp )",
       title: "Hai chân dung người dùng được chắt lại từ những điểm lặp nổi bật nhất",
       note:
-        "Thay vì dựng ra một nhân vật hư cấu đơn lẻ, mình gom lại hai chân dung xuất hiện rõ nhất xuyên suốt khảo sát và phỏng vấn để nhìn vấn đề gần với thực tế hơn.",
+        "Thay vì dựng ra một nhân vật hư cấu đơn lẻ, em gom lại hai chân dung xuất hiện rõ nhất xuyên suốt khảo sát và phỏng vấn để nhìn vấn đề gần với thực tế hơn.",
       cards: [
         {
           title: "Persona 1 · Người đi làm bận rộn",
@@ -895,7 +895,7 @@ const COPY = {
       tag: "( 11 · User Journey )",
       title: "Từ cơn thèm ăn đầu tiên đến cảm giác sau khi đã chọn quán",
       intro:
-        "Khi nhìn lại dữ liệu nghiên cứu, mình thấy hành trình chọn quán không nên bị gộp vào một flow chung. Có một nhóm cần quyết nhanh và chắc, còn một nhóm lại đi theo cảm xúc, người đi cùng và cảm giác muốn khám phá một nơi thú vị hơn.",
+        "Khi nhìn lại dữ liệu nghiên cứu, em thấy hành trình chọn quán không nên bị gộp vào một flow chung. Có một nhóm cần quyết nhanh và chắc, còn một nhóm lại đi theo cảm xúc, người đi cùng và cảm giác muốn khám phá một nơi thú vị hơn.",
       maps: [
         {
           title: "Hành trình 1 · Người đi làm bận rộn cần chọn quán nhanh và gần",
@@ -958,7 +958,7 @@ const COPY = {
       keywords: ["Tươi mới", "Thân thiện", "Trẻ trung", "Đơn giản", "Gần gũi", "Đáng tin", "Dễ quyết định"],
       toneLabel: "Tinh thần thị giác",
       tone:
-        "Màu xanh #9DD325 được chọn làm màu chủ đạo vì nó tạo cảm giác tươi, sáng và dễ gần ngay từ cái nhìn đầu tiên. Với Ăng Ăng, mình muốn trải nghiệm ăn uống không chỉ nhanh và tiện, mà còn mang cảm giác vui, nhẹ và đủ đáng tin để người dùng muốn tiếp tục khám phá. Sắc xanh này gợi đến sự tươi mới, tự nhiên và tích cực, đồng thời vẫn đủ nổi bật để giữ vai trò ở những điểm nhấn quan trọng như nút chính, trạng thái được chọn hay những khu vực cần thu hút ánh nhìn. Khi đi cùng nền trắng và typography bo tròn, tổng thể của Ăng Ăng trở nên trẻ trung, sạch sẽ và dễ nhớ hơn.",
+        "Màu xanh #9DD325 được chọn làm màu chủ đạo vì nó tạo cảm giác tươi, sáng và dễ gần ngay từ cái nhìn đầu tiên. Với Ăng Ăng, em muốn trải nghiệm ăn uống không chỉ nhanh và tiện, mà còn mang cảm giác vui, nhẹ và đủ đáng tin để người dùng muốn tiếp tục khám phá. Sắc xanh này gợi đến sự tươi mới, tự nhiên và tích cực, đồng thời vẫn đủ nổi bật để giữ vai trò ở những điểm nhấn quan trọng như nút chính, trạng thái được chọn hay những khu vực cần thu hút ánh nhìn. Khi đi cùng nền trắng và typography bo tròn, tổng thể của Ăng Ăng trở nên trẻ trung, sạch sẽ và dễ nhớ hơn.",
       moodLabel: "Bảng cảm hứng",
     },
     color: {
@@ -1073,7 +1073,7 @@ const COPY = {
       tag: "( 20 · Wireframe )",
       title: "Những nét vẽ đầu tiên cho hành trình chọn quán ăn",
       body:
-        "Trước khi đi tới phần UI hoàn chỉnh, mình phác các màn hình cốt lõi trên giấy để thử bố cục, điều hướng và xem mỗi insight có thể đi vào một hành trình thật sự dùng được như thế nào.",
+        "Trước khi đi tới phần UI hoàn chỉnh, em phác các màn hình cốt lõi trên giấy để thử bố cục, điều hướng và xem mỗi insight có thể đi vào một hành trình thật sự dùng được như thế nào.",
       items: [
         { src: wireframeHome, t: "Trang chủ · Điểm vào theo tâm trạng", d: "Lời chào, thanh tìm kiếm, chips tâm trạng, quán gần đây và banner." },
         { src: wireframeNav, t: "Bố cục & thanh điều hướng dưới", d: "Khung app, vùng hero, khối nội dung, bottom nav 5 tab." },

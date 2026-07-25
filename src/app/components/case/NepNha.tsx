@@ -223,38 +223,36 @@ const COPY = {
     },
     anatomy: {
       tag: "( 08 · How I Structured the Screen )",
-      title: "I arranged the Today screen from one person’s day to the family’s shared life.",
-      body:
-        "I did not arrange this screen by feature. I started with a personal greeting, followed with information that can be checked quickly, then moved into shared responsibilities and activities the family can do together. The spacing helps make that order easy to follow.",
-      hierarchyTitle: "The order I want users to follow",
-      hierarchy: [
-        ["Start with a family member", "I placed the profile and greeting first so the screen opens with a person, not a list of devices or statistics."],
-        ["Show what matters today", "The two cards directly below summarize the information that can be understood in a quick glance."],
-        ["Move into shared responsibilities", "Member status and household tasks show what is happening in the family without making the experience feel like monitoring."],
-        ["End with a reason to connect", "Connection suggestions appear as their own section so the screen does more than report information. It also encourages time together."],
-      ],
-      spacingTitle: "Why I chose these spacing values",
-      spacing: [
-        ["4px", "I use this small gap when two details need to be read as one unit, such as an icon and its label."],
-        ["8px", "This keeps a title close to the sentence that explains it."],
-        ["12px", "This gives an icon and its content enough room without making the card feel disconnected."],
-        ["16px", "This is the main rhythm of the interface: screen margins, card padding, and gaps between repeated cards."],
-        ["24px", "I use a larger gap when the user is moving into a different content group."],
-        ["32px", "This separates major topics on the Family screens and creates a clear pause before the next section."],
-      ],
-      formulaTitle: "How I divided the two quick-summary cards",
-      formula:
-        "The screen is 375px wide. After leaving 16px on both sides, I divided the remaining row into two 163px cards with a 16px gap. Each card is 84px high, which is enough for a label, a 4px gap, and one clear value without leaving unnecessary empty space.",
-      exceptionTitle: "Why the suggestion cards use 14px",
-      exception:
-        "I reduced the padding from 16px to 14px in these cards because they contain a 36px icon and two lines of text. This keeps the row at 84px and gives the content enough room without making the card taller than necessary.",
-      radiusTitle: "I also use corner radius to show hierarchy",
-      radius: [
-        ["16px", "Small cards and repeated actions"],
-        ["24px", "Larger sections for family and connection"],
-        ["32px", "The bottom navigation, which frames the whole screen"],
-      ],
-      source: "These measurements come directly from the Today and Family screens in the Nếp Nhà Figma file.",
+      ia: {
+        title: "Information Architecture Breakdown (IA)",
+        desc: "Before drawing the UI, I listed all necessary data points and grouped them by context of use.",
+        step1: {
+          title: "Data points",
+          items: ["Greeting", "Avatar", "Temperature", "Humidity", "Medication Reminder", "Family Status", "Who's Home", "Connection Suggestion", "Shared Chores"]
+        },
+        step2: {
+          title: "Context Grouping",
+          g1: { title: "Start (Header)", desc: "Avatar + Greeting" },
+          g2: { title: "Quick Reports", desc: "Personal Reminders + Environment Stats" },
+          g3: { title: "Family Life", desc: "Family Status + Connection Suggestions" }
+        },
+        step3: {
+          title: "Wireframe Mapping"
+        }
+      },
+      layout: {
+        title: "Pixel-Perfect Layout Analysis (Today Screen)",
+        headline: "Grid Formula: 375px Width, 16px Margin, and two 163px quick report cards.",
+        desc: "The interface is meticulously calculated to fit popular screen sizes, ensuring a 16px breathing room for the main rhythm while optimizing space for information display components.",
+        annotations: {
+          w163: "163px width",
+          gap16: "16px gap",
+          pad14: { title: "14px padding", desc: "Exception: This card has a 36px icon and 2 lines of text, so I reduced padding from 16px to 14px to maintain the 84px height." },
+          rad24: { title: "24px radius", desc: "For larger family and connection blocks." },
+          margin16: "16px margin",
+          disclaimer: "( UI rendered using HTML/CSS simulating an iPhone 13 mini - 375px screen )"
+        }
+      }
     },
     ui: {
       tag: "( 09 · Final Interface )",
@@ -337,7 +335,7 @@ const COPY = {
     },
     research: {
       tag: "( 02 · Quy trình nghiên cứu )",
-      title: "Tôi bắt đầu từ đời sống gia đình, không bắt đầu bằng danh sách tính năng.",
+      title: "Em bắt đầu từ đời sống gia đình, không bắt đầu bằng danh sách tính năng.",
       body:
         "UX board đi từ desk research và phân tích đối thủ đến nhóm người dùng, empathy map, persona, journey, kiến trúc thông tin và giao diện. Mục tiêu của chuỗi này là hiểu nhịp sinh hoạt gia đình đang vướng ở đâu trước khi quyết định Nếp Nhà cần trở thành sản phẩm như thế nào.",
       methods: [
@@ -485,38 +483,36 @@ const COPY = {
     },
     anatomy: {
       tag: "( 08 · Cách em sắp xếp giao diện )",
-      title: "Em sắp xếp màn Hôm nay theo một nhịp đi từ cá nhân đến đời sống chung của gia đình.",
-      body:
-        "Em không xếp nội dung theo danh sách tính năng. Màn hình bắt đầu bằng lời chào, tiếp đến là thông tin cần xem nhanh, rồi mới đi vào việc chung và những hoạt động giúp cả nhà gần nhau hơn. Khoảng cách giữa các khối giúp người dùng nhận ra thứ tự này mà không cần đọc quá lâu.",
-      hierarchyTitle: "Thứ tự em muốn người dùng nhìn thấy",
-      hierarchy: [
-        ["Bắt đầu từ một thành viên", "Em đặt ảnh đại diện và lời chào lên đầu để màn hình mở ra bằng một con người, không phải bằng thiết bị hay số liệu."],
-        ["Cho xem nhanh điều cần biết", "Hai card ngay bên dưới tóm tắt những thông tin có thể hiểu chỉ trong một lượt nhìn."],
-        ["Đi vào việc chung của gia đình", "Trạng thái thành viên và việc nhà cho biết trong nhà đang diễn ra điều gì, nhưng không tạo cảm giác mọi người đang bị theo dõi."],
-        ["Kết thúc bằng một lý do để gần nhau hơn", "Gợi ý kết nối được tách thành một phần riêng để màn hình không chỉ báo thông tin, mà còn gợi mở một hoạt động cả nhà có thể làm cùng nhau."],
-      ],
-      spacingTitle: "Vì sao em chọn những khoảng cách này?",
-      spacing: [
-        ["4px", "Em dùng khi hai chi tiết cần được đọc chung, chẳng hạn icon đi cùng nhãn."],
-        ["8px", "Khoảng cách này giữ tiêu đề ở gần câu giải thích của nó."],
-        ["12px", "Icon và nội dung có đủ chỗ thở nhưng vẫn được nhìn như một nhóm."],
-        ["16px", "Đây là nhịp chính của giao diện, được dùng cho lề màn hình, padding trong card và khoảng cách giữa các card lặp lại."],
-        ["24px", "Em dùng khi người dùng chuẩn bị chuyển sang một nhóm nội dung khác."],
-        ["32px", "Khoảng cách này tách các chủ đề lớn trên màn Gia đình và tạo một nhịp nghỉ rõ trước phần tiếp theo."],
-      ],
-      formulaTitle: "Cách em chia hai card báo cáo nhanh",
-      formula:
-        "Màn hình rộng 375px. Sau khi chừa lề 16px ở hai bên, em chia hàng nội dung thành hai card rộng 163px, cách nhau 16px. Mỗi card cao 84px, vừa đủ cho một hàng nhãn, khoảng cách 4px và một giá trị chính mà không để lại quá nhiều khoảng trống.",
-      exceptionTitle: "Vì sao card gợi ý dùng 14px",
-      exception:
-        "Card này có icon 36px và hai dòng chữ nên em giảm padding từ 16px xuống 14px. Nhờ vậy, card vẫn giữ chiều cao 84px, nội dung không bị chật và cũng không cần tăng chiều cao không cần thiết.",
-      radiusTitle: "Em cũng dùng độ bo góc để phân cấp",
-      radius: [
-        ["16px", "Card nhỏ và các hành động lặp lại"],
-        ["24px", "Những khối lớn về gia đình và kết nối"],
-        ["32px", "Thanh điều hướng bao lấy toàn bộ màn hình"],
-      ],
-      source: "Các số đo dưới đây được lấy trực tiếp từ màn Hôm nay và Gia đình trong file Figma Nếp Nhà.",
+      ia: {
+        title: "Phân rã kiến trúc thông tin (IA)",
+        desc: "Trước khi vẽ UI, em liệt kê tất cả điểm dữ liệu cần thiết và gom nhóm theo ngữ cảnh sử dụng.",
+        step1: {
+          title: "Điểm dữ liệu (Data points)",
+          items: ["Lời chào", "Avatar", "Nhiệt độ", "Độ ẩm", "Lời nhắc uống thuốc", "Trạng thái người thân", "Ai đang ở nhà", "Gợi ý kết nối", "Việc nhà chung"]
+        },
+        step2: {
+          title: "Gom nhóm (Context Grouping)",
+          g1: { title: "Khởi đầu (Header)", desc: "Avatar + Lời chào" },
+          g2: { title: "Báo cáo nhanh", desc: "Lời nhắc cá nhân + Thông số môi trường" },
+          g3: { title: "Đời sống gia đình", desc: "Trạng thái người thân + Gợi ý kết nối" }
+        },
+        step3: {
+          title: "Wireframe Mapping"
+        }
+      },
+      layout: {
+        title: "Phân tích Layout Pixel-Perfect (Màn Hôm Nay)",
+        headline: "Công thức chia lưới: 375px Width, 16px Margin, và 2 thẻ báo cáo nhanh 163px.",
+        desc: "Giao diện được tính toán chi tiết để vừa vặn với kích thước màn hình phổ biến, đảm bảo khoảng thở 16px tạo nhịp điệu chính, đồng thời tối ưu hóa diện tích cho các component hiển thị thông tin.",
+        annotations: {
+          w163: "163px width",
+          gap16: "16px gap",
+          pad14: { title: "14px padding", desc: "Ngoại lệ: Card này có icon 36px và 2 dòng chữ, nên em giảm padding từ 16px xuống 14px để giữ nguyên chiều cao 84px." },
+          rad24: { title: "24px radius", desc: "Cho các khối lớn về gia đình và kết nối." },
+          margin16: "16px margin",
+          disclaimer: "( Giao diện được dựng bằng HTML/CSS mô phỏng màn hình iPhone 13 mini - 375px )"
+        }
+      }
     },
     ui: {
       tag: "( 09 · Giao diện hoàn chỉnh )",
@@ -1268,138 +1264,164 @@ export function NepNha() {
         <section id="anatomy" className="py-24 md:py-32" style={{ backgroundColor: "#EDF4E7" }}>
           <div className="mx-auto max-w-[1400px] px-6 md:px-12">
             <SectionTag>{c.anatomy.tag}</SectionTag>
-            <div className="grid gap-10 lg:grid-cols-12">
-              <h2
-                className="text-4xl leading-[1.04] tracking-[-0.035em] md:text-6xl lg:col-span-7"
-                style={{ fontFamily: "Fraunces, serif", fontWeight: 400 }}
-              >
-                {c.anatomy.title}
-              </h2>
-              <p className="text-lg leading-relaxed lg:col-span-5" style={{ color: MUTED }}>
-                {c.anatomy.body}
-              </p>
-            </div>
-
-            <div className="mt-16 grid items-center gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-5">
-                <div className="mx-auto max-w-[300px]">
-                  <PhoneMockup src={NEP_NHA_UI.today} alt="Nếp Nhà Today screen used for layout analysis" />
+            
+            {/* INFOGRAPHIC 1: DATA POINTS TO INFORMATION ARCHITECTURE */}
+            <div className="mt-8 rounded-[2.5rem] bg-white p-6 shadow-sm ring-1 ring-black/5 md:p-12 lg:p-16">
+              <div className="mb-12">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GREEN_DARK }}>
+                  {c.anatomy.ia.title}
                 </div>
+                <h3 className="mt-4 max-w-2xl text-2xl leading-snug text-neutral-800 md:text-3xl" style={{ fontFamily: "Fraunces, serif" }}>
+                  {c.anatomy.ia.desc}
+                </h3>
               </div>
 
-              <div className="lg:col-span-7">
-                <div className="mb-5 text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GREEN_DARK }}>
-                  {c.anatomy.hierarchyTitle}
-                </div>
-                <div className="grid gap-4 md:grid-cols-2">
-                  {c.anatomy.hierarchy.map(([title, body], index) => (
-                    <div
-                      key={title}
-                      className="rounded-[1.5rem] border bg-white p-6 shadow-[0_12px_30px_rgba(54,91,43,0.06)]"
-                      style={{ borderColor: LINE }}
-                    >
-                      <div className="flex h-9 w-9 items-center justify-center rounded-full text-xs font-bold text-white" style={{ backgroundColor: GREEN_DARK }}>
-                        0{index + 1}
-                      </div>
-                      <h3 className="mt-5 text-xl" style={{ fontFamily: "Fraunces, serif" }}>{title}</h3>
-                      <p className="mt-2 text-sm leading-relaxed" style={{ color: MUTED }}>{body}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-14 rounded-[2rem] border bg-white p-6 md:p-9" style={{ borderColor: LINE }}>
-              <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-                <div className="max-w-2xl">
-                  <div className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GREEN_DARK }}>
-                    {c.anatomy.spacingTitle}
-                  </div>
-                  <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}>
-                    {c.anatomy.source}
-                  </p>
-                </div>
-                <div className="flex items-end gap-3" aria-hidden="true">
-                  {[4, 8, 12, 16, 24, 32].map((size) => (
-                    <div key={size} className="flex flex-col items-center gap-2">
-                      <div
-                        className="rounded-full"
-                        style={{
-                          width: `${Math.max(size, 8)}px`,
-                          height: `${Math.max(size, 8)}px`,
-                          backgroundColor: size === 16 ? GREEN_DARK : GREEN,
-                          opacity: size === 16 ? 1 : 0.35 + size / 64,
-                        }}
-                      />
-                      <span className="text-[10px] font-semibold" style={{ color: MUTED }}>{size}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {c.anatomy.spacing.map(([size, purpose]) => (
-                  <div key={size} className="flex gap-4 rounded-2xl p-4" style={{ backgroundColor: CREAM }}>
-                    <div
-                      className="flex h-11 min-w-14 items-center justify-center rounded-xl text-sm font-bold text-white"
-                      style={{ backgroundColor: size === "16px" ? GREEN_DARK : GREEN }}
-                    >
-                      {size}
-                    </div>
-                    <p className="text-xs leading-relaxed" style={{ color: MUTED }}>{purpose}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-6 grid gap-6 lg:grid-cols-12">
-              <div className="rounded-[2rem] p-7 text-white md:p-9 lg:col-span-7" style={{ backgroundColor: GREEN_DARK }}>
-                <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
-                  <CheckCircle2 size={18} />
-                  {c.anatomy.formulaTitle}
-                </div>
-                <p className="mt-7 text-xl leading-relaxed md:text-2xl" style={{ fontFamily: "Fraunces, serif" }}>
-                  {c.anatomy.formula}
-                </p>
-                <div className="mt-8 grid grid-cols-[1fr_auto_1fr] items-center gap-3 rounded-2xl bg-white/10 p-4 text-center text-xs md:text-sm">
-                  <span>163px</span>
-                  <span className="rounded-full bg-white/15 px-3 py-2">16px</span>
-                  <span>163px</span>
-                </div>
-              </div>
-
-              <div className="space-y-6 lg:col-span-5">
-                <div className="rounded-[2rem] border bg-[#FFF9E8] p-7 md:p-8" style={{ borderColor: "#E7DDBB" }}>
-                  <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#7A6425]">
-                    <Info size={18} />
-                    {c.anatomy.exceptionTitle}
-                  </div>
-                  <p className="mt-5 text-sm leading-relaxed text-[#675A34]">{c.anatomy.exception}</p>
-                </div>
-
-                <div className="rounded-[2rem] border bg-white p-7 md:p-8" style={{ borderColor: LINE }}>
-                  <div className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: GREEN_DARK }}>
-                    {c.anatomy.radiusTitle}
-                  </div>
-                  <div className="mt-5 space-y-3">
-                    {c.anatomy.radius.map(([size, purpose], index) => (
-                      <div key={size} className="flex items-center gap-4">
-                        <div
-                          className="h-12 w-16 shrink-0 border-2"
-                          style={{
-                            borderColor: GREEN,
-                            borderRadius: `${[16, 24, 32][index]}px`,
-                            backgroundColor: GREEN_SOFT,
-                          }}
-                        />
-                        <div>
-                          <div className="text-sm font-bold" style={{ color: GREEN_DARK }}>{size}</div>
-                          <div className="text-xs" style={{ color: MUTED }}>{purpose}</div>
-                        </div>
-                      </div>
+              <div className="grid gap-8 lg:grid-cols-3">
+                {/* Step 1 */}
+                <div className="rounded-3xl bg-[#f9f9f9] p-8">
+                  <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-200 text-xs font-bold text-neutral-600">1</div>
+                  <div className="mb-4 font-semibold text-neutral-800">{c.anatomy.ia.step1.title}</div>
+                  <div className="flex flex-wrap gap-2">
+                    {c.anatomy.ia.step1.items.map((point: string) => (
+                      <span key={point} className="rounded-lg border border-neutral-200 bg-white px-3 py-1.5 text-xs text-neutral-600 shadow-sm">{point}</span>
                     ))}
                   </div>
                 </div>
+
+                {/* Step 2 */}
+                <div className="rounded-3xl bg-[#f0f5ed] p-8">
+                  <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full font-bold text-white" style={{ backgroundColor: GREEN }}>2</div>
+                  <div className="mb-4 font-semibold text-neutral-800">{c.anatomy.ia.step2.title}</div>
+                  <div className="space-y-3">
+                    <div className="rounded-xl bg-white p-4 shadow-sm">
+                      <div className="text-xs font-bold uppercase tracking-wider" style={{ color: GREEN_DARK }}>{c.anatomy.ia.step2.g1.title}</div>
+                      <div className="mt-1 text-xs text-neutral-500">{c.anatomy.ia.step2.g1.desc}</div>
+                    </div>
+                    <div className="rounded-xl bg-white p-4 shadow-sm border-l-4" style={{ borderLeftColor: GREEN }}>
+                      <div className="text-xs font-bold uppercase tracking-wider" style={{ color: GREEN_DARK }}>{c.anatomy.ia.step2.g2.title}</div>
+                      <div className="mt-1 text-xs text-neutral-500">{c.anatomy.ia.step2.g2.desc}</div>
+                    </div>
+                    <div className="rounded-xl bg-white p-4 shadow-sm border-l-4 border-neutral-300">
+                      <div className="text-xs font-bold uppercase tracking-wider text-neutral-600">{c.anatomy.ia.step2.g3.title}</div>
+                      <div className="mt-1 text-xs text-neutral-500">{c.anatomy.ia.step2.g3.desc}</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="rounded-3xl p-8" style={{ backgroundColor: GREEN_DARK }}>
+                  <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/20 font-bold text-white">3</div>
+                  <div className="mb-4 font-semibold text-white">{c.anatomy.ia.step3.title}</div>
+                  <div className="mx-auto w-48 overflow-hidden rounded-[2rem] bg-neutral-900 p-2 shadow-2xl ring-4 ring-neutral-800">
+                    <div className="flex h-[320px] flex-col gap-2 rounded-[1.6rem] bg-white p-3">
+                      <div className="flex items-center gap-2 px-1 py-2">
+                        <div className="h-8 w-8 rounded-full bg-neutral-200" />
+                        <div className="h-3 w-16 rounded-full bg-neutral-200" />
+                      </div>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="h-20 rounded-xl opacity-80" style={{ backgroundColor: GREEN_SOFT }} />
+                        <div className="h-20 rounded-xl opacity-80" style={{ backgroundColor: GREEN_SOFT }} />
+                      </div>
+                      <div className="mt-2 h-16 rounded-xl bg-neutral-100" />
+                      <div className="h-16 rounded-xl bg-neutral-100" />
+                      <div className="mt-auto flex justify-around border-t pt-2">
+                        <div className="h-4 w-4 rounded-full bg-neutral-200" />
+                        <div className="h-4 w-4 rounded-full bg-neutral-200" />
+                        <div className="h-4 w-4 rounded-full bg-neutral-200" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* INFOGRAPHIC 2: PIXEL-PERFECT LAYOUT ANATOMY */}
+            <div className="mt-8 overflow-hidden rounded-[2.5rem] bg-[#1a1f18] p-6 text-white shadow-2xl md:p-16">
+              <div className="mb-16 max-w-2xl">
+                <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
+                  <CheckCircle2 size={16} />
+                  {c.anatomy.layout.title}
+                </div>
+                <h3 className="mt-5 text-2xl leading-snug md:text-3xl" style={{ fontFamily: "Fraunces, serif" }}>
+                  {c.anatomy.layout.headline}
+                </h3>
+                <p className="mt-4 text-sm text-white/60 leading-relaxed">
+                  {c.anatomy.layout.desc}
+                </p>
+              </div>
+
+              <div className="relative mx-auto flex w-full max-w-[800px] items-center justify-center py-10 hidden sm:flex">
+                <div className="relative z-10 w-[375px] shrink-0 rounded-[2.5rem] bg-white p-[16px] shadow-2xl ring-8 ring-white/10 select-none">
+                  <div className="mb-6 flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-full bg-neutral-200" />
+                    <div className="space-y-1.5">
+                      <div className="h-3 w-20 rounded-full bg-neutral-200" />
+                      <div className="h-4 w-32 rounded-full bg-neutral-300" />
+                    </div>
+                  </div>
+
+                  <div className="relative flex gap-[16px]">
+                    <div className="relative h-[84px] w-[163.5px] rounded-[16px] p-[16px]" style={{ backgroundColor: GREEN_SOFT }}>
+                      <div className="flex items-center gap-1.5">
+                        <div className="h-5 w-5 rounded-md bg-white/60" />
+                        <div className="h-2 w-16 rounded-full bg-black/20" />
+                      </div>
+                      <div className="mt-3 h-5 w-24 rounded-full bg-black/40" />
+                      <div className="absolute -bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center">
+                        <div className="h-4 w-[1px] bg-white/40" />
+                        <div className="whitespace-nowrap rounded-md bg-white/10 px-2 py-1 text-[10px] text-white backdrop-blur-sm">{c.anatomy.layout.annotations.w163}</div>
+                      </div>
+                    </div>
+
+                    <div className="absolute left-[163.5px] top-1/2 flex h-full w-[16px] -translate-y-1/2 flex-col items-center justify-center">
+                      <div className="w-full border-t border-dashed border-red-400" />
+                      <div className="absolute -top-6 whitespace-nowrap text-[10px] font-bold text-red-400">{c.anatomy.layout.annotations.gap16}</div>
+                    </div>
+
+                    <div className="relative h-[84px] w-[163.5px] rounded-[16px] p-[14px]" style={{ backgroundColor: '#FFF9E8' }}>
+                      <div className="flex items-center gap-1.5">
+                        <div className="h-7 w-7 rounded-full bg-orange-100" />
+                        <div className="space-y-1.5">
+                          <div className="h-2 w-12 rounded-full bg-black/20" />
+                          <div className="h-2 w-16 rounded-full bg-black/20" />
+                        </div>
+                      </div>
+                      <div className="mt-2 h-4 w-20 rounded-full bg-black/40" />
+                      <div className="absolute -right-32 top-1/2 flex -translate-y-1/2 items-center gap-2">
+                        <div className="h-[1px] w-8 border-t border-dashed border-[#F5A623]" />
+                        <div className="w-32 rounded-lg bg-[#2a2a2a] p-2 text-[10px] text-white/80 ring-1 ring-white/10">
+                          <strong className="block text-[#F5A623]">{c.anatomy.layout.annotations.pad14.title}</strong>
+                          {c.anatomy.layout.annotations.pad14.desc}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="mt-[24px]">
+                    <div className="mb-3 h-4 w-32 rounded-full bg-neutral-200" />
+                    <div className="relative h-[120px] w-full rounded-[24px] bg-neutral-100 p-4">
+                      <div className="absolute -left-28 mt-8 flex items-center gap-2">
+                        <div className="w-24 text-right text-[10px] text-white/80">
+                          <strong className="block text-green-400">{c.anatomy.layout.annotations.rad24.title}</strong>
+                          {c.anatomy.layout.annotations.rad24.desc}
+                        </div>
+                        <div className="h-[1px] w-6 border-t border-dashed border-green-400" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="absolute -left-12 top-[40%] flex items-center gap-2">
+                    <div className="whitespace-nowrap text-[10px] font-bold text-blue-300">{c.anatomy.layout.annotations.margin16}</div>
+                    <div className="w-8 border-t border-dashed border-blue-300" />
+                  </div>
+                  <div className="pointer-events-none absolute inset-y-0 left-0 w-[16px] bg-blue-400/10" />
+                  <div className="pointer-events-none absolute inset-y-0 right-0 w-[16px] bg-blue-400/10" />
+
+                </div>
+              </div>
+              
+              <div className="mt-8 text-center text-[10px] uppercase tracking-[0.2em] text-white/40 hidden sm:block">
+                {c.anatomy.layout.annotations.disclaimer}
               </div>
             </div>
           </div>

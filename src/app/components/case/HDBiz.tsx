@@ -321,7 +321,7 @@ const COPY = {
     },
     impact: {
       tag: "( 08 · Đóng góp chính )",
-      title: "Tôi đảm nhiệm chính phần thiết kế màn hình cho chức năng Thanh Toán Vay, một phần chức năng Giải Ngân và thêm các màn hình thuộc những chức năng khác.",
+      title: "Em đảm nhiệm chính phần thiết kế màn hình cho chức năng Thanh Toán Vay, một phần chức năng Giải Ngân và thêm các màn hình thuộc những chức năng khác.",
       stats: [
         ["Chính", "màn hình Thanh Toán Vay"],
         ["Một phần", "màn hình Giải Ngân"],

@@ -324,7 +324,7 @@ const COPY = {
     ],
     auditTitle: "Điểm vướng chính không nằm ở việc có nhiều sản phẩm, mà nằm ở cách sản phẩm được trình bày.",
     auditIntro:
-      "Tôi xem lại trang chủ, thanh điều hướng, danh sách sản phẩm và trang chi tiết cũ để tìm những chỗ giao diện khiến người mua phải dừng lại, nhìn thêm lần nữa hoặc tự đoán bước tiếp theo.",
+      "Em xem lại trang chủ, thanh điều hướng, danh sách sản phẩm và trang chi tiết cũ để tìm những chỗ giao diện khiến người mua phải dừng lại, nhìn thêm lần nữa hoặc tự đoán bước tiếp theo.",
     audit: [
       {
         icon: "search",
@@ -351,7 +351,7 @@ const COPY = {
     competitorTitle:
       "Nhìn vào các website thời trang để hiểu cách người dùng xem, so sánh và tin vào sản phẩm.",
     competitorIntro:
-      "Tôi tham khảo Uniqlo, Routine và IconDenim để xem mỗi thương hiệu tổ chức điều hướng, khám phá sản phẩm, product card và cảm giác tin tưởng khi mua như thế nào.",
+      "Em tham khảo Uniqlo, Routine và IconDenim để xem mỗi thương hiệu tổ chức điều hướng, khám phá sản phẩm, product card và cảm giác tin tưởng khi mua như thế nào.",
     competitorReference: "Tham chiếu",
     competitorInsight: "Điểm quan sát",
     competitorTakeaway: "Hướng áp dụng",
@@ -385,7 +385,7 @@ const COPY = {
     comparisonTitle:
       "MeMe không chỉ thay đổi vẻ ngoài mà còn làm lại cách người mua đi từ cảm hứng đến một lựa chọn đủ tin tưởng.",
     comparisonIntro:
-      "Nếu chỉ đặt một cặp ảnh trước và sau cạnh nhau, redesign rất dễ bị hiểu thành một lần thay áo giao diện. Tôi tách hành trình mua sắm thành sáu quyết định để chỉ ra trải nghiệm cũ vướng ở đâu và MeMe đã xử lý từng điểm như thế nào.",
+      "Nếu chỉ đặt một cặp ảnh trước và sau cạnh nhau, redesign rất dễ bị hiểu thành một lần thay áo giao diện. Em tách hành trình mua sắm thành sáu quyết định để chỉ ra trải nghiệm cũ vướng ở đâu và MeMe đã xử lý từng điểm như thế nào.",
     comparisonBefore: "Trước · Website YaMe",
     comparisonAfter: "Sau · MeMe redesign",
     journeyLabel: "Các bước được redesign",
@@ -484,14 +484,14 @@ const COPY = {
         points: ["Tóm tắt đơn rõ ràng", "Hiển thị phần tiết kiệm", "Hành động thanh toán tập trung"],
       },
     ],
-    systemTitle: "Hướng thiết kế",
+    systemTitle: "Cách em giữ giao diện rõ ràng và nhất quán",
     systemIntro:
-      "Phần giao diện giữ lại tinh thần bán lẻ năng động của YaMe, sau đó làm nó thoáng hơn bằng phân cấp rõ, hình sản phẩm nổi bật hơn và component có thể lặp lại.",
+      "Em vẫn giữ cảm giác trẻ và năng động của YaMe, nhưng sắp xếp lại nội dung để người mua dễ nhìn sản phẩm, dễ đọc thông tin và biết mình nên làm gì tiếp theo.",
     principles: [
-      "Ưu tiên hình ảnh, nhưng không để hình ảnh tự nói một mình",
-      "Khuyến mãi nên dẫn đường, không chen ngang",
-      "Mỗi card cần có một hành động tiếp theo thật rõ",
-      "Checkout phải dễ đoán trước khi yêu cầu người dùng thanh toán",
+      "Hình sản phẩm được ưu tiên, nhưng giá, màu sắc và thông tin cần chọn vẫn phải dễ thấy.",
+      "Ưu đãi chỉ xuất hiện ở nơi phù hợp, không che mất sản phẩm người mua đang xem.",
+      "Mỗi card tập trung vào một hành động chính để người mua không phải đoán bước tiếp theo.",
+      "Trước khi thanh toán, người mua có thể kiểm tra lại sản phẩm, số lượng, lựa chọn và tổng tiền.",
     ],
     tokens: [
       { k: "Primary", v: "#050505" },
@@ -1444,7 +1444,9 @@ export function MeMe() {
                 <div className="rounded-[2rem] bg-black text-white p-7">
                   <div className="flex items-center gap-3 text-yellow-300 mb-6">
                     <Sparkles size={18} />
-                    <span className="text-xs tracking-[0.2em] uppercase">Principles</span>
+                    <span className="text-xs tracking-[0.2em] uppercase">
+                      {lang === "vi" ? "Nguyên tắc thiết kế" : "Principles"}
+                    </span>
                   </div>
                   <div className="space-y-4">
                     {copy.principles.map((item) => (
