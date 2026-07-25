@@ -309,7 +309,7 @@ const COPY = {
       title: "Nếp Nhà",
       headline: "Một không gian chung để cả nhà cùng nhớ, cùng chăm và gần nhau hơn.",
       body:
-        "Nếp Nhà là concept ứng dụng dành cho gia đình nhiều thế hệ. Dự án không bắt đầu từ câu hỏi điều khiển thiết bị như thế nào, mà từ việc công nghệ có thể giúp các thành viên chia sẻ trách nhiệm, hiện diện trong cuộc sống của nhau và giữ lại những kỷ niệm thường ngày ra sao mà không biến sự quan tâm thành theo dõi.",
+        "Nếp Nhà là concept ứng dụng dành cho gia đình nhiều thế hệ. Thay vì bắt đầu từ việc điều khiển thiết bị, em đặt câu hỏi: công nghệ có thể giúp các thành viên san sẻ việc nhà, quan tâm nhau và lưu giữ kỷ niệm như thế nào mà không khiến ai cảm thấy bị theo dõi?",
       cta1: "Xem phần nghiên cứu",
       cta2: "Xem giao diện hoàn chỉnh",
       info: [
@@ -325,7 +325,7 @@ const COPY = {
       tag: "( 01 · Tổng quan dự án )",
       title: "Sống chung một mái nhà không có nghĩa lúc nào cũng cảm thấy gần nhau.",
       body:
-        "Công việc, học tập, điện thoại cá nhân và lịch sinh hoạt khác nhau khiến gia đình ngày càng ít có thời gian chung. Thông tin quan trọng lại nằm rải rác trong nhóm chat, cuộc gọi, lịch riêng và nhiều album ảnh, trong khi một người thường phải gánh phần lớn việc nhớ và nhắc. Nếp Nhà đặt lại bài toán smart home quanh những người đang sống trong nhà: lịch chung, việc chăm sóc, tín hiệu hiện diện vừa đủ, sự an toàn và những kỷ niệm gia đình.",
+        "Công việc, học tập và lịch sinh hoạt khác nhau khiến các thành viên ngày càng ít có thời gian chung. Lịch hẹn, lời nhắc và ảnh gia đình lại nằm rải rác trong nhóm chat, cuộc gọi, lịch riêng và nhiều album khác nhau. Trong khi đó, một người thường phải nhớ và nhắc việc cho cả nhà. Vì vậy, em thiết kế Nếp Nhà như một không gian chung để gia đình theo dõi lịch, san sẻ việc chăm sóc, kiểm tra sự an toàn và cùng lưu giữ kỷ niệm.",
       question: "Làm sao để công nghệ giúp các thế hệ gần nhau hơn, nhưng vẫn tôn trọng sự riêng tư và không làm người lớn tuổi thấy khó dùng?",
       pillars: [
         ["Cùng nhớ", "Giữ lịch và nếp sinh hoạt quan trọng ở một nơi để không ai phải nhắc cả nhà một mình."],
@@ -335,21 +335,21 @@ const COPY = {
     },
     research: {
       tag: "( 02 · Quy trình nghiên cứu )",
-      title: "Em bắt đầu từ đời sống gia đình, không bắt đầu bằng danh sách tính năng.",
+      title: "Em bắt đầu bằng việc tìm hiểu gia đình đang gặp khó khăn ở đâu.",
       body:
-        "UX board đi từ desk research và phân tích đối thủ đến nhóm người dùng, empathy map, persona, journey, kiến trúc thông tin và giao diện. Mục tiêu của chuỗi này là hiểu nhịp sinh hoạt gia đình đang vướng ở đâu trước khi quyết định Nếp Nhà cần trở thành sản phẩm như thế nào.",
+        "Quy trình nghiên cứu gồm tìm hiểu bối cảnh, phân tích đối thủ, tổng hợp nhu cầu của các nhóm tuổi, xây dựng persona và user journey. Sau khi xác định được những vấn đề lặp lại, em mới sắp xếp kiến trúc thông tin, xây dựng luồng sử dụng và thiết kế giao diện.",
       methods: [
-        ["Desk research", "Tìm hiểu bối cảnh smart living và sự thay đổi trong nếp sinh hoạt của gia đình Việt."],
-        ["Phân tích đối thủ", "So sánh ứng dụng smart home với các nền tảng điều phối gia đình."],
-        ["Empathy mapping", "Nhóm lại nhu cầu, nỗi lo, trách nhiệm và kỳ vọng lặp lại giữa các thế hệ."],
-        ["Persona và journey", "Chuyển nghiên cứu thành hai persona chính và hai góc nhìn sử dụng quan trọng."],
-        ["IA và prototype", "Đưa insight vào cấu trúc sản phẩm, flow và các màn hình hoàn chỉnh."],
+        ["Nghiên cứu tài liệu", "Tìm hiểu sự thay đổi trong nếp sinh hoạt của gia đình Việt và cách công nghệ đang được dùng trong nhà."],
+        ["Phân tích đối thủ", "So sánh ứng dụng nhà thông minh với các nền tảng hỗ trợ gia đình quản lý lịch và công việc chung."],
+        ["Sơ đồ thấu cảm", "Tổng hợp những nhu cầu, nỗi lo và trách nhiệm thường xuất hiện ở mỗi thế hệ."],
+        ["Persona và hành trình", "Xây dựng hai persona chính để thấy rõ mỗi người đang gặp khó khăn ở bước nào."],
+        ["Cấu trúc và prototype", "Chuyển kết quả nghiên cứu thành cấu trúc sản phẩm, luồng sử dụng và giao diện hoàn chỉnh."],
       ],
       evidence: [
-        ["3 thế hệ", "Ba mức độ tự tin, tự chủ và quen thuộc với công nghệ cần cùng tồn tại."],
-        ["4 nơi rời rạc", "Thông tin gia đình đi qua nhóm chat, cuộc gọi, lịch riêng và nhiều album ảnh."],
-        ["1 người giữ nhịp", "Một người thường phải nhớ lịch, nhắc việc và theo sát mọi người trong nhà."],
-        ["Quan tâm hay theo dõi", "Mọi người muốn yên tâm về nhau nhưng không muốn bị giám sát hoặc quản lý."],
+        ["3 thế hệ", "Mỗi thế hệ có mức độ quen thuộc với công nghệ và nhu cầu tự chủ khác nhau."],
+        ["4 nơi lưu thông tin", "Thông tin gia đình thường nằm rải rác trong nhóm chat, cuộc gọi, lịch riêng và album ảnh."],
+        ["1 người thường xuyên nhắc việc", "Một người trong nhà thường phải nhớ lịch, nhắc việc và kiểm tra mọi người."],
+        ["Quan tâm và riêng tư", "Các thành viên muốn biết người thân vẫn ổn nhưng không muốn cảm thấy mình bị giám sát."],
       ],
       competitorsTitle: "Điều rút ra từ phân tích đối thủ",
       competitors: [
@@ -359,13 +359,13 @@ const COPY = {
         ["FamilyWall", "Phối hợp gia đình khá tốt nhưng tách rời smart home và bối cảnh gia đình Việt."],
       ],
       gap:
-        "Cơ hội thiết kế không nằm ở một chiếc điều khiển từ xa khác. Nếp Nhà cần kết nối lịch sinh hoạt, việc chăm sóc, sự an toàn và kỷ niệm chung, đồng thời để mỗi người tự quyết định điều mình muốn chia sẻ.",
+        "Từ đó, em nhận ra gia đình không cần thêm một ứng dụng chỉ để điều khiển thiết bị. Họ cần một nơi kết nối lịch sinh hoạt, việc chăm sóc, sự an toàn và kỷ niệm chung, đồng thời cho phép mỗi người tự chọn thông tin mình muốn chia sẻ.",
     },
     insights: {
       tag: "( 03 · Tổng hợp insight )",
-      title: "Nghiên cứu không dẫn đến nhiều tính năng hơn. Nó giúp em hiểu đúng vai trò của sản phẩm.",
+      title: "Điều em cần giải quyết không phải là thêm tính năng, mà là cân bằng ba nhu cầu.",
       body:
-        "Ba mâu thuẫn chính đã định hình giải pháp. Sự quan tâm không được biến thành theo dõi. Lời nhắc phải làm nhẹ bớt áp lực thay vì trở thành một nguồn áp lực mới. Một trải nghiệm chung cần phù hợp với nhiều thế hệ mà không bắt mọi người sử dụng theo cùng một cách.",
+        "Gia đình cần quan tâm nhau nhưng vẫn phải tôn trọng riêng tư. Lời nhắc cần giúp mọi người bớt quên việc mà không tạo cảm giác bị thúc ép. Giao diện cũng phải đủ nhanh cho người trẻ nhưng vẫn rõ ràng và dễ dùng với người lớn tuổi.",
       tensions: [
         ["Quan tâm nhưng không theo dõi", "Trạng thái và thông tin an toàn nên giúp cả nhà yên tâm, nhưng quyền chia sẻ phải rõ ràng và do từng người lựa chọn."],
         ["Nhắc việc nhưng không gây áp lực", "Sản phẩm cần chia sẻ trách nhiệm và dùng giọng điệu gần gũi, thay vì liên tục ra lệnh cho người dùng."],
@@ -382,7 +382,7 @@ const COPY = {
     },
     audience: {
       tag: "( 04 · Persona chính )",
-      title: "Hai người đang giữ những phần khác nhau trong cùng một nhịp sống gia đình.",
+      title: "Hai persona đại diện cho hai vai trò khác nhau trong gia đình.",
       groups: [
         {
           label: "Minh Anh · 22 tuổi · Người kết nối công nghệ",
@@ -402,13 +402,13 @@ const COPY = {
       labels: { context: "Bối cảnh", needs: "Nhu cầu", tension: "Mâu thuẫn chính" },
       accessibilityTitle: "Người lớn tuổi vẫn là nhóm thiết kế quan trọng",
       accessibility:
-        "Dù hai persona chính đại diện cho người kết nối công nghệ và người giữ nhịp gia đình, ông bà là nhóm quyết định yêu cầu accessibility: nút lớn, từ ngữ quen thuộc, lời nhắc nhẹ và thao tác có thể sửa sai.",
+        "Ngoài hai persona chính, em vẫn xem ông bà là nhóm người dùng cần được ưu tiên. Vì vậy, giao diện cần có nút đủ lớn, từ ngữ quen thuộc, lời nhắc nhẹ nhàng và cách quay lại rõ ràng khi bấm nhầm.",
     },
     journey: {
       tag: "( 05 · Hành trình quan trọng )",
-      title: "Em kiểm tra giải pháp từ hai phía của cùng một mối quan hệ gia đình.",
+      title: "Em đặt hai nhóm người dùng vào cùng một hành trình để xem mỗi người gặp khó khăn ở đâu.",
       body:
-        "Hai hành trình dưới đây được làm lại trực tiếp từ UX Research. Cả hai đều đi qua ba giai đoạn giống nhau, nhưng nỗi lo và điều họ cần ở sản phẩm không thể dùng chung một lời giải.",
+        "Cả hai nhóm đều đi qua ba giai đoạn: trước khi có Nếp Nhà, lúc thiết lập lần đầu và sau một thời gian sử dụng. Tuy cùng dùng một sản phẩm, mỗi nhóm lại có nỗi lo và cách làm quen khác nhau.",
       stageLabels: ["Trước khi có giải pháp chung", "Lần đầu thiết lập", "Sau một thời gian sử dụng"],
       journeys: [
         {
@@ -458,21 +458,21 @@ const COPY = {
     },
     direction: {
       tag: "( 06 · Định hướng sản phẩm )",
-      title: "Từ bảng điều khiển thiết bị thành nơi giữ nhịp sống chung.",
+      title: "Từ ứng dụng điều khiển thiết bị thành không gian chung cho cả gia đình.",
       body:
-        "Kết quả nghiên cứu giúp sản phẩm rời khỏi hình ảnh một bảng điều khiển thiết bị, để trở thành không gian hỗ trợ đời sống gia đình. Mỗi nguyên tắc dưới đây đều trả lời một mâu thuẫn đã xuất hiện trong user journey.",
+        "Sau khi tổng hợp nghiên cứu, em xác định Nếp Nhà không nên chỉ tập trung vào thiết bị. Sản phẩm cần hỗ trợ những việc diễn ra mỗi ngày trong gia đình và giúp các thành viên quan tâm nhau theo cách vừa đủ.",
       principles: [
-        ["Thông minh vừa đủ", "Chỉ đưa điều cần thiết lên đúng lúc, thay vì lấp đầy ngày bằng thông báo."],
-        ["Riêng tư do mỗi người chọn", "Giải thích rõ ai thấy được gì, trạng thái nào được chia sẻ và lời nhắc nào được nhận."],
-        ["Dễ tiếp cận với người lớn tuổi", "Dùng từ quen thuộc, phân cấp rõ, nút lớn và giảm số quyết định trên từng màn."],
-        ["Ngôi nhà có câu chuyện", "Kết nối an toàn, nếp sinh hoạt và ký ức để sản phẩm gần gũi hơn một ứng dụng tiện ích."],
+        ["Chỉ nhắc khi cần", "Ưu tiên những thông tin cần xem ngay và hạn chế thông báo không cần thiết."],
+        ["Mỗi người tự chọn điều muốn chia sẻ", "Giải thích rõ ai có thể xem trạng thái, lịch và thông tin của từng thành viên."],
+        ["Người lớn tuổi cũng có thể tự dùng", "Dùng từ quen thuộc, nút lớn, phân cấp rõ và giảm số lựa chọn trên mỗi màn hình."],
+        ["Không chỉ quản lý, còn lưu giữ", "Kết hợp lịch sinh hoạt, sự an toàn và kỷ niệm để ứng dụng gần gũi hơn với đời sống gia đình."],
       ],
     },
     structure: {
       tag: "( 07 · Cấu trúc sản phẩm )",
-      title: "Năm không gian cùng hỗ trợ gia đình, nhưng Hôm nay là nơi bắt đầu câu chuyện.",
+      title: "Nếp Nhà được chia thành năm khu vực, với Hôm nay là màn hình bắt đầu.",
       body:
-        "Kiến trúc thông tin tách những việc cần làm ngay khỏi thành viên, thiết bị và kỷ niệm. Nhờ vậy, màn đầu tiên vẫn hữu ích mà không bắt mọi tính năng phải tranh nhau sự chú ý.",
+        "Em tách thông tin cần xem ngay khỏi phần thành viên, thiết bị, kỷ niệm và cài đặt. Nhờ vậy, màn Hôm nay chỉ giữ những nội dung cần thiết cho một ngày, thay vì đưa toàn bộ tính năng lên cùng lúc.",
       items: [
         ["Hôm nay", "Điểm bắt đầu chung cho lời nhắc, trạng thái thành viên, việc cần chú ý và gợi ý kết nối."],
         ["Gia đình", "Thành viên, lịch chung, việc chăm sóc và những tín hiệu hiện diện vừa đủ."],
@@ -484,41 +484,41 @@ const COPY = {
     anatomy: {
       tag: "( 08 · Cách em sắp xếp giao diện )",
       ia: {
-        title: "Phân rã kiến trúc thông tin (IA)",
-        desc: "Trước khi vẽ UI, em liệt kê tất cả điểm dữ liệu cần thiết và gom nhóm theo ngữ cảnh sử dụng.",
+        title: "Cách em sắp xếp thông tin trước khi vẽ giao diện",
+        desc: "Em liệt kê những thông tin cần xuất hiện trên màn Hôm nay, sau đó chia chúng thành từng nhóm dựa trên mục đích sử dụng.",
         step1: {
-          title: "Điểm dữ liệu (Data points)",
+          title: "Những thông tin cần có",
           items: ["Lời chào", "Avatar", "Nhiệt độ", "Độ ẩm", "Lời nhắc uống thuốc", "Trạng thái người thân", "Ai đang ở nhà", "Gợi ý kết nối", "Việc nhà chung"]
         },
         step2: {
-          title: "Gom nhóm (Context Grouping)",
-          g1: { title: "Khởi đầu (Header)", desc: "Avatar + Lời chào" },
+          title: "Chia thông tin theo từng nhóm",
+          g1: { title: "Phần mở đầu", desc: "Ảnh đại diện + Lời chào" },
           g2: { title: "Báo cáo nhanh", desc: "Lời nhắc cá nhân + Thông số môi trường" },
           g3: { title: "Đời sống gia đình", desc: "Trạng thái người thân + Gợi ý kết nối" }
         },
         step3: {
-          title: "Wireframe Mapping"
+          title: "Đưa các nhóm thông tin vào wireframe"
         }
       },
       layout: {
-        title: "Phân tích Layout Pixel-Perfect (Màn Hôm Nay)",
-        headline: "Công thức chia lưới: 375px Width, 16px Margin, và 2 thẻ báo cáo nhanh 163px.",
-        desc: "Giao diện được tính toán chi tiết để vừa vặn với kích thước màn hình phổ biến, đảm bảo khoảng thở 16px tạo nhịp điệu chính, đồng thời tối ưu hóa diện tích cho các component hiển thị thông tin.",
+        title: "Cách em chia bố cục màn Hôm nay",
+        headline: "Màn hình rộng 375px, chừa lề 16px và chia hàng báo cáo thành hai card rộng 163px.",
+        desc: "Em dùng lề 16px làm khoảng cách chính trên toàn màn hình. Cách chia này giúp hai card có cùng kích thước, nội dung dễ so sánh và vẫn đủ khoảng trống để giao diện không bị chật.",
         annotations: {
           w163: "163px width",
           gap16: "16px gap",
           pad14: { title: "14px padding", desc: "Ngoại lệ: Card này có icon 36px và 2 dòng chữ, nên em giảm padding từ 16px xuống 14px để giữ nguyên chiều cao 84px." },
           rad24: { title: "24px radius", desc: "Cho các khối lớn về gia đình và kết nối." },
           margin16: "16px margin",
-          disclaimer: "( Giao diện được dựng bằng HTML/CSS mô phỏng màn hình iPhone 13 mini - 375px )"
+          disclaimer: "( Giao diện được dựng bằng HTML/CSS theo kích thước iPhone 13 mini, rộng 375px )"
         }
       }
     },
     ui: {
       tag: "( 09 · Giao diện hoàn chỉnh )",
-      title: "Mỗi màn hình đều trả lời một phát hiện cụ thể từ nghiên cứu.",
+      title: "Mỗi màn hình được thiết kế để giải quyết một nhu cầu đã tìm thấy trong nghiên cứu.",
       body:
-        "UI hoàn chỉnh dùng nền kem dịu, sắc xanh trầm, khoảng thở rộng và các khối bo tròn. Tổng thể được giữ bình tĩnh để lời nhắc và trạng thái ngôi nhà mang cảm giác hỗ trợ, không tạo thêm áp lực.",
+        "Em dùng nền kem, màu xanh trầm, khoảng cách rộng và các card bo tròn để tạo cảm giác gần gũi. Lời nhắc và trạng thái trong nhà nhờ vậy dễ nhận biết nhưng không khiến người dùng cảm thấy bị thúc ép.",
       expand: "Xem toàn bộ màn hình",
       close: "Đóng bản xem",
       screens: [
@@ -534,22 +534,22 @@ const COPY = {
     },
     validation: {
       tag: "( 10 · Kế hoạch kiểm chứng )",
-      title: "Đây là một concept có thể kiểm chứng, không phải kết quả em cho rằng đã được chứng minh.",
+      title: "Bước tiếp theo là kiểm thử prototype với ba nhóm tuổi trong gia đình.",
       body:
-        "Phần tổng hợp nghiên cứu, kiến trúc thông tin và prototype hoàn chỉnh đã được xây dựng. Bước tiếp theo là usability test có hướng dẫn với một người trẻ, một người giữ nhịp gia đình và một người lớn tuổi để kiểm tra khả năng hiểu, quyền riêng tư và cảm giác khi sử dụng giữa các thế hệ.",
+        "Ở giai đoạn hiện tại, em đã hoàn thành phần nghiên cứu, cấu trúc thông tin và prototype. Để biết giải pháp có thật sự dễ hiểu và phù hợp với nhiều thế hệ hay không, em sẽ kiểm thử với một người trẻ, một người thường sắp xếp việc gia đình và một người lớn tuổi.",
       checks: [
-        ["Độ rõ của tác vụ", "Mỗi người có thể tìm lời nhắc, xem trạng thái gia đình và hoàn thành việc chung mà không cần trợ giúp không?"],
-        ["Hiểu quyền riêng tư", "Thành viên có hiểu mình đang chia sẻ điều gì, với ai và thay đổi ở đâu không?"],
-        ["Giọng điệu thông báo", "Lời nhắc tạo cảm giác được hỗ trợ hay gây khó chịu như đang bị thúc ép?"],
-        ["Khả năng dùng của người lớn tuổi", "Cỡ chữ, nút bấm, từ ngữ và cách sửa sai có đủ dễ chịu với người lớn tuổi không?"],
+        ["Thực hiện tác vụ", "Người dùng có thể tìm lời nhắc, xem trạng thái gia đình và hoàn thành việc chung mà không cần trợ giúp không?"],
+        ["Hiểu quyền riêng tư", "Mỗi thành viên có biết mình đang chia sẻ thông tin gì, với ai và có thể thay đổi ở đâu không?"],
+        ["Cảm nhận về lời nhắc", "Thông báo có tạo cảm giác được hỗ trợ hay khiến người dùng thấy mình đang bị thúc ép?"],
+        ["Mức độ dễ dùng với người lớn tuổi", "Cỡ chữ, nút bấm, từ ngữ và cách quay lại có đủ rõ ràng khi người lớn tuổi thao tác không?"],
       ],
-      metrics: "Chỉ số nên theo dõi: tỷ lệ hoàn thành tác vụ, thời gian thực hiện, lỗi thao tác, mức độ hiểu quyền riêng tư, mức chấp nhận thông báo và cảm nhận thoải mái khi sử dụng.",
+      metrics: "Khi kiểm thử, em sẽ theo dõi tỷ lệ hoàn thành tác vụ, thời gian thực hiện, lỗi thao tác, mức độ hiểu quyền riêng tư và cảm nhận của người dùng về các lời nhắc.",
     },
     reflection: {
       tag: "( 11 · Điều em rút ra )",
-      title: "Thiết kế sự gắn kết gia đình không có nghĩa là tạo thêm thật nhiều tương tác.",
+      title: "Muốn gia đình gần nhau hơn, sản phẩm không cần tạo thêm thật nhiều tương tác.",
       body:
-        "Nếp Nhà giúp em hiểu rằng cần tìm những điểm chạm bình tĩnh và có ý nghĩa, thay vì lấp đầy sản phẩm bằng tính năng. Thiết kế cho gia đình là cùng lúc nghĩ đến nhiều mức độ tự tin, khả năng tập trung và nhu cầu tự chủ. Sản phẩm nên giúp mỗi người tham gia vào đời sống chung mà không biến sự quan tâm thành kiểm soát.",
+        "Qua Nếp Nhà, em hiểu rằng một sản phẩm dành cho gia đình không cần có quá nhiều tính năng. Điều quan trọng hơn là chọn đúng lúc để nhắc, giúp mỗi người tham gia vào việc chung và vẫn tôn trọng quyền riêng tư. Giao diện cũng cần đủ linh hoạt để người trẻ dùng nhanh, trong khi người lớn tuổi vẫn có thể hiểu và tự thao tác.",
       next: "Case study tiếp theo",
       nextProject: "MeMe · Redesign YaMe",
     },

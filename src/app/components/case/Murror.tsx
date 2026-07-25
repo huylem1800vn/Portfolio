@@ -174,19 +174,19 @@ const COPY = {
       { id: "ui", label: "UI" },
       { id: "reflection", label: "Suy ngẫm" },
     ],
-    badge: "Case Study · 2026 · AI Companion · Mobile",
-    title: "Murror · Trải nghiệm đồng hành khi overthinking",
+    badge: "Case Study · 2026 · Ứng dụng đồng hành cảm xúc · Mobile",
+    title: "Murror · Đồng hành cùng người hay suy nghĩ quá nhiều",
     concept: "UNFOLD",
-    headline: "Giúp người dùng nhẹ nhàng gỡ rối suy nghĩ và biến nhiễu cảm xúc thành bước đi rõ ràng tiếp theo.",
+    headline: "Giúp người dùng bình tĩnh lại, hiểu cảm xúc của mình và chọn một việc nhỏ để bắt đầu.",
     description:
-      "Một case study về UX research và product design, khám phá cách một AI companion có thể ở bên người dùng qua những lần check in cảm xúc ít thao tác, những điểm tựa thị giác, các câu hỏi phản chiếu và những nhịp nhỏ cho hành trình phát triển bản thân mỗi ngày.",
+      "Murror là case study về một ứng dụng AI hỗ trợ người dùng khi suy nghĩ quá nhiều. Trải nghiệm được xây dựng quanh những lần ghi nhận cảm xúc nhanh, bài tập giúp lấy lại bình tĩnh, câu hỏi gợi mở và các hành động nhỏ có thể thực hiện ngay.",
     cta1: "Xem UX Flow",
     cta2: "Xem màn hình UI",
 
     overview: {
       tag: "( 01 · Tổng quan dự án )",
       cards: [
-        { k: "Vấn đề", v: "Người hay overthinking thường thấy đầu óc quá tải, khó gọi tên cảm xúc của mình và không biết nên bắt đầu từ đâu." },
+        { k: "Vấn đề", v: "Người thường suy nghĩ quá nhiều dễ cảm thấy đầu óc quá tải, khó gọi tên cảm xúc và không biết nên bắt đầu giải quyết từ đâu." },
         { k: "Mục tiêu", v: "Thiết kế một trải nghiệm ít áp lực để người dùng có thể nhận diện cảm xúc, dịu lại, soi chiếu chính mình và chọn một hành động nhỏ tiếp theo." },
         { k: "Người dùng", v: "Người trẻ đang đi qua những bối rối cảm xúc nhẹ, áp lực học tập, lo âu trong mối quan hệ hoặc cảm giác hoang mang về chính mình." },
         { k: "Vai trò", v: "UX Research, Product Thinking, User Flow, Wireframing, UI Design, Interaction Design." },
@@ -195,30 +195,30 @@ const COPY = {
 
     problem: {
       tag: "( 02 · Vấn đề UX cốt lõi )",
-      quote: "Nhiều ứng dụng wellness yêu cầu người dùng giải thích cảm xúc trước khi giúp họ bình tĩnh lại.",
-      body: "Khi một người đang rối, việc phải gõ quá nhiều đôi khi trở thành thêm một gánh nặng. Trải nghiệm cần hạ bớt áp lực nhập liệu và nhẹ nhàng dẫn họ đi từng bước.",
+      quote: "Khi đang rối, người dùng thường chưa sẵn sàng viết một đoạn dài để giải thích mình cảm thấy thế nào.",
+      body: "Nếu ứng dụng mở đầu bằng một ô nhập trống hoặc quá nhiều câu hỏi, người dùng có thể bỏ cuộc trước khi nhận được hỗ trợ. Vì vậy, trải nghiệm cần giảm lượng thông tin phải nhập và hướng dẫn từng bước ngắn, dễ thực hiện.",
     },
 
     research: {
       tag: "( 03 · Insight nghiên cứu )",
       insights: [
-        { n: "01", k: "Khi đang rối, người dùng không muốn phải giải thích quá nhiều.", v: "Phản hồi thiết kế là quick reply, nút tâm trạng, chọn màu, chọn icon và cả tùy chọn giọng nói." },
-        { n: "02", k: "Người dùng cần được dẫn dắt trước khi sẵn sàng nhận lời khuyên.", v: "Phản hồi thiết kế đi theo nhịp check in, grounding, reflection, AI mirror rồi mới tới hành động nhỏ." },
-        { n: "03", k: "Giao diện phải mang lại cảm giác an toàn và không phán xét.", v: "Phản hồi thiết kế là màu sắc dịu, câu chữ ngắn, motion mềm và một giọng điệu nhẹ nhàng." },
-        { n: "04", k: "Việc quay lại nên đến từ thói quen, không phải sức ép.", v: "Phản hồi thiết kế là check in hằng ngày, hành trình phát triển, mood pattern và một hệ thống streak rất nhẹ." },
+        { n: "01", k: "Khi đang rối, người dùng không muốn phải giải thích quá nhiều.", v: "Em dùng câu trả lời nhanh, nút chọn cảm xúc, màu sắc, biểu tượng và giọng nói để giảm việc phải gõ." },
+        { n: "02", k: "Người dùng cần bình tĩnh lại trước khi tiếp nhận gợi ý.", v: "Luồng trải nghiệm đi từ ghi nhận cảm xúc, ổn định nhịp thở, nhìn lại suy nghĩ rồi mới đề xuất một hành động nhỏ." },
+        { n: "03", k: "Giao diện cần tạo cảm giác an toàn và không phán xét.", v: "Em dùng màu dịu, câu ngắn, chuyển động nhẹ và cách trò chuyện gần gũi." },
+        { n: "04", k: "Người dùng nên quay lại vì thấy có ích, không phải vì sợ mất chuỗi ngày.", v: "Ứng dụng ghi lại cảm xúc và tiến trình theo ngày nhưng không gây áp lực bằng phần thưởng hay cảnh báo dồn dập." },
       ],
     },
 
     journey: {
       tag: "( 04 · Hành trình người dùng )",
       stages: [
-        { k: "Trigger", feel: "Quá tải, bối rối, đầu óc ồn ào.", need: "Một nơi an toàn để bắt đầu.", opp: "Mở đầu bằng một câu hỏi dịu nhẹ, không phải ô input trống." },
-        { k: "Check-in", feel: "Ngại giải thích.", need: "Diễn đạt mà không cần gõ.", opp: "Nút tâm trạng, chọn màu, bảng icon." },
-        { k: "Grounding", feel: "Suy nghĩ chạy đua.", need: "Chậm lại trước khi phản chiếu.", opp: "Nhịp thị giác dịu, prompt hít thở, copy bình tĩnh." },
-        { k: "Reflection", feel: "Muốn được lắng nghe, không bị chẩn đoán.", need: "Một tấm gương, không phải lời phán xét.", opp: "Câu hỏi phản chiếu bằng chính lời người dùng." },
-        { k: "AI Mirror", feel: "Tìm kiếm ý nghĩa.", need: "Diễn giải nhẹ nhàng.", opp: "AI gọi tên kiểu cảm xúc, không dán nhãn người dùng." },
-        { k: "Small Action", feel: "Mệt vì phải chọn.", need: "Một bước tiếp theo, không phải mười.", opp: "Đề xuất một hành động nhỏ, có tùy chọn bỏ qua." },
-        { k: "Growth Ritual", feel: "Hy vọng nhưng hoài nghi.", need: "Sự liên tục không áp lực.", opp: "Nghi thức nhỏ hàng ngày, không streak xấu hổ." },
+        { k: "Xuất hiện cảm xúc", feel: "Quá tải, bối rối, đầu óc không ngừng suy nghĩ.", need: "Một nơi dễ bắt đầu.", opp: "Mở đầu bằng một câu hỏi ngắn thay vì một ô nhập trống." },
+        { k: "Ghi nhận cảm xúc", feel: "Chưa muốn giải thích dài.", need: "Có thể diễn đạt mà không cần gõ nhiều.", opp: "Cho chọn cảm xúc bằng nút bấm, màu sắc và biểu tượng." },
+        { k: "Lấy lại bình tĩnh", feel: "Các suy nghĩ vẫn diễn ra liên tục.", need: "Chậm lại trước khi nhìn sâu vào vấn đề.", opp: "Dùng nhịp chuyển động nhẹ và hướng dẫn hít thở ngắn." },
+        { k: "Nhìn lại suy nghĩ", feel: "Muốn được lắng nghe nhưng không muốn bị phán xét.", need: "Một câu hỏi giúp tự nhìn lại.", opp: "Đặt câu hỏi dựa trên chính điều người dùng vừa chia sẻ." },
+        { k: "AI phản hồi", feel: "Muốn hiểu điều gì đang xảy ra với mình.", need: "Một cách diễn giải nhẹ nhàng, dễ tiếp nhận.", opp: "AI mô tả cảm xúc có thể đang xuất hiện nhưng không gắn nhãn con người." },
+        { k: "Hành động nhỏ", feel: "Mệt và không muốn chọn quá nhiều.", need: "Một việc cụ thể có thể làm ngay.", opp: "Đề xuất một hành động nhỏ và luôn cho phép bỏ qua." },
+        { k: "Duy trì thói quen", feel: "Muốn tiến bộ nhưng không muốn bị ép.", need: "Theo dõi sự thay đổi theo cách nhẹ nhàng.", opp: "Ghi lại hành trình mỗi ngày mà không gây áp lực bằng chuỗi thành tích." },
       ],
     },
 
@@ -227,56 +227,56 @@ const COPY = {
       steps: [
         "Người dùng cảm thấy quá tải",
         "Mở Murror",
-        "Chọn tâm trạng qua quick input",
-        "Nhận tương tác grounding",
-        "Chọn nguồn gốc của overthinking",
-        "AI phản chiếu kiểu cảm xúc",
+        "Chọn nhanh cảm xúc hiện tại",
+        "Thực hiện một bước lấy lại bình tĩnh",
+        "Chọn điều đang khiến mình suy nghĩ nhiều",
+        "Nhận phản hồi từ AI",
         "Người dùng chọn một hành động nhỏ tiếp theo",
-        "Insight được lưu vào hành trình phát triển cá nhân",
+        "Ghi lại điều vừa nhận ra vào hành trình cá nhân",
       ],
     },
 
     principles: {
       tag: "( 06 · Nguyên tắc thiết kế )",
       items: [
-        { k: "Nhập liệu ít áp lực", v: "Mọi tương tác nên thực hiện được chỉ với một chạm." },
-        { k: "Bình tĩnh trước khi nhận lời khuyên", v: "Điều hòa cảm xúc trước khi đề xuất hành động." },
-        { k: "Phản chiếu, không chẩn đoán", v: "Phản chiếu điều người dùng đang cảm thấy, chứ không đóng khung họ bằng một nhãn gọi tên." },
-        { k: "Cá nhân hóa nhẹ nhàng", v: "Thích nghi chậm rãi, xin phép, không giả định." },
-        { k: "Giữ chân bằng thói quen tích cực", v: "Làm cho việc xuất hiện hàng ngày trở nên dịu nhẹ, không bắt buộc." },
+        { k: "Giảm áp lực nhập liệu", v: "Ưu tiên lựa chọn nhanh để người dùng không phải viết quá nhiều khi đang mệt." },
+        { k: "Bình tĩnh trước khi nhận gợi ý", v: "Giúp người dùng chậm lại trước khi đưa ra bất kỳ hành động tiếp theo nào." },
+        { k: "Gợi mở, không chẩn đoán", v: "Nhắc lại và đặt câu hỏi từ điều người dùng chia sẻ, không tự kết luận họ đang gặp vấn đề gì." },
+        { k: "Cá nhân hóa có sự đồng ý", v: "Chỉ thay đổi trải nghiệm dựa trên thông tin người dùng chủ động cung cấp." },
+        { k: "Tạo thói quen nhưng không gây áp lực", v: "Khuyến khích người dùng quay lại mà không khiến họ cảm thấy có lỗi khi bỏ lỡ một ngày." },
       ],
     },
 
     features: {
       tag: "( 07 · Tính năng chính )",
       items: [
-        { icon: "spark", k: "Check-in không cần gõ", v: "Người dùng có thể diễn đạt cảm xúc qua nút bấm, màu sắc, icon hoặc giọng nói, thay vì phải đối diện với một ô trống đầy áp lực." },
-        { icon: "compass", k: "Visual Grounding", v: "Nhịp thị giác dịu và prompt ngắn giúp người dùng chậm lại." },
-        { icon: "message", k: "AI Mirror Reflection", v: "AI phản chiếu cảm xúc người dùng có thể đang cảm thấy bằng giọng văn nhẹ nhàng." },
+        { icon: "spark", k: "Ghi nhận cảm xúc không cần gõ", v: "Người dùng có thể chọn nút bấm, màu sắc, biểu tượng hoặc dùng giọng nói thay vì phải bắt đầu từ một ô nhập trống." },
+        { icon: "compass", k: "Bài tập lấy lại bình tĩnh", v: "Chuyển động nhẹ và hướng dẫn ngắn giúp người dùng chậm lại trước khi nhìn sâu vào suy nghĩ." },
+        { icon: "message", k: "AI phản hồi cảm xúc", v: "AI diễn giải điều người dùng có thể đang cảm thấy bằng lời lẽ nhẹ nhàng và không phán xét." },
         { icon: "step", k: "Bước tiếp theo nhỏ", v: "Ứng dụng gợi ý một hành động nhỏ thay vì hàng loạt lựa chọn." },
-        { icon: "growth", k: "Hành trình phát triển bản thân", v: "Theo dõi mood pattern, insight và sự trưởng thành cảm xúc theo cách riêng tư và đủ an toàn để người dùng muốn quay lại." },
+        { icon: "growth", k: "Hành trình cảm xúc", v: "Lưu lại cảm xúc, những điều người dùng nhận ra và sự thay đổi theo thời gian trong một không gian riêng tư." },
       ],
     },
 
     ui: {
       tag: "( 08 · Hướng UI )",
-      body: "UI cuối cùng cân bằng giữa cảm giác dịu và sự rõ ràng bằng nền kem sáng, bảng màu pastel theo cảm xúc, thẻ bo tròn, mascot thân thiện và những khối tương tác gọn để giảm áp lực phải gõ. Design system này vừa đủ ấm để nâng đỡ cảm xúc, vừa đủ có cấu trúc để hỗ trợ phản chiếu.",
+      body: "Giao diện dùng nền kem sáng, màu pastel thay đổi theo cảm xúc, card bo tròn và nhân vật minh họa thân thiện. Các lựa chọn được trình bày gọn để người dùng không phải đọc hoặc nhập quá nhiều khi đang mệt, nhưng vẫn đủ rõ để họ biết mình đang ở bước nào.",
       screensLabel: "( 09 · Màn hình cuối )",
       screens: [
-        "Onboarding",
-        "Daily Check-in",
+        "Giới thiệu",
+        "Ghi nhận cảm xúc hằng ngày",
         "Chọn tâm trạng",
-        "Grounding Screen",
-        "AI Reflection",
+        "Lấy lại bình tĩnh",
+        "AI phản hồi",
         "Đề xuất hành động nhỏ",
         "Hành trình phát triển",
-        "Lịch sử insight",
+        "Những điều đã ghi nhận",
       ],
     },
 
     reflection: {
       tag: "( 10 · Suy ngẫm )",
-      body: "Dự án này nhắc em rằng emotional UX không nằm ở việc thêm thật nhiều tính năng. Điều quan trọng hơn là biết giảm bớt áp lực đúng lúc. Một trải nghiệm hữu ích cần đưa người dùng đi từ cảm giác rối bời đến sự rõ ràng bằng những tương tác dịu, những lựa chọn vừa đủ và một logic sản phẩm có chủ đích.",
+      body: "Qua dự án, em hiểu rằng thiết kế cho cảm xúc không có nghĩa là thêm thật nhiều tính năng hoặc lời động viên. Điều quan trọng là giảm bớt yêu cầu đúng lúc, cho người dùng đủ lựa chọn và hướng họ tới một bước nhỏ mà họ có thể thực hiện ngay.",
     },
 
     feelLabel: "Cảm xúc",
@@ -345,9 +345,9 @@ const UI_PRINCIPLES = {
     { title: "Rounded, low-friction layout", body: "Large corner radii, compact cards, and clear spacing keep each step approachable." },
   ],
   vi: [
-    { title: "Màu sắc như cách gọi tên cảm xúc", body: "Những mảng pastel giúp người dùng chọn một cảm giác trước khi họ sẵn sàng giải thích nó." },
-    { title: "Mascot thân thiện và những điểm vui nhỏ", body: "Nhân vật và các khoảnh khắc nhỏ mang tính động viên làm trải nghiệm mềm hơn mà không bị trẻ con hóa." },
-    { title: "Bố cục bo tròn, ít ma sát", body: "Bo góc lớn, card gọn và khoảng thở rõ ràng khiến từng bước trở nên dễ tiếp cận hơn." },
+    { title: "Dùng màu để hỗ trợ chọn cảm xúc", body: "Các mảng màu pastel giúp người dùng thể hiện cảm giác ban đầu ngay cả khi chưa biết diễn đạt bằng lời." },
+    { title: "Nhân vật tạo cảm giác gần gũi", body: "Biểu cảm của nhân vật giúp giao diện bớt lạnh và tạo điểm động viên nhỏ mà không khiến sản phẩm trở nên trẻ con." },
+    { title: "Mỗi màn hình chỉ tập trung vào một bước", body: "Card gọn, bo góc lớn và khoảng cách rõ ràng giúp người dùng biết mình cần làm gì tiếp theo." },
   ],
 };
 
@@ -391,7 +391,7 @@ const UI_SHOWCASES = {
   vi: [
     {
       title: "Onboarding",
-      desc: "Phần onboarding được show theo từng màn hình thật trong Figma để giữ nguyên nhịp mascot và cách đi vào cảm xúc ban đầu.",
+      desc: "Chuỗi onboarding giới thiệu từng trạng thái cảm xúc bằng màu sắc và biểu cảm của nhân vật, giúp người dùng hiểu cách Murror sẽ đồng hành cùng mình.",
       screens: [
         { title: "Joy", body: "Mở đầu sáng và thân thiện, giúp sản phẩm xuất hiện như một nơi vui vẻ, an toàn và dễ bước vào.", src: onboardingJoy },
         { title: "Sadness", body: "Tông dịu và mềm hơn, thừa nhận cảm giác nặng lòng mà không khiến người dùng thấy mình bị phán xét.", src: onboardingSadness },
@@ -402,25 +402,25 @@ const UI_SHOWCASES = {
       ],
     },
     {
-      title: "Profile",
-      desc: "Đây là đúng 6 màn hình profile trong Figma, thể hiện cách icon nhân vật, màu nền và visual accent đổi theo cảm xúc của ngày hôm đó.",
+      title: "Trang cá nhân",
+      desc: "Sáu trạng thái cho thấy màu nền, biểu cảm nhân vật và chi tiết trang trí thay đổi theo cảm xúc người dùng ghi nhận trong ngày.",
       screens: [
-        { title: "Mood xanh ngọc", body: "Tượng trưng cho một ngày bồn chồn và hơi quá tải. Sắc xanh ngọc thoáng nhưng bất an, còn mascot thể hiện sự nhiễu và khó yên.", src: profileMinhHuyAqua },
-        { title: "Mood vàng", body: "Tượng trưng cho niềm vui và sự lạc quan. Màu vàng ấm cùng mascot tươi cười khiến profile trở nên mở, nhẹ và đầy năng lượng tích cực.", src: profileMinhHuyYellow },
-        { title: "Mood cam", body: "Tượng trưng cho tức giận và nhiệt cảm xúc cao. Nền cam và hình khối bùng nổ của mascot làm cảm giác căng thẳng hiện lên rất rõ.", src: profileMinhHuyOrange },
-        { title: "Mood xanh dương", body: "Tượng trưng cho nỗi buồn và cảm giác nặng lòng. Tông xanh lạnh cùng những hình mềm như nước khiến giao diện lắng và hướng nội hơn.", src: profileMinhHuyBlue },
-        { title: "Mood tím", body: "Tượng trưng cho choáng ngợp và rối trí. Bảng tím cùng các accent rải rác gợi cảm giác đầu óc đông đúc và thiếu ổn định.", src: profileMinhHuyPurple },
-        { title: "Mood xanh lá", body: "Tượng trưng cho khó chịu, kháng cự hoặc ghê sợ. Màn xanh lá đẩy mascot vào biểu cảm gượng gạo hơn, làm mood trở nên bất ổn và khép lại.", src: profileMinhHuyGreen },
+        { title: "Trạng thái xanh ngọc", body: "Sắc xanh thoáng nhưng hơi lạnh, kết hợp với biểu cảm bồn chồn để thể hiện một ngày khó tập trung.", src: profileMinhHuyAqua },
+        { title: "Trạng thái vàng", body: "Màu vàng ấm và biểu cảm tươi giúp trang cá nhân thể hiện niềm vui và sự lạc quan.", src: profileMinhHuyYellow },
+        { title: "Trạng thái cam", body: "Nền cam cùng hình khối mạnh thể hiện cảm giác bức bối và mức năng lượng cảm xúc cao.", src: profileMinhHuyOrange },
+        { title: "Trạng thái xanh dương", body: "Tông xanh lạnh và các hình mềm gợi cảm giác buồn, lắng xuống và muốn ở một mình.", src: profileMinhHuyBlue },
+        { title: "Trạng thái tím", body: "Màu tím cùng các chi tiết rải rác thể hiện cảm giác choáng ngợp và suy nghĩ thiếu trật tự.", src: profileMinhHuyPurple },
+        { title: "Trạng thái xanh lá", body: "Màu xanh lá và biểu cảm căng giúp thể hiện sự khó chịu hoặc muốn tránh xa một tình huống.", src: profileMinhHuyGreen },
       ],
     },
     {
       title: "Chat",
-      desc: "Nhóm chat dùng các màn hình thật cho điểm vào hội thoại, check-in cảm xúc, chọn mode phản hồi và màn trò chuyện đang diễn ra.",
+      desc: "Luồng trò chuyện đi từ ghi nhận cảm xúc, chọn cách nhận hỗ trợ đến cuộc hội thoại phản hồi đang diễn ra.",
       screens: [
-        { title: "Trang chat", body: "Điểm vào hội thoại mở ra bằng các hướng dẫn nhẹ nhàng và action rõ ràng, thay vì buộc người dùng đối diện ngay với một ô chat trống.", src: chatHome },
-        { title: "Check-in cảm xúc", body: "Các lựa chọn cảm xúc được đặt lên trước để người dùng có thể biểu đạt mình trước khi phải diễn giải bằng chữ.", src: chatMoodCheckin },
-        { title: "Chọn mode phản hồi", body: "Giao diện cho phép chọn cách được đồng hành, từ đó người dùng có cảm giác kiểm soát nhiều hơn với kiểu hỗ trợ mình muốn nhận.", src: chatAiModePicker },
-        { title: "Hội thoại đang diễn ra", body: "Khi đã vào luồng trò chuyện, giọng điệu vẫn giữ tính đối thoại và phản chiếu, tránh cảm giác chẩn đoán hay máy móc.", src: chatActiveConversation },
+        { title: "Trang trò chuyện", body: "Màn hình mở đầu bằng những gợi ý ngắn và hành động rõ ràng thay vì để người dùng đối diện ngay với một ô chat trống.", src: chatHome },
+        { title: "Ghi nhận cảm xúc", body: "Các lựa chọn cảm xúc xuất hiện trước để người dùng có thể bắt đầu mà chưa cần giải thích bằng một đoạn văn.", src: chatMoodCheckin },
+        { title: "Chọn cách phản hồi", body: "Người dùng có thể chọn kiểu hỗ trợ phù hợp với mình trước khi bắt đầu cuộc trò chuyện.", src: chatAiModePicker },
+        { title: "Cuộc trò chuyện", body: "AI đặt câu hỏi và nhắc lại điều người dùng chia sẻ bằng giọng điệu gần gũi, tránh kết luận hoặc chẩn đoán.", src: chatActiveConversation },
       ],
     },
   ],

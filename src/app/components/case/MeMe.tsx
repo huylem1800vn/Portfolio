@@ -287,7 +287,7 @@ const COPY = {
   vi: {
     sections: [
       { id: "overview", label: "Tổng quan" },
-      { id: "audit", label: "Audit" },
+      { id: "audit", label: "Đánh giá" },
       { id: "competitors", label: "Đối thủ" },
       { id: "comparison", label: "Trước / Sau" },
       { id: "system", label: "Hệ thống" },
@@ -295,13 +295,13 @@ const COPY = {
       { id: "ui", label: "Giao diện" },
       { id: "reflection", label: "Suy ngẫm" },
     ],
-    badge: "Case Study · 2025 · Fashion Ecommerce · Responsive Web",
-    title: "MeMe · Redesign trải nghiệm mua sắm thời trang YaMe",
+    badge: "Case Study · 2025 · Thương mại điện tử thời trang · Responsive Web",
+    title: "MeMe · Thiết kế lại trải nghiệm mua sắm trên YaMe",
     concept: "MUA SẮM RÕ RÀNG HƠN",
     headline:
       "Biến một website thời trang nhiều thông tin thành hành trình mua sắm dễ nhìn, dễ chọn và dễ đi tiếp.",
     description:
-      "MeMe là dự án redesign UI/UX cho YaMe, tập trung làm cho việc khám phá sản phẩm dễ hơn, thông tin sản phẩm dễ đọc hơn và hành trình từ trang chủ đến thanh toán rõ ràng hơn.",
+      "MeMe là dự án thiết kế lại website YaMe. Mục tiêu là giúp người mua dễ tìm sản phẩm phù hợp, dễ so sánh thông tin và luôn biết bước tiếp theo từ trang chủ đến thanh toán.",
     cta1: "Xem hướng UI",
     cta2: "Xem luồng mua hàng",
     overview: [
@@ -311,15 +311,15 @@ const COPY = {
       },
       {
         k: "Mục tiêu",
-        v: "Tạo một trải nghiệm ecommerce sạch hơn, giúp người dùng lướt bộ sưu tập, so sánh sản phẩm, chọn size và đi tới thanh toán ít bị khựng hơn.",
+        v: "Tạo trải nghiệm mua sắm gọn và rõ hơn, giúp người dùng xem bộ sưu tập, so sánh sản phẩm, chọn kích cỡ và đi tới thanh toán liền mạch hơn.",
       },
       {
         k: "Vai trò",
-        v: "UX audit, cấu trúc thông tin, responsive UI, hệ thống product card, checkout flow và visual direction.",
+        v: "Đánh giá trải nghiệm cũ, sắp xếp lại thông tin, thiết kế responsive, xây dựng hệ thống card sản phẩm và luồng thanh toán.",
       },
       {
         k: "Đầu ra",
-        v: "Concept website redesign gồm trang chủ, danh sách sản phẩm, chi tiết sản phẩm, giỏ hàng, thanh toán, tài khoản và trạng thái đơn hàng.",
+        v: "Bộ giao diện mới gồm trang chủ, danh sách và chi tiết sản phẩm, tìm kiếm, giỏ hàng, thanh toán, tài khoản và trạng thái đơn hàng.",
       },
     ],
     auditTitle: "Điểm vướng chính không nằm ở việc có nhiều sản phẩm, mà nằm ở cách sản phẩm được trình bày.",
@@ -351,7 +351,7 @@ const COPY = {
     competitorTitle:
       "Nhìn vào các website thời trang để hiểu cách người dùng xem, so sánh và tin vào sản phẩm.",
     competitorIntro:
-      "Em tham khảo Uniqlo, Routine và IconDenim để xem mỗi thương hiệu tổ chức điều hướng, khám phá sản phẩm, product card và cảm giác tin tưởng khi mua như thế nào.",
+      "Em tham khảo Uniqlo, Routine và IconDenim để xem mỗi thương hiệu tổ chức điều hướng, trình bày card sản phẩm và cung cấp thông tin giúp người mua ra quyết định như thế nào.",
     competitorReference: "Tham chiếu",
     competitorInsight: "Điểm quan sát",
     competitorTakeaway: "Hướng áp dụng",
@@ -368,24 +368,24 @@ const COPY = {
         brand: "Routine",
         focus: "Hành vi mua sắm thời trang nội địa",
         insight:
-          "Routine gần với thói quen mua sắm của người dùng Việt hơn, có nhóm sản phẩm quen thuộc, campaign section và cách khám phá theo outfit.",
+          "Routine gần với thói quen mua sắm của người dùng Việt, có các nhóm sản phẩm quen thuộc, nội dung theo chiến dịch và cách khám phá dựa trên trang phục.",
         takeaway:
-          "Giữ tinh thần bán lẻ năng động, nhưng làm khuyến mãi, điểm vào danh mục và listing dễ đi tiếp hơn.",
+          "Giữ tinh thần bán lẻ năng động, đồng thời làm rõ khuyến mãi, lối vào danh mục và trang danh sách sản phẩm.",
       },
       {
         brand: "IconDenim",
         focus: "Cá tính sản phẩm và niềm tin khi chọn",
         insight:
-          "IconDenim nhấn vào chất denim và cá tính thương hiệu, giúp sản phẩm có cảm giác rõ style hơn thay vì chỉ là một item trong grid.",
+          "IconDenim làm nổi bật chất denim và cá tính thương hiệu, nhờ đó mỗi sản phẩm có phong cách riêng thay vì chỉ là một món hàng trong lưới.",
         takeaway:
           "Cân bằng giữa thông tin sản phẩm rõ ràng và cá tính thời trang để giao diện không bị quá nhạt.",
       },
     ],
     comparisonLabel: "( 04 · Trước và sau redesign )",
     comparisonTitle:
-      "MeMe không chỉ thay đổi vẻ ngoài mà còn làm lại cách người mua đi từ cảm hứng đến một lựa chọn đủ tin tưởng.",
+      "MeMe không chỉ thay đổi giao diện, mà còn sắp xếp lại cách người mua khám phá và lựa chọn sản phẩm.",
     comparisonIntro:
-      "Nếu chỉ đặt một cặp ảnh trước và sau cạnh nhau, redesign rất dễ bị hiểu thành một lần thay áo giao diện. Em tách hành trình mua sắm thành sáu quyết định để chỉ ra trải nghiệm cũ vướng ở đâu và MeMe đã xử lý từng điểm như thế nào.",
+      "Để cho thấy sự khác biệt không chỉ nằm ở màu sắc hay hình ảnh, em chia hành trình mua sắm thành sáu bước. Ở mỗi bước, em đối chiếu điểm vướng của website cũ với cách giao diện mới hỗ trợ người mua.",
     comparisonBefore: "Trước · Website YaMe",
     comparisonAfter: "Sau · MeMe redesign",
     journeyLabel: "Các bước được redesign",
@@ -404,16 +404,16 @@ const COPY = {
     comparisonChapters: [
       {
         stage: "01 · Bắt đầu khám phá",
-        title: "Trang chủ: từ bảng khuyến mãi thành điểm bắt đầu của một câu chuyện thời trang",
+        title: "Trang chủ: từ nhiều khối bán hàng thành một điểm bắt đầu rõ ràng",
         observed:
-          "Trang cũ mở bằng thông tin sale và hình ảnh mang cảm giác công nghệ. Nhiều nhóm sản phẩm xuất hiện liên tiếp, nhưng người xem chưa biết nên bắt đầu từ campaign, danh mục hay ưu đãi.",
+          "Trang cũ mở đầu bằng thông tin giảm giá và nhiều nhóm sản phẩm nối tiếp nhau. Người xem khó biết nên bắt đầu từ bộ sưu tập, danh mục hay chương trình ưu đãi.",
         response:
-          "MeMe dùng campaign thời trang làm lớp mở đầu, sau đó sắp nội dung theo một nhịp thống nhất: sản phẩm nổi bật, các hướng Gu, best seller và những bộ sưu tập liên quan.",
+          "MeMe mở đầu bằng một bộ sưu tập nổi bật, sau đó lần lượt giới thiệu sản phẩm đáng chú ý, các hướng phong cách, sản phẩm bán chạy và bộ sưu tập liên quan.",
         intent:
-          "Dẫn người mua từ cảm hứng đến lựa chọn cụ thể, thay vì để họ tự ghép ý nghĩa từ nhiều khối bán hàng rời rạc.",
+          "Giúp người mua đi từ cảm hứng ban đầu tới một nhóm sản phẩm cụ thể mà không phải tự tìm đường giữa nhiều nội dung rời rạc.",
         evidence: [
           "Câu chuyện thương hiệu xuất hiện trước nội dung về giá",
-          "Khối editorial dẫn tự nhiên sang sản phẩm",
+          "Nội dung hình ảnh dẫn tự nhiên sang sản phẩm",
           "Nhịp trình bày lặp lại giúp trang dài dễ theo dõi hơn",
         ],
       },
@@ -421,7 +421,7 @@ const COPY = {
         stage: "02 · Chọn theo phong cách",
         title: "Gu: từ một bài giới thiệu dài thành cách khám phá sản phẩm thực tế",
         observed:
-          "Trang Gu cũ có nội dung và hình ảnh khá đầy đủ nhưng nằm trong một cột hẹp. Phần giải thích phong cách và sản phẩm chưa nối liền, nên người xem phải đọc khá lâu trước khi biết có thể khám phá gì tiếp.",
+          "Trang Gu cũ có nhiều nội dung và hình ảnh nhưng được đặt trong một cột hẹp. Phần giới thiệu phong cách chưa gắn liền với sản phẩm, nên người xem phải đọc khá lâu mới biết có thể đi đâu tiếp.",
         response:
           "Bản mới chia Gu thành ba hướng rõ ràng. Mỗi hướng kết hợp ảnh tham chiếu, mô tả ngắn, các nhánh phong cách nhỏ và sản phẩm liên quan.",
         intent:
@@ -429,7 +429,7 @@ const COPY = {
         evidence: [
           "Ba hướng phong cách được nhìn thấy ngay từ đầu",
           "Hình tham chiếu, mô tả và sản phẩm nằm cùng một ngữ cảnh",
-          "Mỗi khối editorial đều có đường dẫn rõ sang mua sắm",
+          "Mỗi phần giới thiệu đều có đường dẫn rõ sang sản phẩm",
         ],
       },
       {
@@ -438,7 +438,7 @@ const COPY = {
         observed:
           "Danh sách cũ dùng khung nội dung hẹp, card nhỏ và bộ lọc khá gọn. Trang chứa được nhiều sản phẩm cùng lúc, nhưng ảnh, tên, giá và ưu đãi phải cạnh tranh sự chú ý.",
         response:
-          "MeMe đặt bộ lọc vào sidebar ổn định, tăng kích thước hình sản phẩm và sắp giá, mức giảm, lượt bán, màu sắc cùng hành động theo một thứ tự dễ đoán.",
+          "MeMe giữ bộ lọc ở cột bên, tăng kích thước hình sản phẩm và sắp xếp giá, mức giảm, lượt bán, màu sắc cùng hành động theo một thứ tự thống nhất.",
         intent:
           "Hiển thị ít sản phẩm hơn trong một khung hình, nhưng giúp người mua hiểu và so sánh từng lựa chọn nhanh hơn.",
         evidence: [
@@ -465,9 +465,9 @@ const COPY = {
     ],
     continuationLabel: "Hành trình vẫn tiếp tục",
     continuationTitle:
-      "MeMe còn xử lý những khoảnh khắc nằm giữa việc chọn được sản phẩm và sẵn sàng thanh toán.",
+      "MeMe tiếp tục hỗ trợ người mua ở bước tìm kiếm và kiểm tra giỏ hàng.",
     continuationIntro:
-      "Tìm kiếm và Giỏ hàng không phải hai màn hình trang trí thêm. Chúng giữ cho hành trình liền mạch khi người mua đã có mục tiêu, muốn đổi hướng hoặc cần kiểm tra lần cuối trước khi trả tiền.",
+      "Tìm kiếm giúp người mua đi thẳng tới sản phẩm khi đã có mục tiêu. Giỏ hàng cho họ một lần kiểm tra cuối về sản phẩm, số lượng và giá trước khi thanh toán.",
     continuationStates: [
       {
         stage: "05 · Tìm nhanh",
@@ -503,24 +503,24 @@ const COPY = {
     ],
     flowTitle: "Luồng mua hàng",
     flowIntro:
-      "Luồng redesign được xây quanh một quyết định mua sắm liên tục: khám phá, so sánh, tin tưởng, chọn sản phẩm rồi thanh toán.",
+      "Luồng mua hàng được sắp xếp theo thứ tự người dùng thường ra quyết định: khám phá, thu hẹp lựa chọn, xem thông tin, chọn sản phẩm và thanh toán.",
     flow: [
       "Vào trang chủ",
       "Chọn bộ sưu tập hoặc danh mục",
-      "Lọc theo phong cách, size, giá, màu",
-      "So sánh sản phẩm trong grid",
+      "Lọc theo phong cách, kích cỡ, giá và màu",
+      "So sánh sản phẩm trong danh sách",
       "Mở trang chi tiết",
-      "Chọn size và biến thể",
+      "Chọn kích cỡ và màu sắc",
       "Kiểm tra giỏ hàng",
       "Xác nhận giao hàng và thanh toán",
     ],
     uiTitle: "Hướng giao diện cuối",
     uiIntro:
-      "UI board cuối giữ đúng các màn hình MeMe trong Figma: trang chủ, campaign section, danh sách sản phẩm, chi tiết sản phẩm, giỏ hàng, thanh toán, tài khoản, trạng thái đơn hàng và responsive variants.",
+      "Bộ giao diện hoàn chỉnh gồm trang chủ, nội dung theo chiến dịch, danh sách và chi tiết sản phẩm, giỏ hàng, thanh toán, tài khoản, trạng thái đơn hàng cùng các phiên bản responsive.",
     previewLabel: "Figma UI board",
     reflectionTitle: "Điều em học được",
     reflection:
-      "Một website thời trang không chỉ bán quần áo. Nó còn bán sự tự tin trong lựa chọn. Bài học lớn nhất của dự án là cân bằng giữa tinh thần editorial và độ rõ ràng của ecommerce, để giao diện vẫn có chất thời trang nhưng giúp người dùng ra quyết định nhanh hơn.",
+      "Qua MeMe, em hiểu rằng một website thời trang vừa phải truyền tải được cá tính thương hiệu, vừa phải giúp người mua tự tin với lựa chọn của mình. Hình ảnh có thể tạo cảm hứng, nhưng thông tin sản phẩm, bộ lọc và các bước mua hàng vẫn cần được trình bày thật rõ.",
     next: "Case study tiếp theo",
     nextProject: "Murror · AI Companion",
   },
@@ -1037,7 +1037,7 @@ export function MeMe() {
 
         <section id="overview" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1400px] mx-auto">
-            <SectionLabel>( 01 · Project Overview )</SectionLabel>
+            <SectionLabel>{lang === "vi" ? "( 01 · Tổng quan dự án )" : "( 01 · Project Overview )"}</SectionLabel>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {copy.overview.map((item) => (
                 <motion.div
@@ -1059,7 +1059,7 @@ export function MeMe() {
 
         <section id="audit" className="px-6 md:px-12 py-24 md:py-32 bg-white">
           <div className="max-w-[1400px] mx-auto">
-            <SectionLabel>( 02 · UX Audit )</SectionLabel>
+            <SectionLabel>{lang === "vi" ? "( 02 · Đánh giá trải nghiệm cũ )" : "( 02 · UX Audit )"}</SectionLabel>
             <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16">
               <div>
                 <h2
@@ -1431,7 +1431,7 @@ export function MeMe() {
           <div className="max-w-[1400px] mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
               <div>
-                <SectionLabel>( 05 · Design System Direction )</SectionLabel>
+                <SectionLabel>{lang === "vi" ? "( 05 · Hướng thiết kế hệ thống )" : "( 05 · Design System Direction )"}</SectionLabel>
                 <h2
                   className="tracking-[-0.04em] leading-[1]"
                   style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6rem)" }}
@@ -1467,7 +1467,7 @@ export function MeMe() {
 
         <section id="flow" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1400px] mx-auto">
-            <SectionLabel>( 06 · Purchase Flow )</SectionLabel>
+            <SectionLabel>{lang === "vi" ? "( 06 · Luồng mua hàng )" : "( 06 · Purchase Flow )"}</SectionLabel>
             <div className="grid lg:grid-cols-[0.75fr_1.25fr] gap-10 lg:gap-16 items-start">
               <div>
                 <h2
@@ -1498,7 +1498,7 @@ export function MeMe() {
         <section id="ui" className="px-6 md:px-12 py-24 md:py-32">
           <div className="max-w-[1400px] mx-auto">
             <div className="max-w-[940px] mb-10 md:mb-12">
-              <SectionLabel>( 07 · Final UI Showcase )</SectionLabel>
+              <SectionLabel>{lang === "vi" ? "( 07 · Giao diện hoàn chỉnh )" : "( 07 · Final UI Showcase )"}</SectionLabel>
               <h2
                 className="tracking-[-0.04em] leading-[1]"
                 style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6.25rem)" }}
@@ -1555,7 +1555,7 @@ export function MeMe() {
 
         <section id="reflection" className="px-6 md:px-12 py-20 bg-black text-white">
           <div className="max-w-[1200px] mx-auto">
-            <SectionLabel>( 08 · Reflection )</SectionLabel>
+            <SectionLabel>{lang === "vi" ? "( 08 · Điều em rút ra )" : "( 08 · Reflection )"}</SectionLabel>
             <h2
               className="tracking-[-0.04em] leading-[1]"
               style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
