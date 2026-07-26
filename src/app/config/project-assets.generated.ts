@@ -39,6 +39,22 @@ export const PROJECT_ASSETS = {
       "height": 59,
       "format": "svg"
     },
+    "informationArchitecture": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785065132/Portfolio%20Minh%20Huy/Nep%20Nha/UX/information-architecture.png",
+      "publicId": "Portfolio Minh Huy/Nep Nha/UX/information-architecture",
+      "bytes": 315476,
+      "width": 4096,
+      "height": 2917,
+      "format": "png"
+    },
+    "userGroups": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785073192/Portfolio%20Minh%20Huy/Nep%20Nha/UX/user-groups.png",
+      "publicId": "Portfolio Minh Huy/Nep Nha/UX/user-groups",
+      "bytes": 473869,
+      "width": 3046,
+      "height": 3072,
+      "format": "png"
+    },
     "onboarding": {
       "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1784803358/Portfolio%20Minh%20Huy/Nep%20Nha/UI/onboarding.png",
       "publicId": "Portfolio Minh Huy/Nep Nha/UI/onboarding",

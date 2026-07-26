@@ -19,7 +19,13 @@ import {
   X,
 } from "lucide-react";
 import { useI18n } from "../../i18n";
-import { NEP_NHA_LOGO_MARK_URL, NEP_NHA_THUMBNAIL_URL, NEP_NHA_UI } from "../../config/nep-nha-assets";
+import {
+  NEP_NHA_INFORMATION_ARCHITECTURE_URL,
+  NEP_NHA_LOGO_MARK_URL,
+  NEP_NHA_THUMBNAIL_URL,
+  NEP_NHA_UI,
+  NEP_NHA_USER_GROUPS_URL,
+} from "../../config/nep-nha-assets";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
 import { NextProjectFooter } from "./NextProjectFooter";
@@ -78,6 +84,46 @@ const COPY = {
       title: "The project started with family life, not a feature list.",
       body:
         "The UX board moves from desk research and competitive review to user groups, empathy mapping, personas, journeys, information architecture, and interface design. The purpose was to understand where family coordination breaks down before deciding what Nếp Nhà should become.",
+      framingTitle: "How the problem was framed",
+      framingBody:
+        "Instead of assuming that families needed another smart-home dashboard, I broke the brief into four questions. This kept the research focused on family relationships while still accounting for the home and its technology.",
+      framing: [
+        ["Who is affected?", "Grandparents who need closeness, parents carrying the household mental load, and younger members who are comfortable with technology but protective of their independence."],
+        ["Where does it happen?", "Inside multigenerational homes where members share an address but follow different routines and spend much of the day in separate spaces."],
+        ["When is the gap most visible?", "During moments that should bring people together: dinner, weekends, health reminders, birthdays, anniversaries, and family rituals."],
+        ["What is the real problem?", "The home may already be connected by devices, but the family still lacks one gentle, shared place for routines, care, and memories."],
+      ],
+      marketTitle: "Context behind the opportunity",
+      marketBody:
+        "Desk research showed a growing smart-home market, but most products still compete through devices and automation. That left an opening to ask what a smart home could do for relationships, not only for rooms and appliances.",
+      marketSignals: [
+        ["$358.59M", "Estimated Vietnam smart-home revenue in 2024 in the Statista reference used on the UX board."],
+        ["$506.4M", "Projected market revenue for 2028 in the same research reference."],
+        ["22.6%", "Projected household penetration by 2027, showing that smart-home behavior is moving beyond a niche audience."],
+      ],
+      segmentsTitle: "Three generations, three different expectations",
+      segmentsBody:
+        "The board first mapped the whole household before narrowing the case study to two primary personas. Each generation changes what accessibility, privacy, and usefulness mean for the product.",
+      segments: [
+        ["Grandparents · 60+", "Want simple reminders, a sense of family presence, and confidence that they will not make a mistake. Small text and technical flows quickly become barriers."],
+        ["Parents · 35–55", "Often coordinate schedules, health, bills, meals, and household safety. They need less mental load, not another system to manage."],
+        ["Children and young adults · 10–34", "Adopt technology quickly and want faster coordination, but expect control over their location, status, and notifications."],
+      ],
+      userGroupsBoardTitle: "The original board goes deeper into the two groups at opposite ends of the experience.",
+      userGroupsBoardBody:
+        "The UX board documents young technology connectors and grandparents in detail. Parents were then synthesized as the family coordinator: the role carrying schedules, reminders, and follow-up between the other two groups.",
+      userGroupsBoardLabel: "Open the original User Groups board",
+      questionsTitle: "What I needed to learn from families",
+      questionsBody:
+        "The interview and survey guide was organized around daily life rather than asking people to validate a proposed feature. This made it easier to uncover existing routines and tensions.",
+      questions: [
+        "When is the family naturally together, and which routines are worth preserving?",
+        "Which schedules, reminders, and household tasks are most often forgotten or repeated?",
+        "Who usually coordinates family life, and where does that responsibility become tiring?",
+        "How do older members currently receive care and reminders?",
+        "Which status information feels reassuring, and which begins to feel like surveillance?",
+        "Where are family photos and memories kept today, and why are they difficult to revisit?",
+      ],
       methods: [
         ["Desk research", "Reviewed the smart-living context and the changing routines of Vietnamese families."],
         ["Competitive audit", "Compared smart-home products with family coordination platforms."],
@@ -106,11 +152,37 @@ const COPY = {
       title: "The research did not lead to more features. It clarified the role of the product.",
       body:
         "Three tensions shaped the design. Care must not feel like surveillance. Reminders must reduce pressure instead of becoming another source of pressure. A shared experience must include different generations without forcing everyone to use it in the same way.",
+      empathyTitle: "What the empathy map made visible",
+      empathyBody:
+        "The same household tension appeared in different language across generations. Looking at what people say, do, see, and feel helped separate the surface behavior from the reason behind it.",
+      empathy: [
+        ["Says", "“I want us to have dinner together, but our schedules never match.” “I want to know my parents are okay without repeatedly calling them.”"],
+        ["Does", "Uses family chat, phone calls, personal calendars, and memory to coordinate important dates and daily care."],
+        ["Thinks and feels", "Parents feel overloaded and guilty, grandparents can feel lonely without wanting to complain, and younger members want closeness without losing privacy."],
+        ["Design implication", "The product should notice and support small moments of connection, while every reminder and shared status remains calm, optional, and understandable."],
+      ],
+      synthesisTitle: "The problem statement I carried into design",
+      problemStatement:
+        "Multigenerational families need one simple and private way to coordinate routines, care for one another, and keep shared memories because their current tools are scattered and often place the responsibility on one person.",
+      howMightWe:
+        "How might we help a family stay present in one another's lives without turning care into control or asking every generation to use technology in the same way?",
       tensions: [
         ["Care without surveillance", "Status and safety information should reassure family members, while visibility remains understandable and optional."],
         ["Reminders without pressure", "The product should distribute responsibility and use a warm tone rather than repeatedly telling people what to do."],
         ["One family, different abilities", "Younger adults need speed and control, while older adults need clarity, confidence, and fewer decisions."],
       ],
+      differentiatorTag: "The product's defining tension",
+      differentiatorTitle: "Care should create reassurance, not the feeling of being watched.",
+      differentiatorBody:
+        "This became more than a principle. It shaped what information is shared, how long it remains visible, and whether a member can change that choice without asking another person.",
+      privacyModelTitle: "How that idea changes the experience",
+      privacyModel: [
+        ["Share a status, not constant location", "A member can say they are home, outside, busy, or available without broadcasting an exact route all day."],
+        ["Make visibility understandable", "Every shared status should make it clear who can see it, and the member can pause or change that choice."],
+        ["Coordinate care without repeated chasing", "A reminder can be accepted and marked as handled so the family knows the task is covered without sending more messages."],
+      ],
+      differentiatorConclusion:
+        "The goal is not to help one person monitor the household. It is to let every member participate in care while keeping control over their own information.",
       decisionsTitle: "From finding to product decision",
       decisions: [
         ["Scattered family information", "Today", "Bring schedules, reminders, status, and priorities into one starting point."],
@@ -195,6 +267,17 @@ const COPY = {
         },
       ],
       labels: { action: "Behavior", pain: "Pain point", opportunity: "Design opportunity" },
+      scenarioTitle: "One shared-care scenario connects the three generations",
+      scenarioBody:
+        "I used one end-to-end situation to check whether the product supports the coordinator, the older adult, and the younger member without making any one person carry the entire flow.",
+      scenarioSteps: [
+        ["01", "The coordinator adds an appointment", "Ngọc Hạnh creates a hospital reminder and shares only the time, place, and support needed."],
+        ["02", "The older member receives a gentle reminder", "Grandfather sees a large, plain-language card and can confirm that he has read it."],
+        ["03", "The younger member takes responsibility", "Minh Anh accepts the task of accompanying him without needing a separate family-chat thread."],
+        ["04", "The family sees that it is handled", "The reminder changes status for everyone, reducing repeated calls and follow-up messages."],
+      ],
+      scenarioOutcome:
+        "The same flow supports care, autonomy, and shared responsibility without requiring continuous location tracking.",
     },
     direction: {
       tag: "( 06 · Product Direction )",
@@ -207,18 +290,47 @@ const COPY = {
         ["Senior-friendly access", "Use familiar words, strong hierarchy, larger controls, and fewer decisions per screen."],
         ["Home as a shared story", "Connect safety, routines, and memories so the product feels warmer than a utility app."],
       ],
+      prioritiesTitle: "How features were prioritized",
+      prioritiesBody:
+        "The board contains many possible directions, so I grouped them by how directly they support the central goal of family connection. Smart-home controls remain useful, but they do not lead the product.",
+      priorities: [
+        ["Core connection", "Today view, shared family calendar, gentle reminders, member status, and privacy controls."],
+        ["Shared care", "Medication and appointment reminders, household tasks, family routines, and connection suggestions."],
+        ["Supporting utilities", "Device control, home-safety checks, reusable scenes, residence services, and settings."],
+      ],
     },
     structure: {
       tag: "( 07 · Product Structure )",
-      title: "Five spaces support the family, but Today carries the main story.",
+      title: "Six branches turn a broad family-living concept into a structure people can scan.",
       body:
-        "The information architecture separates immediate daily needs from people, devices, and memories. This keeps the first screen useful without making every feature compete for attention.",
+        "I separated setup, daily priorities, the physical home, family coordination, memories, and system controls. This keeps each area focused while Today remains the place people can return to every day.",
       items: [
-        ["Today", "The shared starting point for reminders, member status, priorities, and connection suggestions."],
-        ["Family", "Members, shared schedules, care routines, and light presence signals."],
-        ["Home", "Essential device control, safety status, and reusable home routines."],
-        ["Memories", "A private family album for everyday moments and important occasions."],
-        ["Settings", "Privacy, permissions, notification preferences, and accessibility choices."],
+        ["Onboarding", "Explain the product value, create or join a shared home, invite members, and set privacy from the start."],
+        ["Today", "Bring together the home overview, reminders, appointments, family status, and connection suggestions."],
+        ["Home", "Organize rooms, devices, routines, safety checks, and home assistance without mixing them with family content."],
+        ["Family", "Keep members, shared calendars, care, household tasks, and responsibilities in one place."],
+        ["Memories", "Give family moments, private albums, journals, and rituals a space of their own."],
+        ["Settings", "Manage profiles, members, privacy, notifications, devices, accessibility, and support."],
+      ],
+      iaTitle: "Why the information architecture is organized this way",
+      iaBody:
+        "I began with recurring research needs rather than a list of features: what the family needs today, who is involved, what belongs to the physical home, and what should be preserved over time. Those needs became six distinct branches.",
+      iaReasonsTitle: "Decisions behind the map",
+      iaReasons: [
+        ["Onboarding stands on its own", "Creating a shared home, inviting relatives, choosing roles, and understanding privacy must happen before daily use."],
+        ["Today answers the immediate question", "Reminders, appointments, home status, and family signals are grouped around what needs attention now."],
+        ["Home and Family are separate", "Devices and rooms follow a different mental model from people, care, schedules, and responsibilities."],
+        ["Memories need a quieter space", "Photos, stories, and family rituals should not compete with alerts or operational tasks."],
+        ["Settings stays out of the daily flow", "Account, permission, notification, and device controls remain available without crowding the main experience."],
+      ],
+      iaImageLabel: "Open the complete IA diagram",
+      flowsTitle: "Three flows used to check the structure",
+      flowsBody:
+        "The sitemap was not treated as a list of pages. I checked whether it could support the moments that matter most in the research.",
+      flows: [
+        ["Bring the family in", ["Create a shared home", "Invite a member", "Choose a role", "Set privacy preferences"]],
+        ["Coordinate care", ["See today's priorities", "Open a reminder", "Assign or confirm it", "Let the family know it is handled"]],
+        ["Create a family memory", ["Receive a connection suggestion", "Share a moment", "Add it to the private album", "Revisit it together"]],
       ],
     },
     anatomy: {
@@ -338,6 +450,46 @@ const COPY = {
       title: "Em bắt đầu bằng việc tìm hiểu gia đình đang gặp khó khăn ở đâu.",
       body:
         "Quy trình nghiên cứu gồm tìm hiểu bối cảnh, phân tích đối thủ, tổng hợp nhu cầu của các nhóm tuổi, xây dựng persona và user journey. Sau khi xác định được những vấn đề lặp lại, em mới sắp xếp kiến trúc thông tin, xây dựng luồng sử dụng và thiết kế giao diện.",
+      framingTitle: "Cách em đặt lại bài toán",
+      framingBody:
+        "Thay vì mặc định gia đình cần thêm một bảng điều khiển smart home, em chia đề bài thành bốn câu hỏi. Cách này giúp phần nghiên cứu luôn quay về mối quan hệ giữa các thành viên, nhưng vẫn không tách rời bối cảnh ngôi nhà và công nghệ.",
+      framing: [
+        ["Ai đang gặp khó khăn?", "Ông bà cần cảm giác gần gũi, cha mẹ đang gánh phần lớn việc nhớ và nhắc, còn người trẻ quen công nghệ nhưng muốn giữ sự tự chủ."],
+        ["Vấn đề diễn ra ở đâu?", "Trong những gia đình nhiều thế hệ sống cùng nhà nhưng có lịch sinh hoạt khác nhau và thường ở những không gian riêng."],
+        ["Khoảng cách lộ rõ khi nào?", "Ở những lúc đáng lẽ cả nhà có thể gần nhau hơn: bữa tối, cuối tuần, lịch khám, sinh nhật, ngày giỗ và các dịp chung."],
+        ["Vấn đề thật sự là gì?", "Ngôi nhà có thể đã kết nối bằng thiết bị, nhưng gia đình vẫn thiếu một nơi chung đủ nhẹ nhàng để cùng nhớ lịch, chăm nhau và giữ kỷ niệm."],
+      ],
+      marketTitle: "Bối cảnh cho thấy cơ hội nằm ở đâu",
+      marketBody:
+        "Nghiên cứu tài liệu cho thấy thị trường smart home đang tăng trưởng, nhưng phần lớn sản phẩm vẫn cạnh tranh bằng thiết bị và khả năng tự động hóa. Từ đó, em đặt thêm câu hỏi: ngoài điều khiển căn nhà, công nghệ có thể giúp gì cho những người đang sống bên trong?",
+      marketSignals: [
+        ["358,59 triệu USD", "Doanh thu ước tính của thị trường smart home Việt Nam năm 2024 theo tài liệu Statista được dùng trong UX board."],
+        ["506,4 triệu USD", "Mức doanh thu dự kiến vào năm 2028 trong cùng nguồn nghiên cứu."],
+        ["22,6%", "Tỷ lệ hộ gia đình được dự báo sử dụng smart home vào năm 2027, cho thấy hành vi này đang dần trở nên phổ biến hơn."],
+      ],
+      segmentsTitle: "Ba thế hệ có ba cách kỳ vọng về sản phẩm",
+      segmentsBody:
+        "Trước khi chọn hai persona chính, em nhìn toàn bộ gia đình như một hệ thống. Mỗi thế hệ khiến khái niệm dễ dùng, riêng tư và hữu ích mang một ý nghĩa khác nhau.",
+      segments: [
+        ["Ông bà · từ 60 tuổi", "Cần lời nhắc đơn giản, cảm nhận được sự hiện diện của con cháu và yên tâm rằng mình không dễ thao tác sai. Chữ nhỏ hoặc flow kỹ thuật nhanh chóng trở thành rào cản."],
+        ["Cha mẹ · 35–55 tuổi", "Thường đứng ra sắp xếp lịch, sức khỏe, hóa đơn, bữa cơm và an toàn trong nhà. Họ cần giảm bớt việc phải nhớ, không cần thêm một hệ thống để tự mình quản lý."],
+        ["Con cháu · 10–34 tuổi", "Làm quen công nghệ nhanh và muốn phối hợp thuận tiện hơn, nhưng cần được tự quyết về vị trí, trạng thái và thông báo của mình."],
+      ],
+      userGroupsBoardTitle: "Bảng gốc đi sâu vào hai nhóm nằm ở hai đầu trải nghiệm.",
+      userGroupsBoardBody:
+        "Trong UX board, em mô tả chi tiết người trẻ quen công nghệ và ông bà ít tự tin khi dùng ứng dụng. Sau đó, em bổ sung vai trò cha mẹ như người giữ nhịp ở giữa, thường phải nhớ lịch, nhắc việc và kết nối hai nhóm còn lại.",
+      userGroupsBoardLabel: "Mở bảng User Groups gốc",
+      questionsTitle: "Những điều em cần nghe từ gia đình",
+      questionsBody:
+        "Bộ câu hỏi phỏng vấn và khảo sát đi từ đời sống thường ngày, thay vì yêu cầu người tham gia đánh giá một tính năng đã có sẵn. Nhờ vậy, em có thể tìm ra thói quen và mâu thuẫn đang thật sự tồn tại.",
+      questions: [
+        "Cả nhà thường ở bên nhau vào lúc nào, và có nếp sinh hoạt nào mọi người muốn giữ lại?",
+        "Lịch, lời nhắc hoặc việc nhà nào thường bị quên hay phải nhắc nhiều lần?",
+        "Ai thường đứng ra sắp xếp việc chung, và trách nhiệm đó bắt đầu gây mệt ở đâu?",
+        "Người lớn tuổi đang được chăm sóc và nhắc lịch bằng cách nào?",
+        "Thông tin nào giúp cả nhà yên tâm, và thông tin nào khiến một người cảm thấy bị theo dõi?",
+        "Ảnh và kỷ niệm của gia đình hiện được lưu ở đâu, vì sao cả nhà ít khi cùng xem lại?",
+      ],
       methods: [
         ["Nghiên cứu tài liệu", "Tìm hiểu sự thay đổi trong nếp sinh hoạt của gia đình Việt và cách công nghệ đang được dùng trong nhà."],
         ["Phân tích đối thủ", "So sánh ứng dụng nhà thông minh với các nền tảng hỗ trợ gia đình quản lý lịch và công việc chung."],
@@ -366,11 +518,37 @@ const COPY = {
       title: "Điều em cần giải quyết không phải là thêm tính năng, mà là cân bằng ba nhu cầu.",
       body:
         "Gia đình cần quan tâm nhau nhưng vẫn phải tôn trọng riêng tư. Lời nhắc cần giúp mọi người bớt quên việc mà không tạo cảm giác bị thúc ép. Giao diện cũng phải đủ nhanh cho người trẻ nhưng vẫn rõ ràng và dễ dùng với người lớn tuổi.",
+      empathyTitle: "Điều empathy map giúp em nhìn rõ hơn",
+      empathyBody:
+        "Cùng một khoảng cách trong gia đình nhưng mỗi thế hệ lại diễn tả theo một cách khác. Khi đặt cạnh những gì họ nói, làm, nhìn thấy và cảm nhận, em có thể phân biệt hành vi bên ngoài với nguyên nhân phía sau.",
+      empathy: [
+        ["Họ nói", "“Em muốn cả nhà ăn tối cùng nhau nhưng lịch lúc nào cũng lệch.” “Em muốn biết ba mẹ vẫn ổn mà không phải gọi hỏi liên tục.”"],
+        ["Họ đang làm", "Dùng nhóm chat, gọi điện, lịch riêng và tự ghi nhớ để theo dõi ngày quan trọng lẫn việc chăm sóc hằng ngày."],
+        ["Họ nghĩ và cảm thấy", "Cha mẹ thấy quá tải và áy náy, ông bà có thể cô đơn nhưng không muốn than phiền, còn người trẻ muốn gần gia đình mà vẫn có không gian riêng."],
+        ["Điều này có ý nghĩa với thiết kế", "Sản phẩm nên hỗ trợ những khoảnh khắc kết nối nhỏ, đồng thời giữ lời nhắc và trạng thái chia sẻ ở mức nhẹ nhàng, tự nguyện và dễ hiểu."],
+      ],
+      synthesisTitle: "Bài toán em mang sang giai đoạn thiết kế",
+      problemStatement:
+        "Gia đình nhiều thế hệ cần một cách đơn giản và riêng tư để phối hợp lịch sinh hoạt, chăm sóc nhau và giữ kỷ niệm, vì những công cụ hiện tại đang rời rạc và thường dồn trách nhiệm lên một người.",
+      howMightWe:
+        "Làm sao để các thành viên vẫn hiện diện trong cuộc sống của nhau mà không biến sự quan tâm thành kiểm soát, cũng không bắt mọi thế hệ phải dùng công nghệ theo cùng một cách?",
       tensions: [
         ["Quan tâm nhưng không theo dõi", "Trạng thái và thông tin an toàn nên giúp cả nhà yên tâm, nhưng quyền chia sẻ phải rõ ràng và do từng người lựa chọn."],
         ["Nhắc việc nhưng không gây áp lực", "Sản phẩm cần chia sẻ trách nhiệm và dùng giọng điệu gần gũi, thay vì liên tục ra lệnh cho người dùng."],
         ["Một gia đình, nhiều khả năng sử dụng", "Người trẻ cần nhanh và chủ động, còn người lớn tuổi cần rõ ràng, dễ tin và ít phải lựa chọn."],
       ],
+      differentiatorTag: "Mâu thuẫn định hình sản phẩm",
+      differentiatorTitle: "Sự quan tâm nên tạo cảm giác yên tâm, không phải cảm giác bị theo dõi.",
+      differentiatorBody:
+        "Đây không chỉ là một nguyên tắc chung. Nó ảnh hưởng trực tiếp đến loại thông tin được chia sẻ, thời gian thông tin xuất hiện và quyền thay đổi lựa chọn của mỗi thành viên.",
+      privacyModelTitle: "Ý tưởng này được đưa vào trải nghiệm như thế nào",
+      privacyModel: [
+        ["Chia sẻ trạng thái thay vì vị trí liên tục", "Một thành viên có thể báo đang ở nhà, ra ngoài, bận hoặc sẵn sàng trò chuyện mà không phải công khai hành trình cả ngày."],
+        ["Nói rõ ai đang xem được thông tin", "Mỗi trạng thái cần cho biết phạm vi chia sẻ, đồng thời cho phép thành viên tạm dừng hoặc thay đổi lựa chọn."],
+        ["Phối hợp chăm sóc mà không phải nhắc nhiều lần", "Một lời nhắc có thể được nhận và đánh dấu đã có người xử lý để cả nhà không cần tiếp tục gọi hỏi."],
+      ],
+      differentiatorConclusion:
+        "Mục tiêu không phải giúp một người theo dõi cả nhà. Em muốn mỗi thành viên đều có thể tham gia chăm sóc nhau nhưng vẫn làm chủ thông tin của chính mình.",
       decisionsTitle: "Từ phát hiện đến quyết định sản phẩm",
       decisions: [
         ["Thông tin gia đình nằm rải rác", "Hôm nay", "Gom lịch, lời nhắc, trạng thái và việc cần chú ý vào một điểm bắt đầu."],
@@ -393,7 +571,7 @@ const COPY = {
         },
         {
           label: "Ngọc Hạnh · 38 tuổi · Người giữ nhịp gia đình",
-          quote: "Mình không cần app làm thay mọi thứ, chỉ cần nó giúp cả nhà bớt quên việc, bớt phải nhắc nhau và biết người thân vẫn ổn.",
+          quote: "Em không cần app làm thay mọi thứ, chỉ cần nó giúp cả nhà bớt quên việc, bớt phải nhắc nhau và biết người thân vẫn ổn.",
           context: "Là người thường sắp xếp lịch, cuộc hẹn, thuốc men, hóa đơn và những việc chăm sóc trong gia đình.",
           needs: ["Một lịch chung cho cả nhà", "Chia việc cho nhiều thành viên", "Cập nhật an toàn dễ hiểu", "Nơi giữ nếp sinh hoạt và kỷ niệm"],
           tension: "Muốn chăm lo cho mọi người nhưng đang mệt vì phải một mình ghi nhớ và theo sát quá nhiều việc.",
@@ -455,6 +633,17 @@ const COPY = {
         },
       ],
       labels: { action: "Hành vi", pain: "Điểm vướng", opportunity: "Cơ hội thiết kế" },
+      scenarioTitle: "Một tình huống chăm sóc kết nối cả ba thế hệ",
+      scenarioBody:
+        "Em dùng một tình huống xuyên suốt để kiểm tra xem người giữ nhịp, người lớn tuổi và người trẻ có thể cùng xử lý một việc mà không dồn toàn bộ trách nhiệm lên một người hay không.",
+      scenarioSteps: [
+        ["01", "Người giữ nhịp thêm lịch khám", "Ngọc Hạnh tạo lời nhắc khám bệnh và chỉ chia sẻ thời gian, địa điểm cùng việc cần hỗ trợ."],
+        ["02", "Ông nhận một lời nhắc dễ hiểu", "Ông nhìn thấy card chữ lớn, nội dung ngắn và có thể xác nhận mình đã đọc."],
+        ["03", "Người trẻ nhận phần việc", "Minh Anh chọn đưa ông đi khám mà không cần mở thêm một cuộc trò chuyện trong nhóm gia đình."],
+        ["04", "Cả nhà biết việc đã có người lo", "Trạng thái lời nhắc được cập nhật cho mọi người, nhờ vậy không cần gọi hỏi hoặc nhắc lại nhiều lần."],
+      ],
+      scenarioOutcome:
+        "Cùng một luồng vừa hỗ trợ việc chăm sóc, vừa chia sẻ trách nhiệm và vẫn không cần theo dõi vị trí liên tục.",
     },
     direction: {
       tag: "( 06 · Định hướng sản phẩm )",
@@ -467,18 +656,47 @@ const COPY = {
         ["Người lớn tuổi cũng có thể tự dùng", "Dùng từ quen thuộc, nút lớn, phân cấp rõ và giảm số lựa chọn trên mỗi màn hình."],
         ["Không chỉ quản lý, còn lưu giữ", "Kết hợp lịch sinh hoạt, sự an toàn và kỷ niệm để ứng dụng gần gũi hơn với đời sống gia đình."],
       ],
+      prioritiesTitle: "Cách em ưu tiên tính năng",
+      prioritiesBody:
+        "UX board có khá nhiều hướng phát triển, nên em chia chúng theo mức độ phục vụ cho mục tiêu gắn kết gia đình. Điều khiển smart home vẫn cần thiết, nhưng không phải nội dung dẫn dắt sản phẩm.",
+      priorities: [
+        ["Kết nối cốt lõi", "Màn Hôm nay, lịch chung, lời nhắc nhẹ, trạng thái thành viên và quyền riêng tư."],
+        ["Chăm sóc chung", "Lịch thuốc và khám bệnh, việc nhà, nếp sinh hoạt và gợi ý để cả nhà có thêm thời gian chung."],
+        ["Tiện ích hỗ trợ", "Điều khiển thiết bị, kiểm tra an toàn, chế độ dùng lại, tiện ích nội khu và phần cài đặt."],
+      ],
     },
     structure: {
       tag: "( 07 · Cấu trúc sản phẩm )",
-      title: "Nếp Nhà được chia thành năm khu vực, với Hôm nay là màn hình bắt đầu.",
+      title: "Sáu nhánh giúp những nhu cầu trong gia đình được sắp xếp theo cách dễ tìm.",
       body:
-        "Em tách thông tin cần xem ngay khỏi phần thành viên, thiết bị, kỷ niệm và cài đặt. Nhờ vậy, màn Hôm nay chỉ giữ những nội dung cần thiết cho một ngày, thay vì đưa toàn bộ tính năng lên cùng lúc.",
+        "Em tách riêng phần thiết lập ban đầu, việc cần xem trong ngày, ngôi nhà, thành viên, kỷ niệm và cài đặt. Mỗi khu vực vì thế có một nhiệm vụ rõ ràng, còn Hôm nay vẫn là nơi cả nhà có thể quay lại mỗi ngày.",
       items: [
-        ["Hôm nay", "Điểm bắt đầu chung cho lời nhắc, trạng thái thành viên, việc cần chú ý và gợi ý kết nối."],
-        ["Gia đình", "Thành viên, lịch chung, việc chăm sóc và những tín hiệu hiện diện vừa đủ."],
-        ["Nhà", "Thiết bị cần thiết, trạng thái an toàn và các nếp sinh hoạt có thể dùng lại."],
-        ["Ký ức", "Album riêng của gia đình dành cho khoảnh khắc thường ngày lẫn dịp quan trọng."],
-        ["Cài đặt", "Quyền riêng tư, phân quyền, thông báo và lựa chọn hỗ trợ khả năng tiếp cận."],
+        ["Onboarding", "Giới thiệu giá trị của sản phẩm, tạo hoặc tham gia nhà chung, mời thành viên và thiết lập quyền riêng tư ngay từ đầu."],
+        ["Hôm nay", "Gom tổng quan trong nhà, lời nhắc, lịch hẹn, trạng thái thành viên và gợi ý kết nối vào một điểm bắt đầu."],
+        ["Nhà", "Sắp xếp phòng, thiết bị, nếp sinh hoạt và kiểm tra an toàn mà không trộn lẫn với thông tin về thành viên."],
+        ["Gia đình", "Quản lý thành viên, lịch chung, việc chăm sóc, việc nhà và trách nhiệm của từng người."],
+        ["Ký ức", "Dành một không gian riêng cho khoảnh khắc, album, câu chuyện và những nếp quen của gia đình."],
+        ["Cài đặt", "Quản lý hồ sơ, thành viên, quyền riêng tư, thông báo, thiết bị và phần hỗ trợ."],
+      ],
+      iaTitle: "Vì sao em xây sơ đồ IA theo cách này?",
+      iaBody:
+        "Em không bắt đầu bằng cách liệt kê thật nhiều tính năng. Em nhìn lại những nhu cầu lặp lại trong nghiên cứu: hôm nay cả nhà cần chú ý điều gì, ai đang liên quan, việc nào thuộc về ngôi nhà và điều gì cần được lưu giữ lâu dài. Từ đó, em chia sản phẩm thành sáu nhánh riêng.",
+      iaReasonsTitle: "Những quyết định chính trong sơ đồ",
+      iaReasons: [
+        ["Onboarding đứng thành một nhánh riêng", "Tạo nhà chung, mời người thân, chọn vai trò và hiểu quyền riêng tư cần được hoàn tất trước khi bắt đầu sử dụng hằng ngày."],
+        ["Hôm nay trả lời việc cần biết ngay", "Lời nhắc, lịch hẹn, trạng thái trong nhà và tín hiệu từ người thân được gom theo những gì đang cần chú ý."],
+        ["Nhà và Gia đình được tách riêng", "Phòng và thiết bị có cách tổ chức khác với thành viên, lịch chung, việc chăm sóc và trách nhiệm."],
+        ["Ký ức có một không gian yên hơn", "Ảnh, câu chuyện và nếp quen gia đình không phải cạnh tranh sự chú ý với cảnh báo hay việc cần làm."],
+        ["Cài đặt không chen vào nhịp dùng mỗi ngày", "Hồ sơ, quyền, thông báo và thiết bị vẫn dễ tìm nhưng không làm màn hình chính trở nên nặng nề."],
+      ],
+      iaImageLabel: "Mở toàn bộ sơ đồ IA",
+      flowsTitle: "Ba luồng dùng để kiểm tra lại cấu trúc",
+      flowsBody:
+        "Em không xem sitemap như một danh sách màn hình. Em dùng ba tình huống quan trọng trong nghiên cứu để kiểm tra xem người dùng có thể đi từ nhu cầu đến kết quả một cách rõ ràng hay không.",
+      flows: [
+        ["Đưa các thành viên vào nhà chung", ["Tạo nhà chung", "Mời thành viên", "Chọn vai trò", "Thiết lập quyền riêng tư"]],
+        ["Phối hợp một việc chăm sóc", ["Xem việc cần chú ý hôm nay", "Mở lời nhắc", "Nhận hoặc xác nhận việc", "Báo cho cả nhà biết đã hoàn thành"]],
+        ["Giữ lại một khoảnh khắc chung", ["Nhận gợi ý kết nối", "Chia sẻ khoảnh khắc", "Thêm vào album riêng", "Cùng xem lại sau đó"]],
       ],
     },
     anatomy: {
@@ -671,10 +889,16 @@ export function NepNha() {
   // Interactive UI Screen Explorer State
   const [selectedUiIndex, setSelectedUiIndex] = useState<number>(1);
 
+  // Generic Image Popup State
+  const [popupImage, setPopupImage] = useState<{src: string, alt: string, caption?: string} | null>(null);
+
   useEffect(() => {
-    if (activeScreen === null) return;
+    if (activeScreen === null && popupImage === null) return;
     const close = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setActiveScreen(null);
+      if (event.key === "Escape") {
+        setActiveScreen(null);
+        setPopupImage(null);
+      }
     };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", close);
@@ -682,7 +906,7 @@ export function NepNha() {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", close);
     };
-  }, [activeScreen]);
+  }, [activeScreen, popupImage]);
 
   return (
     <div className="min-h-screen font-sans selection:bg-[#DDEACF] selection:text-[#365B2B]" style={{ backgroundColor: CREAM, color: INK }}>
@@ -879,6 +1103,30 @@ export function NepNha() {
               <p className="max-w-[56ch] text-lg leading-relaxed lg:col-span-5" style={{ color: MUTED }}>{c.research.body}</p>
             </div>
 
+            <div className="mt-20">
+              <div className="grid gap-5 lg:grid-cols-12 lg:items-end">
+                <h3 className="text-3xl lg:col-span-5" style={{ fontFamily: "Fraunces, serif" }}>{c.research.framingTitle}</h3>
+                <p className="max-w-[70ch] text-sm leading-relaxed lg:col-span-7" style={{ color: MUTED }}>{c.research.framingBody}</p>
+              </div>
+              <div className="mt-8 grid overflow-hidden rounded-[2rem] border md:grid-cols-2" style={{ borderColor: LINE }}>
+                {c.research.framing.map(([title, body], index) => (
+                  <article
+                    key={title}
+                    className="min-h-56 border-b p-7 md:p-8 odd:md:border-r [&:nth-last-child(-n+2)]:md:border-b-0"
+                    style={{
+                      borderColor: LINE,
+                      backgroundColor: index === 1 || index === 2 ? GREEN_DARK : PAPER,
+                      color: index === 1 || index === 2 ? "#fff" : INK,
+                    }}
+                  >
+                    <div className="text-xs font-bold tracking-[0.2em]" style={{ color: index === 1 || index === 2 ? "#CFE4BD" : GREEN }}>0{index + 1}</div>
+                    <h4 className="mt-8 text-2xl" style={{ fontFamily: "Fraunces, serif" }}>{title}</h4>
+                    <p className="mt-3 max-w-[56ch] text-sm leading-relaxed" style={{ color: index === 1 || index === 2 ? "rgba(255,255,255,0.72)" : MUTED }}>{body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
             <div className="mt-16 grid gap-3 md:grid-cols-5">
               {c.research.methods.map(([title, body], index) => (
                 <article key={title} className="rounded-[1.6rem] border bg-white p-6 shadow-sm" style={{ borderColor: LINE }}>
@@ -892,6 +1140,93 @@ export function NepNha() {
                   <p className="mt-2 text-xs leading-relaxed" style={{ color: MUTED }}>{body}</p>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-20 rounded-[2.4rem] p-7 text-white md:p-10" style={{ backgroundColor: GREEN_DARK }}>
+              <div className="grid gap-8 lg:grid-cols-12">
+                <div className="lg:col-span-5">
+                  <h3 className="text-3xl" style={{ fontFamily: "Fraunces, serif" }}>{c.research.marketTitle}</h3>
+                  <p className="mt-4 max-w-[52ch] text-sm leading-relaxed text-white/70">{c.research.marketBody}</p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-3 lg:col-span-7">
+                  {c.research.marketSignals.map(([stat, body]) => (
+                    <article key={stat} className="rounded-[1.6rem] border border-white/15 bg-white/10 p-6">
+                      <div className="text-3xl text-[#E2F0D7]" style={{ fontFamily: "Fraunces, serif" }}>{stat}</div>
+                      <p className="mt-5 text-xs leading-relaxed text-white/65">{body}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-20">
+              <div className="grid gap-5 lg:grid-cols-12 lg:items-end">
+                <h3 className="text-3xl lg:col-span-5" style={{ fontFamily: "Fraunces, serif" }}>{c.research.segmentsTitle}</h3>
+                <p className="max-w-[70ch] text-sm leading-relaxed lg:col-span-7" style={{ color: MUTED }}>{c.research.segmentsBody}</p>
+              </div>
+              <div className="mt-8 grid gap-5 md:grid-cols-3">
+                {c.research.segments.map(([title, body], index) => (
+                  <article key={title} className="rounded-[2rem] border bg-white p-7 shadow-sm" style={{ borderColor: LINE }}>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-bold tracking-[0.18em]" style={{ color: GREEN }}>0{index + 1}</span>
+                      <UsersRound size={19} style={{ color: GREEN_DARK }} />
+                    </div>
+                    <h4 className="mt-8 text-2xl" style={{ fontFamily: "Fraunces, serif" }}>{title}</h4>
+                    <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}>{body}</p>
+                  </article>
+                ))}
+              </div>
+
+              <div className="mt-8 grid gap-8 overflow-hidden rounded-[2.2rem] border bg-white p-5 shadow-sm md:p-8 lg:grid-cols-12 lg:items-center" style={{ borderColor: LINE }}>
+                <div className="lg:col-span-4">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: GREEN }}>
+                    {lang === "vi" ? "Tư liệu từ UX board" : "Evidence from the UX board"}
+                  </div>
+                  <h4 className="mt-5 text-3xl leading-tight" style={{ fontFamily: "Fraunces, serif" }}>
+                    {c.research.userGroupsBoardTitle}
+                  </h4>
+                  <p className="mt-5 text-sm leading-relaxed" style={{ color: MUTED }}>
+                    {c.research.userGroupsBoardBody}
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setPopupImage({
+                    src: NEP_NHA_USER_GROUPS_URL,
+                    alt: lang === "vi" ? "Bảng User Groups gốc trong UX board Nếp Nhà" : "Original User Groups board from the Nếp Nhà UX research",
+                    caption: c.research.userGroupsBoardTitle
+                  })}
+                  className="group relative overflow-hidden rounded-[1.7rem] border bg-neutral-50 p-2 lg:col-span-8 w-full text-left"
+                  style={{ borderColor: LINE }}
+                >
+                  <img
+                    src={NEP_NHA_USER_GROUPS_URL}
+                    alt={lang === "vi" ? "Bảng User Groups gốc trong UX board Nếp Nhà" : "Original User Groups board from the Nếp Nhà UX research"}
+                    className="h-auto w-full rounded-[1.25rem] transition-transform duration-500 group-hover:scale-[1.01]"
+                    loading="lazy"
+                  />
+                  <div className="absolute bottom-5 right-5 flex items-center gap-2 rounded-full bg-[#20251E]/90 px-4 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur-md">
+                    <Expand size={14} />
+                    {c.research.userGroupsBoardLabel}
+                  </div>
+                  </button>
+              </div>
+            </div>
+
+            <div className="mt-20 grid gap-10 rounded-[2.2rem] border bg-white p-7 shadow-sm md:p-10 lg:grid-cols-12" style={{ borderColor: LINE }}>
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl" style={{ fontFamily: "Fraunces, serif" }}>{c.research.questionsTitle}</h3>
+                <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}>{c.research.questionsBody}</p>
+              </div>
+              <div className="grid gap-x-8 gap-y-0 md:grid-cols-2 lg:col-span-8">
+                {c.research.questions.map((question, index) => (
+                  <div key={question} className="flex gap-4 border-t py-5" style={{ borderColor: LINE }}>
+                    <span className="text-xs font-bold tracking-[0.16em]" style={{ color: GREEN }}>0{index + 1}</span>
+                    <p className="text-sm leading-relaxed">{question}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="mt-8 grid overflow-hidden rounded-[2.2rem] border shadow-sm md:grid-cols-2 lg:grid-cols-4" style={{ borderColor: LINE }}>
@@ -939,6 +1274,32 @@ export function NepNha() {
               <p className="text-lg leading-relaxed lg:col-span-5" style={{ color: MUTED }}>{c.insights.body}</p>
             </div>
 
+            <div className="mt-16 grid gap-8 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl" style={{ fontFamily: "Fraunces, serif" }}>{c.insights.empathyTitle}</h3>
+                <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}>{c.insights.empathyBody}</p>
+              </div>
+              <div className="grid gap-4 md:grid-cols-2 lg:col-span-8">
+                {c.insights.empathy.map(([title, body], index) => (
+                  <article key={title} className="rounded-[1.7rem] border p-6" style={{ borderColor: LINE, backgroundColor: index === 3 ? GREEN_SOFT : CREAM }}>
+                    <div className="text-xs font-bold uppercase tracking-[0.16em]" style={{ color: GREEN_DARK }}>{title}</div>
+                    <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}>{body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-16 overflow-hidden rounded-[2.2rem] border shadow-sm md:grid md:grid-cols-2" style={{ borderColor: LINE }}>
+              <div className="p-8 md:p-10" style={{ backgroundColor: CREAM }}>
+                <div className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: GREEN }}>{c.insights.synthesisTitle}</div>
+                <p className="mt-6 text-xl leading-relaxed" style={{ fontFamily: "Fraunces, serif" }}>{c.insights.problemStatement}</p>
+              </div>
+              <div className="p-8 text-white md:p-10" style={{ backgroundColor: GREEN_DARK }}>
+                <div className="text-xs font-bold uppercase tracking-[0.18em] text-white/55">How might we</div>
+                <p className="mt-6 text-xl leading-relaxed" style={{ fontFamily: "Fraunces, serif" }}>{c.insights.howMightWe}</p>
+              </div>
+            </div>
+
             <div className="mt-14 grid gap-5 md:grid-cols-3">
               {c.insights.tensions.map(([title, body], index) => (
                 <article key={title} className="rounded-[2rem] p-8 text-white shadow-lg" style={{ backgroundColor: index === 1 ? GREEN : GREEN_DARK }}>
@@ -947,6 +1308,44 @@ export function NepNha() {
                   <p className="mt-3 text-sm leading-relaxed text-white/75">{body}</p>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-20 overflow-hidden rounded-[2.4rem] border shadow-sm" style={{ borderColor: LINE }}>
+              <div className="grid lg:grid-cols-12">
+                <div className="p-8 text-white md:p-12 lg:col-span-5" style={{ backgroundColor: GREEN_DARK }}>
+                  <div className="text-xs font-bold uppercase tracking-[0.18em] text-white/50">
+                    {c.insights.differentiatorTag}
+                  </div>
+                  <h3 className="mt-6 text-3xl leading-tight md:text-4xl" style={{ fontFamily: "Fraunces, serif" }}>
+                    {c.insights.differentiatorTitle}
+                  </h3>
+                  <p className="mt-6 text-sm leading-relaxed text-white/70">
+                    {c.insights.differentiatorBody}
+                  </p>
+                  <div className="mt-10 rounded-[1.5rem] border border-white/15 bg-white/10 p-5 text-sm leading-relaxed text-white/80">
+                    {c.insights.differentiatorConclusion}
+                  </div>
+                </div>
+
+                <div className="bg-white p-8 md:p-12 lg:col-span-7">
+                  <h4 className="text-2xl" style={{ fontFamily: "Fraunces, serif" }}>
+                    {c.insights.privacyModelTitle}
+                  </h4>
+                  <div className="mt-7 space-y-4">
+                    {c.insights.privacyModel.map(([title, body], index) => (
+                      <article key={title} className="grid gap-4 rounded-[1.5rem] border p-5 sm:grid-cols-[3rem_1fr]" style={{ borderColor: LINE, backgroundColor: index === 1 ? GREEN_SOFT : CREAM }}>
+                        <span className="flex h-10 w-10 items-center justify-center rounded-full text-xs font-bold text-white" style={{ backgroundColor: GREEN_DARK }}>
+                          0{index + 1}
+                        </span>
+                        <div>
+                          <h5 className="font-semibold">{title}</h5>
+                          <p className="mt-2 text-sm leading-relaxed" style={{ color: MUTED }}>{body}</p>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="mt-20">
@@ -1145,6 +1544,39 @@ export function NepNha() {
                 );
               })}
             </div>
+
+            <div className="mt-20 overflow-hidden rounded-[2.4rem] border shadow-sm" style={{ borderColor: LINE, backgroundColor: CREAM }}>
+              <div className="grid gap-8 p-8 md:p-10 lg:grid-cols-12 lg:p-12">
+                <div className="lg:col-span-4">
+                  <div className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: GREEN }}>
+                    {lang === "vi" ? "Tình huống xuyên suốt" : "End-to-end scenario"}
+                  </div>
+                  <h3 className="mt-5 text-3xl leading-tight md:text-4xl" style={{ fontFamily: "Fraunces, serif" }}>
+                    {c.journey.scenarioTitle}
+                  </h3>
+                  <p className="mt-5 text-sm leading-relaxed" style={{ color: MUTED }}>
+                    {c.journey.scenarioBody}
+                  </p>
+                </div>
+
+                <div className="lg:col-span-8">
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {c.journey.scenarioSteps.map(([number, title, body]) => (
+                      <article key={number} className="rounded-[1.6rem] border bg-white p-6" style={{ borderColor: LINE }}>
+                        <div className="text-xs font-bold tracking-[0.18em]" style={{ color: GREEN }}>{number}</div>
+                        <h4 className="mt-6 text-xl" style={{ fontFamily: "Fraunces, serif" }}>{title}</h4>
+                        <p className="mt-3 text-sm leading-relaxed" style={{ color: MUTED }}>{body}</p>
+                      </article>
+                    ))}
+                  </div>
+                  <div className="mt-4 flex items-start gap-4 rounded-[1.5rem] p-5 text-white" style={{ backgroundColor: GREEN_DARK }}>
+                    <CheckCircle2 size={20} className="mt-0.5 shrink-0 text-[#CFE4BD]" />
+                    <p className="text-sm leading-relaxed text-white/80">{c.journey.scenarioOutcome}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
 
@@ -1177,6 +1609,26 @@ export function NepNha() {
                 );
               })}
             </div>
+
+            <div className="mt-20 grid gap-8 rounded-[2.2rem] border bg-white p-7 shadow-sm md:p-10 lg:grid-cols-12" style={{ borderColor: LINE }}>
+              <div className="lg:col-span-4">
+                <h3 className="text-3xl" style={{ fontFamily: "Fraunces, serif" }}>{c.direction.prioritiesTitle}</h3>
+                <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}>{c.direction.prioritiesBody}</p>
+              </div>
+              <div className="space-y-3 lg:col-span-8">
+                {c.direction.priorities.map(([title, body], index) => (
+                  <article key={title} className="grid gap-4 rounded-[1.5rem] border p-5 sm:grid-cols-[8rem_1fr] sm:items-center" style={{ borderColor: LINE, backgroundColor: index === 0 ? GREEN_SOFT : PAPER }}>
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold text-white" style={{ backgroundColor: index === 0 ? GREEN_DARK : GREEN }}>
+                        0{index + 1}
+                      </span>
+                      <h4 className="text-sm font-semibold">{title}</h4>
+                    </div>
+                    <p className="text-sm leading-relaxed" style={{ color: MUTED }}>{body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -1191,9 +1643,9 @@ export function NepNha() {
               <p className="text-lg leading-relaxed text-white/70 lg:col-span-5">{c.structure.body}</p>
             </div>
 
-            <div className="mt-16 grid gap-4 md:grid-cols-5">
+            <div className="mt-16 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
               {c.structure.items.map(([title, body], index) => {
-                const icons = [CalendarDays, UsersRound, Home, Heart, ShieldCheck];
+                const icons = [Smartphone, CalendarDays, Home, UsersRound, Heart, ShieldCheck];
                 const Icon = icons[index];
                 return (
                   <div key={title} className="rounded-[1.8rem] bg-white/10 p-7 backdrop-blur-md border border-white/15 transition-all hover:bg-white/20 hover:-translate-y-1">
@@ -1206,6 +1658,86 @@ export function NepNha() {
                   </div>
                 );
               })}
+            </div>
+
+            <div className="mt-20 border-t border-white/15 pt-12">
+              <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
+                <div className="lg:col-span-5">
+                  <h3 className="text-3xl md:text-4xl" style={{ fontFamily: "Fraunces, serif" }}>
+                    {c.structure.iaTitle}
+                  </h3>
+                  <p className="mt-5 max-w-[58ch] text-sm leading-relaxed text-white/70">
+                    {c.structure.iaBody}
+                  </p>
+
+                  <div className="mt-9 text-xs font-bold uppercase tracking-[0.18em] text-white/45">
+                    {c.structure.iaReasonsTitle}
+                  </div>
+                  <div className="mt-5 space-y-3">
+                    {c.structure.iaReasons.map(([title, body], index) => (
+                      <article key={title} className="rounded-2xl border border-white/15 bg-white/10 p-5">
+                        <div className="flex gap-4">
+                          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/10 text-[0.65rem] font-bold text-white">
+                            {index + 1}
+                          </span>
+                          <div>
+                            <h4 className="text-sm font-semibold text-white">{title}</h4>
+                            <p className="mt-2 text-xs leading-relaxed text-white/65">{body}</p>
+                          </div>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setPopupImage({
+                    src: NEP_NHA_INFORMATION_ARCHITECTURE_URL,
+                    alt: lang === "vi" ? "Sơ đồ cấu trúc thông tin IA đầy đủ của ứng dụng Nếp Nhà" : "Complete information architecture diagram for the Nếp Nhà app",
+                    caption: c.structure.iaImageLabel
+                  })}
+                  className="group overflow-hidden rounded-[2rem] border border-white/15 bg-white p-3 shadow-2xl lg:col-span-7 w-full text-left"
+                >
+                  <div className="relative overflow-hidden rounded-[1.4rem] bg-white">
+                    <img
+                      src={NEP_NHA_INFORMATION_ARCHITECTURE_URL}
+                      alt={lang === "vi" ? "Sơ đồ cấu trúc thông tin IA đầy đủ của ứng dụng Nếp Nhà" : "Complete information architecture diagram for the Nếp Nhà app"}
+                      className="h-auto w-full transition-transform duration-500 group-hover:scale-[1.01]"
+                      loading="lazy"
+                    />
+                    <div className="absolute bottom-4 right-4 flex items-center gap-2 rounded-full bg-[#20251E]/90 px-4 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur-md">
+                      <Expand size={14} />
+                      {c.structure.iaImageLabel}
+                    </div>
+                  </div>
+                  </button>
+              </div>
+            </div>
+
+            <div className="mt-20 border-t border-white/15 pt-12">
+              <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+                <h3 className="text-3xl lg:col-span-5" style={{ fontFamily: "Fraunces, serif" }}>{c.structure.flowsTitle}</h3>
+                <p className="max-w-[70ch] text-sm leading-relaxed text-white/65 lg:col-span-7">{c.structure.flowsBody}</p>
+              </div>
+              <div className="mt-8 grid gap-5 md:grid-cols-3">
+                {c.structure.flows.map(([title, steps], flowIndex) => (
+                  <article key={title} className="rounded-[1.8rem] border border-white/15 bg-white/10 p-7">
+                    <div className="text-xs font-bold tracking-[0.18em] text-white/45">FLOW 0{flowIndex + 1}</div>
+                    <h4 className="mt-5 text-2xl" style={{ fontFamily: "Fraunces, serif" }}>{title}</h4>
+                    <ol className="mt-7 space-y-3">
+                      {steps.map((step, stepIndex) => (
+                        <li key={step} className="flex items-center gap-3 text-sm text-white/75">
+                          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white/10 text-[0.65rem] font-bold text-white">
+                            {stepIndex + 1}
+                          </span>
+                          <span>{step}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -1646,6 +2178,29 @@ export function NepNha() {
               </button>
             </div>
             <img src={UI_IMAGES[activeScreen]} alt={`Nếp Nhà ${c.ui.screens[activeScreen][0]} full UI screen`} className="h-auto w-full rounded-[1.8rem]" />
+          </div>
+        </div>
+      )}
+
+      {/* GENERIC IMAGE POPUP MODAL */}
+      {popupImage !== null && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8" role="dialog" aria-modal="true">
+          <button
+            type="button"
+            onClick={() => setPopupImage(null)}
+            className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
+            aria-label={c.ui.close}
+          >
+            <X size={22} />
+          </button>
+          <button type="button" onClick={() => setPopupImage(null)} className="fixed inset-0 cursor-default" aria-hidden="true" tabIndex={-1} />
+          <div className="relative z-10 mx-auto w-full max-w-[1200px] rounded-[2.5rem] p-2 sm:p-4 mt-8 md:mt-0">
+            <img src={popupImage.src} alt={popupImage.alt} className="h-auto w-full rounded-[1.8rem] shadow-2xl" />
+            {popupImage.caption && (
+              <div className="mt-4 text-center text-sm font-medium text-white/80">
+                {popupImage.caption}
+              </div>
+            )}
           </div>
         </div>
       )}
