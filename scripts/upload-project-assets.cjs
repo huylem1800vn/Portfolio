@@ -46,6 +46,13 @@ const assets = [
     folder: "Nep Nha/Brand",
     publicId: "logo-mark",
   },
+  ...["minh-anh", "ngoc-hanh"].map((name) => ({
+    project: "nepNha",
+    key: name === "minh-anh" ? "personaMinhAnh" : "personaNgocHanh",
+    file: `public/assets/nep-nha/personas/${name}.png`,
+    folder: "Nep Nha/UX/Personas",
+    publicId: name,
+  })),
   ...["onboarding", "today", "family", "home", "memories"].map((name) => ({
     project: "nepNha",
     key: name,

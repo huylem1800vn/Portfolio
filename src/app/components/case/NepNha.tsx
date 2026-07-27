@@ -22,6 +22,7 @@ import { useI18n } from "../../i18n";
 import {
   NEP_NHA_INFORMATION_ARCHITECTURE_URL,
   NEP_NHA_LOGO_MARK_URL,
+  NEP_NHA_PERSONA_IMAGES,
   NEP_NHA_THUMBNAIL_URL,
   NEP_NHA_UI,
 } from "../../config/nep-nha-assets";
@@ -109,13 +110,13 @@ const COPY = {
         ["Children and young adults · 10–34", "Adopt technology quickly and want faster coordination, but expect control over their location, status, and notifications."],
       ],
       personaBridgeTag: "From user groups to personas",
-      personaBridgeTitle: "I chose two contrasting behaviors, not two convenient demographics.",
+      personaBridgeTitle: "I chose two roles that shape the same family rhythm.",
       personaBridgeBody:
-        "The initial grouping revealed two ends of the same family relationship: a younger member who connects the household to technology, and an older member who wants closeness but has less digital confidence. Turning these patterns into personas made it possible to discuss design decisions through concrete situations instead of broad age ranges.",
+        "The initial grouping showed that the product is shaped by two recurring roles: a younger member who wants to stay connected without losing privacy, and a family coordinator who carries most of the remembering and reminding. Turning these patterns into personas made the design discussion more specific than a broad age-based segment.",
       personaBridgeSteps: [
         ["01 · Gather", "Collected recurring context, frustrations, needs, and attitudes from the user-group map, empathy work, desk research, and the interview guide."],
-        ["02 · Cluster", "Grouped evidence by behavior: who sets things up, who needs support, what creates reassurance, and what begins to feel intrusive."],
-        ["03 · Select", "Selected the two roles with the clearest contrast because a solution that works for both is more likely to remain simple, respectful, and useful across generations."],
+        ["02 · Cluster", "Grouped evidence by behavior: who keeps family information moving, who carries the coordination load, and where care starts to feel intrusive."],
+        ["03 · Select", "Selected two complementary roles whose decisions affect one another: the person who coordinates family life and the younger member who chooses how to respond and share."],
       ],
       questionsTitle: "What I needed to learn from families",
       questionsBody:
@@ -198,100 +199,134 @@ const COPY = {
     },
     audience: {
       tag: "( 04 · Primary Personas )",
-      title: "Two personas reveal both sides of connection across generations.",
+      title: "Two personas reveal how family coordination works from both sides.",
       intro:
-        "These are research-informed, provisional personas. They summarize patterns already present in the UX board; they are not fictional proof that replaces real participants. Their purpose is to focus design decisions now, then be refined through interviews and usability testing.",
+        "Minh Anh and Ngọc Hạnh are working personas synthesized from the behavior patterns documented on the UX board. They help connect research findings to concrete design decisions, while interviews and usability testing remain necessary to confirm or revise those patterns.",
       rationaleTitle: "Why these two personas?",
       rationale: [
-        ["Opposite levels of digital confidence", "Minh Anh can set up and troubleshoot the product, while Mrs. Thu needs a small number of clear, forgiving actions."],
-        ["Two sides of care and privacy", "One wants reassurance without tracking; the other wants support without feeling controlled or becoming a burden."],
-        ["A real interdependent relationship", "They do not use the product in isolation. One person's setup, reminder, or privacy choice directly shapes the other person's experience."],
+        ["They represent two recurring family roles", "Ngọc Hạnh coordinates schedules and reminders, while Minh Anh represents the younger member who receives, responds to, and shares family information."],
+        ["They expose the product's central tension", "Ngọc Hạnh needs enough visibility to know important tasks are covered. Minh Anh wants to stay connected without being monitored or overwhelmed by reminders."],
+        ["Their experiences are interdependent", "A reminder, check-in, or sharing choice starts with one person and changes what the other person sees, understands, and does next."],
       ],
       groups: [
         {
-          label: "Minh Anh · 22 · Technology connector",
-          quote: "I care about my family, but I do not want tracking or constant reminders.",
-          context: "A young professional who is comfortable with technology and often helps other family members set up digital tools.",
-          needs: ["Right-time reminders", "Clear privacy controls", "A quick home-safety check", "A private space for family memories"],
-          tension: "Wants reassurance, but rejects notification overload and constant location tracking.",
-          impact: "Shapes fast setup, understandable permissions, selective notifications, and status sharing without continuous location.",
+          label: "Minh Anh",
+          meta: "22 · New employee · Family's primary technology user",
+          quote: "I still want to care for my family, but I do not want that care to become constant tracking or repeated reminders.",
+          context: "Minh Anh is comfortable with digital tools and stays in regular contact with her family. She is not the main family coordinator, but she often becomes the person who helps everyone approach new technology.",
+          needs: ["See important family events without rereading chat history", "Receive reminders only when they are relevant", "Check in without sharing an exact location", "Keep family memories in a private space"],
+          tension: "She wants to stay close and know her family is well, but too many notifications or unclear privacy settings quickly feel controlling.",
+          impact: "Shapes selective notifications, visible privacy choices, lightweight check-ins, and a fast experience that does not demand constant attention.",
         },
         {
-          label: "Mrs. Thu · 67 · Older family member",
-          quote: "I want to know what is happening at home and feel close to my children, but I am afraid of pressing the wrong thing.",
-          context: "A retired grandmother who lives with her family, uses calling and basic messaging, and relies on her children for unfamiliar digital tasks.",
-          needs: ["Large, familiar actions", "Gentle health and routine reminders", "Small signs that family members are okay", "An easy way to revisit family memories"],
-          tension: "Wants more independence and connection, but dense screens, technical language, and commanding reminders quickly reduce confidence.",
-          impact: "Shapes larger controls, plain language, forgiving navigation, calm reminders, and an album-like memory experience.",
+          label: "Ngọc Hạnh",
+          meta: "38 · Self-employed · Family coordinator",
+          quote: "I do not need an app to do everything for us. I need it to help the family forget less, repeat reminders less, and know that everyone is okay.",
+          context: "Ngọc Hạnh lives with her husband and children and stays close to her older parents. She keeps track of school schedules, health appointments, anniversaries, bills, household tasks, and the small reminders that hold the family routine together.",
+          needs: ["One overview of what matters to the family today", "Shared reminders that do not depend on repeated messages", "Quick confirmation that an important task is covered", "A shared place for routines and family moments"],
+          tension: "She wants to reduce the family's mental load, but does not want a complicated system that gives her even more work or makes other members feel controlled.",
+          impact: "Shapes the Today overview, shared ownership of tasks, clear completion states, reusable family routines, and calm coordination instead of repeated follow-up.",
         },
       ],
       labels: { context: "Context", needs: "Needs", tension: "Core tension", impact: "Design impact" },
       validationTitle: "What still needs to be validated",
       validation:
-        "The next round should interview and test with younger family members and adults aged 60+. I would check whether these behaviors recur, which reminders feel supportive, how privacy choices are understood, and whether older participants can complete core tasks without help. Findings that do not hold would be revised rather than forced into the persona.",
+        "The next round should interview younger family members and adults who regularly coordinate household routines. I would verify whether these responsibilities and privacy concerns recur, then test which reminders feel supportive, how sharing choices are understood, and whether responsibility is genuinely distributed instead of moved to another screen.",
     },
     journey: {
       tag: "( 05 · Critical Journeys )",
-      title: "The solution was checked from both sides of a family relationship.",
+      title: "The same family moment creates two very different journeys.",
       body:
-        "The journey maps were rebuilt directly from the UX board. Both users move through the same three stages, but their pain points and expectations are not interchangeable.",
+        "I rebuilt the journeys around the two current personas and the behavior patterns documented in the UX board. The maps show what each person wants, does, touches, thinks, and struggles with before turning those observations into design opportunities.",
       stageLabels: ["Before a shared solution", "First-time setup", "After regular use"],
       journeys: [
         {
-          name: "Technology connector",
-          role: "Busy child or grandchild",
+          name: "Minh Anh",
+          role: "Young family member",
           stages: [
             {
-              action: "Uses family chats, phone calls, and separate calendars to coordinate schedules and reminders.",
-              pain: "Information is scattered and one person carries most of the remembering.",
-              opportunity: "Bring important routines, events, and home status into one calm view.",
+              desire: "Stay aware of important family moments without rereading every message or sharing her location all day.",
+              action: "Receives plans through family chat, calls, and separate reminders, then responds whenever she notices them.",
+              touchpoint: "Zalo or Messenger, phone calls, and her personal calendar.",
+              thought: "I want to stay involved, but repeated reminders make me feel as if I am being checked on.",
+              emotion: "Disconnected and overwhelmed",
+              pain: "Important information gets buried in chat, while repeated reminders make her more likely to ignore it.",
+              opportunity: "Collect only the family updates relevant to her and deliver them at the right moment.",
             },
             {
-              action: "Creates the family space, connects essential devices, and invites parents or grandparents.",
-              pain: "Worries that setup will be too technical for older family members.",
-              opportunity: "Keep setup short and offer a clearer, larger display mode.",
+              desire: "Join quickly and understand exactly which information other family members can see.",
+              action: "Accepts the family invitation, reviews the shared space, then chooses her status, reminder, and visibility preferences.",
+              touchpoint: "Invitation link, onboarding, notification settings, and privacy controls.",
+              thought: "What can everyone see, and can I change my mind later?",
+              emotion: "Curious but cautious",
+              pain: "Broad permissions and unclear default settings can make the product feel like a tracking tool.",
+              opportunity: "Use progressive onboarding, explain visibility at the point of choice, and keep every permission reversible.",
             },
             {
-              action: "Checks home status, receives important reminders, and adds family photos.",
-              pain: "Too many alerts or unclear permissions quickly reduce trust.",
-              opportunity: "Let each member control notifications, visibility, and shared information.",
+              desire: "Take part in family plans and preserve shared moments without keeping the app open throughout the day.",
+              action: "Responds to a plan, completes a lightweight check-in, accepts a small task, or adds a photo to a shared memory.",
+              touchpoint: "Selective notifications, Today overview, shared plans, and the private family archive.",
+              thought: "I can stay close to my family without having to report everything I am doing.",
+              emotion: "Reassured and in control",
+              pain: "Notification overload or overly visible status information can quickly turn care into pressure.",
+              opportunity: "Offer one-tap responses, member-specific visibility, and a calm notification digest instead of constant alerts.",
             },
           ],
         },
         {
-          name: "Older family member",
-          role: "Parent or grandparent at home",
+          name: "Ngọc Hạnh",
+          role: "Family coordinator",
           stages: [
             {
-              action: "Waits for calls, reads simple messages, and relies on spoken reminders at home.",
-              pain: "Can feel left out of both family activity and newer technology.",
-              opportunity: "Offer low-pressure reminders and small signs of family presence.",
+              desire: "See what matters to the family today and know that important plans or care tasks have not been forgotten.",
+              action: "Keeps schedules in memory, chat, calls, and a personal calendar, then follows up with each person.",
+              touchpoint: "Family chat, phone calls, handwritten notes, and her personal calendar.",
+              thought: "If I do not remember and remind everyone, an important task may be missed.",
+              emotion: "Responsible but burdened",
+              pain: "Information is scattered and one person carries most of the family's remembering and follow-up.",
+              opportunity: "Create one shared overview for family events, care tasks, and household routines.",
             },
             {
-              action: "Receives setup help and learns a small number of large, familiar actions.",
-              pain: "Dense screens and deep settings create fear of making mistakes.",
-              opportunity: "Use a simplified interface with clear language and forgiving actions.",
+              desire: "Set up only what the family needs without spending a long time configuring another system.",
+              action: "Creates the family space, adds a few essential routines or dates, and invites members to participate.",
+              touchpoint: "Create-family flow, routine templates, shared calendar setup, and member invitations.",
+              thought: "I hope this reduces the work instead of giving me another place to manage.",
+              emotion: "Hopeful but watchful",
+              pain: "A long setup and too many features would add to the mental load she is already carrying.",
+              opportunity: "Start with meaningful presets, make advanced setup optional, and let the family space grow gradually.",
             },
             {
-              action: "Listens to gentle reminders, views memories, and uses basic home controls.",
-              pain: "Commanding notifications can feel like repeated criticism.",
-              opportunity: "Use warm language, sound, and a familiar album-like memory experience.",
+              desire: "Know that plans and responsibilities are covered without repeatedly contacting every family member.",
+              action: "Reviews upcoming plans, sees who has responded, assigns or shares small responsibilities, and saves family moments.",
+              touchpoint: "Today overview, shared calendar, task status, gentle reminders, and the family archive.",
+              thought: "I can see what has been handled without calling everyone again.",
+              emotion: "Relieved and connected",
+              pain: "If ownership, responses, or completion states are unclear, she still has to repeat the same follow-up.",
+              opportunity: "Show clear ownership and completion, then let the coordinator choose when a gentle reminder is truly needed.",
             },
           ],
         },
       ],
-      labels: { action: "Behavior", pain: "Pain point", opportunity: "Design opportunity" },
-      scenarioTitle: "One appointment reminder shows how the two personas support each other",
+      labels: {
+        desire: "Goal",
+        action: "Behavior",
+        touchpoint: "Touchpoints",
+        thought: "Thought",
+        emotion: "Emotional state",
+        pain: "Pain point",
+        opportunity: "Design opportunity",
+      },
+      scenarioTitle: "Illustrative scenario: planning one shared family dinner",
       scenarioBody:
-        "I used one end-to-end situation to check whether Minh Anh can offer support without taking control away from Mrs. Thu.",
+        "This scenario is not a replacement for the journey maps. It is a focused example showing how Ngọc Hạnh's need for less repeated coordination meets Minh Anh's need to participate without being tracked.",
       scenarioSteps: [
-        ["01", "Minh Anh adds the appointment", "She creates a hospital reminder with only the time, place, and support Mrs. Thu may need."],
-        ["02", "Mrs. Thu receives a gentle reminder", "A large, plain-language card lets her confirm that she has read it without navigating a complex flow."],
-        ["03", "Mrs. Thu chooses what she needs", "She can mark that she will go independently or ask Minh Anh to accompany her."],
-        ["04", "Minh Anh receives a clear update", "The reminder status changes once, so she knows what to do without calling repeatedly or checking location."],
+        ["01", "Ngọc Hạnh creates a family dinner", "She adds the time and a short note once instead of repeating the plan in several messages."],
+        ["02", "Minh Anh receives one relevant invitation", "The notification explains the plan without asking for her live location or sending repeated follow-ups."],
+        ["03", "Minh Anh responds with one tap", "She can join, decline, or say she will arrive later while keeping the rest of her status private."],
+        ["04", "The family sees a shared update", "Ngọc Hạnh knows who can attend, and the plan can later become a saved family moment."],
       ],
       scenarioOutcome:
-        "The same flow supports care and autonomy without requiring continuous location tracking or repeated follow-up.",
+        "The flow reduces the coordinator's mental load and gives the younger member a clear, private way to participate.",
     },
     direction: {
       tag: "( 06 · Product Direction )",
@@ -490,13 +525,13 @@ const COPY = {
         ["Con cháu · 10–34 tuổi", "Làm quen công nghệ nhanh và muốn phối hợp thuận tiện hơn, nhưng cần được tự quyết về vị trí, trạng thái và thông báo của mình."],
       ],
       personaBridgeTag: "Từ nhóm người dùng đến persona",
-      personaBridgeTitle: "Em chọn hai kiểu hành vi đối lập, không chỉ chọn hai độ tuổi.",
+      personaBridgeTitle: "Em chọn hai vai trò cùng tạo nên nhịp sinh hoạt của gia đình.",
       personaBridgeBody:
-        "Khi tổng hợp bảng nhóm người dùng, em nhận ra hai đầu của cùng một mối quan hệ: người trẻ giúp cả nhà tiếp cận công nghệ và người lớn tuổi muốn gần con cháu nhưng chưa tự tin khi dùng ứng dụng. Chuyển hai kiểu hành vi này thành persona giúp em phân tích tình huống cụ thể, thay vì nói chung chung về một nhóm tuổi quá rộng.",
+        "Khi tổng hợp dữ liệu, em nhận ra hai vai trò xuất hiện rõ nhất: người trẻ muốn gần gũi với gia đình nhưng vẫn cần không gian riêng, và người điều phối đang gánh phần lớn việc ghi nhớ, nhắc nhở. Chuyển hai vai trò này thành persona giúp em nói về những tình huống cụ thể, thay vì chỉ chia người dùng theo độ tuổi.",
       personaBridgeSteps: [
         ["01 · Thu thập", "Gom bối cảnh, vấn đề, mong muốn và thái độ lặp lại từ bảng nhóm người dùng, sơ đồ thấu cảm, nghiên cứu tài liệu và bộ câu hỏi phỏng vấn."],
-        ["02 · Nhóm mẫu hành vi", "Sắp xếp dữ liệu theo hành vi: ai thường thiết lập công nghệ, ai cần hỗ trợ, điều gì tạo cảm giác yên tâm và lúc nào sự quan tâm trở thành xâm phạm."],
-        ["03 · Chọn persona", "Chọn hai vai trò có độ tương phản rõ nhất. Nếu trải nghiệm vẫn đơn giản, tôn trọng và hữu ích với cả hai, sản phẩm sẽ có cơ sở tốt hơn để phục vụ gia đình nhiều thế hệ."],
+        ["02 · Nhóm mẫu hành vi", "Sắp xếp dữ liệu theo hành vi: ai giữ nhịp sinh hoạt chung, ai đang gánh việc điều phối và khi nào sự quan tâm bắt đầu tạo cảm giác bị kiểm soát."],
+        ["03 · Chọn persona", "Chọn hai vai trò bổ trợ và tác động trực tiếp đến nhau: người tổ chức việc chung và người trẻ quyết định cách phản hồi, tham gia, chia sẻ thông tin."],
       ],
       questionsTitle: "Những điều em cần nghe từ gia đình",
       questionsBody:
@@ -579,100 +614,134 @@ const COPY = {
     },
     audience: {
       tag: "( 04 · Persona chính )",
-      title: "Hai persona giúp em nhìn việc kết nối gia đình từ cả hai phía.",
+      title: "Hai persona giúp em nhìn rõ cách việc chung được tạo ra và được đón nhận.",
       intro:
-        "Đây là hai persona định hướng được tổng hợp từ những mẫu hành vi đã có trong UX board. Em không xem persona là bằng chứng thay cho người dùng thật. Chúng giúp em tập trung quyết định thiết kế ở giai đoạn này và cần tiếp tục được điều chỉnh sau các buổi phỏng vấn, kiểm thử khả dụng.",
+        "Minh Anh và Ngọc Hạnh là hai persona định hướng được tổng hợp từ các mẫu hành vi trong UX board. Hai persona giúp em nối những điều đã tìm thấy với quyết định thiết kế cụ thể. Tuy vậy, em vẫn cần phỏng vấn và kiểm thử với người dùng thật để xác nhận hoặc điều chỉnh các giả định này.",
       rationaleTitle: "Vì sao em chọn hai persona này?",
       rationale: [
-        ["Khác nhau rõ về khả năng dùng công nghệ", "Minh Anh có thể thiết lập và xử lý vấn đề, còn bà Thu cần ít thao tác, nội dung rõ và có thể quay lại dễ dàng khi bấm nhầm."],
-        ["Đại diện cho hai phía của quan tâm và riêng tư", "Một người muốn biết người thân vẫn ổn nhưng không muốn theo dõi; người còn lại muốn được hỗ trợ nhưng không muốn thấy mình bị kiểm soát hoặc trở thành gánh nặng."],
-        ["Có mối quan hệ phụ thuộc lẫn nhau", "Hai persona không dùng sản phẩm riêng lẻ. Cách một người thiết lập, gửi lời nhắc hay chọn quyền chia sẻ sẽ ảnh hưởng trực tiếp đến trải nghiệm của người còn lại."],
+        ["Đại diện cho hai vai trò thường gặp trong gia đình", "Ngọc Hạnh là người nhớ lịch và nhắc việc, còn Minh Anh là người trẻ tiếp nhận, phản hồi và lựa chọn thông tin muốn chia sẻ."],
+        ["Làm rõ mâu thuẫn chính của sản phẩm", "Ngọc Hạnh cần biết những việc quan trọng đã có người xử lý. Minh Anh muốn quan tâm gia đình nhưng không muốn bị theo dõi hay nhận quá nhiều lời nhắc."],
+        ["Trải nghiệm của hai người tác động trực tiếp đến nhau", "Một lời nhắc, lời mời hay trạng thái chia sẻ bắt đầu từ một người và quyết định người còn lại sẽ nhìn thấy gì, hiểu gì và làm gì tiếp theo."],
       ],
       groups: [
         {
-          label: "Minh Anh · 22 tuổi · Người kết nối công nghệ",
-          quote: "Em quan tâm gia đình, nhưng không muốn bị theo dõi hay nhận quá nhiều lời nhắc.",
-          context: "Mới đi làm, quen dùng công nghệ và thường là người hỗ trợ các thành viên khác thiết lập công cụ số.",
-          needs: ["Lời nhắc đúng lúc", "Quyền riêng tư rõ ràng", "Kiểm tra nhanh độ an toàn của nhà", "Không gian riêng cho ảnh gia đình"],
-          tension: "Muốn yên tâm về người thân nhưng không chấp nhận thông báo dồn dập hay theo dõi vị trí liên tục.",
-          impact: "Định hướng phần thiết lập nhanh, quyền chia sẻ dễ hiểu, thông báo có chọn lọc và trạng thái thay cho vị trí liên tục.",
+          label: "Minh Anh",
+          meta: "22 tuổi · Nhân viên mới đi làm · Người dùng công nghệ chính trong nhà",
+          quote: "Em vẫn muốn quan tâm gia đình, nhưng không muốn sự quan tâm biến thành theo dõi hay nhắc nhở quá nhiều.",
+          context: "Minh Anh quen dùng các công cụ số và vẫn giữ liên lạc thường xuyên với gia đình. Cô không phải người điều phối chính, nhưng thường là người giúp cả nhà tiếp cận công nghệ mới.",
+          needs: ["Biết việc quan trọng mà không phải đọc lại nhóm chat", "Chỉ nhận lời nhắc khi thật sự cần", "Check-in nhanh mà không chia sẻ vị trí chính xác", "Lưu kỷ niệm gia đình trong không gian riêng"],
+          tension: "Muốn gần gũi và biết người thân vẫn ổn, nhưng quá nhiều thông báo hoặc quyền riêng tư không rõ ràng sẽ khiến cô thấy mình bị kiểm soát.",
+          impact: "Định hướng thông báo có chọn lọc, quyền chia sẻ dễ hiểu, check-in gọn và trải nghiệm không buộc người dùng phải chú ý liên tục.",
         },
         {
-          label: "Bà Thu · 67 tuổi · Người cần sự gần gũi",
-          quote: "Bà muốn biết trong nhà đang có việc gì và được gần con cháu hơn, nhưng bà sợ bấm nhầm.",
-          context: "Đã nghỉ hưu, sống cùng gia đình, quen gọi điện và nhắn tin cơ bản nhưng thường cần con cháu hỗ trợ khi gặp thao tác mới.",
-          needs: ["Nút lớn và thao tác quen thuộc", "Lời nhắc nhẹ về sức khỏe, sinh hoạt", "Tín hiệu đơn giản để biết người thân vẫn ổn", "Cách xem lại ảnh gia đình thật dễ"],
-          tension: "Muốn tự chủ và gần gũi hơn, nhưng màn hình dày thông tin, từ ngữ kỹ thuật và lời nhắc mang tính ra lệnh dễ khiến bà mất tự tin.",
-          impact: "Định hướng nút bấm lớn, ngôn ngữ đời thường, điều hướng dễ quay lại, lời nhắc nhẹ và trải nghiệm xem ảnh giống một cuốn album.",
+          label: "Ngọc Hạnh",
+          meta: "38 tuổi · Kinh doanh tự do · Người điều phối gia đình",
+          quote: "Em không cần app làm thay mọi thứ, chỉ cần nó giúp cả nhà bớt quên việc, bớt phải nhắc nhau và biết người thân vẫn ổn.",
+          context: "Ngọc Hạnh sống cùng chồng con và ở gần cha mẹ lớn tuổi. Cô thường nhớ lịch học, lịch khám, ngày giỗ, hóa đơn, việc nhà và những lời nhắc nhỏ để sinh hoạt của cả nhà không bị đứt quãng.",
+          needs: ["Một nơi cho biết hôm nay gia đình có việc gì quan trọng", "Nhắc việc chung mà không phải nhắn lại nhiều lần", "Biết việc quan trọng đã có người nhận và xử lý", "Không gian chung cho nếp sinh hoạt và kỷ niệm"],
+          tension: "Muốn giảm gánh nặng ghi nhớ cho cả nhà, nhưng không muốn một hệ thống phức tạp khiến cô có thêm việc hoặc làm các thành viên cảm thấy bị quản lý.",
+          impact: "Định hướng màn Hôm nay, phân chia người phụ trách, trạng thái hoàn thành rõ ràng, nếp sinh hoạt có thể dùng lại và cách phối hợp không cần nhắc đi nhắc lại.",
         },
       ],
       labels: { context: "Bối cảnh", needs: "Nhu cầu", tension: "Mâu thuẫn chính", impact: "Ảnh hưởng đến thiết kế" },
       validationTitle: "Những điều em vẫn cần kiểm chứng",
       validation:
-        "Ở vòng tiếp theo, em sẽ phỏng vấn và thử sản phẩm với người trẻ trong gia đình cùng người từ 60 tuổi trở lên. Em cần kiểm tra xem các hành vi trên có lặp lại không, lời nhắc nào tạo cảm giác được quan tâm, quyền riêng tư được hiểu ra sao và người lớn tuổi có tự hoàn thành tác vụ chính hay không. Điểm nào không đúng sẽ được sửa lại trong persona, thay vì cố ép dữ liệu theo giả định ban đầu.",
+        "Ở vòng tiếp theo, em sẽ phỏng vấn người trẻ trong gia đình và những người thường xuyên đứng ra sắp xếp việc chung. Em cần kiểm tra xem các trách nhiệm và lo ngại về riêng tư này có lặp lại không, lời nhắc nào tạo cảm giác được quan tâm, quyền chia sẻ được hiểu ra sao và sản phẩm có thật sự phân bớt việc hay chỉ chuyển việc nhắc nhở sang một màn hình khác.",
     },
     journey: {
       tag: "( 05 · Hành trình quan trọng )",
-      title: "Em đặt hai nhóm người dùng vào cùng một hành trình để xem mỗi người gặp khó khăn ở đâu.",
+      title: "Cùng một chuyện trong gia đình nhưng mỗi người lại trải qua theo một cách khác.",
       body:
-        "Cả hai nhóm đều đi qua ba giai đoạn: trước khi có Nếp Nhà, lúc thiết lập lần đầu và sau một thời gian sử dụng. Tuy cùng dùng một sản phẩm, mỗi nhóm lại có nỗi lo và cách làm quen khác nhau.",
+        "Em xây dựng lại hai hành trình dựa trên persona hiện tại và những mẫu hành vi đã ghi nhận trong UX board. Mỗi hành trình cho thấy người dùng muốn gì, đang làm gì, tiếp xúc với những kênh nào, nghĩ gì và vướng ở đâu trước khi em chuyển những điều đó thành cơ hội thiết kế.",
       stageLabels: ["Trước khi có giải pháp chung", "Lần đầu thiết lập", "Sau một thời gian sử dụng"],
       journeys: [
         {
-          name: "Người kết nối công nghệ",
-          role: "Con hoặc cháu bận rộn",
+          name: "Minh Anh",
+          role: "Người trẻ trong gia đình",
           stages: [
             {
-              action: "Dùng nhóm chat, gọi điện và nhiều lịch riêng để nhắc việc cho cả nhà.",
-              pain: "Thông tin nằm rải rác và một người phải gánh phần lớn việc ghi nhớ.",
-              opportunity: "Gom lịch quan trọng, nếp sinh hoạt và trạng thái ngôi nhà vào một nơi dễ nhìn.",
+              desire: "Biết những việc quan trọng của gia đình mà không phải đọc lại toàn bộ tin nhắn hay chia sẻ vị trí cả ngày.",
+              action: "Nhận kế hoạch qua nhóm chat, cuộc gọi và các lời nhắc rời rạc rồi phản hồi khi tình cờ nhìn thấy.",
+              touchpoint: "Zalo hoặc Messenger, cuộc gọi điện thoại và lịch cá nhân.",
+              thought: "Em vẫn muốn quan tâm gia đình, nhưng bị nhắc nhiều lần khiến em có cảm giác mình đang bị kiểm tra.",
+              emotion: "Rời rạc và quá tải",
+              pain: "Thông tin quan trọng dễ trôi trong nhóm chat, còn lời nhắc lặp lại khiến cô có xu hướng bỏ qua.",
+              opportunity: "Tập hợp đúng những cập nhật liên quan đến cô và gửi vào thời điểm phù hợp.",
             },
             {
-              action: "Tạo không gian gia đình, kết nối thiết bị cần thiết rồi mời cha mẹ, ông bà tham gia.",
-              pain: "Lo phần thiết lập quá kỹ thuật và người lớn tuổi khó làm quen.",
-              opportunity: "Rút ngắn thiết lập, có chế độ hiển thị lớn và hướng dẫn thật rõ.",
+              desire: "Tham gia nhanh và hiểu rõ từng thông tin của mình sẽ được chia sẻ với ai.",
+              action: "Nhận lời mời vào gia đình, xem không gian chung rồi chọn trạng thái, lời nhắc và quyền hiển thị phù hợp.",
+              touchpoint: "Đường dẫn mời, hướng dẫn ban đầu, cài đặt thông báo và quyền riêng tư.",
+              thought: "Cả nhà sẽ thấy được những gì và sau này em có thể đổi lại không?",
+              emotion: "Tò mò nhưng thận trọng",
+              pain: "Quyền truy cập quá rộng hoặc cài đặt mặc định không rõ ràng dễ khiến sản phẩm giống công cụ theo dõi.",
+              opportunity: "Chia nhỏ quá trình thiết lập, giải thích quyền hiển thị ngay lúc chọn và cho phép thay đổi bất cứ khi nào.",
             },
             {
-              action: "Kiểm tra nhà, nhận lời nhắc cần thiết và lưu ảnh của gia đình.",
-              pain: "Quá nhiều thông báo hoặc quyền riêng tư khó hiểu sẽ làm mất niềm tin.",
-              opportunity: "Cho từng thành viên tự chọn thông báo, trạng thái và nội dung muốn chia sẻ.",
+              desire: "Tham gia việc chung và lưu lại kỷ niệm mà không phải mở ứng dụng liên tục.",
+              action: "Phản hồi kế hoạch, báo trạng thái ngắn, nhận một việc nhỏ hoặc thêm ảnh vào kỷ niệm chung.",
+              touchpoint: "Thông báo có chọn lọc, màn hình Hôm nay, kế hoạch chung và kho kỷ niệm riêng của gia đình.",
+              thought: "Em vẫn có thể gần gũi với gia đình mà không cần báo cáo mọi việc mình đang làm.",
+              emotion: "An tâm và chủ động",
+              pain: "Thông báo dồn dập hoặc trạng thái bị chia sẻ quá rộng sẽ nhanh chóng biến sự quan tâm thành áp lực.",
+              opportunity: "Cho phép phản hồi bằng một thao tác, chọn người được xem và gom thông báo thay vì gửi liên tục.",
             },
           ],
         },
         {
-          name: "Người lớn tuổi",
-          role: "Cha mẹ hoặc ông bà ở nhà",
+          name: "Ngọc Hạnh",
+          role: "Người điều phối gia đình",
           stages: [
             {
-              action: "Chờ con cháu gọi về, đọc tin nhắn đơn giản và nghe người nhà nhắc trực tiếp.",
-              pain: "Dễ thấy mình đứng ngoài nhịp sinh hoạt lẫn thế giới công nghệ của người trẻ.",
-              opportunity: "Dùng lời nhắc nhẹ và những tín hiệu nhỏ để họ vẫn cảm nhận được sự hiện diện của gia đình.",
+              desire: "Nhìn được những việc quan trọng của gia đình trong ngày và biết kế hoạch hay việc chăm sóc nào chưa được xử lý.",
+              action: "Tự nhớ lịch, nhắn trong nhóm chat, gọi điện, ghi chú rồi theo dõi xem từng người đã nhận việc chưa.",
+              touchpoint: "Nhóm chat gia đình, cuộc gọi, ghi chú cá nhân và lịch trên điện thoại.",
+              thought: "Nếu mình không nhớ và nhắc thì có khi việc quan trọng lại bị bỏ sót.",
+              emotion: "Có trách nhiệm nhưng nặng đầu",
+              pain: "Thông tin nằm rải rác ở nhiều nơi và một người đang phải gánh phần lớn việc ghi nhớ, nhắc nhở.",
+              opportunity: "Tạo một nơi chung để theo dõi lịch, việc chăm sóc và nếp sinh hoạt của gia đình.",
             },
             {
-              action: "Được con cháu thiết lập giúp và học một số thao tác lớn, quen thuộc.",
-              pain: "Màn hình nhiều thông tin và cài đặt sâu tạo cảm giác sợ bấm nhầm.",
-              opportunity: "Thiết kế giao diện tối giản, dùng từ dễ hiểu và cho phép quay lại khi thao tác sai.",
+              desire: "Chỉ thiết lập những điều gia đình thật sự cần mà không mất nhiều thời gian cấu hình.",
+              action: "Tạo không gian gia đình, thêm vài lịch hoặc nếp sinh hoạt cần thiết rồi mời mọi người tham gia.",
+              touchpoint: "Luồng tạo gia đình, mẫu nếp sinh hoạt, lịch chung và lời mời thành viên.",
+              thought: "Mình mong ứng dụng này giảm bớt việc, chứ không trở thành thêm một nơi phải quản lý.",
+              emotion: "Có hy vọng nhưng vẫn dè chừng",
+              pain: "Thiết lập dài và quá nhiều tính năng sẽ làm tăng đúng gánh nặng mà cô đang muốn giảm.",
+              opportunity: "Bắt đầu bằng những mẫu thiết thực, để phần nâng cao là tùy chọn và cho phép không gian gia đình lớn dần.",
             },
             {
-              action: "Nghe lời nhắc, xem kỷ niệm và dùng các điều khiển nhà cơ bản.",
-              pain: "Thông báo mang giọng ra lệnh dễ bị cảm nhận như đang cằn nhằn.",
-              opportunity: "Dùng ngôn ngữ ấm áp, âm thanh nhẹ và trải nghiệm xem ảnh quen như một cuốn album.",
+              desire: "Biết kế hoạch và trách nhiệm đã có người xử lý mà không phải liên tục liên hệ từng thành viên.",
+              action: "Xem kế hoạch sắp tới, biết ai đã phản hồi, chia sẻ việc nhỏ và lưu lại những khoảnh khắc của gia đình.",
+              touchpoint: "Màn hình Hôm nay, lịch chung, trạng thái công việc, lời nhắc nhẹ và kho kỷ niệm.",
+              thought: "Mình nhìn vào là biết việc nào đã xong, không cần gọi hỏi lại từng người.",
+              emotion: "Nhẹ lòng và gần gũi hơn",
+              pain: "Nếu người phụ trách, phản hồi và trạng thái hoàn thành chưa rõ, cô vẫn phải lặp lại việc nhắc nhở.",
+              opportunity: "Hiển thị rõ người nhận việc và trạng thái hoàn thành, đồng thời để cô chủ động chọn khi nào thật sự cần nhắc.",
             },
           ],
         },
       ],
-      labels: { action: "Hành vi", pain: "Điểm vướng", opportunity: "Cơ hội thiết kế" },
-      scenarioTitle: "Một lời nhắc lịch khám cho thấy hai persona hỗ trợ nhau như thế nào",
+      labels: {
+        desire: "Mục tiêu",
+        action: "Hành vi",
+        touchpoint: "Điểm chạm",
+        thought: "Suy nghĩ",
+        emotion: "Trạng thái cảm xúc",
+        pain: "Nỗi đau",
+        opportunity: "Cơ hội thiết kế",
+      },
+      scenarioTitle: "Kịch bản minh họa: cùng lên kế hoạch cho một bữa cơm gia đình",
       scenarioBody:
-        "Em dùng một tình huống xuyên suốt để kiểm tra xem Minh Anh có thể hỗ trợ mà không làm bà Thu mất quyền chủ động hay không.",
+        "Kịch bản này không thay thế User Journey Map. Đây là một ví dụ cụ thể để cho thấy nhu cầu bớt nhắc lại của Ngọc Hạnh gặp nhu cầu tham gia nhanh nhưng không bị theo dõi của Minh Anh như thế nào.",
       scenarioSteps: [
-        ["01", "Minh Anh thêm lịch khám", "Cô tạo lời nhắc với thời gian, địa điểm và phần hỗ trợ bà Thu có thể cần."],
-        ["02", "Bà Thu nhận lời nhắc dễ hiểu", "Thẻ thông tin có chữ lớn và nội dung ngắn giúp bà xác nhận đã đọc mà không phải đi qua nhiều bước."],
-        ["03", "Bà Thu tự chọn cách xử lý", "Bà có thể báo mình sẽ tự đi hoặc nhờ Minh Anh đưa đi, thay vì để người khác quyết định thay."],
-        ["04", "Minh Anh nhận được cập nhật rõ ràng", "Trạng thái chỉ thay đổi một lần để cô biết cần làm gì, không phải gọi hỏi liên tục hay kiểm tra vị trí."],
+        ["01", "Ngọc Hạnh tạo lịch ăn cơm chung", "Cô thêm thời gian và lời nhắn một lần, thay vì nhắc lại kế hoạch ở nhiều đoạn chat."],
+        ["02", "Minh Anh nhận một lời mời đúng lúc", "Thông báo nêu rõ kế hoạch nhưng không yêu cầu cô bật vị trí hay nhận thêm nhiều lời nhắc."],
+        ["03", "Minh Anh phản hồi bằng một thao tác", "Cô có thể tham gia, từ chối hoặc báo sẽ về muộn mà không phải chia sẻ thêm trạng thái riêng."],
+        ["04", "Cả nhà cùng thấy một cập nhật", "Ngọc Hạnh biết ai có thể tham gia, còn khoảnh khắc bữa cơm có thể được lưu lại thành kỷ niệm chung."],
       ],
       scenarioOutcome:
-        "Cùng một luồng vừa hỗ trợ sự quan tâm, vừa giữ quyền chủ động cho bà Thu mà không cần theo dõi vị trí hay nhắc lại nhiều lần.",
+        "Luồng này giúp người điều phối bớt gánh việc nhắc nhở và cho người trẻ một cách tham gia rõ ràng mà vẫn giữ được không gian riêng.",
     },
     direction: {
       tag: "( 06 · Định hướng sản phẩm )",
@@ -1433,13 +1502,29 @@ export function NepNha() {
                   className="flex flex-col rounded-[2.5rem] p-8 md:p-10 shadow-2xl"
                   style={{ backgroundColor: index === 0 ? PAPER : CREAM, color: INK }}
                 >
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <span className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em]" style={{ backgroundColor: index === 0 ? GREEN_SOFT : "#E2ECDA", color: GREEN_DARK }}>
-                      {index === 0 ? <Smartphone size={14} /> : <UsersRound size={14} />}
-                      {group.label}
-                    </span>
-                    <div className="text-xs font-bold uppercase tracking-wider text-neutral-400">
-                      Persona 0{index + 1}
+                  <div className="flex items-start gap-5 md:gap-6">
+                    <img
+                      src={NEP_NHA_PERSONA_IMAGES[index]}
+                      alt={`${group.label} persona`}
+                      className="h-24 w-24 shrink-0 rounded-full border-4 object-cover shadow-md md:h-32 md:w-32"
+                      style={{ borderColor: index === 0 ? "#CFE4BD" : "#FFFFFF" }}
+                    />
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center justify-between gap-3">
+                        <span
+                          className="inline-flex items-center gap-2 rounded-full px-3 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.14em]"
+                          style={{ backgroundColor: index === 0 ? GREEN_SOFT : "#E2ECDA", color: GREEN_DARK }}
+                        >
+                          {index === 0 ? <Smartphone size={14} /> : <UsersRound size={14} />}
+                          Persona 0{index + 1}
+                        </span>
+                      </div>
+                      <h3 className="mt-4 text-2xl font-semibold md:text-3xl" style={{ fontFamily: "Fraunces, serif" }}>
+                        {group.label}
+                      </h3>
+                      <p className="mt-2 text-xs font-medium leading-relaxed uppercase tracking-[0.08em]" style={{ color: MUTED }}>
+                        {group.meta}
+                      </p>
                     </div>
                   </div>
 
@@ -1575,13 +1660,36 @@ export function NepNha() {
                       {c.journey.stageLabels[idx]}
                     </h3>
 
-                    <div className="mt-8 space-y-6 text-sm leading-relaxed">
+                    <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-[#365B2B]/15 bg-[#DDEACF]/45 px-3 py-1.5 text-xs font-medium text-[#365B2B]">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#6E9854]" aria-hidden="true" />
+                      <span>{c.journey.labels.emotion}: {stage.emotion}</span>
+                    </div>
+
+                    <div className="mt-7 space-y-6 text-sm leading-relaxed">
+                      <div>
+                        <strong className="block text-[0.7rem] font-bold uppercase tracking-[0.16em]" style={{ color: GREEN_DARK }}>
+                          {c.journey.labels.desire}
+                        </strong>
+                        <p className="mt-2 text-base leading-relaxed text-neutral-900">{stage.desire}</p>
+                      </div>
                       <div>
                         <strong className="block text-[0.7rem] font-bold uppercase tracking-[0.16em]" style={{ color: GREEN }}>
                           {c.journey.labels.action}
                         </strong>
                         <p className="mt-2 text-neutral-800">{stage.action}</p>
                       </div>
+                      <div>
+                        <strong className="block text-[0.7rem] font-bold uppercase tracking-[0.16em] text-neutral-500">
+                          {c.journey.labels.touchpoint}
+                        </strong>
+                        <p className="mt-2 text-neutral-600">{stage.touchpoint}</p>
+                      </div>
+                      <blockquote className="rounded-2xl border-l-4 border-[#9AB780] bg-white/80 px-5 py-4 text-[0.95rem] italic leading-relaxed text-neutral-700 shadow-sm">
+                        <span className="mb-2 block text-[0.65rem] font-bold not-italic uppercase tracking-[0.16em] text-neutral-400">
+                          {c.journey.labels.thought}
+                        </span>
+                        “{stage.thought}”
+                      </blockquote>
                       <div>
                         <strong className="block text-[0.7rem] font-bold uppercase tracking-[0.16em]" style={{ color: "#A05A4A" }}>
                           {c.journey.labels.pain}

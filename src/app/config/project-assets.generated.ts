@@ -55,6 +55,22 @@ export const PROJECT_ASSETS = {
       "height": 3072,
       "format": "png"
     },
+    "personaMinhAnh": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785120744/Portfolio%20Minh%20Huy/Nep%20Nha/UX/Personas/minh-anh.png",
+      "publicId": "Portfolio Minh Huy/Nep Nha/UX/Personas/minh-anh",
+      "bytes": 226934,
+      "width": 504,
+      "height": 504,
+      "format": "png"
+    },
+    "personaNgocHanh": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785120744/Portfolio%20Minh%20Huy/Nep%20Nha/UX/Personas/ngoc-hanh.png",
+      "publicId": "Portfolio Minh Huy/Nep Nha/UX/Personas/ngoc-hanh",
+      "bytes": 217735,
+      "width": 509,
+      "height": 509,
+      "format": "png"
+    },
     "onboarding": {
       "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1784803358/Portfolio%20Minh%20Huy/Nep%20Nha/UI/onboarding.png",
       "publicId": "Portfolio Minh Huy/Nep Nha/UI/onboarding",
