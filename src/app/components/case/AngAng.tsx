@@ -470,7 +470,7 @@ const COPY = {
       keywords: ["Fresh", "Friendly", "Youthful", "Simple", "Local", "Trustworthy", "Easy to decide"],
       toneLabel: "Visual tone",
       tone:
-        "The #9DD325 green was chosen as the primary color because it feels fresh, energetic, and friendly. Its bright tone creates a positive impression at first glance and fits the spirit of Ăng Ăng as a food experience that feels close, cheerful, and easy for young users to approach. In the context of UX research, people often expect a food platform not only to help them find something to eat quickly, but also to feel pleasant, trustworthy, and inviting enough to spark curiosity. That is why this green does more than define the brand. It also supports the emotional side of the experience by making the product feel lighter, calmer, and less commercially heavy. The color suggests freshness, naturalness, and positive energy, while still standing out enough for important interface moments such as primary buttons, selected states, highlighted labels, or any area that needs attention. When paired with a white background and rounded typography, it gives Ăng Ăng a look that feels youthful, clean, and easy to remember.",
+        "The logo begins with Ăng Ăng's central questions: what should we eat, and where should we go? A location pin forms the outer shape, while a fork and spoon meet inside to represent the shared dining experience. Rounded lines keep the mark friendly and recognizable at app icon size, with #9DD325 adding a fresh, youthful accent.",
       moodLabel: "Moodboard",
     },
     color: {
@@ -958,7 +958,7 @@ const COPY = {
       keywords: ["Tươi mới", "Thân thiện", "Trẻ trung", "Đơn giản", "Gần gũi", "Đáng tin", "Dễ quyết định"],
       toneLabel: "Tinh thần thị giác",
       tone:
-        "Em chọn màu xanh #9DD325 vì sắc độ sáng tạo cảm giác tươi, trẻ và gần với chủ đề ẩm thực. Màu này đủ nổi bật cho nút chính, trạng thái được chọn và những thông tin cần chú ý. Khi kết hợp với nền trắng cùng kiểu chữ bo tròn, giao diện giữ được cảm giác thân thiện mà vẫn rõ ràng và dễ đọc.",
+        "Logo bắt đầu từ hai câu hỏi cốt lõi của Ăng Ăng: ăn gì và ăn ở đâu. Hình ghim địa điểm tạo thành khung chính, còn nĩa và muỗng được ghép vào bên trong để gợi lên trải nghiệm cùng nhau đi ăn. Các đường bo tròn giúp biểu tượng thân thiện, dễ nhận ra ở kích thước icon; màu #9DD325 tạo điểm nhấn tươi và trẻ.",
       moodLabel: "Bảng cảm hứng",
     },
     color: {
@@ -1952,82 +1952,117 @@ export function AngAng() {
         <p className="mt-5 max-w-[62ch]" style={{ color: MUTED, lineHeight: 1.7 }}>
           {t.persona.note}
         </p>
-        <div className="grid lg:grid-cols-2 gap-6 mt-8">
+        <div className="grid gap-10 mt-12">
           {t.persona.cards.map((card, index) => (
             <motion.article
               key={card.title}
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: index * 0.06 }}
-              className="rounded-[32px] p-6 md:p-8"
-              style={{ backgroundColor: BG, border: `1px solid ${BORDER}` }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="relative overflow-hidden rounded-[2.5rem] bg-white p-6 shadow-sm md:p-10"
+              style={{ border: `1px solid ${BORDER}` }}
             >
-              <div className="inline-flex rounded-full px-4 py-2 text-sm md:text-[1.05rem]" style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}`, fontWeight: 600 }}>
-                {card.title}
+              {/* Top Section: Header & Avatar */}
+              <div className="flex flex-col md:flex-row md:items-center gap-6 pb-8 border-b" style={{ borderColor: BORDER }}>
+                <div className="relative shrink-0">
+                  <div className="absolute -inset-1 rounded-full blur-xl opacity-60" style={{ background: `linear-gradient(135deg, ${GREEN_LIGHT}, ${GREEN})` }}></div>
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full shadow-lg md:h-28 md:w-28 border border-black/5">
+                    <ImageWithFallback
+                      src={index === 0 ? BAO_TRAN_PERSONA_AVATAR_URL : DUY_KHOI_PERSONA_AVATAR_URL}
+                      alt={`${card.name} persona avatar`}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <div className="inline-flex items-center rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest" style={{ color: GREEN_DARK, backgroundColor: BG }}>
+                    {card.title}
+                  </div>
+                  <h3 className="mt-3 text-3xl font-medium tracking-tight text-neutral-900" style={{ fontFamily: "Fraunces, serif" }}>
+                    {card.name}
+                  </h3>
+                  <p className="mt-2 text-sm text-neutral-500">
+                    {card.role}
+                  </p>
+                </div>
               </div>
 
-              <div className="mt-6 grid gap-6 lg:grid-cols-[220px_minmax(0,1fr)]">
-                <div>
-                  <div
-                    className="rounded-[24px] p-4 overflow-hidden"
-                    style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}
-                  >
-                    <div
-                      className="rounded-[20px] overflow-hidden"
-                      style={{ aspectRatio: "1 / 1", backgroundColor: "#f5eceb" }}
-                    >
-                      <ImageWithFallback
-                        src={index === 0 ? BAO_TRAN_PERSONA_AVATAR_URL : DUY_KHOI_PERSONA_AVATAR_URL}
-                        alt={`${card.name} persona avatar`}
-                        className="w-full h-full object-cover"
-                      />
+              {/* Content Grid */}
+              <div className="mt-8 grid gap-8 lg:grid-cols-2">
+                <div className="space-y-8">
+                  {/* Goal as a highlight */}
+                  <div className="rounded-3xl p-6" style={{ backgroundColor: BG }}>
+                    <div className="text-[11px] font-bold uppercase tracking-widest mb-3" style={{ color: GREEN_DARK }}>
+                      {lang === "en" ? "Goal" : "Mục tiêu"}
                     </div>
+                    <p className="text-lg font-medium leading-relaxed text-neutral-800">
+                      {card.goal}
+                    </p>
                   </div>
-                  <div className="mt-4 rounded-2xl p-5" style={{ backgroundColor: INK, color: "#fff" }}>
-                    <div style={{ fontFamily: "Fraunces, serif", fontSize: "1.45rem", lineHeight: 1.2 }}>
-                      {card.name}
-                    </div>
-                    <div className="text-xs tracking-[0.18em] uppercase mt-2" style={{ color: GREEN }}>
-                      {card.role}
-                    </div>
+
+                  {/* Demographic & Context */}
+                  <div>
+                     <div className="text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-4">
+                       {lang === "en" ? "Demographic & Context" : "Đặc điểm & Bối cảnh"}
+                     </div>
+                     <ul className="space-y-3">
+                       {card.demographic.map((item) => (
+                         <li key={item} className="flex items-start gap-3 text-[15px] text-neutral-700">
+                           <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: GREEN_DARK }} />
+                           <span className="leading-relaxed">{item}</span>
+                         </li>
+                       ))}
+                       <li className="flex items-start gap-3 text-[15px] text-neutral-700">
+                         <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: GREEN_DARK }} />
+                         <span className="leading-relaxed">{card.context}</span>
+                       </li>
+                     </ul>
                   </div>
                 </div>
 
-                <div className="space-y-5">
+                <div className="space-y-8">
+                  {/* User Story */}
                   <div>
-                    <div className="text-xs tracking-[0.2em] uppercase mb-3" style={{ color: GREEN_DARK, fontWeight: 600 }}>
-                      {lang === "en" ? "Demographic" : "Demographic"}
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-3">
+                      {lang === "en" ? "User Story" : "Câu chuyện người dùng"}
                     </div>
-                    <ul className="space-y-2">
-                      {card.demographic.map((item) => (
-                        <li key={item} className="flex items-start gap-2" style={{ fontSize: "0.96rem", lineHeight: 1.6 }}>
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: GREEN_DARK }} />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-[15px] leading-relaxed text-neutral-600 italic border-l-2 pl-4" style={{ borderColor: BORDER }}>
+                      "{card.userStory}"
+                    </p>
                   </div>
 
-                  {[
-                    { label: lang === "en" ? "Context" : "Bối cảnh", value: card.context },
-                    { label: lang === "en" ? "User story" : "Câu chuyện người dùng", value: card.userStory },
-                    { label: lang === "en" ? "Goal" : "Mục tiêu", value: card.goal },
-                    { label: lang === "en" ? "Gain points" : "Điểm tạo giá trị", value: card.gainPoints },
-                    { label: lang === "en" ? "Pain points" : "Điểm gây vướng", value: card.painPoints },
-                    { label: lang === "en" ? "Personality" : "Tính cách", value: card.personality },
-                  ].map((item, itemIndex) => (
-                    <div
-                      key={item.label}
-                      className="pt-4"
-                      style={{ borderTop: itemIndex === 0 ? `1px solid ${BORDER}` : `1px solid ${BORDER}` }}
-                    >
-                      <div className="text-xs tracking-[0.2em] uppercase mb-2" style={{ color: item.label === (lang === "en" ? "Pain points" : "Điểm gây vướng") ? RED : item.label === (lang === "en" ? "Gain points" : "Điểm tạo giá trị") ? ORANGE : MUTED, fontWeight: 600 }}>
-                        {item.label}
+                  <div className="grid gap-6 md:grid-cols-2">
+                    {/* Gain Points */}
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-widest mb-3" style={{ color: ORANGE }}>
+                        {lang === "en" ? "Gain points" : "Điểm tạo giá trị"}
                       </div>
-                      <p style={{ fontSize: "0.96rem", lineHeight: 1.65 }}>{item.value}</p>
+                      <p className="text-[14px] leading-relaxed text-neutral-600">
+                        {card.gainPoints}
+                      </p>
                     </div>
-                  ))}
+
+                    {/* Pain Points */}
+                    <div>
+                      <div className="text-[11px] font-bold uppercase tracking-widest mb-3" style={{ color: RED }}>
+                        {lang === "en" ? "Pain points" : "Điểm gây vướng"}
+                      </div>
+                      <p className="text-[14px] leading-relaxed text-neutral-600">
+                        {card.painPoints}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Personality */}
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-neutral-500 mb-3">
+                      {lang === "en" ? "Personality" : "Tính cách"}
+                    </div>
+                    <p className="text-[14px] leading-relaxed text-neutral-600">
+                      {card.personality}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.article>
