@@ -636,7 +636,7 @@ const COPY = {
         {
           label: "Ngọc Hạnh",
           meta: "38 tuổi · Kinh doanh tự do · Người điều phối gia đình",
-          quote: "Em không cần app làm thay mọi thứ, chỉ cần nó giúp cả nhà bớt quên việc, bớt phải nhắc nhau và biết người thân vẫn ổn.",
+          quote: "Mình không cần app làm thay mọi thứ, chỉ cần nó giúp cả nhà bớt quên việc, bớt phải nhắc nhau và biết người thân vẫn ổn.",
           context: "Ngọc Hạnh sống cùng chồng con và ở gần cha mẹ lớn tuổi. Cô thường nhớ lịch học, lịch khám, ngày giỗ, hóa đơn, việc nhà và những lời nhắc nhỏ để sinh hoạt của cả nhà không bị đứt quãng.",
           needs: ["Một nơi cho biết hôm nay gia đình có việc gì quan trọng", "Nhắc việc chung mà không phải nhắn lại nhiều lần", "Biết việc quan trọng đã có người nhận và xử lý", "Không gian chung cho nếp sinh hoạt và kỷ niệm"],
           tension: "Muốn giảm gánh nặng ghi nhớ cho cả nhà, nhưng không muốn một hệ thống phức tạp khiến cô có thêm việc hoặc làm các thành viên cảm thấy bị quản lý.",
