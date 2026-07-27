@@ -3181,41 +3181,49 @@ export function AngAng() {
 
       {activeWireframe && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8"
-          style={{ backgroundColor: "rgba(18, 24, 10, 0.8)" }}
-          onClick={() => setActiveWireframe(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8"
+          role="dialog"
+          aria-modal="true"
         >
-          <div
-            className="relative w-full max-w-6xl rounded-[28px] overflow-hidden"
-            style={{ backgroundColor: "#fff", border: `1px solid rgba(255,255,255,0.18)` }}
-            onClick={(e) => e.stopPropagation()}
+          <button
+            type="button"
+            onClick={() => setActiveWireframe(null)}
+            className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
+            aria-label={lang === "en" ? "Close image preview" : "Đóng ảnh phóng to"}
           >
-            <button
-              type="button"
-              className="absolute right-4 top-4 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full text-[28px] leading-none"
-              style={{ backgroundColor: "rgba(38,38,38,0.82)", color: "#fff" }}
-              onClick={() => setActiveWireframe(null)}
-              aria-label={lang === "en" ? "Close image preview" : "Đóng ảnh phóng to"}
-            >
-              ×
-            </button>
-            <div className="px-5 pt-5 pb-3 sm:px-7 sm:pt-7">
-              <div className="text-xs tracking-[0.2em] uppercase" style={{ color: GREEN_DARK }}>
-                {lang === "en" ? "Wireframe preview" : "Xem wireframe"}
+            <X size={22} />
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveWireframe(null)}
+            className="fixed inset-0 cursor-default"
+            aria-hidden="true"
+            tabIndex={-1}
+          />
+          <div className="relative z-10 mx-auto w-full max-w-[1200px] overflow-hidden rounded-[2.5rem] bg-white p-4 shadow-2xl mt-8 md:mt-0">
+            <div className="flex items-center justify-between p-4 border-b mb-3" style={{ borderColor: BORDER }}>
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider" style={{ color: GREEN_DARK }}>
+                  {lang === "en" ? "Wireframe preview" : "Xem wireframe"}
+                </span>
+                <h3 className="text-2xl font-normal text-neutral-900 mt-1" style={{ fontFamily: "Fraunces, serif" }}>
+                  {activeWireframe.title}
+                </h3>
               </div>
-              <div className="mt-2" style={{ fontFamily: "Fraunces, serif", fontSize: "1.5rem", lineHeight: 1.2 }}>
-                {activeWireframe.title}
-              </div>
+              <button
+                type="button"
+                onClick={() => setActiveWireframe(null)}
+                className="hidden md:block rounded-full bg-neutral-100 px-4 py-2 text-xs font-semibold text-neutral-700 hover:bg-neutral-200"
+              >
+                {lang === "en" ? "Close" : "Đóng"}
+              </button>
             </div>
-            <div className="px-5 pb-5 sm:px-7 sm:pb-7">
-              <div className="overflow-auto rounded-2xl" style={{ backgroundColor: "#fafaf6", maxHeight: "78vh" }}>
-                <img
-                  src={activeWireframe.src}
-                  alt={activeWireframe.title}
-                  className="block w-full h-auto"
-                  style={{ minWidth: 720 }}
-                />
-              </div>
+            <div className="overflow-auto rounded-3xl bg-[#fafaf6] p-2 sm:p-4" style={{ maxHeight: "75vh" }}>
+              <img
+                src={activeWireframe.src}
+                alt={activeWireframe.title}
+                className="mx-auto block h-auto w-full rounded-[1.8rem] shadow-sm"
+              />
             </div>
           </div>
         </div>

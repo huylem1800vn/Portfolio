@@ -24,7 +24,6 @@ import {
   NEP_NHA_LOGO_MARK_URL,
   NEP_NHA_THUMBNAIL_URL,
   NEP_NHA_UI,
-  NEP_NHA_USER_GROUPS_URL,
 } from "../../config/nep-nha-assets";
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
@@ -109,10 +108,15 @@ const COPY = {
         ["Parents · 35–55", "Often coordinate schedules, health, bills, meals, and household safety. They need less mental load, not another system to manage."],
         ["Children and young adults · 10–34", "Adopt technology quickly and want faster coordination, but expect control over their location, status, and notifications."],
       ],
-      userGroupsBoardTitle: "The original board goes deeper into the two groups at opposite ends of the experience.",
-      userGroupsBoardBody:
-        "The UX board documents young technology connectors and grandparents in detail. Parents were then synthesized as the family coordinator: the role carrying schedules, reminders, and follow-up between the other two groups.",
-      userGroupsBoardLabel: "Open the original User Groups board",
+      personaBridgeTag: "From user groups to personas",
+      personaBridgeTitle: "I chose two contrasting behaviors, not two convenient demographics.",
+      personaBridgeBody:
+        "The initial grouping revealed two ends of the same family relationship: a younger member who connects the household to technology, and an older member who wants closeness but has less digital confidence. Turning these patterns into personas made it possible to discuss design decisions through concrete situations instead of broad age ranges.",
+      personaBridgeSteps: [
+        ["01 · Gather", "Collected recurring context, frustrations, needs, and attitudes from the user-group map, empathy work, desk research, and the interview guide."],
+        ["02 · Cluster", "Grouped evidence by behavior: who sets things up, who needs support, what creates reassurance, and what begins to feel intrusive."],
+        ["03 · Select", "Selected the two roles with the clearest contrast because a solution that works for both is more likely to remain simple, respectful, and useful across generations."],
+      ],
       questionsTitle: "What I needed to learn from families",
       questionsBody:
         "The interview and survey guide was organized around daily life rather than asking people to validate a proposed feature. This made it easier to uncover existing routines and tensions.",
@@ -194,7 +198,15 @@ const COPY = {
     },
     audience: {
       tag: "( 04 · Primary Personas )",
-      title: "Two people carry different parts of the same family rhythm.",
+      title: "Two personas reveal both sides of connection across generations.",
+      intro:
+        "These are research-informed, provisional personas. They summarize patterns already present in the UX board; they are not fictional proof that replaces real participants. Their purpose is to focus design decisions now, then be refined through interviews and usability testing.",
+      rationaleTitle: "Why these two personas?",
+      rationale: [
+        ["Opposite levels of digital confidence", "Minh Anh can set up and troubleshoot the product, while Mrs. Thu needs a small number of clear, forgiving actions."],
+        ["Two sides of care and privacy", "One wants reassurance without tracking; the other wants support without feeling controlled or becoming a burden."],
+        ["A real interdependent relationship", "They do not use the product in isolation. One person's setup, reminder, or privacy choice directly shapes the other person's experience."],
+      ],
       groups: [
         {
           label: "Minh Anh · 22 · Technology connector",
@@ -202,19 +214,21 @@ const COPY = {
           context: "A young professional who is comfortable with technology and often helps other family members set up digital tools.",
           needs: ["Right-time reminders", "Clear privacy controls", "A quick home-safety check", "A private space for family memories"],
           tension: "Wants reassurance, but rejects notification overload and constant location tracking.",
+          impact: "Shapes fast setup, understandable permissions, selective notifications, and status sharing without continuous location.",
         },
         {
-          label: "Ngọc Hạnh · 38 · Family coordinator",
-          quote: "I do not need an app to do everything. I need it to help us forget less, remind each other less, and know that everyone is okay.",
-          context: "A parent who coordinates schedules, appointments, medication, bills, and daily care across the household.",
-          needs: ["One shared family schedule", "Responsibilities distributed across members", "Simple safety updates", "A place for family routines and memories"],
-          tension: "Wants to care for everyone, but the invisible work of remembering and following up is becoming exhausting.",
+          label: "Mrs. Thu · 67 · Older family member",
+          quote: "I want to know what is happening at home and feel close to my children, but I am afraid of pressing the wrong thing.",
+          context: "A retired grandmother who lives with her family, uses calling and basic messaging, and relies on her children for unfamiliar digital tasks.",
+          needs: ["Large, familiar actions", "Gentle health and routine reminders", "Small signs that family members are okay", "An easy way to revisit family memories"],
+          tension: "Wants more independence and connection, but dense screens, technical language, and commanding reminders quickly reduce confidence.",
+          impact: "Shapes larger controls, plain language, forgiving navigation, calm reminders, and an album-like memory experience.",
         },
       ],
-      labels: { context: "Context", needs: "Needs", tension: "Core tension" },
-      accessibilityTitle: "Older adults remain a critical design group",
-      accessibility:
-        "Although the two primary personas represent the technology connector and the family coordinator, grandparents shape the accessibility requirements: larger controls, familiar language, gentle reminders, and forgiving interactions.",
+      labels: { context: "Context", needs: "Needs", tension: "Core tension", impact: "Design impact" },
+      validationTitle: "What still needs to be validated",
+      validation:
+        "The next round should interview and test with younger family members and adults aged 60+. I would check whether these behaviors recur, which reminders feel supportive, how privacy choices are understood, and whether older participants can complete core tasks without help. Findings that do not hold would be revised rather than forced into the persona.",
     },
     journey: {
       tag: "( 05 · Critical Journeys )",
@@ -267,17 +281,17 @@ const COPY = {
         },
       ],
       labels: { action: "Behavior", pain: "Pain point", opportunity: "Design opportunity" },
-      scenarioTitle: "One shared-care scenario connects the three generations",
+      scenarioTitle: "One appointment reminder shows how the two personas support each other",
       scenarioBody:
-        "I used one end-to-end situation to check whether the product supports the coordinator, the older adult, and the younger member without making any one person carry the entire flow.",
+        "I used one end-to-end situation to check whether Minh Anh can offer support without taking control away from Mrs. Thu.",
       scenarioSteps: [
-        ["01", "The coordinator adds an appointment", "Ngọc Hạnh creates a hospital reminder and shares only the time, place, and support needed."],
-        ["02", "The older member receives a gentle reminder", "Grandfather sees a large, plain-language card and can confirm that he has read it."],
-        ["03", "The younger member takes responsibility", "Minh Anh accepts the task of accompanying him without needing a separate family-chat thread."],
-        ["04", "The family sees that it is handled", "The reminder changes status for everyone, reducing repeated calls and follow-up messages."],
+        ["01", "Minh Anh adds the appointment", "She creates a hospital reminder with only the time, place, and support Mrs. Thu may need."],
+        ["02", "Mrs. Thu receives a gentle reminder", "A large, plain-language card lets her confirm that she has read it without navigating a complex flow."],
+        ["03", "Mrs. Thu chooses what she needs", "She can mark that she will go independently or ask Minh Anh to accompany her."],
+        ["04", "Minh Anh receives a clear update", "The reminder status changes once, so she knows what to do without calling repeatedly or checking location."],
       ],
       scenarioOutcome:
-        "The same flow supports care, autonomy, and shared responsibility without requiring continuous location tracking.",
+        "The same flow supports care and autonomy without requiring continuous location tracking or repeated follow-up.",
     },
     direction: {
       tag: "( 06 · Product Direction )",
@@ -475,10 +489,15 @@ const COPY = {
         ["Cha mẹ · 35–55 tuổi", "Thường đứng ra sắp xếp lịch, sức khỏe, hóa đơn, bữa cơm và an toàn trong nhà. Họ cần giảm bớt việc phải nhớ, không cần thêm một hệ thống để tự mình quản lý."],
         ["Con cháu · 10–34 tuổi", "Làm quen công nghệ nhanh và muốn phối hợp thuận tiện hơn, nhưng cần được tự quyết về vị trí, trạng thái và thông báo của mình."],
       ],
-      userGroupsBoardTitle: "Bảng gốc đi sâu vào hai nhóm nằm ở hai đầu trải nghiệm.",
-      userGroupsBoardBody:
-        "Trong UX board, em mô tả chi tiết người trẻ quen công nghệ và ông bà ít tự tin khi dùng ứng dụng. Sau đó, em bổ sung vai trò cha mẹ như người giữ nhịp ở giữa, thường phải nhớ lịch, nhắc việc và kết nối hai nhóm còn lại.",
-      userGroupsBoardLabel: "Mở bảng User Groups gốc",
+      personaBridgeTag: "Từ nhóm người dùng đến persona",
+      personaBridgeTitle: "Em chọn hai kiểu hành vi đối lập, không chỉ chọn hai độ tuổi.",
+      personaBridgeBody:
+        "Khi tổng hợp bảng nhóm người dùng, em nhận ra hai đầu của cùng một mối quan hệ: người trẻ giúp cả nhà tiếp cận công nghệ và người lớn tuổi muốn gần con cháu nhưng chưa tự tin khi dùng ứng dụng. Chuyển hai kiểu hành vi này thành persona giúp em phân tích tình huống cụ thể, thay vì nói chung chung về một nhóm tuổi quá rộng.",
+      personaBridgeSteps: [
+        ["01 · Thu thập", "Gom bối cảnh, vấn đề, mong muốn và thái độ lặp lại từ bảng nhóm người dùng, sơ đồ thấu cảm, nghiên cứu tài liệu và bộ câu hỏi phỏng vấn."],
+        ["02 · Nhóm mẫu hành vi", "Sắp xếp dữ liệu theo hành vi: ai thường thiết lập công nghệ, ai cần hỗ trợ, điều gì tạo cảm giác yên tâm và lúc nào sự quan tâm trở thành xâm phạm."],
+        ["03 · Chọn persona", "Chọn hai vai trò có độ tương phản rõ nhất. Nếu trải nghiệm vẫn đơn giản, tôn trọng và hữu ích với cả hai, sản phẩm sẽ có cơ sở tốt hơn để phục vụ gia đình nhiều thế hệ."],
+      ],
       questionsTitle: "Những điều em cần nghe từ gia đình",
       questionsBody:
         "Bộ câu hỏi phỏng vấn và khảo sát đi từ đời sống thường ngày, thay vì yêu cầu người tham gia đánh giá một tính năng đã có sẵn. Nhờ vậy, em có thể tìm ra thói quen và mâu thuẫn đang thật sự tồn tại.",
@@ -560,7 +579,15 @@ const COPY = {
     },
     audience: {
       tag: "( 04 · Persona chính )",
-      title: "Hai persona đại diện cho hai vai trò khác nhau trong gia đình.",
+      title: "Hai persona giúp em nhìn việc kết nối gia đình từ cả hai phía.",
+      intro:
+        "Đây là hai persona định hướng được tổng hợp từ những mẫu hành vi đã có trong UX board. Em không xem persona là bằng chứng thay cho người dùng thật. Chúng giúp em tập trung quyết định thiết kế ở giai đoạn này và cần tiếp tục được điều chỉnh sau các buổi phỏng vấn, kiểm thử khả dụng.",
+      rationaleTitle: "Vì sao em chọn hai persona này?",
+      rationale: [
+        ["Khác nhau rõ về khả năng dùng công nghệ", "Minh Anh có thể thiết lập và xử lý vấn đề, còn bà Thu cần ít thao tác, nội dung rõ và có thể quay lại dễ dàng khi bấm nhầm."],
+        ["Đại diện cho hai phía của quan tâm và riêng tư", "Một người muốn biết người thân vẫn ổn nhưng không muốn theo dõi; người còn lại muốn được hỗ trợ nhưng không muốn thấy mình bị kiểm soát hoặc trở thành gánh nặng."],
+        ["Có mối quan hệ phụ thuộc lẫn nhau", "Hai persona không dùng sản phẩm riêng lẻ. Cách một người thiết lập, gửi lời nhắc hay chọn quyền chia sẻ sẽ ảnh hưởng trực tiếp đến trải nghiệm của người còn lại."],
+      ],
       groups: [
         {
           label: "Minh Anh · 22 tuổi · Người kết nối công nghệ",
@@ -568,19 +595,21 @@ const COPY = {
           context: "Mới đi làm, quen dùng công nghệ và thường là người hỗ trợ các thành viên khác thiết lập công cụ số.",
           needs: ["Lời nhắc đúng lúc", "Quyền riêng tư rõ ràng", "Kiểm tra nhanh độ an toàn của nhà", "Không gian riêng cho ảnh gia đình"],
           tension: "Muốn yên tâm về người thân nhưng không chấp nhận thông báo dồn dập hay theo dõi vị trí liên tục.",
+          impact: "Định hướng phần thiết lập nhanh, quyền chia sẻ dễ hiểu, thông báo có chọn lọc và trạng thái thay cho vị trí liên tục.",
         },
         {
-          label: "Ngọc Hạnh · 38 tuổi · Người giữ nhịp gia đình",
-          quote: "Em không cần app làm thay mọi thứ, chỉ cần nó giúp cả nhà bớt quên việc, bớt phải nhắc nhau và biết người thân vẫn ổn.",
-          context: "Là người thường sắp xếp lịch, cuộc hẹn, thuốc men, hóa đơn và những việc chăm sóc trong gia đình.",
-          needs: ["Một lịch chung cho cả nhà", "Chia việc cho nhiều thành viên", "Cập nhật an toàn dễ hiểu", "Nơi giữ nếp sinh hoạt và kỷ niệm"],
-          tension: "Muốn chăm lo cho mọi người nhưng đang mệt vì phải một mình ghi nhớ và theo sát quá nhiều việc.",
+          label: "Bà Thu · 67 tuổi · Người cần sự gần gũi",
+          quote: "Bà muốn biết trong nhà đang có việc gì và được gần con cháu hơn, nhưng bà sợ bấm nhầm.",
+          context: "Đã nghỉ hưu, sống cùng gia đình, quen gọi điện và nhắn tin cơ bản nhưng thường cần con cháu hỗ trợ khi gặp thao tác mới.",
+          needs: ["Nút lớn và thao tác quen thuộc", "Lời nhắc nhẹ về sức khỏe, sinh hoạt", "Tín hiệu đơn giản để biết người thân vẫn ổn", "Cách xem lại ảnh gia đình thật dễ"],
+          tension: "Muốn tự chủ và gần gũi hơn, nhưng màn hình dày thông tin, từ ngữ kỹ thuật và lời nhắc mang tính ra lệnh dễ khiến bà mất tự tin.",
+          impact: "Định hướng nút bấm lớn, ngôn ngữ đời thường, điều hướng dễ quay lại, lời nhắc nhẹ và trải nghiệm xem ảnh giống một cuốn album.",
         },
       ],
-      labels: { context: "Bối cảnh", needs: "Nhu cầu", tension: "Mâu thuẫn chính" },
-      accessibilityTitle: "Người lớn tuổi vẫn là nhóm thiết kế quan trọng",
-      accessibility:
-        "Ngoài hai persona chính, em vẫn xem ông bà là nhóm người dùng cần được ưu tiên. Vì vậy, giao diện cần có nút đủ lớn, từ ngữ quen thuộc, lời nhắc nhẹ nhàng và cách quay lại rõ ràng khi bấm nhầm.",
+      labels: { context: "Bối cảnh", needs: "Nhu cầu", tension: "Mâu thuẫn chính", impact: "Ảnh hưởng đến thiết kế" },
+      validationTitle: "Những điều em vẫn cần kiểm chứng",
+      validation:
+        "Ở vòng tiếp theo, em sẽ phỏng vấn và thử sản phẩm với người trẻ trong gia đình cùng người từ 60 tuổi trở lên. Em cần kiểm tra xem các hành vi trên có lặp lại không, lời nhắc nào tạo cảm giác được quan tâm, quyền riêng tư được hiểu ra sao và người lớn tuổi có tự hoàn thành tác vụ chính hay không. Điểm nào không đúng sẽ được sửa lại trong persona, thay vì cố ép dữ liệu theo giả định ban đầu.",
     },
     journey: {
       tag: "( 05 · Hành trình quan trọng )",
@@ -633,17 +662,17 @@ const COPY = {
         },
       ],
       labels: { action: "Hành vi", pain: "Điểm vướng", opportunity: "Cơ hội thiết kế" },
-      scenarioTitle: "Một tình huống chăm sóc kết nối cả ba thế hệ",
+      scenarioTitle: "Một lời nhắc lịch khám cho thấy hai persona hỗ trợ nhau như thế nào",
       scenarioBody:
-        "Em dùng một tình huống xuyên suốt để kiểm tra xem người giữ nhịp, người lớn tuổi và người trẻ có thể cùng xử lý một việc mà không dồn toàn bộ trách nhiệm lên một người hay không.",
+        "Em dùng một tình huống xuyên suốt để kiểm tra xem Minh Anh có thể hỗ trợ mà không làm bà Thu mất quyền chủ động hay không.",
       scenarioSteps: [
-        ["01", "Người giữ nhịp thêm lịch khám", "Ngọc Hạnh tạo lời nhắc khám bệnh và chỉ chia sẻ thời gian, địa điểm cùng việc cần hỗ trợ."],
-        ["02", "Ông nhận một lời nhắc dễ hiểu", "Ông nhìn thấy card chữ lớn, nội dung ngắn và có thể xác nhận mình đã đọc."],
-        ["03", "Người trẻ nhận phần việc", "Minh Anh chọn đưa ông đi khám mà không cần mở thêm một cuộc trò chuyện trong nhóm gia đình."],
-        ["04", "Cả nhà biết việc đã có người lo", "Trạng thái lời nhắc được cập nhật cho mọi người, nhờ vậy không cần gọi hỏi hoặc nhắc lại nhiều lần."],
+        ["01", "Minh Anh thêm lịch khám", "Cô tạo lời nhắc với thời gian, địa điểm và phần hỗ trợ bà Thu có thể cần."],
+        ["02", "Bà Thu nhận lời nhắc dễ hiểu", "Thẻ thông tin có chữ lớn và nội dung ngắn giúp bà xác nhận đã đọc mà không phải đi qua nhiều bước."],
+        ["03", "Bà Thu tự chọn cách xử lý", "Bà có thể báo mình sẽ tự đi hoặc nhờ Minh Anh đưa đi, thay vì để người khác quyết định thay."],
+        ["04", "Minh Anh nhận được cập nhật rõ ràng", "Trạng thái chỉ thay đổi một lần để cô biết cần làm gì, không phải gọi hỏi liên tục hay kiểm tra vị trí."],
       ],
       scenarioOutcome:
-        "Cùng một luồng vừa hỗ trợ việc chăm sóc, vừa chia sẻ trách nhiệm và vẫn không cần theo dõi vị trí liên tục.",
+        "Cùng một luồng vừa hỗ trợ sự quan tâm, vừa giữ quyền chủ động cho bà Thu mà không cần theo dõi vị trí hay nhắc lại nhiều lần.",
     },
     direction: {
       tag: "( 06 · Định hướng sản phẩm )",
@@ -1177,40 +1206,40 @@ export function NepNha() {
                 ))}
               </div>
 
-              <div className="mt-8 grid gap-8 overflow-hidden rounded-[2.2rem] border bg-white p-5 shadow-sm md:p-8 lg:grid-cols-12 lg:items-center" style={{ borderColor: LINE }}>
-                <div className="lg:col-span-4">
-                  <div className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: GREEN }}>
-                    {lang === "vi" ? "Tư liệu từ UX board" : "Evidence from the UX board"}
+              <div className="mt-8 overflow-hidden rounded-[2.2rem] border bg-white p-7 shadow-sm md:p-10" style={{ borderColor: LINE }}>
+                <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+                  <div className="lg:col-span-5">
+                    <div className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: GREEN }}>
+                      {c.research.personaBridgeTag}
+                    </div>
+                    <h4 className="mt-5 text-3xl leading-tight md:text-4xl" style={{ fontFamily: "Fraunces, serif" }}>
+                      {c.research.personaBridgeTitle}
+                    </h4>
                   </div>
-                  <h4 className="mt-5 text-3xl leading-tight" style={{ fontFamily: "Fraunces, serif" }}>
-                    {c.research.userGroupsBoardTitle}
-                  </h4>
-                  <p className="mt-5 text-sm leading-relaxed" style={{ color: MUTED }}>
-                    {c.research.userGroupsBoardBody}
+                  <p className="max-w-[70ch] text-sm leading-relaxed lg:col-span-7" style={{ color: MUTED }}>
+                    {c.research.personaBridgeBody}
                   </p>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => setPopupImage({
-                    src: NEP_NHA_USER_GROUPS_URL,
-                    alt: lang === "vi" ? "Bảng User Groups gốc trong UX board Nếp Nhà" : "Original User Groups board from the Nếp Nhà UX research",
-                    caption: c.research.userGroupsBoardTitle
-                  })}
-                  className="group relative overflow-hidden rounded-[1.7rem] border bg-neutral-50 p-2 lg:col-span-8 w-full text-left"
-                  style={{ borderColor: LINE }}
-                >
-                  <img
-                    src={NEP_NHA_USER_GROUPS_URL}
-                    alt={lang === "vi" ? "Bảng User Groups gốc trong UX board Nếp Nhà" : "Original User Groups board from the Nếp Nhà UX research"}
-                    className="h-auto w-full rounded-[1.25rem] transition-transform duration-500 group-hover:scale-[1.01]"
-                    loading="lazy"
-                  />
-                  <div className="absolute bottom-5 right-5 flex items-center gap-2 rounded-full bg-[#20251E]/90 px-4 py-2 text-xs font-semibold text-white shadow-lg backdrop-blur-md">
-                    <Expand size={14} />
-                    {c.research.userGroupsBoardLabel}
-                  </div>
-                  </button>
+                <div className="mt-9 grid gap-4 md:grid-cols-3">
+                  {c.research.personaBridgeSteps.map(([title, body], index) => (
+                    <article
+                      key={title}
+                      className="rounded-[1.65rem] border p-6"
+                      style={{
+                        borderColor: index === 2 ? GREEN : LINE,
+                        backgroundColor: index === 2 ? GREEN_SOFT : PAPER,
+                      }}
+                    >
+                      <h5 className="text-sm font-bold uppercase tracking-[0.13em]" style={{ color: GREEN_DARK }}>
+                        {title}
+                      </h5>
+                      <p className="mt-4 text-sm leading-relaxed" style={{ color: MUTED }}>
+                        {body}
+                      </p>
+                    </article>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -1376,6 +1405,22 @@ export function NepNha() {
             <h2 className="max-w-[28ch] text-4xl leading-[1.04] tracking-[-0.035em] md:text-6xl" style={{ fontFamily: "Fraunces, serif", fontWeight: 400 }}>
               {c.audience.title}
             </h2>
+            <p className="mt-7 max-w-[82ch] text-base leading-relaxed text-white/70 md:text-lg">
+              {c.audience.intro}
+            </p>
+
+            <div className="mt-10 rounded-[2rem] border border-white/15 bg-white/10 p-7 backdrop-blur-sm md:p-8">
+              <h3 className="text-xl font-semibold">{c.audience.rationaleTitle}</h3>
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                {c.audience.rationale.map(([title, body], index) => (
+                  <article key={title} className="rounded-[1.4rem] bg-white/10 p-5">
+                    <div className="text-xs font-bold tracking-[0.16em] text-[#CFE4BD]">0{index + 1}</div>
+                    <h4 className="mt-4 text-base font-semibold">{title}</h4>
+                    <p className="mt-3 text-sm leading-relaxed text-white/65">{body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-14 grid gap-6 md:grid-cols-2">
               {c.audience.groups.map((group, index) => (
@@ -1429,6 +1474,16 @@ export function NepNha() {
                       <span style={{ color: MUTED }}>{group.tension}</span>
                     </div>
                   </div>
+
+                  <div className="mt-4 flex items-start gap-3 rounded-[1.5rem] p-4 text-sm leading-relaxed" style={{ backgroundColor: GREEN_SOFT }}>
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-[#365B2B]">
+                      <Sparkles size={15} />
+                    </div>
+                    <div>
+                      <strong className="text-neutral-900">{c.audience.labels.impact}: </strong>
+                      <span style={{ color: MUTED }}>{group.impact}</span>
+                    </div>
+                  </div>
                 </motion.article>
               ))}
             </div>
@@ -1438,8 +1493,8 @@ export function NepNha() {
                 <ShieldCheck size={22} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">{c.audience.accessibilityTitle}</h3>
-                <p className="mt-2 max-w-[92ch] text-sm leading-relaxed text-white/70">{c.audience.accessibility}</p>
+                <h3 className="text-lg font-semibold">{c.audience.validationTitle}</h3>
+                <p className="mt-2 max-w-[92ch] text-sm leading-relaxed text-white/70">{c.audience.validation}</p>
               </div>
             </div>
           </div>
