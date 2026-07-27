@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp, Maximize2, X } from "lucide-react";
 import { useI18n } from "../../i18n";
@@ -437,9 +437,12 @@ export function Murror() {
     { label: "Email", href: "mailto:huylem1800vn@gmail.com" },
     { label: "Resume", href: CV_URL },
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <div className="min-h-screen relative" style={{ backgroundColor: INK, color: FG }}>
+    <div className="min-h-screen relative overflow-x-hidden" style={{ backgroundColor: INK, color: FG }}>
       {/* Ambient gradient */}
       <div
         className="fixed inset-0 pointer-events-none"

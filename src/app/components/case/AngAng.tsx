@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import {
   ArrowUpRight,
@@ -1350,8 +1350,12 @@ export function AngAng() {
   const [uiFilterTab, setUiFilterTab] = useState<"intro" | "discovery" | "reviewer">("intro");
   const [activeRealScreen, setActiveRealScreen] = useState<number | null>(null);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen">
+    <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen overflow-x-hidden">
       <CaseNav
         sections={t.sections as unknown as { id: string; label: string }[]}
         accent={GREEN_DARK}
