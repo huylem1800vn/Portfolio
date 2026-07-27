@@ -25,13 +25,21 @@ const assets = [
     folder: "Ang Ang/Brand",
     publicId: "brand-identity-logo",
   },
-  {
+  ...[
+    ["finalUiOnboarding", "onboarding"],
+    ["finalUiHome", "home"],
+    ["finalUiMap", "map"],
+    ["finalUiMood", "mood"],
+    ["finalUiReviewer", "reviewer"],
+    ["finalUiLocalProfile", "local-profile"],
+    ["finalUiVerifiedProfile", "verified-profile"],
+  ].map(([key, name]) => ({
     project: "angAng",
-    key: "verifiedReviewer",
-    file: "src/imports/Reviewer/reviewer.svg",
-    folder: "Ang Ang/UI",
-    publicId: "verified-reviewer",
-  },
+    key,
+    file: `public/assets/ang-ang/final-ui/${name}.png`,
+    folder: "Ang Ang/UI/Final Screens",
+    publicId: name,
+  })),
   {
     project: "nepNha",
     key: "thumbnail",

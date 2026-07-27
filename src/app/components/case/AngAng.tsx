@@ -36,17 +36,11 @@ import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
 import { NextProjectFooter } from "./NextProjectFooter";
 import { ImageWithFallback } from "../figma/ImageWithFallback";
-import Onboarding from "../../../imports/Onboarding/Onboarding";
-import HomeScreen from "../../../imports/Home/Home";
-import Reviewer from "../../../imports/Reviewer/Reviewer";
-import BanDo from "../../../imports/BảnDồ/BảnDồ";
-import CamXuc from "../../../imports/CảmXuc/CảmXuc";
-import LocalProfile from "../../../imports/LocalProfile/LocalProfile";
-import VerifiedProfile from "../../../imports/VertifiedProfile/VertifiedProfile";
 import BrandIdentityLogo from "../../../imports/AngAngBrand/BrandIdentityLogo";
 import logoMarkPath from "../../../imports/AngAngBrand/logo-mark-path";
 import { CV_URL } from "../../config/links";
 import { BAO_TRAN_PERSONA_AVATAR_URL, DUY_KHOI_PERSONA_AVATAR_URL } from "../../config/persona-avatars";
+import { ANG_ANG_FINAL_UI_IMAGES } from "../../config/ang-ang-assets";
 import wireframeHome from "../../../imports/image-5.png";
 import wireframeNav from "../../../imports/image-2.png";
 import wireframeDetail from "../../../imports/image-3.png";
@@ -1129,21 +1123,21 @@ const PROCESS_ICONS = [Search, BarChart3, MessagesSquare, ClipboardList, Users, 
 const MOOD_ICONS = [Smile, Heart, UsersRound, Wallet, Clock, Utensils, MapPin, Star];
 
 const REAL_SCREENS = [
-  { key: "onboarding", category: "intro", Component: Onboarding, en: { t: "Onboarding", d: "First launch · brand intro" }, vi: { t: "Onboarding", d: "Mở lần đầu · giới thiệu thương hiệu" } },
-  { key: "home", category: "intro", Component: HomeScreen, en: { t: "Home Screen", d: "Personalized feed + quick filters" }, vi: { t: "Trang chủ", d: "Feed cá nhân hoá + filter nhanh" } },
-  { key: "bando", category: "discovery", Component: BanDo, en: { t: "Real-time Map", d: "Real-time map · open now signals" }, vi: { t: "Bản đồ thời gian thực", d: "Bản đồ thời gian thực · đang mở" } },
-  { key: "camxuc", category: "discovery", Component: CamXuc, en: { t: "Mood Discovery", d: "“What are you in the mood for?”" }, vi: { t: "Khám phá cảm xúc", d: "“Bạn đang muốn ăn gì?”" } },
-  { key: "reviewer", category: "reviewer", Component: Reviewer, en: { t: "Verified Reviewer", d: "Trust system & perks" }, vi: { t: "Verified Reviewer", d: "Hệ thống uy tín & đặc quyền" } },
-  { key: "localprofile", category: "reviewer", Component: LocalProfile, en: { t: "Local Profile", d: "Public reviewer profile" }, vi: { t: "Local Profile", d: "Hồ sơ reviewer công khai" } },
-  { key: "verifiedprofile", category: "reviewer", Component: VerifiedProfile, en: { t: "Verified Profile", d: "Verified reviewer detail" }, vi: { t: "Verified Profile", d: "Chi tiết reviewer đã xác thực" } },
-];
+  { key: "onboarding", category: "intro", image: ANG_ANG_FINAL_UI_IMAGES.onboarding, en: { t: "Onboarding", d: "First launch · brand intro" }, vi: { t: "Onboarding", d: "Mở lần đầu · giới thiệu thương hiệu" } },
+  { key: "home", category: "intro", image: ANG_ANG_FINAL_UI_IMAGES.home, en: { t: "Home Screen", d: "Personalized feed + quick filters" }, vi: { t: "Trang chủ", d: "Feed cá nhân hoá + filter nhanh" } },
+  { key: "bando", category: "discovery", image: ANG_ANG_FINAL_UI_IMAGES.map, en: { t: "Real-time Map", d: "Real-time map · open now signals" }, vi: { t: "Bản đồ thời gian thực", d: "Bản đồ thời gian thực · đang mở" } },
+  { key: "camxuc", category: "discovery", image: ANG_ANG_FINAL_UI_IMAGES.mood, en: { t: "Mood Discovery", d: "“What are you in the mood for?”" }, vi: { t: "Khám phá cảm xúc", d: "“Bạn đang muốn ăn gì?”" } },
+  { key: "reviewer", category: "reviewer", image: ANG_ANG_FINAL_UI_IMAGES.reviewer, en: { t: "Verified Reviewer", d: "Trust system & perks" }, vi: { t: "Verified Reviewer", d: "Hệ thống uy tín & đặc quyền" } },
+  { key: "localprofile", category: "reviewer", image: ANG_ANG_FINAL_UI_IMAGES.localProfile, en: { t: "Local Profile", d: "Public reviewer profile" }, vi: { t: "Local Profile", d: "Hồ sơ reviewer công khai" } },
+  { key: "verifiedprofile", category: "reviewer", image: ANG_ANG_FINAL_UI_IMAGES.verifiedProfile, en: { t: "Verified Profile", d: "Verified reviewer detail" }, vi: { t: "Verified Profile", d: "Chi tiết reviewer đã xác thực" } },
+] as const;
 
 function RealPhone({
-  Component,
+  image,
   title,
   desc,
 }: {
-  Component: React.ComponentType;
+  image: { src: string; width: number; height: number };
   title: string;
   desc: string;
 }) {
@@ -1168,16 +1162,15 @@ function RealPhone({
           className="relative overflow-hidden rounded-[26px] bg-white"
           style={{ width: W, height: H }}
         >
-          <div
-            style={{
-              width: 375,
-              height: 812,
-              transform: `scale(${W / 375})`,
-              transformOrigin: "top left",
-            }}
-          >
-            <Component />
-          </div>
+          <img
+            src={image.src}
+            alt={title}
+            width={image.width}
+            height={image.height}
+            loading="lazy"
+            decoding="async"
+            className="block h-auto w-full"
+          />
           <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/5" />
         </div>
       </div>
@@ -3292,6 +3285,7 @@ export function AngAng() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
           {REAL_SCREENS.filter((s) => s.category === uiFilterTab).map((s) => {
+            const copy = lang === "en" ? s.en : s.vi;
             return (
               <motion.div
                 key={s.key}
@@ -3301,7 +3295,7 @@ export function AngAng() {
                 transition={{ duration: 0.55 }}
               >
                 <RealPhone
-                  Component={s.Component}
+                  image={s.image}
                   title={copy.t}
                   desc={copy.d}
                 />

@@ -13,13 +13,61 @@ export const PROJECT_ASSETS = {
       "height": 368,
       "format": "svg"
     },
-    "verifiedReviewer": {
-      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1784803352/Portfolio%20Minh%20Huy/Ang%20Ang/UI/verified-reviewer.svg",
-      "publicId": "Portfolio Minh Huy/Ang Ang/UI/verified-reviewer",
-      "bytes": 428354,
+    "finalUiOnboarding": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785174130/Portfolio%20Minh%20Huy/Ang%20Ang/UI/Final%20Screens/onboarding.png",
+      "publicId": "Portfolio Minh Huy/Ang Ang/UI/Final Screens/onboarding",
+      "bytes": 9589,
       "width": 375,
       "height": 812,
-      "format": "svg"
+      "format": "png"
+    },
+    "finalUiHome": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785174131/Portfolio%20Minh%20Huy/Ang%20Ang/UI/Final%20Screens/home.png",
+      "publicId": "Portfolio Minh Huy/Ang Ang/UI/Final Screens/home",
+      "bytes": 316936,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "finalUiMap": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785174131/Portfolio%20Minh%20Huy/Ang%20Ang/UI/Final%20Screens/map.png",
+      "publicId": "Portfolio Minh Huy/Ang Ang/UI/Final Screens/map",
+      "bytes": 293940,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "finalUiMood": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785174132/Portfolio%20Minh%20Huy/Ang%20Ang/UI/Final%20Screens/mood.png",
+      "publicId": "Portfolio Minh Huy/Ang Ang/UI/Final Screens/mood",
+      "bytes": 431590,
+      "width": 375,
+      "height": 1460,
+      "format": "png"
+    },
+    "finalUiReviewer": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785174131/Portfolio%20Minh%20Huy/Ang%20Ang/UI/Final%20Screens/reviewer.png",
+      "publicId": "Portfolio Minh Huy/Ang Ang/UI/Final Screens/reviewer",
+      "bytes": 52341,
+      "width": 375,
+      "height": 812,
+      "format": "png"
+    },
+    "finalUiLocalProfile": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785174131/Portfolio%20Minh%20Huy/Ang%20Ang/UI/Final%20Screens/local-profile.png",
+      "publicId": "Portfolio Minh Huy/Ang Ang/UI/Final Screens/local-profile",
+      "bytes": 105683,
+      "width": 378,
+      "height": 812,
+      "format": "png"
+    },
+    "finalUiVerifiedProfile": {
+      "secureUrl": "https://res.cloudinary.com/dlasbipjr/image/upload/v1785174131/Portfolio%20Minh%20Huy/Ang%20Ang/UI/Final%20Screens/verified-profile.png",
+      "publicId": "Portfolio Minh Huy/Ang Ang/UI/Final Screens/verified-profile",
+      "bytes": 114093,
+      "width": 375,
+      "height": 812,
+      "format": "png"
     }
   },
   "nepNha": {
