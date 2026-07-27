@@ -1347,7 +1347,7 @@ export function AngAng() {
   const t = COPY[lang];
   const L = t.labels;
   const [activeWireframe, setActiveWireframe] = useState<null | { src: string; title: string }>(null);
-  const [uiFilterTab, setUiFilterTab] = useState<"all" | "intro" | "discovery" | "reviewer">("all");
+  const [uiFilterTab, setUiFilterTab] = useState<"intro" | "discovery" | "reviewer">("intro");
   const [activeRealScreen, setActiveRealScreen] = useState<number | null>(null);
 
   return (
@@ -3272,7 +3272,6 @@ export function AngAng() {
         {/* Filter Tabs */}
         <div className="sticky top-[80px] z-30 my-8 flex flex-wrap gap-2.5 rounded-2xl border border-emerald-900/10 bg-white/90 p-2 shadow-lg backdrop-blur-md">
           {[
-            { id: "all", label: lang === "en" ? "All Screens (7)" : "Tất cả màn hình (7)" },
             { id: "intro", label: lang === "en" ? "Home & Onboarding" : "Trang chủ & Onboarding" },
             { id: "discovery", label: lang === "en" ? "Map & Mood Discovery" : "Bản đồ & Cảm xúc" },
             { id: "reviewer", label: lang === "en" ? "Reviewer Profiles" : "Hồ sơ Reviewer (3)" },
@@ -3293,7 +3292,7 @@ export function AngAng() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
-          {REAL_SCREENS.filter((s) => uiFilterTab === "all" || s.category === uiFilterTab).map((s) => {
+          {REAL_SCREENS.filter((s) => s.category === uiFilterTab).map((s) => {
             const globalIndex = REAL_SCREENS.findIndex((item) => item.key === s.key);
             const copy = s[lang];
             return (
