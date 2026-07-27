@@ -23,7 +23,7 @@ const skillGroups = [
   },
   {
     title: "Research",
-    items: ["Survey", "User Interview", "Persona", "User Journey Mapping", "Competitor Review"],
+    items: ["Survey", "User Interview", "Persona", "User Journey Mapping", "Competitor Review", "Information Architecture"],
   },
   {
     title: "Frontend",
