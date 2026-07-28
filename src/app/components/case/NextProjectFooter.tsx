@@ -217,6 +217,12 @@ export function NextProjectFooter({ currentSlug }: { currentSlug: CaseSlug }) {
               <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-stretch lg:items-end gap-4">
                 <a
                   href={`#case/${next.slug}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.hash = `#case/${next.slug}`;
+                    window.scrollTo(0, 0);
+                    setTimeout(() => window.scrollTo(0, 0), 50);
+                  }}
                   className="group inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-base font-semibold transition-all hover:scale-105 shadow-xl"
                   style={{ backgroundColor: next.btnBg, color: next.btnText }}
                 >
@@ -231,6 +237,12 @@ export function NextProjectFooter({ currentSlug }: { currentSlug: CaseSlug }) {
 
                 <a
                   href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.hash = "";
+                    window.scrollTo(0, 0);
+                    setTimeout(() => window.scrollTo(0, 0), 50);
+                  }}
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-medium transition-all hover:bg-white/20 text-white"
                 >
                   <ArrowLeft size={16} />
