@@ -3246,7 +3246,7 @@ export function AngAng() {
                 {lang === "en" ? "Close" : "Đóng"}
               </button>
             </div>
-            <div className="overflow-auto rounded-3xl bg-[#fafaf6] p-2 sm:p-4" style={{ maxHeight: "75vh" }}>
+            <div className="flex-1 overflow-auto rounded-3xl bg-[#fafaf6] p-2 sm:p-4" style={{ maxHeight: "75vh" }}>
               <img
                 src={activeWireframe.src}
                 alt={activeWireframe.title}
@@ -3373,11 +3373,11 @@ export function AngAng() {
           >
             <X size={22} />
           </button>
-          <div 
-            className="relative max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#1F2A1F] p-4 text-white shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="text-center py-3 border-b border-white/10">
+            <div 
+              className="relative flex flex-col max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#1F2A1F] p-4 text-white shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="text-center py-3 border-b border-white/10 shrink-0">
               <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#9DD325]">
                 {REAL_SCREENS[activeRealScreen][lang === "en" ? "en" : "vi"].t}
               </div>
@@ -3385,8 +3385,8 @@ export function AngAng() {
                 {REAL_SCREENS[activeRealScreen][lang === "en" ? "en" : "vi"].d}
               </div>
             </div>
-            <div className="mt-4 flex justify-center overflow-y-auto max-h-[calc(90vh-100px)] p-2">
-              <div className="w-[375px] h-[812px] bg-white rounded-[24px] overflow-hidden shadow-2xl shrink-0">
+            <div className="mt-4 flex-1 flex justify-center overflow-y-auto p-2 min-h-0">
+              <div className="w-[375px] bg-white rounded-[24px] overflow-hidden shadow-2xl h-max">
                 <img
                   src={REAL_SCREENS[activeRealScreen].image.src}
                   alt={REAL_SCREENS[activeRealScreen][lang === "en" ? "en" : "vi"].t}

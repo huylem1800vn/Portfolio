@@ -895,10 +895,10 @@ export function Murror() {
               <X size={22} />
             </button>
             <div 
-              className="relative max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#0d1527] p-5 text-white border border-white/20 shadow-2xl"
+              className="relative flex flex-col max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#0d1527] p-5 text-white border border-white/20 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="text-center pb-3 border-b border-white/10">
+              <div className="text-center pb-3 border-b border-white/10 shrink-0">
                 <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#a59cff]">
                   {activeScreenModal.title}
                 </div>
@@ -906,8 +906,8 @@ export function Murror() {
                   {activeScreenModal.body}
                 </div>
               </div>
-              <div className="mt-4 flex justify-center overflow-y-auto max-h-[calc(90vh-110px)] p-2">
-                <div className="w-[340px] overflow-hidden rounded-[2rem] shadow-2xl shrink-0">
+              <div className="mt-4 flex-1 flex justify-center overflow-y-auto p-2 min-h-0">
+                <div className="w-[340px] rounded-[2rem] overflow-hidden shadow-2xl h-max">
                   <img src={activeScreenModal.src} alt={activeScreenModal.title} className="block w-full h-auto" />
                 </div>
               </div>
