@@ -1338,10 +1338,6 @@ export function AngAng() {
   const [activeWireframe, setActiveWireframe] = useState<null | { src: string; title: string }>(null);
   const [uiFilterTab, setUiFilterTab] = useState<"intro" | "discovery" | "reviewer">("intro");
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen overflow-x-hidden">
       <CaseNav
@@ -3348,8 +3344,6 @@ export function AngAng() {
           {t.reflection.body}
         </p>
       </Section>
-
-      <NextProjectFooter currentSlug="angang" />
 
       <NextProjectFooter currentSlug="angang" />
     </div>
