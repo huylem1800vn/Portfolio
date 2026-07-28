@@ -1006,12 +1006,8 @@ export function NepNha() {
     };
   }, [activeScreen, popupImage]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="min-h-screen font-sans selection:bg-[#DDEACF] selection:text-[#365B2B] overflow-x-hidden" style={{ backgroundColor: CREAM, color: INK }}>
+    <div className="min-h-screen font-sans selection:bg-[#DDEACF] selection:text-[#365B2B] overflow-x-clip" style={{ backgroundColor: CREAM, color: INK }}>
       <CaseNav
         sections={c.sections as unknown as { id: string; label: string }[]}
         accent={GREEN_DARK}

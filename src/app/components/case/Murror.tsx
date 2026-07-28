@@ -437,12 +437,8 @@ export function Murror() {
     { label: "Email", href: "mailto:huylem1800vn@gmail.com" },
     { label: "Resume", href: CV_URL },
   ];
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="min-h-screen relative overflow-x-hidden" style={{ backgroundColor: INK, color: FG }}>
+    <div className="min-h-screen relative overflow-x-clip" style={{ backgroundColor: INK, color: FG }}>
       {/* Ambient gradient */}
       <div
         className="fixed inset-0 pointer-events-none"

@@ -961,7 +961,7 @@ export function MeMe() {
 
   return (
     <div
-      className="min-h-screen overflow-x-hidden antialiased selection:bg-[#f4bd18] selection:text-black"
+      className="min-h-screen overflow-x-clip antialiased selection:bg-[#f4bd18] selection:text-black"
       style={{ backgroundColor: PAPER, color: INK, fontFamily: "Inter, ui-sans-serif, system-ui, sans-serif" }}
     >
       <style>{`

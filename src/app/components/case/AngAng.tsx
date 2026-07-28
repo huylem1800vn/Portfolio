@@ -1339,7 +1339,7 @@ export function AngAng() {
   const [uiFilterTab, setUiFilterTab] = useState<"intro" | "discovery" | "reviewer">("intro");
 
   return (
-    <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen overflow-x-hidden">
+    <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen overflow-x-clip">
       <CaseNav
         sections={t.sections as unknown as { id: string; label: string }[]}
         accent={GREEN_DARK}
