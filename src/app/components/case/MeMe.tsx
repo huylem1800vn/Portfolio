@@ -1577,6 +1577,7 @@ export function MeMe() {
           className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8"
           role="dialog"
           aria-modal="true"
+          onClick={() => setActiveScreen(null)}
         >
           <button
             type="button"
@@ -1586,7 +1587,10 @@ export function MeMe() {
           >
             <X size={22} />
           </button>
-          <div className="relative max-h-[90vh] max-w-[1200px] w-full overflow-hidden rounded-[2.2rem] bg-white border border-neutral-200 shadow-2xl">
+          <div 
+            className="relative max-h-[90vh] max-w-[1200px] w-full overflow-hidden rounded-[2.2rem] bg-white border border-neutral-200 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex items-center justify-between border-b border-neutral-200 px-6 py-4 bg-[#f6f7f9]">
               <div>
                 <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F59E0B]">

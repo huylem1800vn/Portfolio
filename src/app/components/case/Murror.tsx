@@ -884,6 +884,7 @@ export function Murror() {
             className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8"
             role="dialog"
             aria-modal="true"
+            onClick={() => setActiveScreenModal(null)}
           >
             <button
               type="button"
@@ -893,7 +894,10 @@ export function Murror() {
             >
               <X size={22} />
             </button>
-            <div className="relative max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#0d1527] p-5 text-white border border-white/20 shadow-2xl">
+            <div 
+              className="relative max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#0d1527] p-5 text-white border border-white/20 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="text-center pb-3 border-b border-white/10">
                 <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#a59cff]">
                   {activeScreenModal.title}

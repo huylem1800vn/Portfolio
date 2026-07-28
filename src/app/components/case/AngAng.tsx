@@ -1136,16 +1136,19 @@ function RealPhone({
   image,
   title,
   desc,
+  onClick,
 }: {
   image: { src: string; width: number; height: number };
   title: string;
   desc: string;
+  onClick: () => void;
 }) {
   const W = 240;
   const H = Math.round((W * 812) / 375);
   return (
     <div
-      className="group rounded-[2rem] border border-neutral-200/80 bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left flex flex-col items-center"
+      onClick={onClick}
+      className="group cursor-pointer rounded-[2rem] border border-neutral-200/80 bg-white p-4 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl text-left flex flex-col items-center"
     >
       {/* Outer Phone Shell */}
       <div
@@ -1178,6 +1181,7 @@ function RealPhone({
       <div className="mt-4 text-center w-full">
         <div className="flex items-center justify-center gap-1.5 font-semibold text-base" style={{ fontFamily: "Fraunces, serif", color: INK }}>
           <span>{title}</span>
+          <ArrowUpRight size={14} className="opacity-40 group-hover:opacity-100 transition-opacity" style={{ color: GREEN_DARK }} />
         </div>
         <div className="mt-1 text-xs" style={{ color: MUTED }}>
           {desc}
@@ -1337,6 +1341,7 @@ export function AngAng() {
   const L = t.labels;
   const [activeWireframe, setActiveWireframe] = useState<null | { src: string; title: string }>(null);
   const [uiFilterTab, setUiFilterTab] = useState<"intro" | "discovery" | "reviewer">("intro");
+  const [activeRealScreen, setActiveRealScreen] = useState<number | null>(null);
 
   return (
     <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen overflow-x-clip">
@@ -3281,6 +3286,7 @@ export function AngAng() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
           {REAL_SCREENS.filter((s) => s.category === uiFilterTab).map((s) => {
+            const globalIndex = REAL_SCREENS.findIndex((item) => item.key === s.key);
             const copy = lang === "en" ? s.en : s.vi;
             return (
               <motion.div
@@ -3294,6 +3300,7 @@ export function AngAng() {
                   image={s.image}
                   title={copy.t}
                   desc={copy.d}
+                  onClick={() => setActiveRealScreen(globalIndex)}
                 />
               </motion.div>
             );
@@ -3346,6 +3353,50 @@ export function AngAng() {
       </Section>
 
       <NextProjectFooter currentSlug="angang" />
+
+      {/* LIGHTBOX MODAL FOR ANGANG REAL SCREENS */}
+      {activeRealScreen !== null && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setActiveRealScreen(null)}
+        >
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveRealScreen(null);
+            }}
+            className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
+            aria-label="Close modal"
+          >
+            <X size={22} />
+          </button>
+          <div 
+            className="relative max-h-[90vh] max-w-[440px] w-full overflow-hidden rounded-[2.5rem] bg-[#1F2A1F] p-4 text-white shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center py-3 border-b border-white/10">
+              <div className="text-sm font-bold uppercase tracking-[0.2em] text-[#9DD325]">
+                {REAL_SCREENS[activeRealScreen][lang === "en" ? "en" : "vi"].t}
+              </div>
+              <div className="text-xs text-white/60 mt-0.5">
+                {REAL_SCREENS[activeRealScreen][lang === "en" ? "en" : "vi"].d}
+              </div>
+            </div>
+            <div className="mt-4 flex justify-center overflow-y-auto max-h-[calc(90vh-100px)] p-2">
+              <div className="w-[375px] h-[812px] bg-white rounded-[24px] overflow-hidden shadow-2xl shrink-0">
+                <img
+                  src={REAL_SCREENS[activeRealScreen].image.src}
+                  alt={REAL_SCREENS[activeRealScreen][lang === "en" ? "en" : "vi"].t}
+                  className="w-full h-auto block"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

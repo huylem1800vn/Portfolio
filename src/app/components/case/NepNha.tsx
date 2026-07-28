@@ -2314,17 +2314,28 @@ export function NepNha() {
 
       {/* FULLSCREEN LIGHTBOX MODAL */}
       {activeScreen !== null && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8" role="dialog" aria-modal="true" aria-label={c.ui.screens[activeScreen][0]}>
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8" 
+          role="dialog" 
+          aria-modal="true" 
+          aria-label={c.ui.screens[activeScreen][0]}
+          onClick={() => setActiveScreen(null)}
+        >
           <button
             type="button"
-            onClick={() => setActiveScreen(null)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setActiveScreen(null);
+            }}
             className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
             aria-label={c.ui.close}
           >
             <X size={22} />
           </button>
-          <button type="button" onClick={() => setActiveScreen(null)} className="fixed inset-0 cursor-default" aria-hidden="true" tabIndex={-1} />
-          <div className="relative z-10 mx-auto w-full max-w-[720px] overflow-hidden rounded-[2.5rem] bg-white p-4 shadow-2xl">
+          <div 
+            className="relative z-10 mx-auto w-full max-w-[720px] overflow-hidden rounded-[2.5rem] bg-white p-4 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex items-center justify-between p-4 border-b mb-3" style={{ borderColor: LINE }}>
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#365B2B]">0{activeScreen + 1}. {c.ui.imageLabel}</span>
@@ -2347,17 +2358,27 @@ export function NepNha() {
 
       {/* GENERIC IMAGE POPUP MODAL */}
       {popupImage !== null && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8" role="dialog" aria-modal="true">
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8" 
+          role="dialog" 
+          aria-modal="true"
+          onClick={() => setPopupImage(null)}
+        >
           <button
             type="button"
-            onClick={() => setPopupImage(null)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setPopupImage(null);
+            }}
             className="fixed right-6 top-6 z-[110] flex h-12 w-12 items-center justify-center rounded-full bg-white text-black shadow-2xl transition-transform hover:scale-110"
             aria-label={c.ui.close}
           >
             <X size={22} />
           </button>
-          <button type="button" onClick={() => setPopupImage(null)} className="fixed inset-0 cursor-default" aria-hidden="true" tabIndex={-1} />
-          <div className="relative z-10 mx-auto w-full max-w-[1200px] rounded-[2.5rem] p-2 sm:p-4 mt-8 md:mt-0">
+          <div 
+            className="relative z-10 mx-auto w-full max-w-[1200px] rounded-[2.5rem] p-2 sm:p-4 mt-8 md:mt-0"
+            onClick={(e) => e.stopPropagation()}
+          >
             <img src={popupImage.src} alt={popupImage.alt} className="h-auto w-full rounded-[1.8rem] shadow-2xl" />
             {popupImage.caption && (
               <div className="mt-4 text-center text-sm font-medium text-white/80">
