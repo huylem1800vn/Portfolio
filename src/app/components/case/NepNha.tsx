@@ -2333,10 +2333,10 @@ export function NepNha() {
             <X size={22} />
           </button>
           <div 
-            className="relative z-10 mx-auto w-full max-w-[720px] overflow-hidden rounded-[2.5rem] bg-white p-4 shadow-2xl"
+            className="relative z-10 flex flex-col max-h-[90vh] mx-auto w-full max-w-[720px] overflow-hidden rounded-[2.5rem] bg-white shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between p-4 border-b mb-3" style={{ borderColor: LINE }}>
+            <div className="flex items-center justify-between p-4 px-6 border-b shrink-0 bg-white" style={{ borderColor: LINE }}>
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-[#365B2B]">0{activeScreen + 1}. {c.ui.imageLabel}</span>
                 <h3 className="text-2xl font-normal text-neutral-900" style={{ fontFamily: "Fraunces, serif" }}>
@@ -2351,7 +2351,9 @@ export function NepNha() {
                 {c.ui.close}
               </button>
             </div>
-            <img src={UI_IMAGES[activeScreen]} alt={`Nếp Nhà ${c.ui.screens[activeScreen][0]} full UI screen`} className="h-auto w-full rounded-[1.8rem]" />
+            <div className="flex-1 overflow-y-auto min-h-0 p-4 bg-[#f9f9f9]">
+              <img src={UI_IMAGES[activeScreen]} alt={`Nếp Nhà ${c.ui.screens[activeScreen][0]} full UI screen`} className="h-auto w-full rounded-[1.8rem] shadow-sm" />
+            </div>
           </div>
         </div>
       )}
