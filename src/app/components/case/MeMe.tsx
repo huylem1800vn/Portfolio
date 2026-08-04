@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useScrollLock } from "./useScrollLock";
 import { motion } from "motion/react";
 import {
   ArrowUpRight,
@@ -958,6 +959,8 @@ export function MeMe() {
   const copy = COPY[lang];
   const [filterTab, setFilterTab] = useState<"all" | "featured" | "catalog" | "checkout">("all");
   const [activeScreen, setActiveScreen] = useState<number | null>(null);
+
+  useScrollLock(activeScreen !== null);
 
   return (
     <div

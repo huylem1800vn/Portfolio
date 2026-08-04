@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useScrollLock } from "./useScrollLock";
 import { motion } from "motion/react";
 import { ArrowUpRight, Sparkles, Compass, MessageCircle, Footprints, TrendingUp, Maximize2, X } from "lucide-react";
 import { useI18n } from "../../i18n";
@@ -431,6 +432,8 @@ export function Murror() {
   const c = COPY[lang];
   const [activeScreenModal, setActiveScreenModal] = useState<{ src: string; title: string; body: string } | null>(null);
   const [uiTab, setUiTab] = useState<number | "all">("all");
+
+  useScrollLock(activeScreenModal !== null);
   const socialLinks = [
     { label: "Behance", href: "https://www.behance.net/minhhuyhunh2" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/huy-huynh-minh/" },

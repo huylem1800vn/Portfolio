@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useScrollLock } from "./useScrollLock";
 import { motion, AnimatePresence } from "motion/react";
 import {
   ArrowUpRight,
@@ -989,6 +990,8 @@ export function NepNha() {
 
   // Generic Image Popup State
   const [popupImage, setPopupImage] = useState<{src: string, alt: string, caption?: string} | null>(null);
+
+  useScrollLock(activeScreen !== null || popupImage !== null);
 
   useEffect(() => {
     if (activeScreen === null && popupImage === null) return;

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useScrollLock } from "./useScrollLock";
 import { motion } from "motion/react";
 import {
   ArrowUpRight,
@@ -1342,6 +1343,8 @@ export function AngAng() {
   const [activeWireframe, setActiveWireframe] = useState<null | { src: string; title: string }>(null);
   const [uiFilterTab, setUiFilterTab] = useState<"intro" | "discovery" | "reviewer">("intro");
   const [activeRealScreen, setActiveRealScreen] = useState<number | null>(null);
+
+  useScrollLock(activeWireframe !== null || activeRealScreen !== null);
 
   return (
     <div style={{ backgroundColor: BG, color: INK }} className="min-h-screen overflow-x-clip">
