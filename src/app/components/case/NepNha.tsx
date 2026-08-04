@@ -2139,7 +2139,7 @@ export function NepNha() {
             {/* Interactive Screen Selector Tabs — STICKY NAV BAR */}
             <div className="sticky top-[64px] md:top-[80px] z-30 -mx-6 px-6 md:-mx-12 md:px-12 py-3.5 bg-[#F7F2E8]/95 backdrop-blur-md border-b transition-all shadow-sm" style={{ borderColor: LINE }}>
               <div className="flex flex-wrap items-center gap-2 md:gap-3">
-                {c.ui.screens.map(([title], index) => (
+                {c.ui.screens.map(([title]: readonly [string, string], index: number) => (
                   <button
                     key={title}
                     type="button"
