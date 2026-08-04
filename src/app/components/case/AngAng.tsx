@@ -49,7 +49,7 @@ import wireframeProfile from "../../../imports/image-4.png";
 import wireframeExplore from "../../../imports/image-6.png";
 import wireframeReviewer from "../../../imports/image-7.png";
 
-// Ăng Ăng brand palette — sourced from /imports/Color/Color.tsx
+// Ăng Ăng brand palette used throughout the case study.
 const GREEN = "#9dd325";      // Primary 500
 const GREEN_DARK = "#6e9917"; // Primary 600
 const GREEN_LIGHT = "#def3a3";// Primary 200
