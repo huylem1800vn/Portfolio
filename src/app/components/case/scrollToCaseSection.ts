@@ -5,5 +5,5 @@ export function scrollToCaseSection(id: string, headerOffset = 96) {
   if (!element) return;
 
   const top = element.getBoundingClientRect().top + window.scrollY - headerOffset;
-  window.scrollTo({ top, behavior: "smooth" });
+  window.scrollTo({ top, behavior: "auto" });
 }
