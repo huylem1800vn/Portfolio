@@ -1,5 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-  <rect width="120" height="120" rx="30" fill="#F4F4F5" />
-  <text x="22" y="80" font-family="'Fraunces', 'Georgia', serif" font-size="52" font-weight="600" letter-spacing="-2" fill="#171717">mh</text>
-  <circle cx="98" cy="74" r="8" fill="#5c5cff" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 64px;
+      font-weight: 300;
+      fill: #1a1a1a;
+    }
+    @media (prefers-color-scheme: dark) {
+      text {
+        fill: #f3f4f6;
+      }
+    }
+  </style>
+  <text x="50" y="68" text-anchor="middle" letter-spacing="-2">mh</text>
 </svg>
