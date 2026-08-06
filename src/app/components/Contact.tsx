@@ -60,7 +60,7 @@ export function Contact() {
             </a>
           </div>
 
-          <div className="md:col-span-6 md:col-start-7">
+          <div className="md:col-span-7 md:col-start-6">
             <ul>
               {channels.map((c, i) => (
                 <motion.li
