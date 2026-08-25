@@ -2171,17 +2171,26 @@ export function NepNha() {
             >
               {/* Sleek iPhone Mockup Frame */}
               <div className="lg:col-span-5 flex justify-center">
-                <div className="relative w-full max-w-[260px] md:max-w-[280px] group">
+                <div 
+                  className="relative w-full max-w-[260px] md:max-w-[280px] group cursor-pointer transition-transform hover:scale-[1.02]"
+                  onClick={() => setActiveScreen(selectedUiIndex)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setActiveScreen(selectedUiIndex);
+                    }
+                  }}
+                >
                   <PhoneMockup src={UI_IMAGES[selectedUiIndex]} alt={`Nếp Nhà ${c.ui.screens[selectedUiIndex][0]} screen`} />
 
-                  <button
-                    type="button"
-                    onClick={() => setActiveScreen(selectedUiIndex)}
-                    className="absolute top-3 right-3 z-30 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-md transition-transform hover:scale-110"
-                    aria-label="Enlarge image"
+                  <div
+                    className="absolute top-3 right-3 z-30 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-md transition-transform group-hover:scale-110 group-hover:bg-black/80"
+                    aria-hidden="true"
                   >
                     <Expand size={16} />
-                  </button>
+                  </div>
                 </div>
               </div>
 
