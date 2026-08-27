@@ -27,7 +27,6 @@ import {
   Wrench,
   UserCircle,
   ChevronRight,
-  Layers,
   Palette,
   PenTool,
   Award,
@@ -3318,7 +3317,7 @@ export function AngAng() {
         {/* Impact Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {[
-            { icon: Layers, n: "7", label: lang === 'en' ? 'Screens Designed' : 'Màn hình thiết kế' },
+            { icon: Search, n: "8", label: lang === 'en' ? 'Research Stages' : 'Bước nghiên cứu' },
             { icon: Users, n: "2", label: lang === 'en' ? 'Personas Created' : 'Persona xây dựng' },
             { icon: PenTool, n: "5", label: lang === 'en' ? 'HMW Statements' : 'Câu hỏi HMW' },
             { icon: Award, n: "4", label: lang === 'en' ? 'Key Insights' : 'Insight chính' },
