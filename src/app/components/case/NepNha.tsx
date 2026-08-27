@@ -2137,7 +2137,7 @@ export function NepNha() {
             </div>
 
             {/* Interactive Screen Selector Tabs — STICKY NAV BAR */}
-            <div className="sticky top-[64px] md:top-[80px] z-30 -mx-6 px-6 md:-mx-12 md:px-12 py-3.5 bg-[#F7F2E8]/95 backdrop-blur-md border-b transition-all shadow-sm" style={{ borderColor: LINE }}>
+            <div className="sticky top-[64px] md:top-[80px] z-40 -mx-6 px-6 md:-mx-12 md:px-12 mt-10 py-3.5 bg-[#F7F2E8]/95 backdrop-blur-md border-b transition-all shadow-sm" style={{ borderColor: LINE }}>
               <div className="flex flex-wrap items-center gap-2 md:gap-3">
                 {c.ui.screens.map(([title]: readonly [string, string], index: number) => (
                   <button
@@ -2232,8 +2232,7 @@ export function NepNha() {
                   <button
                     type="button"
                     onClick={() => setActiveScreen(selectedUiIndex)}
-                    className="inline-flex items-center gap-2.5 rounded-full border border-[#365B2B] px-5 py-2.5 text-xs font-semibold transition-colors hover:bg-[#365B2B] hover:text-white"
-                    style={{ color: GREEN_DARK }}
+                    className="inline-flex items-center gap-2.5 rounded-full border border-[#365B2B] px-5 py-2.5 text-xs font-semibold text-[#365B2B] transition-colors hover:bg-[#365B2B] hover:text-white"
                   >
                     <Expand size={15} />
                     {c.ui.expand}
