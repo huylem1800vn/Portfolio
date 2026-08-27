@@ -3180,14 +3180,14 @@ export function AngAng() {
               style={{ backgroundColor: "#fff", border: `1px solid ${BORDER}` }}
             >
               <div
-                className="overflow-hidden flex items-center justify-center cursor-zoom-in"
+                className="overflow-hidden flex items-center justify-center cursor-zoom-in group/img transition-all duration-300 hover:shadow-lg"
                 style={{ aspectRatio: "4 / 3", backgroundColor: "#fafaf6" }}
                 onClick={() => setActiveWireframe({ src: w.src, title: w.t })}
               >
                 <img
                   src={w.src}
                   alt={`Wireframe · ${w.t}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover/img:scale-[1.03]"
                   style={{ filter: "contrast(1.05)" }}
                 />
               </div>
