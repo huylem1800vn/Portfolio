@@ -3,7 +3,7 @@ import { createContext, useContext, useState, ReactNode } from "react";
 export type Lang = "en" | "vi";
 
 type Dict = {
-  nav: { work: string; process: string; about: string; resume: string };
+  nav: { work: string; process: string; about: string; resume: string; contact: string };
   hero: {
     badge: string;
     name: string;
@@ -74,7 +74,7 @@ type Dict = {
 };
 
 const en: Dict = {
-  nav: { work: "Work", process: "Process", about: "About", resume: "Resume" },
+  nav: { work: "Work", process: "Process", about: "About", resume: "Resume", contact: "Contact" },
   hero: {
     badge: "Portfolio · 2026 · Open to fresher opportunities",
     name: "HUYNH MINH HUY",
@@ -243,7 +243,7 @@ const en: Dict = {
 };
 
 const vi: Dict = {
-  nav: { work: "Dự án", process: "Quy trình", about: "Giới thiệu", resume: "CV" },
+  nav: { work: "Dự án", process: "Quy trình", about: "Giới thiệu", resume: "CV", contact: "Liên hệ" },
   hero: {
     badge: "Portfolio · 2026 · Đang tìm cơ hội Fresher",
     name: "HUỲNH MINH HUY",

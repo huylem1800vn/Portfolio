@@ -18,6 +18,7 @@ export function Nav() {
     { label: t.nav.work, href: "#work" },
     { label: t.nav.about, href: "#about" },
     { label: t.nav.process, href: "#process" },
+    { label: t.nav.contact, href: "#contact" },
     { label: t.nav.resume, href: CV_URL, external: true },
   ];
 
