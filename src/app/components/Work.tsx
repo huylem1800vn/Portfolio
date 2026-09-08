@@ -351,7 +351,7 @@ export function Work() {
                       {p.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs px-3 py-1.5 rounded-full border border-neutral-900/15 text-neutral-700 hover:border-[#6b5cff] hover:text-[#6b5cff] transition-colors"
+                          className="cursor-default text-xs px-3 py-1.5 rounded-full border border-neutral-900/15 text-neutral-700 hover:border-[#6b5cff] hover:text-[#6b5cff] transition-colors"
                         >
                           {tag}
                         </span>
