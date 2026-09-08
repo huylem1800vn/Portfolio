@@ -246,7 +246,7 @@ export function Work() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.7, delay: i * 0.05 }}
-                className="group border-t border-neutral-900/10 pt-10 md:pt-14"
+                className="border-t border-neutral-900/10 pt-10 md:pt-14"
               >
                 <div className="flex items-baseline justify-between mb-6 md:mb-10">
                   <span className="text-xs tracking-[0.2em] uppercase text-neutral-500">
@@ -259,7 +259,7 @@ export function Work() {
                   <div className="lg:col-span-7 order-2 lg:order-1">
                     <a
                       href={p.href}
-                      className="block relative overflow-hidden rounded-2xl"
+                      className="group block relative overflow-hidden rounded-2xl"
                       style={{ backgroundColor: p.accent }}
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">
