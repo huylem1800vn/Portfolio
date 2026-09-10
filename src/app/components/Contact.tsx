@@ -4,7 +4,11 @@ import { useI18n } from "../i18n";
 import { CV_URL } from "../config/links";
 
 const channels = [
-  { label: "Email", value: "huylem1800vn@gmail.com", href: "mailto:huylem1800vn@gmail.com" },
+  {
+    label: "Email",
+    value: "huylem1800vn@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=huylem1800vn@gmail.com",
+  },
   { label: "Behance", value: "behance.net/minhhuyhunh2", href: "https://www.behance.net/minhhuyhunh2" },
   { label: "LinkedIn", value: "linkedin.com/in/huy-huynh-minh", href: "https://www.linkedin.com/in/huy-huynh-minh/" },
 ];
