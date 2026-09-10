@@ -42,7 +42,7 @@ const meta = [
     tags: ["UX Research", "Family Living", "Smart Home", "Accessibility", "Mobile UI"],
     year: "2026",
     image: NEP_NHA_THUMBNAIL_URL,
-    imageAlt: "Nếp Nhà project thumbnail explaining the conical hat, home, and heart brand symbols",
+    imageAlt: "Nếp Nhà project thumbnail explaining the conical hat, home and heart brand symbols",
     accent: "#dfead3",
     fit: "contain",
     thumbnail: "nepnha",
@@ -149,7 +149,7 @@ function MurrorProjectThumbnail({ lang }: { lang: "en" | "vi" }) {
   const subtitle =
     lang === "vi"
       ? "AI companion cho check-in cảm xúc, grounding và phản chiếu nhẹ nhàng"
-      : "AI companion for emotional check-ins, grounding, and gentle reflection";
+      : "AI companion for emotional check-ins, grounding and gentle reflection";
   const screens = [
     { src: MURROR_CHAT_HOME_URL, label: "Chat" },
     { src: MURROR_CHAT_MOOD_CHECKIN_URL, label: "Check-in" },

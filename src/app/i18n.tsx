@@ -81,16 +81,16 @@ const en: Dict = {
     role: "UI/UX Designer",
     concept: "BRIDGE",
     headline:
-      "Designing the point where user needs, product logic, and technical execution meet naturally.",
+      "Designing the point where user needs, product logic and technical execution meet naturally.",
     intro:
-      "I am a UI/UX Designer with a background in software development, driven by the desire to create experiences that are clear, meaningful, and truly useful. My strength lies in connecting design thinking with technical logic, transforming complex ideas into intuitive user flows, structured interfaces, and scalable design systems that are both visually refined and realistic to build.",
+      "I am a UI/UX Designer with a background in software development, driven by the desire to create experiences that are clear, meaningful and truly useful. My strength lies in connecting design thinking with technical logic, transforming complex ideas into intuitive user flows, structured interfaces and scalable design systems that are both visually refined and realistic to build.",
     cta1: "View Projects",
     cta2: "Download CV",
     scroll: "Scroll to explore",
     label1: "( 01 ) Designer",
     label2: "( 02 ) Direction",
     currently:
-      "My goal is to grow into a product minded designer who can look beyond the interface and understand the real problems behind each user journey. I am focused on strengthening my problem solving mindset, designing for complex workflows, and collaborating closely with different roles in a team to create digital products that are thoughtful, practical, and valuable to people.",
+      "My goal is to grow into a product minded designer who can look beyond the interface and understand the real problems behind each user journey. I am focused on strengthening my problem solving mindset, designing for complex workflows and collaborating closely with different roles in a team to create digital products that are thoughtful, practical and valuable to people.",
   },
   marquee: [
     "User needs",
@@ -120,56 +120,56 @@ const en: Dict = {
           {
             label: "Who it serves",
             body:
-              "Large corporations, SMEs, startups, non-financial organizations, independent businesses, and teams responsible for corporate finance.",
+              "Large corporations, SMEs, startups, non-financial organizations, independent businesses and teams responsible for corporate finance.",
           },
           {
             label: "Shared needs",
             body:
-              "Although their operating scales differ, they all need a flexible online banking platform for managing accounts, cash flow, transfers, payments, financial reporting, and transaction approvals.",
+              "Although their operating scales differ, they all need a flexible online banking platform for managing accounts, cash flow, transfers, payments, financial reporting and transaction approvals.",
           },
         ],
         subtitle:
           "Contributing to HDBiz, HDBank’s corporate Internet and Mobile Banking platform, as part of the FPT IS project team.",
         problem:
-          "Corporate banking workflows involve complex business rules, approval layers, dense forms, transaction states, and high expectations for reliability across web and mobile.",
+          "Corporate banking workflows involve complex business rules, approval layers, dense forms, transaction states and high expectations for reliability across web and mobile.",
         solution:
-          "A clean enterprise banking experience with structured flows, reusable Figma components, clear status feedback, and interface patterns that support business users through critical financial operations.",
+          "A clean enterprise banking experience with structured flows, reusable Figma components, clear status feedback and interface patterns that support business users through critical financial operations.",
       },
       {
         type: "Mobile · iOS / Android",
         subtitle:
           "Helping young users decide where to eat with timely context and recommendations that match how they feel.",
         problem:
-          "Young users in Ho Chi Minh City often struggle to choose where to eat because there are too many options, reviews do not always feel trustworthy, and practical details like crowd level, opening status, or available seats are often missing.",
+          "Young users in Ho Chi Minh City often struggle to choose where to eat because there are too many options, reviews do not always feel trustworthy and practical details like crowd level, opening status, or available seats are often missing.",
         solution:
-          "A food discovery experience built around mood, trusted information, live restaurant status, and recommendations that feel more personal.",
+          "A food discovery experience built around mood, trusted information, live restaurant status and recommendations that feel more personal.",
       },
       {
         type: "Mobile · Family Living",
         subtitle:
-          "Helping different generations share routines, care for the home, and preserve family memories without feeling monitored.",
+          "Helping different generations share routines, care for the home and preserve family memories without feeling monitored.",
         problem:
-          "Family members are gradually losing shared moments as work, study, screen habits, and generational differences pull their daily routines apart. Existing products focus on controlling devices but rarely create a shared space where people can check in, care for one another, and feel closer.",
+          "Family members are gradually losing shared moments as work, study, screen habits and generational differences pull their daily routines apart. Existing products focus on controlling devices but rarely create a shared space where people can check in, care for one another and feel closer.",
         solution:
-          "A shared digital home that brings together family updates, gentle reminders, home safety, shared routines, and private memories, helping each generation stay connected without feeling monitored.",
+          "A shared digital home that brings together family updates, gentle reminders, home safety, shared routines and private memories, helping each generation stay connected without feeling monitored.",
       },
       {
         type: "Web · Responsive",
         subtitle:
-          "Making a fashion shopping experience feel clearer, easier to browse, and smoother to buy from.",
+          "Making a fashion shopping experience feel clearer, easier to browse and smoother to buy from.",
         problem:
-          "The current shopping experience creates friction through complex navigation, weak product discovery, fragmented journeys, and a high risk of users dropping off too early.",
+          "The current shopping experience creates friction through complex navigation, weak product discovery, fragmented journeys and a high risk of users dropping off too early.",
         solution:
-          "A redesigned e commerce experience with clearer navigation, stronger product discovery, a more coherent information structure, and a smoother purchase journey.",
+          "A redesigned e commerce experience with clearer navigation, stronger product discovery, a more coherent information structure and a smoother purchase journey.",
       },
       {
         type: "Mobile · AI Companion",
         subtitle:
-          "A gentle emotional check in experience for reflection, grounding, and steady daily self growth.",
+          "A gentle emotional check in experience for reflection, grounding and steady daily self growth.",
         problem:
           "When people feel overwhelmed, even describing their emotions can feel heavy, especially if they are asked to type or explain too much.",
         solution:
-          "An AI companion experience with quick emotional check ins, visual grounding, gentle interactions, and personal rituals for self growth.",
+          "An AI companion experience with quick emotional check ins, visual grounding, gentle interactions and personal rituals for self growth.",
       },
     ],
   },
@@ -187,19 +187,19 @@ const en: Dict = {
       },
       {
         title: "Research",
-        desc: "Listen to users, study competitors, and trace behavior patterns. Pay attention to the gap between what people say and what their actions reveal.",
+        desc: "Listen to users, study competitors and trace behavior patterns. Pay attention to the gap between what people say and what their actions reveal.",
       },
       {
         title: "Structure",
-        desc: "Shape the user flow, information architecture, and wireframes first. The structure has to breathe before the visuals can shine.",
+        desc: "Shape the user flow, information architecture and wireframes first. The structure has to breathe before the visuals can shine.",
       },
       {
         title: "Design",
-        desc: "Craft screens, components, and the beginnings of a design system so the interface feels clear, consistent, and welcoming to use.",
+        desc: "Craft screens, components and the beginnings of a design system so the interface feels clear, consistent and welcoming to use.",
       },
       {
         title: "Validate",
-        desc: "Review usability, gather feedback, and refine the experience. The first version is only the beginning of the conversation.",
+        desc: "Review usability, gather feedback and refine the experience. The first version is only the beginning of the conversation.",
       },
     ],
   },
@@ -208,15 +208,15 @@ const en: Dict = {
     title1: "A designer who can also ",
     italic: "ship",
     title2: " the build.",
-    body: "I am Minh Huy, a UI/UX designer from Vietnam with a foundation in software development. I am drawn to digital products that feel clear, practical, and ready to grow. My work stays close to user flows, interface systems, and real problems, always shaped by design thinking that respects what can truly be built.",
+    body: "I am Minh Huy, a UI/UX designer from Vietnam with a foundation in software development. I am drawn to digital products that feel clear, practical and ready to grow. My work stays close to user flows, interface systems and real problems, always shaped by design thinking that respects what can truly be built.",
     introSections: [
       {
         tag: "( 01 ) Designer",
-        body: "I am a UI/UX Designer with a background in software development, driven by the desire to create experiences that are clear, meaningful, and truly useful. My strength lies in connecting design thinking with technical logic, transforming complex ideas into intuitive user flows, structured interfaces, and scalable design systems that are both visually refined and realistic to build.",
+        body: "I am a UI/UX Designer with a background in software development, driven by the desire to create experiences that are clear, meaningful and truly useful. My strength lies in connecting design thinking with technical logic, transforming complex ideas into intuitive user flows, structured interfaces and scalable design systems that are both visually refined and realistic to build.",
       },
       {
         tag: "( 02 ) Direction",
-        body: "My goal is to grow into a product minded designer who can look beyond the interface and understand the real problems behind each user journey. I am focused on strengthening my problem solving mindset, designing for complex workflows, and collaborating closely with different roles in a team to create digital products that are thoughtful, practical, and valuable to people.",
+        body: "My goal is to grow into a product minded designer who can look beyond the interface and understand the real problems behind each user journey. I am focused on strengthening my problem solving mindset, designing for complex workflows and collaborating closely with different roles in a team to create digital products that are thoughtful, practical and valuable to people.",
       },
     ],
     facts: [
@@ -228,14 +228,14 @@ const en: Dict = {
     skillsLabel: "( Skills & Tools )",
     learningLabel: "Currently learning",
     learning:
-      "I am currently learning how design systems scale, how accessibility patterns hold up in real products, and how research can lead to interface decisions that are visible and measurable.",
+      "I am currently learning how design systems scale, how accessibility patterns hold up in real products and how research can lead to interface decisions that are visible and measurable.",
   },
   contact: {
     tag: "( Contact · Let's build something useful )",
     title1: "Have a ",
     italic: "project",
     title2: " in mind?",
-    body: "I am currently open to UI/UX Fresher opportunities and collaborative case studies. Email is the best way to reach me, and I usually reply within a day.",
+    body: "I am currently open to UI/UX Fresher opportunities and collaborative case studies. Email is the best way to reach me and I usually reply within a day.",
     resume: "Download CV",
     backTop: "Back to top ↑",
     footer: "© 2026 Huỳnh Minh Huy · Designed and built with care",
