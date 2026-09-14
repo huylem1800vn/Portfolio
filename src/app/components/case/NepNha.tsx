@@ -18,6 +18,8 @@ import {
   Sparkles,
   UsersRound,
   X,
+  ZoomIn,
+  ZoomOut,
 } from "lucide-react";
 import { useI18n } from "../../i18n";
 import {
@@ -30,6 +32,10 @@ import {
 import { CaseNav } from "./CaseNav";
 import { scrollToCaseSection } from "./scrollToCaseSection";
 import { NextProjectFooter } from "./NextProjectFooter";
+import bottomNavigationVariants from "../../../imports/nep-nha/bottom-navigation-variants.png";
+import uxCompetitiveAudit from "../../../imports/nep-nha/ux-competitive-audit.png";
+import uxEmpathyMap from "../../../imports/nep-nha/ux-empathy-map.png";
+import uxJourneyMap from "../../../imports/nep-nha/ux-journey-map.png";
 
 const CREAM = "#F7F2E8";
 const PAPER = "#FFFDF8";
@@ -40,6 +46,27 @@ const INK = "#20251E";
 const MUTED = "#687064";
 const LINE = "#D9DFD1";
 
+const PRIMARY_SCALE = [
+  ["50", "#F6FAF2"],
+  ["100", "#E8F2E0"],
+  ["200", "#D3E6C4"],
+  ["300", "#B5D39F"],
+  ["400", "#8EB86D"],
+  ["500", "#6B934D"],
+  ["600", "#5B8040"],
+  ["700", "#4A6932"],
+  ["800", "#3B5627"],
+  ["900", "#2D421C"],
+  ["950", "#19270F"],
+] as const;
+
+const STATUS_COLORS = [
+  ["Success", "#00C950", "#F0FDF4"],
+  ["Error", "#FB2C36", "#FEF2F2"],
+  ["Warning", "#F0B100", "#FFFBEB"],
+  ["Info", "#2B7FFF", "#EFF6FF"],
+] as const;
+
 const COPY = {
   en: {
     sections: [
@@ -49,6 +76,7 @@ const COPY = {
       { id: "audience", label: "Users" },
       { id: "journey", label: "Journey" },
       { id: "direction", label: "Solution" },
+      { id: "system", label: "System" },
       { id: "ui", label: "Interface" },
     ],
     hero: {
@@ -152,6 +180,12 @@ const COPY = {
       ],
       gap:
         "The opportunity was not another remote control. It was a family layer that connects routines, care, safety, and memories while leaving each person in control of what they share.",
+      artifactsOpen: "Open artifact",
+      artifacts: [
+        ["01 · Explore", "Competitive audit", "Direct and indirect alternatives revealed the gap between device control and meaningful family coordination."],
+        ["02 · Synthesize", "Empathy map", "An early household-level map grouped behaviors, anxieties, responsibilities, pains, and gains before the two final personas were selected."],
+        ["03 · Translate", "User journey map", "The original journey organized stages, actions, touchpoints, emotions, and opportunities before it was rebuilt around the two primary personas below."],
+      ],
     },
     insights: {
       tag: "( 03 · Research Synthesis )",
@@ -383,38 +417,39 @@ const COPY = {
         ["Create a family memory", ["Receive a connection suggestion", "Share a moment", "Add it to the private album", "Revisit it together"]],
       ],
     },
-    anatomy: {
-      tag: "( 08 · How I Structured the Screen )",
-      ia: {
-        title: "Information Architecture Breakdown (IA)",
-        desc: "Before drawing the UI, I listed all necessary data points and grouped them by context of use.",
-        step1: {
-          title: "Data points",
-          items: ["Greeting", "Avatar", "Temperature", "Humidity", "Medication Reminder", "Family Status", "Who's Home", "Connection Suggestion", "Shared Chores"]
-        },
-        step2: {
-          title: "Context Grouping",
-          g1: { title: "Start (Header)", desc: "Avatar + Greeting" },
-          g2: { title: "Quick Reports", desc: "Personal Reminders + Environment Stats" },
-          g3: { title: "Family Life", desc: "Family Status + Connection Suggestions" }
-        },
-        step3: {
-          title: "Wireframe Mapping"
-        }
-      },
-      layout: {
-        title: "Pixel-Perfect Layout Analysis (Today Screen)",
-        headline: "Grid Formula: 375px Width, 16px Margin, and two 163px quick report cards.",
-        desc: "The interface is meticulously calculated to fit popular screen sizes, ensuring a 16px breathing room for the main rhythm while optimizing space for information display components.",
-        annotations: {
-          w163: "163px width",
-          gap16: "16px gap",
-          pad14: { title: "14px padding", desc: "Exception: This card has a 36px icon and 2 lines of text, so I reduced padding from 16px to 14px to maintain the 84px height." },
-          rad24: { title: "24px radius", desc: "For larger family and connection blocks." },
-          margin16: "16px margin",
-          disclaimer: "( UI rendered using HTML/CSS simulating an iPhone 13 mini - 375px screen )"
-        }
-      }
+    system: {
+      tag: "( 08 · Design System )",
+      title: "A token-led system keeps every family touchpoint calm and consistent.",
+      body:
+        "The Figma library separates raw values from semantic decisions and component behavior. That structure supports light and dark modes while keeping buttons, forms, status feedback, navigation, and cards visually aligned.",
+      metrics: [
+        ["11", "Primary shades"],
+        ["8", "Type sizes"],
+        ["3", "Token layers"],
+        ["2", "Color themes"],
+      ],
+      colorLabel: "Primary color system",
+      colorTitle: "Grounded greens communicate care without feeling clinical.",
+      colorBody: "The 50–950 scale supports soft surfaces, readable borders, brand text, interaction states, and high-contrast pressed states.",
+      semanticLabel: "Semantic feedback",
+      statusLabels: ["Success", "Error", "Warning", "Info"],
+      typeLabel: "Typography",
+      typeTitle: "Be Vietnam Pro keeps Vietnamese content clear at every size.",
+      typeBody: "A compact 12–32px scale covers labels, body copy, headings, and display text with Regular, Medium, and SemiBold weights.",
+      tokenLabel: "Token architecture",
+      tokenTitle: "One visual language, three connected layers.",
+      tokenLayers: [
+        ["01 · Primitive", "Raw color, spacing, radius, type size, and weight values."],
+        ["02 · Semantic", "Light and dark decisions for surfaces, text, borders, icons, and feedback."],
+        ["03 · Component", "Purpose-built tokens for buttons, inputs, cards, and bottom sheets."],
+      ],
+      componentsLabel: "Core component library",
+      componentsTitle: "States are designed before screens are assembled.",
+      componentsBody: "The library defines interaction and feedback consistently across common controls and the five-item bottom navigation.",
+      inputLabel: "Home name",
+      inputValue: "Nhà của Minh Huy",
+      rememberLabel: "Remember this preference",
+      navLabels: ["Today", "Home", "Family", "Memories", "Settings"],
     },
     ui: {
       tag: "( 09 · Final Interface )",
@@ -464,6 +499,7 @@ const COPY = {
       { id: "audience", label: "Người dùng" },
       { id: "journey", label: "Hành trình" },
       { id: "direction", label: "Giải pháp" },
+      { id: "system", label: "Hệ thống" },
       { id: "ui", label: "Giao diện" },
     ],
     hero: {
@@ -567,6 +603,12 @@ const COPY = {
       ],
       gap:
         "Từ đó, em nhận ra gia đình không cần thêm một ứng dụng chỉ để điều khiển thiết bị. Họ cần một nơi kết nối lịch sinh hoạt, việc chăm sóc, sự an toàn và kỷ niệm chung, đồng thời cho phép mỗi người tự chọn thông tin mình muốn chia sẻ.",
+      artifactsOpen: "Mở tài liệu",
+      artifacts: [
+        ["01 · Khám phá", "Phân tích đối thủ", "So sánh các giải pháp trực tiếp và gián tiếp giúp em nhận ra khoảng trống giữa điều khiển thiết bị và kết nối gia đình."],
+        ["02 · Tổng hợp", "Sơ đồ thấu cảm", "Bản tổng hợp cấp hộ gia đình ở giai đoạn đầu nhóm hành vi, nỗi lo, trách nhiệm, pain và gain trước khi chọn hai persona cuối."],
+        ["03 · Chuyển hóa", "Bản đồ hành trình", "Bản journey gốc sắp xếp giai đoạn, hành động, điểm chạm, cảm xúc và cơ hội trước khi được xây dựng lại theo hai persona bên dưới."],
+      ],
     },
     insights: {
       tag: "( 03 · Tổng hợp insight )",
@@ -798,38 +840,39 @@ const COPY = {
         ["Giữ lại một khoảnh khắc chung", ["Nhận gợi ý kết nối", "Chia sẻ khoảnh khắc", "Thêm vào album riêng", "Cùng xem lại sau đó"]],
       ],
     },
-    anatomy: {
-      tag: "( 08 · Cách em sắp xếp giao diện )",
-      ia: {
-        title: "Cách em sắp xếp thông tin trước khi vẽ giao diện",
-        desc: "Em liệt kê những thông tin cần xuất hiện trên màn Hôm nay, sau đó chia chúng thành từng nhóm dựa trên mục đích sử dụng.",
-        step1: {
-          title: "Những thông tin cần có",
-          items: ["Lời chào", "Avatar", "Nhiệt độ", "Độ ẩm", "Lời nhắc uống thuốc", "Trạng thái người thân", "Ai đang ở nhà", "Gợi ý kết nối", "Việc nhà chung"]
-        },
-        step2: {
-          title: "Chia thông tin theo từng nhóm",
-          g1: { title: "Phần mở đầu", desc: "Ảnh đại diện + Lời chào" },
-          g2: { title: "Báo cáo nhanh", desc: "Lời nhắc cá nhân + Thông số môi trường" },
-          g3: { title: "Đời sống gia đình", desc: "Trạng thái người thân + Gợi ý kết nối" }
-        },
-        step3: {
-          title: "Đưa các nhóm thông tin vào wireframe"
-        }
-      },
-      layout: {
-        title: "Cách em chia bố cục màn Hôm nay",
-        headline: "Màn hình rộng 375px, chừa lề 16px và chia hàng báo cáo thành hai card rộng 163px.",
-        desc: "Em dùng lề 16px làm khoảng cách chính trên toàn màn hình. Cách chia này giúp hai card có cùng kích thước, nội dung dễ so sánh và vẫn đủ khoảng trống để giao diện không bị chật.",
-        annotations: {
-          w163: "163px width",
-          gap16: "16px gap",
-          pad14: { title: "14px padding", desc: "Ngoại lệ: Card này có icon 36px và 2 dòng chữ, nên em giảm padding từ 16px xuống 14px để giữ nguyên chiều cao 84px." },
-          rad24: { title: "24px radius", desc: "Cho các khối lớn về gia đình và kết nối." },
-          margin16: "16px margin",
-          disclaimer: "( Giao diện được dựng bằng HTML/CSS theo kích thước iPhone 13 mini, rộng 375px )"
-        }
-      }
+    system: {
+      tag: "( 08 · Hệ thống thiết kế )",
+      title: "Hệ thống token giúp mọi điểm chạm trong gia đình luôn nhẹ nhàng và nhất quán.",
+      body:
+        "Library trong Figma tách giá trị gốc, ý nghĩa sử dụng và hành vi của component thành ba lớp. Cấu trúc này hỗ trợ cả light mode và dark mode, đồng thời giữ button, form, trạng thái, điều hướng và card đồng nhất.",
+      metrics: [
+        ["11", "Sắc độ màu chính"],
+        ["8", "Cỡ chữ"],
+        ["3", "Lớp token"],
+        ["2", "Chủ đề màu"],
+      ],
+      colorLabel: "Hệ màu chủ đạo",
+      colorTitle: "Sắc xanh trầm gợi cảm giác quan tâm nhưng không quá thiên về y tế.",
+      colorBody: "Dải màu 50–950 được dùng cho nền nhẹ, đường viền, chữ thương hiệu, trạng thái tương tác và trạng thái nhấn có độ tương phản cao.",
+      semanticLabel: "Màu phản hồi trạng thái",
+      statusLabels: ["Thành công", "Lỗi", "Cảnh báo", "Thông tin"],
+      typeLabel: "Typography",
+      typeTitle: "Be Vietnam Pro giúp nội dung tiếng Việt rõ ràng ở mọi kích thước.",
+      typeBody: "Type scale từ 12–32px bao phủ label, nội dung, heading và display với ba độ đậm Regular, Medium và SemiBold.",
+      tokenLabel: "Kiến trúc token",
+      tokenTitle: "Một ngôn ngữ thị giác, ba lớp liên kết.",
+      tokenLayers: [
+        ["01 · Primitive", "Giá trị gốc cho màu sắc, khoảng cách, bo góc, cỡ chữ và độ đậm."],
+        ["02 · Semantic", "Quyết định light/dark cho nền, chữ, đường viền, icon và phản hồi trạng thái."],
+        ["03 · Component", "Token theo mục đích cho button, input, card và bottom sheet."],
+      ],
+      componentsLabel: "Thư viện component cốt lõi",
+      componentsTitle: "Trạng thái được thiết kế trước khi ghép thành màn hình.",
+      componentsBody: "Library định nghĩa cách tương tác và phản hồi nhất quán cho các control phổ biến cùng bottom navigation gồm năm mục.",
+      inputLabel: "Tên ngôi nhà",
+      inputValue: "Nhà của Minh Huy",
+      rememberLabel: "Ghi nhớ lựa chọn này",
+      navLabels: ["Hôm nay", "Nhà", "Gia đình", "Ký ức", "Cài đặt"],
     },
     ui: {
       tag: "( 09 · Giao diện hoàn chỉnh )",
@@ -936,6 +979,63 @@ function SectionTag({ children, color = GREEN_DARK }: { children: string; color?
   );
 }
 
+function ResearchArtifactPreview({
+  src,
+  alt,
+  eyebrow,
+  title,
+  body,
+  openLabel,
+  onOpen,
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  openLabel: string;
+  onOpen: () => void;
+  className?: string;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onOpen}
+      className={`group grid w-full overflow-hidden rounded-[2.2rem] border bg-white text-left shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl lg:grid-cols-12 ${className}`}
+      style={{ borderColor: LINE }}
+      aria-label={`${openLabel}: ${title}`}
+    >
+      <div className="relative h-80 overflow-hidden bg-neutral-100 sm:h-[28rem] lg:col-span-8 lg:h-[32rem]">
+        <img
+          src={src}
+          alt={alt}
+          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+      </div>
+      <div className="flex flex-col justify-between p-7 md:p-9 lg:col-span-4">
+        <div>
+          <div className="text-[0.65rem] font-bold uppercase tracking-[0.16em]" style={{ color: GREEN }}>
+            {eyebrow}
+          </div>
+          <h4 className="mt-4 text-3xl leading-tight" style={{ fontFamily: "Fraunces, serif" }}>
+            {title}
+          </h4>
+          <p className="mt-5 text-sm leading-relaxed" style={{ color: MUTED }}>
+            {body}
+          </p>
+        </div>
+        <span className="mt-8 inline-flex w-fit items-center gap-2 rounded-full px-4 py-2.5 text-xs font-semibold text-white" style={{ backgroundColor: GREEN_DARK }}>
+          <Expand size={14} />
+          {openLabel}
+        </span>
+      </div>
+    </button>
+  );
+}
+
 function HouseMark() {
   return (
     <div className="flex h-16 w-16 items-center justify-center rounded-[1.35rem] p-2.5 shadow-md" style={{ backgroundColor: GREEN }}>
@@ -990,6 +1090,7 @@ export function NepNha() {
 
   // Generic Image Popup State
   const [popupImage, setPopupImage] = useState<{src: string, alt: string, caption?: string} | null>(null);
+  const [popupZoom, setPopupZoom] = useState(1);
 
   useScrollLock(activeScreen !== null || popupImage !== null);
 
@@ -1360,6 +1461,24 @@ export function NepNha() {
                   </div>
                 ))}
               </div>
+              <div className="lg:col-span-12">
+                <ResearchArtifactPreview
+                  src={uxCompetitiveAudit}
+                  alt="Nếp Nhà competitive audit from the original UX board"
+                  eyebrow={c.research.artifacts[0][0]}
+                  title={c.research.artifacts[0][1]}
+                  body={c.research.artifacts[0][2]}
+                  openLabel={c.research.artifactsOpen}
+                  onOpen={() => {
+                    setPopupZoom(1);
+                    setPopupImage({
+                      src: uxCompetitiveAudit,
+                      alt: "Nếp Nhà competitive audit from the original UX board",
+                      caption: c.research.artifacts[0][1],
+                    });
+                  }}
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -1389,6 +1508,24 @@ export function NepNha() {
                 ))}
               </div>
             </div>
+
+            <ResearchArtifactPreview
+              src={uxEmpathyMap}
+              alt={lang === "vi" ? "Sơ đồ thấu cảm gốc trong UX board Nếp Nhà" : "Original empathy map from the Nếp Nhà UX board"}
+              eyebrow={c.research.artifacts[1][0]}
+              title={c.research.artifacts[1][1]}
+              body={c.research.artifacts[1][2]}
+              openLabel={c.research.artifactsOpen}
+              className="mt-8"
+              onOpen={() => {
+                setPopupZoom(1);
+                setPopupImage({
+                  src: uxEmpathyMap,
+                  alt: lang === "vi" ? "Sơ đồ thấu cảm gốc trong UX board Nếp Nhà" : "Original empathy map from the Nếp Nhà UX board",
+                  caption: c.research.artifacts[1][1],
+                });
+              }}
+            />
 
             <div className="mt-16 overflow-hidden rounded-[2.2rem] border shadow-sm md:grid md:grid-cols-2" style={{ borderColor: LINE }}>
               <div className="p-8 md:p-10" style={{ backgroundColor: CREAM }}>
@@ -1598,6 +1735,24 @@ export function NepNha() {
               </h2>
               <p className="text-lg leading-relaxed lg:col-span-4" style={{ color: MUTED }}>{c.journey.body}</p>
             </div>
+
+            <ResearchArtifactPreview
+              src={uxJourneyMap}
+              alt={lang === "vi" ? "Bản đồ hành trình gốc trong UX board Nếp Nhà" : "Original user journey map from the Nếp Nhà UX board"}
+              eyebrow={c.research.artifacts[2][0]}
+              title={c.research.artifacts[2][1]}
+              body={c.research.artifacts[2][2]}
+              openLabel={c.research.artifactsOpen}
+              className="mt-12"
+              onOpen={() => {
+                setPopupZoom(1);
+                setPopupImage({
+                  src: uxJourneyMap,
+                  alt: lang === "vi" ? "Bản đồ hành trình gốc trong UX board Nếp Nhà" : "Original user journey map from the Nếp Nhà UX board",
+                  caption: c.research.artifacts[2][1],
+                });
+              }}
+            />
 
             {/* Persona Switcher Buttons for Journey */}
             <div className="mt-12 flex flex-wrap items-center justify-between gap-4 border-b pb-6" style={{ borderColor: LINE }}>
@@ -1858,11 +2013,14 @@ export function NepNha() {
 
                 <button
                   type="button"
-                  onClick={() => setPopupImage({
-                    src: NEP_NHA_INFORMATION_ARCHITECTURE_URL,
-                    alt: lang === "vi" ? "Sơ đồ cấu trúc thông tin IA đầy đủ của ứng dụng Nếp Nhà" : "Complete information architecture diagram for the Nếp Nhà app",
-                    caption: c.structure.iaImageLabel
-                  })}
+                  onClick={() => {
+                    setPopupZoom(1);
+                    setPopupImage({
+                      src: NEP_NHA_INFORMATION_ARCHITECTURE_URL,
+                      alt: lang === "vi" ? "Sơ đồ cấu trúc thông tin IA đầy đủ của ứng dụng Nếp Nhà" : "Complete information architecture diagram for the Nếp Nhà app",
+                      caption: c.structure.iaImageLabel
+                    });
+                  }}
                   className="group overflow-hidden rounded-[2rem] border border-white/15 bg-white p-3 shadow-2xl lg:col-span-7 w-full text-left"
                 >
                   <div className="relative overflow-hidden rounded-[1.4rem] bg-white">
@@ -1958,170 +2116,170 @@ export function NepNha() {
           </div>
         </section>
 
-        {/* DESIGN ANATOMY SECTION */}
-        <section id="anatomy" className="py-24 md:py-32" style={{ backgroundColor: "#EDF4E7" }}>
+        {/* DESIGN SYSTEM FOUNDATIONS SECTION */}
+        <section id="system" className="py-24 md:py-32" style={{ backgroundColor: PAPER }}>
           <div className="mx-auto max-w-[1400px] px-6 md:px-12">
-            <SectionTag>{c.anatomy.tag}</SectionTag>
-            
-            {/* INFOGRAPHIC 1: DATA POINTS TO INFORMATION ARCHITECTURE */}
-            <div className="mt-8 rounded-[2.5rem] bg-white p-6 shadow-sm ring-1 ring-black/5 md:p-12 lg:p-16">
-              <div className="mb-12">
-                <div className="text-xs font-semibold uppercase tracking-[0.2em]" style={{ color: GREEN_DARK }}>
-                  {c.anatomy.ia.title}
-                </div>
-                <h3 className="mt-4 max-w-2xl text-2xl leading-snug text-neutral-800 md:text-3xl" style={{ fontFamily: "Fraunces, serif" }}>
-                  {c.anatomy.ia.desc}
-                </h3>
-              </div>
+            <SectionTag>{c.system.tag}</SectionTag>
+            <div className="grid gap-10 lg:grid-cols-12">
+              <h2 className="text-4xl leading-[1.04] tracking-[-0.035em] md:text-6xl lg:col-span-7" style={{ fontFamily: "Fraunces, serif", fontWeight: 400 }}>
+                {c.system.title}
+              </h2>
+              <p className="text-lg leading-relaxed lg:col-span-5" style={{ color: MUTED }}>{c.system.body}</p>
+            </div>
 
-              <div className="grid gap-8 lg:grid-cols-3">
-                {/* Step 1 */}
-                <div className="rounded-3xl bg-[#f9f9f9] p-8">
-                  <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-neutral-200 text-xs font-bold text-neutral-600">1</div>
-                  <div className="mb-4 font-semibold text-neutral-800">{c.anatomy.ia.step1.title}</div>
-                  <div className="flex flex-wrap gap-2">
-                    {c.anatomy.ia.step1.items.map((point: string) => (
-                      <span key={point} className="rounded-lg border border-neutral-200 bg-white px-3 py-1.5 text-xs text-neutral-600 shadow-sm">{point}</span>
+            <div className="mt-12 grid grid-cols-2 overflow-hidden rounded-[2rem] border md:grid-cols-4" style={{ borderColor: LINE }}>
+              {c.system.metrics.map(([value, label], index) => (
+                <div
+                  key={label}
+                  className={`min-h-32 p-6 md:p-8 ${index % 2 === 0 ? "bg-[#F6FAF2]" : "bg-white"} ${index < 2 ? "border-b md:border-b-0" : ""} ${index % 2 === 0 ? "border-r" : ""} ${index === 1 ? "md:border-r" : ""}`}
+                  style={{ borderColor: LINE }}
+                >
+                  <div className="text-3xl md:text-4xl" style={{ color: GREEN_DARK, fontFamily: "Fraunces, serif" }}>{value}</div>
+                  <div className="mt-3 text-xs font-semibold uppercase tracking-[0.14em]" style={{ color: MUTED }}>{label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 grid gap-8 lg:grid-cols-12">
+              <article className="overflow-hidden rounded-[2.5rem] border bg-white lg:col-span-7" style={{ borderColor: LINE }}>
+                <div className="p-7 md:p-10">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: GREEN }}>{c.system.colorLabel}</div>
+                  <h3 className="mt-4 max-w-[24ch] text-3xl leading-tight" style={{ fontFamily: "Fraunces, serif" }}>{c.system.colorTitle}</h3>
+                  <p className="mt-4 max-w-[68ch] text-sm leading-relaxed" style={{ color: MUTED }}>{c.system.colorBody}</p>
+                </div>
+
+                <div className="grid grid-cols-4 border-t sm:grid-cols-6 lg:grid-cols-11" style={{ borderColor: LINE }}>
+                  {PRIMARY_SCALE.map(([step, hex]) => (
+                    <div key={step} className="min-h-28 p-3" style={{ backgroundColor: hex, color: Number(step) >= 500 ? "#FFFFFF" : GREEN_DARK }}>
+                      <div className="text-xs font-semibold">{step}</div>
+                      <div className="mt-12 text-[0.62rem] font-medium uppercase tracking-[0.04em]">{hex}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="border-t p-7 md:p-10" style={{ borderColor: LINE }}>
+                  <div className="text-[0.68rem] font-semibold uppercase tracking-[0.16em]" style={{ color: MUTED }}>{c.system.semanticLabel}</div>
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {STATUS_COLORS.map(([label, color, surface], index) => (
+                      <div key={label} className="inline-flex items-center gap-2 rounded-full border px-3 py-2 text-xs font-medium" style={{ backgroundColor: surface, borderColor: color, color }}>
+                        <span className="h-2 w-2 rounded-full" style={{ backgroundColor: color }} />
+                        {c.system.statusLabels[index]}
+                      </div>
                     ))}
                   </div>
                 </div>
+              </article>
 
-                {/* Step 2 */}
-                <div className="rounded-3xl bg-[#f0f5ed] p-8">
-                  <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full font-bold text-white" style={{ backgroundColor: GREEN }}>2</div>
-                  <div className="mb-4 font-semibold text-neutral-800">{c.anatomy.ia.step2.title}</div>
-                  <div className="space-y-3">
-                    <div className="rounded-xl bg-white p-4 shadow-sm">
-                      <div className="text-xs font-bold uppercase tracking-wider" style={{ color: GREEN_DARK }}>{c.anatomy.ia.step2.g1.title}</div>
-                      <div className="mt-1 text-xs text-neutral-500">{c.anatomy.ia.step2.g1.desc}</div>
+              <article className="rounded-[2.5rem] border p-7 md:p-10 lg:col-span-5" style={{ borderColor: LINE, backgroundColor: "#F6FAF2", fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+                <div className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: GREEN }}>{c.system.typeLabel}</div>
+                <h3 className="mt-4 text-[2rem] font-semibold leading-[1.2] tracking-[-0.025em]" style={{ color: "#101228" }}>{c.system.typeTitle}</h3>
+                <p className="mt-4 text-sm leading-[1.6]" style={{ color: "#4A5565" }}>{c.system.typeBody}</p>
+
+                <div className="mt-10 overflow-hidden rounded-3xl border bg-white" style={{ borderColor: "#D3E6C4" }}>
+                  {[
+                    ["Display / 32 / SemiBold", "32px", "Nếp Nhà", "text-[2rem] font-semibold leading-[1.2] tracking-[-0.025em]"],
+                    ["Heading / 28 / SemiBold", "28px", lang === "vi" ? "Gần nhau mỗi ngày" : "Closer every day", "text-[1.75rem] font-semibold leading-[1.2] tracking-[-0.02em]"],
+                    ["Body / 16 / Regular", "16px", lang === "vi" ? "Một không gian chung cho cả gia đình." : "One shared space for the whole family.", "text-base leading-6"],
+                    ["Label / 12 / Medium", "12px", lang === "vi" ? "NHẮC NHẸ HÔM NAY" : "TODAY'S GENTLE REMINDER", "text-xs font-medium leading-4"],
+                  ].map(([token, size, sample, className], index) => (
+                    <div key={token} className={`p-5 ${index > 0 ? "border-t" : ""}`} style={{ borderColor: "#E5E7EB" }}>
+                      <div className="mb-3 flex items-center justify-between gap-4 text-[0.62rem] uppercase tracking-[0.12em]" style={{ color: "#99A1AF" }}>
+                        <span>{token}</span>
+                        <span>{size}</span>
+                      </div>
+                      <div className={className} style={{ color: "#101228" }}>{sample}</div>
                     </div>
-                    <div className="rounded-xl bg-white p-4 shadow-sm border-l-4" style={{ borderLeftColor: GREEN }}>
-                      <div className="text-xs font-bold uppercase tracking-wider" style={{ color: GREEN_DARK }}>{c.anatomy.ia.step2.g2.title}</div>
-                      <div className="mt-1 text-xs text-neutral-500">{c.anatomy.ia.step2.g2.desc}</div>
-                    </div>
-                    <div className="rounded-xl bg-white p-4 shadow-sm border-l-4 border-neutral-300">
-                      <div className="text-xs font-bold uppercase tracking-wider text-neutral-600">{c.anatomy.ia.step2.g3.title}</div>
-                      <div className="mt-1 text-xs text-neutral-500">{c.anatomy.ia.step2.g3.desc}</div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
+              </article>
+            </div>
 
-                {/* Step 3 */}
-                <div className="rounded-3xl p-8" style={{ backgroundColor: GREEN_DARK }}>
-                  <div className="mb-6 flex h-8 w-8 items-center justify-center rounded-full bg-white/20 font-bold text-white">3</div>
-                  <div className="mb-4 font-semibold text-white">{c.anatomy.ia.step3.title}</div>
-                  <div className="mx-auto w-48 overflow-hidden rounded-[2rem] bg-neutral-900 p-2 shadow-2xl ring-4 ring-neutral-800">
-                    <div className="flex h-[320px] flex-col gap-2 rounded-[1.6rem] bg-white p-3">
-                      <div className="flex items-center gap-2 px-1 py-2">
-                        <div className="h-8 w-8 rounded-full bg-neutral-200" />
-                        <div className="h-3 w-16 rounded-full bg-neutral-200" />
-                      </div>
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="h-20 rounded-xl opacity-80" style={{ backgroundColor: GREEN_SOFT }} />
-                        <div className="h-20 rounded-xl opacity-80" style={{ backgroundColor: GREEN_SOFT }} />
-                      </div>
-                      <div className="mt-2 h-16 rounded-xl bg-neutral-100" />
-                      <div className="h-16 rounded-xl bg-neutral-100" />
-                      <div className="mt-auto flex justify-around border-t pt-2">
-                        <div className="h-4 w-4 rounded-full bg-neutral-200" />
-                        <div className="h-4 w-4 rounded-full bg-neutral-200" />
-                        <div className="h-4 w-4 rounded-full bg-neutral-200" />
-                      </div>
+            <div className="mt-8 overflow-hidden rounded-[2.5rem] p-7 text-white md:p-10 lg:p-12" style={{ backgroundColor: "#19270F" }}>
+              <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
+                <div className="lg:col-span-5">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em] text-white/55">{c.system.tokenLabel}</div>
+                  <h3 className="mt-4 text-3xl leading-tight md:text-4xl" style={{ fontFamily: "Fraunces, serif" }}>{c.system.tokenTitle}</h3>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-3 lg:col-span-7">
+                  {c.system.tokenLayers.map(([title, body], index) => (
+                    <div key={title} className="relative rounded-2xl border border-white/15 bg-white/8 p-5">
+                      <div className="text-xs font-semibold uppercase tracking-[0.14em]" style={{ color: "#B5D39F" }}>{title}</div>
+                      <p className="mt-3 text-xs leading-relaxed text-white/65">{body}</p>
+                      {index < c.system.tokenLayers.length - 1 && <ChevronRight className="absolute -right-[18px] top-1/2 z-10 hidden -translate-y-1/2 text-white/35 sm:block" size={20} />}
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* INFOGRAPHIC 2: PIXEL-PERFECT LAYOUT ANATOMY */}
-            <div className="mt-8 overflow-hidden rounded-[2.5rem] bg-[#1a1f18] p-6 text-white shadow-2xl md:p-16">
-              <div className="mb-16 max-w-2xl">
-                <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/60">
-                  <CheckCircle2 size={16} />
-                  {c.anatomy.layout.title}
+            <article className="mt-8 rounded-[2.5rem] border bg-white p-7 md:p-10 lg:p-12" style={{ borderColor: LINE, fontFamily: "'Be Vietnam Pro', sans-serif" }}>
+              <div className="grid gap-8 lg:grid-cols-12">
+                <div className="lg:col-span-4">
+                  <div className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: GREEN }}>{c.system.componentsLabel}</div>
+                  <h3 className="mt-4 text-3xl font-semibold leading-tight" style={{ color: "#101228" }}>{c.system.componentsTitle}</h3>
+                  <p className="mt-4 text-sm leading-relaxed" style={{ color: "#4A5565" }}>{c.system.componentsBody}</p>
                 </div>
-                <h3 className="mt-5 text-2xl leading-snug md:text-3xl" style={{ fontFamily: "Fraunces, serif" }}>
-                  {c.anatomy.layout.headline}
-                </h3>
-                <p className="mt-4 text-sm text-white/60 leading-relaxed">
-                  {c.anatomy.layout.desc}
-                </p>
-              </div>
 
-              <div className="relative mx-auto flex w-full max-w-[800px] items-center justify-center py-10 hidden sm:flex">
-                <div className="relative z-10 w-[375px] shrink-0 rounded-[2.5rem] bg-white p-[16px] shadow-2xl ring-8 ring-white/10 select-none">
-                  <div className="mb-6 flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-full bg-neutral-200" />
-                    <div className="space-y-1.5">
-                      <div className="h-3 w-20 rounded-full bg-neutral-200" />
-                      <div className="h-4 w-32 rounded-full bg-neutral-300" />
+                <div className="grid gap-5 sm:grid-cols-2 lg:col-span-8">
+                  <div className="rounded-3xl border p-5" style={{ borderColor: "#E5E7EB", backgroundColor: "#FAFAFA" }}>
+                    <div className="text-[0.65rem] font-medium uppercase tracking-[0.14em]" style={{ color: "#737373" }}>
+                      {lang === "vi" ? "Button · Mặc định / Hover / Nhấn" : "Button · Default / Hover / Pressed"}
+                    </div>
+                    <div className="mt-5 flex flex-wrap gap-3">
+                      {["#6B934D", "#8EB86D", "#2D421C"].map((color, index) => (
+                        <button key={color} type="button" className="rounded-[10px] border-[1.5px] px-5 py-3 text-sm font-semibold text-white" style={{ backgroundColor: color, borderColor: index === 1 ? "#6B934D" : color }}>
+                          {lang === "vi" ? "Lưu thông tin" : "Save details"}
+                        </button>
+                      ))}
+                    </div>
+                    <div className="mt-3 flex flex-wrap gap-3">
+                      <button type="button" className="rounded-[10px] border-[1.5px] px-5 py-3 text-sm font-semibold" style={{ backgroundColor: "#F6FAF2", borderColor: "#B5D39F", color: "#4A6932" }}>
+                        {lang === "vi" ? "Xem chi tiết" : "View details"}
+                      </button>
+                      <button type="button" className="px-5 py-3 text-sm font-semibold" style={{ color: "#4A6932" }}>
+                        {lang === "vi" ? "Bỏ qua" : "Skip"}
+                      </button>
                     </div>
                   </div>
 
-                  <div className="relative flex gap-[16px]">
-                    <div className="relative h-[84px] w-[163.5px] rounded-[16px] p-[16px]" style={{ backgroundColor: GREEN_SOFT }}>
-                      <div className="flex items-center gap-1.5">
-                        <div className="h-5 w-5 rounded-md bg-white/60" />
-                        <div className="h-2 w-16 rounded-full bg-black/20" />
+                  <div className="rounded-3xl border p-5" style={{ borderColor: "#E5E7EB", backgroundColor: "#FAFAFA" }}>
+                    <label className="text-xs font-medium" style={{ color: "#4A5565" }}>
+                      {c.system.inputLabel}
+                      <input readOnly value={c.system.inputValue} className="mt-2 block h-12 w-full rounded-[10px] border bg-white px-4 text-sm outline-none" style={{ borderColor: "#B5D39F", color: "#101228" }} />
+                    </label>
+                    <div className="mt-4 flex items-center justify-between gap-4">
+                      <div className="flex items-center gap-2 text-xs" style={{ color: "#4A5565" }}>
+                        <span className="flex h-5 w-5 items-center justify-center rounded-md text-xs text-white" style={{ backgroundColor: "#6B934D" }}>✓</span>
+                        {c.system.rememberLabel}
                       </div>
-                      <div className="mt-3 h-5 w-24 rounded-full bg-black/40" />
-                      <div className="absolute -bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center">
-                        <div className="h-4 w-[1px] bg-white/40" />
-                        <div className="whitespace-nowrap rounded-md bg-white/10 px-2 py-1 text-[10px] text-white backdrop-blur-sm">{c.anatomy.layout.annotations.w163}</div>
-                      </div>
-                    </div>
-
-                    <div className="absolute left-[163.5px] top-1/2 flex h-full w-[16px] -translate-y-1/2 flex-col items-center justify-center">
-                      <div className="w-full border-t border-dashed border-red-400" />
-                      <div className="absolute -top-6 whitespace-nowrap text-[10px] font-bold text-red-400">{c.anatomy.layout.annotations.gap16}</div>
-                    </div>
-
-                    <div className="relative h-[84px] w-[163.5px] rounded-[16px] p-[14px]" style={{ backgroundColor: '#FFF9E8' }}>
-                      <div className="flex items-center gap-1.5">
-                        <div className="h-7 w-7 rounded-full bg-orange-100" />
-                        <div className="space-y-1.5">
-                          <div className="h-2 w-12 rounded-full bg-black/20" />
-                          <div className="h-2 w-16 rounded-full bg-black/20" />
-                        </div>
-                      </div>
-                      <div className="mt-2 h-4 w-20 rounded-full bg-black/40" />
-                      <div className="absolute -right-32 top-1/2 flex -translate-y-1/2 items-center gap-2">
-                        <div className="h-[1px] w-8 border-t border-dashed border-[#F5A623]" />
-                        <div className="w-32 rounded-lg bg-[#2a2a2a] p-2 text-[10px] text-white/80 ring-1 ring-white/10">
-                          <strong className="block text-[#F5A623]">{c.anatomy.layout.annotations.pad14.title}</strong>
-                          {c.anatomy.layout.annotations.pad14.desc}
-                        </div>
+                      <div className="flex h-6 w-11 items-center justify-end rounded-full p-1" style={{ backgroundColor: "#6B934D" }}>
+                        <span className="h-4 w-4 rounded-full bg-white shadow-sm" />
                       </div>
                     </div>
                   </div>
 
-                  <div className="mt-[24px]">
-                    <div className="mb-3 h-4 w-32 rounded-full bg-neutral-200" />
-                    <div className="relative h-[120px] w-full rounded-[24px] bg-neutral-100 p-4">
-                      <div className="absolute -left-28 mt-8 flex items-center gap-2">
-                        <div className="w-24 text-right text-[10px] text-white/80">
-                          <strong className="block text-green-400">{c.anatomy.layout.annotations.rad24.title}</strong>
-                          {c.anatomy.layout.annotations.rad24.desc}
-                        </div>
-                        <div className="h-[1px] w-6 border-t border-dashed border-green-400" />
-                      </div>
+                  <div className="rounded-3xl border p-5 sm:col-span-2" style={{ borderColor: "#E5E7EB", backgroundColor: "#FAFAFA" }}>
+                    <div className="text-[0.65rem] font-medium uppercase tracking-[0.14em]" style={{ color: "#737373" }}>
+                      {lang === "vi" ? "Bottom navigation · 5 trạng thái" : "Bottom navigation · 5 states"}
+                    </div>
+                    <div className="mt-5 flex justify-center overflow-hidden rounded-[1.5rem] bg-white p-3 sm:p-5">
+                      <img
+                        src={bottomNavigationVariants}
+                        alt={lang === "vi" ? "Năm trạng thái của Bottom Navigation Nếp Nhà" : "Five states of the Nếp Nhà bottom navigation"}
+                        className="h-auto w-full max-w-[415px] object-contain"
+                      />
+                    </div>
+                    <div className="mt-4 flex flex-wrap gap-2 text-[0.65rem] font-medium" style={{ color: "#737373" }}>
+                      {["375 × 64", "Icon 24 px", "Label 12 px", "Top radius 32 px"].map((spec) => (
+                        <span key={spec} className="rounded-full border bg-white px-3 py-1.5" style={{ borderColor: "#E5E7EB" }}>
+                          {spec}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                  
-                  <div className="absolute -left-12 top-[40%] flex items-center gap-2">
-                    <div className="whitespace-nowrap text-[10px] font-bold text-blue-300">{c.anatomy.layout.annotations.margin16}</div>
-                    <div className="w-8 border-t border-dashed border-blue-300" />
-                  </div>
-                  <div className="pointer-events-none absolute inset-y-0 left-0 w-[16px] bg-blue-400/10" />
-                  <div className="pointer-events-none absolute inset-y-0 right-0 w-[16px] bg-blue-400/10" />
-
                 </div>
               </div>
-              
-              <div className="mt-8 text-center text-[10px] uppercase tracking-[0.2em] text-white/40 hidden sm:block">
-                {c.anatomy.layout.annotations.disclaimer}
-              </div>
-            </div>
+            </article>
           </div>
         </section>
 
@@ -2372,11 +2530,48 @@ export function NepNha() {
       {/* GENERIC IMAGE POPUP MODAL */}
       {popupImage !== null && (
         <div 
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/85 p-4 backdrop-blur-md md:p-8" 
+          className="fixed inset-0 z-[100] overflow-auto bg-black/85 backdrop-blur-md"
           role="dialog" 
           aria-modal="true"
           onClick={() => setPopupImage(null)}
         >
+          <div className="fixed bottom-5 left-1/2 z-[110] flex -translate-x-1/2 items-center gap-1 rounded-full bg-white p-1.5 text-black shadow-2xl md:bottom-7">
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                setPopupZoom((zoom) => Math.max(1, zoom - 0.5));
+              }}
+              disabled={popupZoom <= 1}
+              className="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-neutral-100 disabled:cursor-not-allowed disabled:opacity-30"
+              aria-label={lang === "vi" ? "Thu nhỏ ảnh" : "Zoom out"}
+            >
+              <ZoomOut size={18} />
+            </button>
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                setPopupZoom(1);
+              }}
+              className="min-w-16 rounded-full px-3 py-2 text-xs font-semibold tabular-nums transition-colors hover:bg-neutral-100"
+              aria-label={lang === "vi" ? "Đặt lại mức thu phóng" : "Reset zoom"}
+            >
+              {Math.round(popupZoom * 100)}%
+            </button>
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                setPopupZoom((zoom) => Math.min(3, zoom + 0.5));
+              }}
+              disabled={popupZoom >= 3}
+              className="flex h-10 w-10 items-center justify-center rounded-full transition-colors hover:bg-neutral-100 disabled:cursor-not-allowed disabled:opacity-30"
+              aria-label={lang === "vi" ? "Phóng to ảnh" : "Zoom in"}
+            >
+              <ZoomIn size={18} />
+            </button>
+          </div>
           <button
             type="button"
             onClick={(e) => {
@@ -2389,10 +2584,19 @@ export function NepNha() {
             <X size={22} />
           </button>
           <div 
-            className="relative z-10 mx-auto w-full max-w-[1200px] rounded-[2.5rem] p-2 sm:p-4 mt-8 md:mt-0"
+            className="relative z-10 mx-auto p-4 pb-24 pt-20 transition-[width] duration-300 ease-out md:p-8 md:pb-28 md:pt-24"
+            style={{
+              width: popupZoom === 1 ? "min(100%, 1600px)" : `${popupZoom * 100}%`,
+              maxWidth: "4096px",
+            }}
             onClick={(e) => e.stopPropagation()}
           >
-            <img src={popupImage.src} alt={popupImage.alt} className="h-auto w-full rounded-[1.8rem] shadow-2xl" />
+            <img
+              src={popupImage.src}
+              alt={popupImage.alt}
+              className="h-auto w-full rounded-[1.8rem] shadow-2xl"
+              onDoubleClick={() => setPopupZoom((zoom) => zoom === 1 ? 2 : 1)}
+            />
             {popupImage.caption && (
               <div className="mt-4 text-center text-sm font-medium text-white/80">
                 {popupImage.caption}
