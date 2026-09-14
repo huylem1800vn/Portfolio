@@ -837,7 +837,7 @@ function MeMeHeroPreview() {
                 </div>
                 <h3
                   className="tracking-[-0.06em] leading-[0.95] text-black"
-                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(3rem, 6vw, 5.75rem)" }}
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)" }}
                 >
                   Fashion
                   <br />
@@ -1000,7 +1000,7 @@ export function MeMe() {
                 </div>
                 <h1
                   className="tracking-[-0.055em] leading-[0.92]"
-                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(3.2rem, 7.5vw, 5.8rem)" }}
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)" }}
                 >
                   MeMe
                 </h1>
@@ -1067,7 +1067,7 @@ export function MeMe() {
               <div>
                 <h2
                   className="tracking-[-0.04em] leading-[1]"
-                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.5rem, 5.6vw, 5.75rem)" }}
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
                 >
                   {copy.auditTitle}
                 </h2>
@@ -1105,7 +1105,7 @@ export function MeMe() {
                 <SectionLabel>{copy.competitorLabel}</SectionLabel>
                 <h2
                   className="tracking-[-0.04em] leading-[1]"
-                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.5rem, 5.4vw, 5.6rem)" }}
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
                 >
                   {copy.competitorTitle}
                 </h2>
@@ -1181,7 +1181,7 @@ export function MeMe() {
                   style={{
                     fontFamily: "Fraunces, serif",
                     fontWeight: 500,
-                    fontSize: "clamp(2.25rem, 4.2vw, 4.25rem)",
+                    fontSize: "clamp(1.875rem, 3.5vw, 3rem)",
                   }}
                 >
                   {copy.comparisonTitle}
@@ -1437,7 +1437,7 @@ export function MeMe() {
                 <SectionLabel>{lang === "vi" ? "( 05 · Hướng thiết kế hệ thống )" : "( 05 · Design System Direction )"}</SectionLabel>
                 <h2
                   className="tracking-[-0.04em] leading-[1]"
-                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6rem)" }}
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)" }}
                 >
                   {copy.systemTitle}
                 </h2>
@@ -1475,7 +1475,7 @@ export function MeMe() {
               <div>
                 <h2
                   className="tracking-[-0.04em] leading-[1]"
-                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 5.4vw, 5.5rem)" }}
+                  style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)" }}
                 >
                   {copy.flowTitle}
                 </h2>
@@ -1504,7 +1504,7 @@ export function MeMe() {
               <SectionLabel>{lang === "vi" ? "( 07 · Giao diện hoàn chỉnh )" : "( 07 · Final UI Showcase )"}</SectionLabel>
               <h2
                 className="tracking-[-0.04em] leading-[1]"
-                style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.75rem, 6vw, 6.25rem)" }}
+                style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.25rem, 4.5vw, 3.75rem)" }}
               >
                 {copy.uiTitle}
               </h2>
@@ -1561,7 +1561,7 @@ export function MeMe() {
             <SectionLabel>{lang === "vi" ? "( 08 · Điều em rút ra )" : "( 08 · Reflection )"}</SectionLabel>
             <h2
               className="tracking-[-0.04em] leading-[1]"
-              style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
+              style={{ fontFamily: "Fraunces, serif", fontWeight: 500, fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
             >
               {copy.reflectionTitle}
             </h2>
